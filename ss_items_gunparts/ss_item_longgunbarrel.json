@@ -1,0 +1,22 @@
+{
+    "name": "Long Gun Barrel",
+    "codename": "ss_item_longgunbarrel",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_gunparts",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_barrel_longgun",
+        "meta": {
+            "description": "A barrel for a longgun, could be useful",
+            "slots": "resource",
+            "blockWidth": 2,
+            "blockHeight": 1
+        },
+        "events": {
+            "onCreate": "function() {\r\n  \tthis.maxStack = 1;\r\n  \tthis.isQuantity = true;\r\n}"
+        }
+    }
+}

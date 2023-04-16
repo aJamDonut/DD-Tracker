@@ -1,0 +1,17 @@
+{
+    "name": "Play Icon",
+    "codename": "icon_play",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_icon",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "description": "Play icon",
+        "across": 1,
+        "down": 2,
+        "w": 64,
+        "h": 64
+    }
+}

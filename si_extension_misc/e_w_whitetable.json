@@ -1,0 +1,16 @@
+{
+    "name": "White Table",
+    "codename": "e_w_whitetable",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "si_extension_misc",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "meta": {
+            "blockZone": "all"
+        },
+        "events": []
+    }
+}

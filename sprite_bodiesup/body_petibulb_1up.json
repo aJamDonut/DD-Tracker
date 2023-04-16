@@ -1,0 +1,17 @@
+{
+    "name": "Petibulb 1 Up",
+    "codename": "body_petibulb_1up",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_bodiesup",
+    "color": "#202327",
+    "editedtime": "1674904884",
+    "vars": {
+        "tileset": "sheet_animalia",
+        "across": 9,
+        "down": 5,
+        "w": 128,
+        "h": 128
+    }
+}

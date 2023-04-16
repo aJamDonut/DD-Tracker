@@ -1,0 +1,17 @@
+{
+    "name": "Red Mantis Right2",
+    "codename": "body_mantis_redright2",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_bodiesright",
+    "color": "#202327",
+    "editedtime": "1675744970",
+    "vars": {
+        "tileset": "sheet_animalia_mantis",
+        "across": 5,
+        "down": 4,
+        "w": 256,
+        "h": 192
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Container 1",
+    "codename": "container_1",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_misc",
+    "color": "",
+    "editedtime": "1670882765",
+    "vars": {
+        "tileset": "sheet_world_items",
+        "across": 2,
+        "down": 1,
+        "w": 64,
+        "h": 64
+    }
+}

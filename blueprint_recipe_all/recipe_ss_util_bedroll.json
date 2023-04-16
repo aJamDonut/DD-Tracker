@@ -1,0 +1,17 @@
+{
+    "name": "Bedroll",
+    "codename": "recipe_ss_util_bedroll",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_util_bedroll",
+        "sprite": "sprite_bed",
+        "crafted_in": "build",
+        "require": "bedroll",
+        "amount": "1"
+    }
+}

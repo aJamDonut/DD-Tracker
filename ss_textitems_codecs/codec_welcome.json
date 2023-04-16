@@ -1,0 +1,18 @@
+{
+    "name": "Codec: Welcome to Dead Desert",
+    "codename": "codec_welcome",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_textitems_codecs",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "item_codec",
+        "meta": {
+            "blockWidth": 1,
+            "blockHeight": 1,
+            "description": "[Author: Adam Dougherty] [Year: 2020]\r\nWelcome to Dead Desert.\r\nThe game is still really early in it's development.\r\nYou will come across many bugs!\r\nI hope you still enjoy the game and find out something cool.\r\nHOW TO PLAY:\r\nUse the mouse to right click and move to where you want.\r\nTalk to NPCs, loot containers and find out where you are.\r\nGo into the world and forge your own path.\r\n\r\n"
+        }
+    }
+}

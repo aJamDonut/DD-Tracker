@@ -1,0 +1,13 @@
+{
+    "name": "Object Placer",
+    "codename": "bootstrap_fn_objectplacer",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_util",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "exec": "function() {\r\n\r\n\r\n  game.ee.on('world-rightclick-up', function () {\r\n    game.util.destroyPlaceObject();\r\n  });\r\n\r\n  game.ee.on('world-leftclick-up', function () {\r\n    console.log(\"clicko\");\r\n    game.util.doPlaceObject();\r\n  });\r\n\r\n  game.util.destroyPlaceObject = function () {\r\n    if (game.util.placeObjectContainer) {\r\n      game.util.placeObjectContainer.destroy();\r\n      game.util.placeObjectContainer = false;\r\n    }\r\n  }\r\n\r\n\r\n  game.util.makeItem = function (item) {\r\n    if(_BLUEPRINTS.COMPLEX_ITEMS[item.codename]) {\r\n      return new ComplexItem(item.codename, item.data);\r\n    } else {\r\n      return new SimpleItem(item.sprite, item.data);\r\n    }\r\n  }\r\n\r\n  game.util.doPlaceObject = function () {\r\n\r\n    if (!game.util.placeObjectContainer) {\r\n      return; \/\/Nothing to place\r\n    }\r\n\r\n    let tool = game.util.placeObjectContainer;\r\n\r\n    let furni = {};\r\n\r\n    furni = game.util.makeItem(tool.item)\r\n\r\n    furni.scaleToGame();\r\n\r\n    furni.x = tool.x;\r\n    furni.y = tool.y;\r\n\r\n    game.world.addObject(furni);\r\n\r\n    game.render.objectLayer.addChild(furni);\r\n\r\n    furni.onCreate();\r\n\r\n    this.lastsweep = false;\r\n\r\n  }\r\n\r\n\r\n  game.setTicker('placeObject', function () {\r\n\r\n    if (!game.util.placeObjectContainer) {\r\n      return false;\r\n    }\r\n\r\n    let x = game.mouseX;\r\n    let y = game.mouseY;\r\n\r\n    \/\/Snap to the grid\r\n    if (game.snap == true) {\r\n      x = game.atGridPos(game.gridPos(x));\r\n      y = game.atGridPos(game.gridPos(y));\r\n    }\r\n\r\n    game.util.placeObjectContainer.x = x;\r\n\r\n    game.util.placeObjectContainer.y = y;\r\n\r\n  })\r\n\r\n  game.util.placeObject = function (item, options) {\r\n\r\n    if (!item) {\r\n      console.error(\"Cannot placeObject with\", item);\r\n    }\r\n\r\n    if (!options) {\r\n      options = {\r\n        type: 'editor', \/\/ editor | godfurni | playerfurni\r\n        snapDefault: true,\r\n      }\r\n    }\r\n\r\n    game.snap = (typeof options.snapDefault == 'undefined') ? true : options.snapDefault;\r\n\r\n    game.util.destroyPlaceObject();\r\n\r\n    game.util.placeObjectContainer = new SimpleItem(item.sprite);\r\n    game.util.placeObjectContainer.item = item;\r\n    game.util.placeObjectContainer.scaleToGame();\r\n\r\n    game.render.aboveLife.addChild(game.util.placeObjectContainer);\r\n\r\n  }\r\n\r\n}"
+    }
+}

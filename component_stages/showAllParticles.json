@@ -1,0 +1,13 @@
+{
+    "name": "Show All Particles",
+    "codename": "showAllParticles",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "component_stages",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "getElement": "function(options) {\r\n\tvar pane = new UIContainer();\r\n  \tvar particle = new Particles('trail_1');\r\n    pane.x = 20;\r\n    pane.y = 20;\r\n    \r\n    pane.addChild(particle);\r\n  particle.playForever();\r\n  \treturn pane;\r\n  }"
+    }
+}

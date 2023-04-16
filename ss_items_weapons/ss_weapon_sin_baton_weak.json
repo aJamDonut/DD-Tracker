@@ -1,0 +1,27 @@
+{
+    "name": "Weakened Sin Baton",
+    "codename": "ss_weapon_sin_baton_weak",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_weapons",
+    "color": "#202327",
+    "editedtime": "1674343615",
+    "vars": {
+        "sprite": "weapon_baton",
+        "meta": {
+            "description": "A baton that inflicts high torpor and damage",
+            "weight": 1,
+            "contextOptions": "equipt",
+            "slots": "weapon",
+            "blockWidth": 4,
+            "blockHeight": 2,
+            "stance": "melee",
+            "value": "2450"
+        },
+        "events": {
+            "onEquipt": "function(item, life) {\r\n  life.data.tool = 'wooden_club';\r\n  \tlife.data.bullet = {\r\n    statuses: [\r\n      { status: 'damage', dmg: item.data.BASE_DMG, type: item.data.TYPE },\r\n      { status: 'torpor', dmg: item.data.BASE_TORPOR }\r\n    ],\r\n    sprite: item.data.SPRITE,\r\n    lifetime: item.data.LIFETIME,\r\n    speed: item.data.SPEED\r\n  };\r\n}",
+            "onCreate": "function(item, life) {\r\n  item.addExtension('ext_bullet_default', {\r\n    BASE_DMG: 0.1,\r\n    LIFETIME: 0.1,\r\n    SPEED: 0.2,\r\n    BASE_TORPOR: 0.1,\r\n    SPRITE: 'projectile_melee',\r\n    TYPE: 'blunt'\r\n  });\r\n}"
+        }
+    }
+}

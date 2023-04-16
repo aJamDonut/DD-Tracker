@@ -1,0 +1,17 @@
+{
+    "name": "Deathspawn Mask",
+    "codename": "recipe_ss_mask_deathspawn",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_mask_deathspawn",
+        "sprite": "mask_deathspawn",
+        "crafted_in": "ss_loom",
+        "require": "skin,spidereye,sheetmetal,glass",
+        "amount": "8,2,10,4"
+    }
+}

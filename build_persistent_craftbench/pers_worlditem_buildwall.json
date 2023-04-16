@@ -1,0 +1,22 @@
+{
+    "name": "Build Wall Job",
+    "codename": "pers_worlditem_buildwall",
+    "value": "-1",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_persistent_craftbench",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "icon_build_spot",
+        "meta": {
+            "blockZone": "all",
+            "collisionGroups": "all",
+            "physicsType": "helper"
+        },
+        "events": {
+            "onCreate": "function(item) {\r\n\tgame.grid.updateTile(game.gridPos(item.x), game.gridPos(item.y), item.data.across || 4, item.data.down || 4, game.drawLayer);\r\n\tgame.grid.drawWalls();\r\n\titem.destroy();\r\n}"
+        },
+        "destroyBase": "0"
+    }
+}

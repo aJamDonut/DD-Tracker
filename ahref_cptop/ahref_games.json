@@ -1,0 +1,14 @@
+{
+    "name": "Game Objects",
+    "codename": "ahref_games",
+    "value": "2",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ahref_cptop",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "url": "items.php",
+        "submenu": []
+    }
+}

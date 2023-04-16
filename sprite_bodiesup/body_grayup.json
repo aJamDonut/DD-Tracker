@@ -1,0 +1,17 @@
+{
+    "name": "Gray Body Up",
+    "codename": "body_grayup",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_bodiesup",
+    "color": "#202327",
+    "editedtime": "1677424975",
+    "vars": {
+        "tileset": "sheet_humanoid",
+        "across": 11,
+        "down": 9,
+        "w": 128,
+        "h": 128
+    }
+}

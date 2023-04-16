@@ -1,0 +1,17 @@
+{
+    "name": "Staff Mask",
+    "codename": "recipe_ss_mask_staff",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_mask_staff",
+        "sprite": "mask_staff",
+        "crafted_in": "ss_loom",
+        "require": "fiber,sheetmetal,glass",
+        "amount": "10,7,4"
+    }
+}

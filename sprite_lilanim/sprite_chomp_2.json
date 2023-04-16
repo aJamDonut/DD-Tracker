@@ -1,0 +1,17 @@
+{
+    "name": "Chomp 2",
+    "codename": "sprite_chomp_2",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_lilanim",
+    "color": "#202327",
+    "editedtime": "1675992017",
+    "vars": {
+        "tileset": "sheet_lilanims",
+        "across": 3,
+        "down": 1,
+        "w": 128,
+        "h": 128
+    }
+}

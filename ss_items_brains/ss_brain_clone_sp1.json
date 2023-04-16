@@ -1,0 +1,24 @@
+{
+    "name": "SP 1 Placid Brain",
+    "codename": "ss_brain_clone_sp1",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_brains",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "brain_clone_1",
+        "meta": {
+            "description": "A rather placid brain. Useful for completing small repetitive tasks in an enclosed space. Useless to you but maybe worth something.",
+            "weight": 1,
+            "contextOptions": "equipt",
+            "slots": "brain",
+            "blockWidth": 3,
+            "blockHeight": 3
+        },
+        "events": {
+            "onEquipt": "function(item, life) {\r\n\tlife.data.brain = 'placid';\r\n  \tlife.sync();\r\n}"
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Bleed",
+    "codename": "c_effect_bleed",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "status_effects_client",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "start": "function(item, options){\r\n  item.nextSpit = Date.now();\r\n    \r\n  var particle = new Particles('blood_impact');\r\n  particle.x = item.x + game.rng(-10,10);\r\n  particle.y = item.y + game.rng(-10,10);\r\n  game.render.aboveLife.addChild(particle);\r\n  particle.playOnceAndDestroy();\r\n  \r\n  \r\n       var particle = new Particles('blood_impact2');\r\n  particle.x = item.x + game.rng(0,32);\r\n  particle.y = item.y + game.rng(0,32);\r\n  game.render.aboveLife.addChild(particle);\r\n  particle.playOnceAndDestroy();\r\n\r\n}",
+        "tick": "function(item, options){\r\n  \r\n  if(item.nextSpit < Date.now()) {\r\n\t var blood = new Particles('blood_pool');\r\n  \tblood.x = item.x;\r\n  \tblood.y = item.y+32;\r\n    var scale = game.rng(0,100);\r\n    blood.scale.x = scale\/100;\r\n    blood.scale.y = scale\/100;\r\n  \tgame.render.underLifeLayer.addChild(blood);\r\n    item.nextSpit = Date.now() + 500;\r\n    blood.playOnceAndDestroy();\r\n    \r\n      var particle = new Particles('blood_impact');\r\n  particle.x = blood.x + blood.width\/2\r\n  particle.y = blood.y + blood.height\/2;\r\n  game.render.aboveLife.addChild(particle);\r\n  particle.playOnceAndDestroy();\r\n    \r\n  }\r\n}",
+        "stacks": "1"
+    }
+}

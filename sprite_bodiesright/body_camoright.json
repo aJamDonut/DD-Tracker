@@ -1,0 +1,17 @@
+{
+    "name": "Camo Jacket Right",
+    "codename": "body_camoright",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_bodiesright",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_humanoid",
+        "across": 3,
+        "down": 7,
+        "w": 128,
+        "h": 128
+    }
+}

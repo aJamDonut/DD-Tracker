@@ -1,0 +1,23 @@
+{
+    "name": "SinChip",
+    "codename": "ss_item_sinchip",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_resources",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_sinchip",
+        "meta": {
+            "description": "An advanced CPU created by SinCorp, not many of these lying around...",
+            "slots": "resource",
+            "blockWidth": 2,
+            "blockHeight": 2,
+            "value": 600
+        },
+        "events": {
+            "onCreate": "function() {\r\n  \tthis.maxStack = 1;\r\n\tthis.isQuantity = true;\r\n}"
+        }
+    }
+}

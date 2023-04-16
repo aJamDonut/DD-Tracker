@@ -1,0 +1,19 @@
+{
+    "name": "Medical Box",
+    "codename": "e_sprite_med_box",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "si_extension_misc",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "meta": {
+            "blockZone": "all",
+            "contextOptions": "loot"
+        },
+        "events": {
+            "onCreate": "function(furni) {\r\n  \r\n  if(game.editMode) {\r\n\treturn false; \/\/Do nothing in edit mode\r\n  }\r\n\r\n  var hasSaveData = (furni.data.inventory) ? true : false;\r\n  \r\n  game.inventories.createInventoryForItem(furni, 4,4, true);\r\n  \r\n  if(hasSaveData) {\r\n\treturn; \/\/Already has been created once or is edit mode don't add any new items.\r\n  }\r\n  \r\n  var itemsLow = ['ss_item_bandage_small', 'ss_item_adhesive', 'ss_item_adhesive'];\r\n  var itemsHigh = ['ss_item_bandage_large'];\r\n  \r\n  for(var i = 0; i < itemsLow.length; i++) {\r\n    let codename = itemsLow[i];\r\n\tif(game.rng(0,10) < 5) {\r\n\t\tfurni.inventory.addItem(new InventoryItem(codename), true);\r\n    }\r\n  }\r\n  \r\n  if(game.rng(0,1)==1) { \/\/Generate better stuff?\r\n\treturn false;\r\n  }\r\n  \r\n  for(var i = 0; i < itemsHigh.length; i++) {\r\n    let codename = itemsHigh[i];\r\n\tif(game.rng(0,10) < 5) {\r\n\t\tfurni.inventory.addItem(new InventoryItem(codename), true);\r\n    }\r\n  }\r\n  \r\n}"
+        }
+    }
+}

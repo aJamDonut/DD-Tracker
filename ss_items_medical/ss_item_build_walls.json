@@ -1,0 +1,20 @@
+{
+    "name": "Build Walls",
+    "codename": "ss_item_build_walls",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_medical",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_hammer_wood",
+        "meta": {
+            "blockWidth": 2,
+            "blockHeight": 2
+        },
+        "events": {
+            "onCreate": "function(item) {\r\n\titem.contextMenus = {};\r\n    item.contextMenus['Build Wall'] = function (caller) {\r\n\t\tgame.tools.setPlayerSquaringTool(caller);\r\n\t}\r\n  \titem.contextMenus['Cancel Wall'] = function (caller) {\r\n\t\tgame.tools.setPlayerCancelTool(caller);\r\n\t}\r\n  \titem.contextMenus['Destroy Wall'] = function (caller) {\r\n\t\tgame.tools.setPlayerDestroyTool(caller);\r\n\t}\r\n}"
+        }
+    }
+}

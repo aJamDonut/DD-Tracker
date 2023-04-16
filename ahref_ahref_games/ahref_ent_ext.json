@@ -1,0 +1,14 @@
+{
+    "name": "Entity Extender",
+    "codename": "ahref_ent_ext",
+    "value": "10001",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ahref_ahref_games",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "url": "items.php?template=entity_extension",
+        "submenu": []
+    }
+}

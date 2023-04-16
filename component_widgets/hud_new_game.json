@@ -1,0 +1,13 @@
+{
+    "name": "Hud New Game",
+    "codename": "hud_new_game",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "component_widgets",
+    "color": "#202327",
+    "editedtime": "1680141004",
+    "vars": {
+        "getElement": "function(options) {\r\n\r\n  var loadFiles = {\r\n    current: {},\r\n  \tslot1: {},\r\n    slot2: {},\r\n    slot3: {},\r\n    slot4: {},\r\n    slot5: {},\r\n    slot6: {},\r\n    slot7: {},\r\n  };\r\n  \r\n  if(!options) {\r\n\toptions = {};\r\n  }\r\n  \r\n  if(!options.title) {\r\n\toptions.title = 'New Game';\r\n    options.type = 'new';\r\n  }\r\n\r\n  \r\n  \r\n  if(!game.globalfs.keyExists('loadfiles')) {\r\n\t\/\/create load files\r\n    game.globalfs.saveSync('loadfiles', loadFiles);\r\n  }\r\n  \r\n  loadFiles = game.globalfs.loadSync('loadfiles');\r\n  \r\n  console.log(\"files\", loadFiles);\r\n  \r\n  var w = 0;\r\n  var pane = game.render.componentRaw('drawBoxPane', {title: false, moveable:false, showX: true, w: w+1200, h: 800});\r\n  \r\n  var container = new UIContainer();\r\n  pane.addChild(container);\r\n  container.x = 30;\r\n  container.y = 20;\r\n\r\n    \r\n  if(options.type == 'new') {\r\n\r\n\r\n    var raceSelect = game.render.componentRaw('component_raceselector', {title: 'Start zone'});\r\n    raceSelect.x = 0;\r\n    raceSelect.y = 15\r\n    container.addChild(raceSelect);\r\n    \/\/component_mapselector\r\n    \r\n    var difficulty = game.render.componentRaw('component_difficulty_toggles', {title: 'Difficulty'});\r\n    difficulty.x = w + raceSelect.width + 20;\r\n    difficulty.y = 10;\r\n    container.addChild(difficulty);\r\n    \/\/component_mapselector\r\n\r\n    var spawn = game.render.componentRaw('component_spawnloc_picker', {w: 280});\r\n    spawn.x = container.width + 30;\r\n    spawn.y = 20;\r\n    container.addChild(spawn);\r\n\r\n    \/\/component_mapselector\r\n    \r\n  }\r\n  \r\n  \r\n\r\n  let startGame = game.render.componentRaw('drawLoadFile', {slot: 'slot1', type: options.type, loadFile: loadFiles.slot1, w:190});\r\n  startGame.y = pane.height - startGame.height - 20;\r\n  startGame.x = pane.width - startGame.width - 50;\r\n  pane.addChild(startGame);\r\n  \r\n  \treturn pane;\r\n  }"
+    }
+}

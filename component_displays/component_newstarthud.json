@@ -1,0 +1,14 @@
+{
+    "name": "New Start Selector",
+    "codename": "component_newstarthud",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "component_displays",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "options": "'itemWithQueue'",
+        "getElement": "function(options) {\r\n\r\n    if(!options) {\r\n      options = new ComplexItem('worlditem_craftingbench');\r\n      \r\n      if (typeof options.onCreate == 'function') {\r\n        options.onCreate({});\r\n      }\r\n      options.data.queue = {data: {}};\r\n      \r\n      options.data.queue.data.list = [\r\n        {name: 'Super Shotgun', duration: 10000, startedTime:false},\r\n        {name: 'Deep Shotgun', duration: 10000, startedTime:false},\r\n        {name: 'Deep Shotgun', duration: 10000, startedTime:false},\r\n        {name: 'Deep Shotgun', duration: 10000, startedTime:false},\r\n        {name: 'Deep Shotgun', duration: 10000, startedTime:false},\r\n        {name: 'Deep Shotgun', duration: 10000, startedTime:false},\r\n        {name: 'Deep Shotgun', duration: 10000, startedTime:false},\r\n        {name: 'Deep Shotgun', duration: 10000, startedTime:false},\r\n        {name: 'Deep Shotgun', duration: 10000, startedTime:false},\r\n        {name: 'Deep Shotgun', duration: 10000, startedTime:false},\r\n      ]\r\n    }\r\n\r\n\r\n  \tlet w = options.w || 450;\r\n  \tlet h = options.h || 450;\r\n  \r\n    var pane = new UIContainer();\r\n  \r\n    var column = new TickerContainer(options, function(item){   \r\n      let page = 1;\r\n\r\n\r\n      if(this.pager && this.pager.pages) {\r\n        page = this.pager.pages.page;\r\n      }\r\n\r\n      let list = [];\r\n      for(let i = 0; i < item.data.queue.data.list.length; i++) {\r\n        let listItem = item.data.queue.data.list[i]\r\n      \tlist.push(game.render.componentRaw('component_list_item_queue', {\r\n          w: w, label: listItem.name,\r\n          started: listItem.startedTime,\r\n          duration: listItem.duration,\r\n          queue: item.data.queue,\r\n          queueIndex: i\r\n        }));\r\n\r\n      }\r\n      \r\n      this.pane = new UIPane({fullscreen:false, fill: '0x303030', padding:0, x: -10, y: 0, w: w+10, h:h});\r\n      let pager = game.render.componentRaw('pager', {rowHeight: 50, ticks: true, page: page, width:w, items:list, itemsPerPage:7});\r\n\r\n      pager.x = -5\r\n      pager.y = 10;\r\n      if(this.pager) {\r\n\t\tthis.pager.destroy();\r\n      }\r\n      this.pager = pager;\r\n      this.pane.addChild(pager)\r\n\r\n      this.addChild(this.pane);\r\n\r\n    }, 0.25);\r\n  \r\n    column.lastRecipe = 'whatever';\r\n\r\n    pane.addChild(column);\r\n  \r\n  \r\n  \treturn pane;\r\n  \r\n  }"
+    }
+}

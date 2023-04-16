@@ -1,0 +1,16 @@
+{
+    "name": "Debug Object",
+    "codename": "e_uiicon_highquality",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "si_extension_misc",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "meta": [],
+        "events": {
+            "onCreate": "function(item){\r\n  \tsetTimeout(()=>{\r\n      item.destroy();\r\n    }, 1000);\r\n\t\r\n}"
+        }
+    }
+}

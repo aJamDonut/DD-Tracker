@@ -1,0 +1,13 @@
+{
+    "name": "Scripts",
+    "codename": "qklinks_href_scripts",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ahref_ahref_quicklinks",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "url": "http:\/\/192.168.1.64:32563\/gd_cp\/http\/items.php?type=bootstrap_helpers&template=bootstrap"
+    }
+}

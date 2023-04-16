@@ -1,0 +1,18 @@
+{
+    "name": "Codec: The Lokals",
+    "codename": "codec_b5",
+    "value": "3",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_textitems_codecs",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "item_codec",
+        "meta": {
+            "blockWidth": 1,
+            "blockHeight": 1,
+            "description": "[Author: The Bookmaker] [Year: 4080]\r\nSo it would appear that we're not actually alone on this planet. Atleast not in the way of other creatures who can work together. A camp was reported to the far north with residents who didn't come from either our colony ship; nor our clone pods. No one has reported many details of who is setting up these camps, as most fear getting too close. But it's now certainly clear that we are not alone out here.\r\n\r\nI've heard of others in the colony who have seen these figures. Some are calling them The Lokals. It'd make sense, this is their planet after all.\r\n\r\nThe one thing I do hope is that their not hostile against our people. So far nothing has gone wrong, but there has been hearsay around about lokals killing wandering clones"
+        }
+    }
+}

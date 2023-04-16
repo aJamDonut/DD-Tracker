@@ -1,0 +1,17 @@
+{
+    "name": "Map Icon Desert",
+    "codename": "sprite_mapicon_desert",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_misc",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_mapicon_desert",
+        "across": 1,
+        "down": 1,
+        "w": 80,
+        "h": 80
+    }
+}

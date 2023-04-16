@@ -1,0 +1,17 @@
+{
+    "name": "Gray Body Right",
+    "codename": "body_grayright",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_bodiesright",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_humanoid",
+        "across": 11,
+        "down": 7,
+        "w": 128,
+        "h": 128
+    }
+}

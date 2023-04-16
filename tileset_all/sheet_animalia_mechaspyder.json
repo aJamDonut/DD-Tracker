@@ -1,0 +1,14 @@
+{
+    "name": "Sheet Animalia Mecha Spyder",
+    "codename": "sheet_animalia_mechaspyder",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "tileset_all",
+    "color": "#202327",
+    "editedtime": "1677423100",
+    "vars": {
+        "filename": "animalia_mechaspyder.png",
+        "blockSize": 64
+    }
+}

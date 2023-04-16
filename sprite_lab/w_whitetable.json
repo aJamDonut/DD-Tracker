@@ -1,0 +1,17 @@
+{
+    "name": "White table",
+    "codename": "w_whitetable",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_lab",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_lab_items",
+        "across": 1,
+        "down": 21,
+        "w": 128,
+        "h": 256
+    }
+}

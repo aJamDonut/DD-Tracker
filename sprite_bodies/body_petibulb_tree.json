@@ -1,0 +1,17 @@
+{
+    "name": "Petibulb Tree",
+    "codename": "body_petibulb_tree",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_bodies",
+    "color": "#202327",
+    "editedtime": "1674926450",
+    "vars": {
+        "tileset": "sheet_animalia",
+        "across": 1,
+        "down": 10,
+        "w": 320,
+        "h": 256
+    }
+}

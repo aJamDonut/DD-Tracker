@@ -1,0 +1,13 @@
+{
+    "name": "Game Dialog",
+    "codename": "game_dialog",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "component_widgets",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "getElement": "function(options) {\r\n    if(!options) {\r\n        options = {\r\n            dialog: 'dialog_recruit_npc',\r\n            callerObject: new LifeObject()\r\n        }\r\n    }\r\n    console.log(\"Get dialog :\" + options.dialog);\r\n\r\n    console.log(\"Caller :\", options.callerObject);\r\n\r\n    var dialog = _BLUEPRINTS.DIALOGS[options.dialog];\r\n    return game.render.component('game_dialog_window', { dialog: dialog, options: options }, 'game_dialog');\r\n}"
+    }
+}

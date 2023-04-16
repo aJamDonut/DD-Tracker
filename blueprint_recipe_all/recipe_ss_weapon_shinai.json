@@ -1,0 +1,16 @@
+{
+    "name": "Shinai",
+    "codename": "recipe_ss_weapon_shinai",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_weapon_shinai",
+        "sprite": "weapon_stick",
+        "require": "wood",
+        "amount": "20"
+    }
+}

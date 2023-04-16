@@ -1,0 +1,16 @@
+{
+    "name": "Bandaging",
+    "codename": "s_effect_bandaging",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "status_effects_server",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "start": "function(item, options){\r\n\t\r\n}",
+        "tick": "function(item, options){\r\n\titem.path = [];\r\n  item.sync();\r\n}",
+        "end": "function(item, options){\r\n\titem.removeAllOfStatus('bleed');\r\n}",
+        "stacks": "1"
+    }
+}

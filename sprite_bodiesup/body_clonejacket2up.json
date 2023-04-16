@@ -1,0 +1,17 @@
+{
+    "name": "Clone Jacket 2 Up",
+    "codename": "body_clonejacket2up",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_bodiesup",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_humanoid",
+        "across": 17,
+        "down": 9,
+        "w": 128,
+        "h": 128
+    }
+}

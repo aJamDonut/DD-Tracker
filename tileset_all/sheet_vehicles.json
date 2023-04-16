@@ -1,0 +1,14 @@
+{
+    "name": "Vehicles",
+    "codename": "sheet_vehicles",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "tileset_all",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "filename": "vehicles.png",
+        "blockSize": 64
+    }
+}

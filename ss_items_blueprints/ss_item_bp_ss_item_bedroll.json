@@ -1,0 +1,20 @@
+{
+    "name": "Bedroll",
+    "codename": "ss_item_bp_ss_item_bedroll",
+    "value": "-10",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_blueprints",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_bp_green",
+        "meta": {
+            "contextOptions": "usebp",
+            "blockWidth": 1,
+            "blockHeight": 1,
+            "recipe": "ss_item_bedroll"
+        },
+        "events": []
+    }
+}

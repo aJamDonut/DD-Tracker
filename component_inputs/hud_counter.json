@@ -1,0 +1,14 @@
+{
+    "name": "Counter",
+    "codename": "hud_counter",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "component_inputs",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "options": "'ref, value, max, min, w'",
+        "getElement": "function(options) {\r\n  \r\n  if(options == undefined) {\r\n    \/\/Stubbo\r\n    const jammy = {x:10};\r\n    options = {\r\n      \tref: jammy,\r\n    \tvalue: 'x',\r\n      \tmax: 10,\r\n      \tmin: 0,\r\n      \tmulti: 1\r\n    };\r\n  }\r\n\r\n  options.multi = options.multi || 1;\r\n  \r\n  let width = options.w || 100;\r\n  let pane = new UIContainer();\r\n  \r\n  let holdNumber = new UIPane({fill: 0x2A2A2A});\r\n  pane.addChild(holdNumber);\r\n  holdNumber.x = 50 + 5;\r\n  holdNumber.width = width;\r\n  \r\n  let text = new TickerContainer(options, function(options){\r\n  \tthis.addChild(game.render.text(options.ref[options.value], 'ingame-label'));\r\n    \r\n  }, 0.1);\r\n  pane.addChild(text);\r\n  text.x = 80;\r\n  text.y = 22;\r\n  \r\n  var btnUp = game.render.component('hud_button', {name: '+', w: 50});\r\n  btnUp.x = holdNumber.x + holdNumber.width + 5;\r\n  pane.addChild(btnUp);\r\n  btnUp.options = options;\r\n  btnUp.on('pointerup', function(){\r\n    let value = this.options.ref[this.options.value];\r\n    if(value >= this.options.max) {\r\n\t\treturn;\r\n    }\r\n  \tthis.options.ref[this.options.value] += this.options.multi;\r\n  });\r\n  holdNumber.height = btnUp.height;\r\n  var btnDown = game.render.component('hud_button', {name: '-', w: 50});\r\n  pane.addChild(btnDown);\r\n\r\n  \r\n  btnDown.options = options;\r\n  btnDown.on('pointerup', function(){\r\n    let value = this.options.ref[this.options.value];\r\n    if(value <= this.options.min) {\r\n\t\treturn;\r\n    }\r\n  \tthis.options.ref[this.options.value] -= this.options.multi;\r\n\tif(this.options.ref[this.options.value] < this.options.min) {\r\n\t\tthis.options.ref[this.options.value] = this.options.multi;\r\n    }\r\n  });\r\n  \r\n  return pane;\r\n}"
+    }
+}

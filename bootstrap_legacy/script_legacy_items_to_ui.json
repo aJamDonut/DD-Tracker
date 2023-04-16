@@ -1,0 +1,13 @@
+{
+    "name": "Complex Items to UI list",
+    "codename": "script_legacy_items_to_ui",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_legacy",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "exec": "function() {\r\n\r\n    let objList = _BLUEPRINTS.COMPLEX_ITEMS;\r\n  \tlet keys = Object.keys(objList);\r\n    for(let i = 0; i < keys.length; i++) {\r\n\t\tlet item = objList[keys[i]];\r\n    \tif(!game.world.objectTemplates[item.parent]) {\r\n        \tgame.world.objectTemplates[item.parent] = [];\r\n        }\r\n      \titem.readName = item.name;\r\n      \titem.codename = keys[i];\r\n      \r\n     \tgame.world.objectTemplates[item.parent].push(item);\r\n      \r\n    }\r\n  \r\n}"
+    }
+}

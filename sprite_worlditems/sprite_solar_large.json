@@ -1,0 +1,17 @@
+{
+    "name": "Solar Panel Large",
+    "codename": "sprite_solar_large",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_worlditems",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_world_items",
+        "across": 17,
+        "down": 20,
+        "w": 320,
+        "h": 192
+    }
+}

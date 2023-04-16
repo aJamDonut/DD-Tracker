@@ -1,0 +1,13 @@
+{
+    "name": "Sprite Parser",
+    "codename": "script_sprite_parser",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_helpers",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "exec": "function() {\r\n\r\n  \/\/DOESNT WORK PRETTY MERDE\r\n\r\n  game.spriteParser = function () {\r\n    let texture = new Sprite('sprite_boulder_1');\r\n    \r\n    const renderTexture = PIXI.RenderTexture.create(texture.width, texture.height);\r\n    let image = game.render.draw.render(texture, renderTexture);\r\n    \r\n      \r\n\r\n    let canvas = document.createElement(\"canvas\");\r\n    $(canvas).css('zIndex', 1000000);\r\n    $(canvas).css('position', 'absolute');\r\n    $(body).append(canvas);\r\n    let ctx = canvas.getContext('2d');\r\n\r\n    ctx.drawImage(image, 0, 0);\r\n\r\n    let pixel = ctx.getImageData(0, 0, 1, 1);\r\n    let data = pixel.data;\r\n\r\n    console.error(\"Sprite data\", data);\r\n  }\r\n}"
+    }
+}

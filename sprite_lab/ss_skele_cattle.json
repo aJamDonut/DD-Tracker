@@ -1,0 +1,17 @@
+{
+    "name": "Skeleton Cattle",
+    "codename": "ss_skele_cattle",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_lab",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_lab_items",
+        "across": 29,
+        "down": 20,
+        "w": 192,
+        "h": 128
+    }
+}

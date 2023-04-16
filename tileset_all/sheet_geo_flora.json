@@ -1,0 +1,14 @@
+{
+    "name": "Geology and Flora",
+    "codename": "sheet_geo_flora",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "tileset_all",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "filename": "geoflora.png",
+        "blockSize": 64
+    }
+}

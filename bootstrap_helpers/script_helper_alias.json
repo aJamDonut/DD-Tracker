@@ -1,0 +1,13 @@
+{
+    "name": "Alias",
+    "codename": "script_helper_alias",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_helpers",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "exec": "function() {\r\n\tgame.alias = {};\r\n\t\r\n\t\r\n\tgame.alias.saveName = {};\r\n\t\r\n\tgame.alias.saveDisableads = 'disableads';\r\n\t\r\n\tgame.alias.saveDefaultname= 'save';\r\n\t\r\n\tgame.alias.saveFile = 'mainsave';\r\n\tgame.alias.savePrefix = 'arcadebuilder';\r\n\t\r\n\tgame.alias.saveSpeedtools = 'speedtools';\r\n\t\r\n\tgame.alias.get = function(name) {\r\n\t\treturn game.alias[name] || name;\r\n\t};\r\n}"
+    }
+}

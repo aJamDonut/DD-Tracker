@@ -1,0 +1,19 @@
+{
+    "name": "Melee Projectile",
+    "codename": "e_projectile_melee",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "si_extension_misc",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "meta": {
+            "collisionGroups": "collision_hurts_1",
+            "physicsType": "projectile"
+        },
+        "events": {
+            "onCreate": "function(item) {\r\n  item.alpha = 1;\r\n  var particle = new Particles('shootdebris');\r\n  particle.playOnce();\r\n  item._container.addChild(particle);\r\n  var life = game.index.getFromIndex(item.data.creatorId, 'all');\r\n  if (life.aiming !== true) {\r\n          life.toggleAim();\r\n        }\r\n  life.shoot();\r\n}"
+        }
+    }
+}

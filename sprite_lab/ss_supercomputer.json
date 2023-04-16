@@ -1,0 +1,17 @@
+{
+    "name": "Super Computer",
+    "codename": "ss_supercomputer",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_lab",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_lab_items",
+        "across": 11,
+        "down": 1,
+        "w": 256,
+        "h": 192
+    }
+}

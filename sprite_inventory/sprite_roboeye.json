@@ -1,0 +1,17 @@
+{
+    "name": "Robo Eye",
+    "codename": "sprite_roboeye",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_inventory",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_invitems2",
+        "across": 11,
+        "down": 1,
+        "w": 128,
+        "h": 128
+    }
+}

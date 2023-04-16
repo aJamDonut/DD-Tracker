@@ -1,0 +1,22 @@
+{
+    "name": "Zone_TP",
+    "codename": "zone_tp",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_world_items",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "save_icon",
+        "blockWidth": 1,
+        "blockHeight": 1,
+        "data": {
+            "collisionGroups": "tp",
+            "physicsType": "sensor",
+            "weight": 1
+        },
+        "events": [],
+        "destroyBase": "0"
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "name": "Panel Settings",
+    "codename": "panel_settings",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "component_widgets",
+    "color": "#202327",
+    "editedtime": "1674340747",
+    "vars": {
+        "getElement": "function() {\r\n  \r\n  let w = 800;\r\n  let h = 800;\r\n  \r\n  var container = game.render.componentRaw('drawBoxPane', {title: 'Settings', moveable: false, w:w, h:h, showX: true});\r\n  \r\n  var pane = new UIContainer();\r\n  container.addChild(pane);\r\n  \r\n  pane.x = 40;\r\n  pane.y = 50;\r\n  \r\n  let booleans = [\r\n    'showTut',\r\n  \t'particles',\r\n    'lights',\r\n    'bloom',\r\n    'blood',\r\n    'performance'\r\n  ];\r\n  \r\n  let descs = [\r\n    'Enables showing the tutorial',\r\n  \t'Particles`nEffects animations like gun shrapnel',\r\n    'Advanced Lights`nDisable if slow framerate',\r\n    'Advanced Bloom`nDisable if slow framerate',\r\n    'Blood`nDisable if slow framerate or dislike',\r\n    'Soft Loading`nEnable if game jerks between areas'\r\n  ];\r\n  \r\n  let padding = 10;\r\n  let note = game.render.text('Note: You may have to restart for changes to take effect', 'ingame-label')\r\n  pane.addChild(note);\r\n  \r\n  \r\n  let volume = game.render.text('Volume', 'ingame-label')\r\n  pane.addChild(volume);\r\n  volume.y = 50;\r\n  volume.x = 5;\r\n  \r\n  var audio = game.render.componentRaw('hud_counter', {ref: game.settings, value: 'musicValue', max: 10, min: 0});\r\n  \r\n  pane.addChild(audio);\r\n  \r\n  audio.y = 80;\r\n  \r\n  let offsetX = pane.x;\r\n  let offsetY = pane.y + 100 + padding;\r\n  \r\n  for(let i = 0; i < booleans.length; i++) {\r\n\tlet value = booleans[i];\r\n    let desc = descs[i];\r\n    var setting = game.render.componentRaw('drawBoxPane', {moveable: false, w:700, h:75, showX: false});\r\n    pane.addChild(setting);\r\n    setting.y = offsetY;\r\n    \r\n    let text = game.render.text(desc, 'ingame-label')\r\n    setting.addChild(text);\r\n    text.x = 20;\r\n    text.y = 20;\r\n    \r\n    \r\n    \r\n    let checkbox = game.render.component('hud_checkbox',\r\n        {\r\n      \t  value: value,\r\n          isEnabled: function(){\r\n            return game.settings[this.value];\r\n          },\r\n      \t  onDisable: function() {\r\n          \tgame.settings[this.value] = false;\r\n      \t  },\r\n          onEnable: function() {\r\n          \tgame.settings[this.value] = true;\r\n      \t  }\r\n        });\r\n    \r\n    checkbox.y = 17.5;\r\n    checkbox.x = 520;\r\n    setting.addChild(checkbox);\r\n    \r\n    \r\n    offsetY += setting.height + padding;\r\n  }\r\n  \r\n  return container; \r\n}"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Tech Dress Up",
+    "codename": "body_techdressup",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_bodiesup",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_humanoid2",
+        "across": 3,
+        "down": 9,
+        "w": 128,
+        "h": 128
+    }
+}

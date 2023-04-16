@@ -1,0 +1,17 @@
+{
+    "name": "Blue Sheen Column",
+    "codename": "lightbluesheencolumn",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_effects",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_effects",
+        "across": 5,
+        "down": 12,
+        "w": 192,
+        "h": 320
+    }
+}

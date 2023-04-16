@@ -1,0 +1,17 @@
+{
+    "name": "Redword Sword",
+    "codename": "recipe_ss_weapon_redword",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_weapon_redword",
+        "sprite": "weapon_redword",
+        "crafted_in": "ss_smithy",
+        "require": "adhesive,wood,fiber,skin,spidereye,redbar",
+        "amount": "2,12,20,10,2,13"
+    }
+}

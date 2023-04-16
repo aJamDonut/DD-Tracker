@@ -1,0 +1,22 @@
+{
+    "name": "Clone Pod",
+    "codename": "ss_clonepod",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_persistent_craftbench",
+    "color": "#202327",
+    "editedtime": "1679159359",
+    "vars": {
+        "sprite": "w_emptyclonepod",
+        "meta": {
+            "physicsType": "helper",
+            "contextOptions": "loot",
+            "recipe": "ss_clonepod"
+        },
+        "events": {
+            "onCreate": "function() {\r\n\r\n\tthis.contextMenus['Place'] = function (item) {\r\n\r\n\t\tconst SLEEP_TIMEOUT = 4000;\r\n\r\n\t\tif (!game.p) {\r\n\t\t\treturn false;\r\n\t\t}\r\n\r\n\t\tconst carrying = game.p.isCarrying();\r\n\r\n\t\tif (!carrying) {\r\n\t\t\tgame.notify(\"Nothing to place\");\r\n\t\t\treturn false;\r\n\t\t}\r\n\r\n\t\tgame.p.stopCarrying(carrying);\r\n\r\n\t\tcarrying.addStatusFromClient('clonepod', {\r\n\t\t\tduration: SLEEP_TIMEOUT,\r\n\t\t\tsource: this.id,\r\n\t\t});\r\n\r\n\t\tcarrying.x = item.x + 64 + 8;\r\n\t\tcarrying.y = item.y + 64;\r\n\t\tcarrying.syncXY();\r\n\t\t\r\n\t}\r\n\r\n}",
+            "onWorldTick": "function(){\r\n  this.hauls();\r\n}"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Small Storage Container",
+    "codename": "recipe_ss_container_smallstorage",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_container_smallstorage",
+        "require": "wood",
+        "amount": "10",
+        "sprite": "container_5",
+        "crafted_in": "build"
+    }
+}

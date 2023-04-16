@@ -1,0 +1,13 @@
+{
+    "name": "RDown Ticker",
+    "codename": "script_ticker_rdown",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_tickers",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "exec": "function(){\r\n\r\n  game.rDownLastCheck = Date.now();\r\n  \r\n  game.setTicker('checkRDown', function(){\r\n    if(!game.rDown) {\r\n      return false;\r\n    }\r\n\r\n    if(game.rDownLastCheck < Date.now() - 1000) {\r\n     \/\/ game.ee.emit('world-rightclick-up');\r\n      game.rDownLastCheck = Date.now();\r\n    }\r\n\r\n    \r\n  })\r\n  \r\n  game.mDownLastCheck = Date.now();\r\n  game.setTicker('checkMDown', function(){\r\n    if(!game.mDown) {\r\n      return false;\r\n    }\r\n\r\n    if(game.mDownLastCheck+200 < Date.now()) {\r\n      game.ee.emit('middleclick-up');\r\n      game.mDownLastCheck = Date.now();\r\n    }\r\n\r\n    \r\n  })\r\n}"
+    }
+}

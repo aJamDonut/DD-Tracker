@@ -1,0 +1,16 @@
+{
+    "name": "Stone Hatchet",
+    "codename": "recipe_ss_weapon_hatchet_st",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_weapon_hatchet_st",
+        "require": "wood,fabric,stone",
+        "amount": "50,50,50",
+        "sprite": "weapon_hatchet_stone"
+    }
+}

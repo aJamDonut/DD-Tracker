@@ -1,0 +1,13 @@
+{
+    "name": "Set Target",
+    "codename": "s_effect_settarget",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "status_effects_server",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "start": "function(item, options) {\r\n    \r\n    item.data.targetId = options.targetId;\r\n\r\n    item.data.do = 'attack';\r\n    item.data.command = 'attack';\r\n\r\n    item.sync();\r\n\r\n}"
+    }
+}

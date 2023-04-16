@@ -1,0 +1,13 @@
+{
+    "name": "Game Right Click",
+    "codename": "script_event_rightclick_up",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_events",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "exec": "function() {\r\n\tgame.ee.on('world-rightclick-up', function () {\r\n      console.log(\"Right up\");\r\n    if(!game.p.id) {\r\n      return;\r\n    }\r\n\r\n      var particle = new Particles('pop');\r\n      particle.playOnceAndDestroy();\r\n      particle.x = game.screenMouseX;\r\n      particle.y = game.screenMouseY;\r\n      game.render.aboveAll.addChild(particle);\r\n      \r\n    game.ui.contextMenuShowing = false; \/\/Hide showing context menus\r\n    setTimeout(() => {\r\n      \r\n      \/\/Player path finding click.\r\n      \/\/If the context menu is showing, don't path find\r\n      if (game.index.indexCount('context_menus') > 0) {\r\n        console.log(\"Don't it \" + game.index.indexCount('context_menus'));\r\n        return false;\r\n      }\r\n\r\n      console.log(\"Do it\");\r\n      \r\n\r\n      game.session.setAllCommand('moveto', {x: game.mouseX, y:game.mouseY});\r\n\r\n      \r\n\r\n\r\n    }, 100);\r\n  });\r\n}"
+    }
+}

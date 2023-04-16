@@ -1,0 +1,21 @@
+{
+    "name": "Oil Barrel",
+    "codename": "ss_oilbarrel",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_world_items",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "wi_oil_barrel",
+        "description": "An explosive oil barrel",
+        "blockWidth": 2,
+        "blockHeight": 4,
+        "data": {
+            "collisionGroups": "explodeOnTouch",
+            "physicsType": "move",
+            "weight": 5
+        }
+    }
+}

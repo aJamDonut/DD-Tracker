@@ -1,0 +1,18 @@
+{
+    "name": "Helper - Craft item",
+    "codename": "pers_craft_helper",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_persistent_items",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "sprite": "icon_build_spot",
+        "meta": [],
+        "events": {
+            "onCreate": "function(item) {\r\n  item.data.job = 'haul';\r\n  item.sync();\r\n  game.offloader.addToIndex('jobs', item);\r\n\r\n  item.alpha = 1;\r\n  item.steps = 0;\r\n  item.jobAnim = 'build';\r\n  item.maxSteps = 3;\r\n\r\n  item.jobStep = function (data) {\r\n\r\n    console.error('craft_helper', \"CRAFT HELPER STEP\", this.steps, data);\r\n\r\n    this.steps++;\r\n\r\n    let caller = game.index.getFromIndex(data.callerId, 'all');\r\n\r\n    caller.forceAnim = 'util\/build_' + caller.data.dir; \/\/Some animation to look like something is happening\r\n\r\n    let parent = game.index.getFromIndex(this.data.parentId, 'all');\r\n    let craftItem = this.data.craftItem;\r\n\r\n    console.error('craft_helper', \"Craft job step\", craftItem, parent);\r\n\r\n    if (this.steps === this.maxSteps) {\r\n      let recipe = game.session.getRecipe(craftItem.recipe);\r\n      console.error('craft_helper', \"Give Items\", recipe, craftItem);\r\n\r\n      let craftCodename = recipe.crafts;\r\n\r\n      let craftedItem = new InventoryItem(craftCodename);\r\n\r\n      console.error('craft_helper', \"Craft item\", craftedItem);\r\n\r\n\r\n      if (parent.inventory.addItemNow(craftedItem)) {\r\n        console.error('craft_helper', \"Added item\");\r\n        caller.xpAction('crafteditem', craftedItem);\r\n\r\n        parent.inventory.removeRecipe(craftItem.recipe);\r\n        parent.queue.removeItemAt(0); \/\/ Remove queue item\r\n      } else {\r\n        console.error('craft_helper', \"Failed to added item\");\r\n      }\r\n\r\n      this.sync();\r\n\r\n      caller.forceAnim = false;\r\n\r\n      caller.completeJob(this);\r\n      this.alpha = 0;\r\n\r\n    }\r\n\r\n  }\r\n}",
+            "onJobCheck": "function(item, life) {\r\n  return true;\r\n  \r\n  \/\/Check that local life has required resource\r\n  \/*\r\n  let parent = this.helper.world.index.getFromIndex(this.data.parentId, 'all');\r\n  let craftItem = item.data.craftItem;\r\n  \r\n  \r\n  let resource = item.data.resource;\r\n  let qty = item.data.qty;\r\n  let lifeQty = life.itemList['ss_item_'+resource];\r\n  \r\n  console.log(\"Looking for \"+qty+\" \"+resource + \" Has +\"+lifeQty, life.itemList);\r\n  \r\n  if(lifeQty && lifeQty > 0) {\r\n  \treturn true; \r\n  }\r\n  \r\n  return false;\r\n  *\/\r\n  \r\n}"
+        }
+    }
+}

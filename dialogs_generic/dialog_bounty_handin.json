@@ -1,0 +1,17 @@
+{
+    "name": "Bounty Hand In",
+    "codename": "dialog_bounty_handin",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "dialogs_generic",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "dialog": "We've got quite a few bounties up for grabs right now. Some real down and outs we need taking care of. If you collect any bounties bring 'em back here.",
+        "option1": "What's a bounty? How do I find one",
+        "option1_func": "function(caller) {\r\n\treturn \"You can find bounty notices around the wasteland. Simply kill the target, collect their head and bring it back to me\";\r\n}",
+        "option2": "[CHECK] I have bounties",
+        "option2_func": "function(caller, player) {\r\n\tlet items = player.inventory.main.getItemArray();\r\n\r\n\r\n\tlet hasItem = false;\r\n\tfor (let i = 0; i < items.length; i++) {\r\n\t\tlet item = items[i];\r\n\t\tif (item.codename == \"ss_item_bountyhead\") {\r\n\t\t\tgame.session.addCash(item.data.bounty || 1000); \/\/Give bounty value or 1k if no bounty provided (lazy dev?)\r\n\t\t\tplayer.inventory.main.removeItem(item);\r\n\t\t\tgame.session.tutComplete('complete_bounty');\r\n\r\n\t\t\t\/\/Found it so break loop\r\n\t\t\treturn \"Nice work, heres your payment\";\r\n\t\t\tbreak;\r\n\t\t}\r\n\t}\r\n\r\n\treturn \"Hm, there are no bounties here that I can take care of, sorry.\";\r\n}"
+    }
+}

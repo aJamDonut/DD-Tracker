@@ -1,0 +1,17 @@
+{
+    "name": "Large Bandage",
+    "codename": "recipe_bandage_large",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_item_bandage_large",
+        "sprite": "sprite_bandage_large",
+        "crafted_in": "ss_chembench",
+        "require": "adhesive,whitemeat,skin",
+        "amount": "1,10,5"
+    }
+}

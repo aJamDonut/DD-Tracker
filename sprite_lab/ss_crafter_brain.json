@@ -1,0 +1,17 @@
+{
+    "name": "Brain Crafter",
+    "codename": "ss_crafter_brain",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_lab",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_lab_items",
+        "across": 21,
+        "down": 11,
+        "w": 384,
+        "h": 256
+    }
+}

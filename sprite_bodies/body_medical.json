@@ -1,0 +1,17 @@
+{
+    "name": "Medical Jacket",
+    "codename": "body_medical",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_bodies",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_humanoid",
+        "across": 1,
+        "down": 5,
+        "w": 128,
+        "h": 128
+    }
+}

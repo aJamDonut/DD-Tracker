@@ -1,0 +1,17 @@
+{
+    "name": "Adapted Tunic Mk 2 Right",
+    "codename": "body_tunic_2right",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_bodiesright",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_humanoid",
+        "across": 5,
+        "down": 13,
+        "w": 128,
+        "h": 128
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "name": "Random Names",
+    "codename": "script_data_randomlists",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_data",
+    "color": "#202327",
+    "editedtime": "1679151777",
+    "vars": {
+        "exec": "function() {\r\n\tgame.randomLists = {};\r\n  \tgame.randomLists.names = [\r\n      'Sana',\r\n      'Jed',\r\n      'Sed',\r\n      'Zed',\r\n      'Sab',\r\n      'Carin',\r\n      'Caron',\r\n      'Cimer',\r\n      'Reuf',\r\n      'Ouais',\r\n      'Yeah',\r\n      'Zoot',\r\n      'Taz',\r\n      'Senna',\r\n      'Vik',\r\n      'Hue',\r\n      'Log',\r\n      'Zoo',\r\n      'Guy',\r\n      'Ted',\r\n      'Key',\r\n      'Bozo',\r\n      'Koi',\r\n      'Koy',\r\n      'Esc',\r\n      'Alt',\r\n      'Hashtag',\r\n      'Kim',\r\n      'Xii',\r\n      'Xax',\r\n      'Soon',\r\n      'Bubblegum',\r\n      'Mits',\r\n      'Glove',\r\n      'Mitten',\r\n      'Sock',\r\n      'Zebby',\r\n      'Taco',\r\n      'Nacho',\r\n      'Rainbow',\r\n      'Floyd',\r\n      'Karma',\r\n      'Fish',\r\n      'Cake',\r\n      'Pan',\r\n      'Rocket',\r\n      'Bus',\r\n      'Bowl',\r\n      'Shoe',\r\n      'Bart',\r\n      'Homer',\r\n      'Kenny',\r\n      'Burp',\r\n      'Wind',\r\n      'Chicken',\r\n      'Mouse',\r\n      'Migu',\r\n      'Poncho',\r\n      'Jazz',\r\n      'Shleem',\r\n      'Parker',\r\n      'Zero',\r\n      'Scrub',\r\n      'Pants',\r\n      'Art',\r\n      'Crypto',\r\n      'Drama',\r\n      'Gary',\r\n      'Angry',\r\n      'Biscuit',\r\n      'Badger',\r\n      'Curly',\r\n      'Giggles',\r\n      'Lunchbox',\r\n      'Brains',\r\n      'Trashbag',\r\n      'Lisa',\r\n      'Badger',\r\n      'Hank',\r\n      'Happy',\r\n      'Avion',\r\n      'Cedric',\r\n      'Jerba',\r\n      'Lockpin',\r\n      'Paper',\r\n      'Bic',\r\n      'Zoob',\r\n      'Peep',\r\n      'Torvald',\r\n      'Iamleym',\r\n      'Unsubnu',\r\n      'Newfon',\r\n      'Hudis',\r\n      'Chui',\r\n      'Ilest',\r\n      'Ilya',\r\n      'Yesterday',\r\n      'Today',\r\n      'Hier',\r\n      'Aujourdhui',\r\n      'Circle',\r\n      'Carre',\r\n      'Jim',\r\n      'Dipsil',\r\n      'Tata',\r\n      'Howie',\r\n      'Slinky',\r\n      'Dorkin',\r\n      'Whimper',\r\n      'Doob',\r\n      'Kettle',\r\n      'Bigmouth',\r\n      'Terrapin',\r\n      'Entiendo',\r\n      'Namaste',\r\n      'Krabby',\r\n      'Tonto',\r\n      'Schweebett'\r\n    ];\r\n  game.util.randomName = function() {\r\n\treturn game.randomLists.names[game.rng(0,game.randomLists.names.length-1)];\r\n  }\r\n}"
+    }
+}

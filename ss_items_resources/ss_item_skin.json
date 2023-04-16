@@ -1,0 +1,23 @@
+{
+    "name": "Skin",
+    "codename": "ss_item_skin",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_resources",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_skin",
+        "meta": {
+            "description": "It's the skin of a living creature... creepy.",
+            "slots": "resource",
+            "blockWidth": 2,
+            "blockHeight": 2,
+            "value": 160
+        },
+        "events": {
+            "onCreate": "function() {\r\n  \tthis.maxStack = 25;\r\n\tthis.isQuantity = true;\r\n}"
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "name": "Adapted Tunic Mk 2",
+    "codename": "ss_body_tunic_2",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_body",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "body_tunic_2",
+        "meta": {
+            "description": "A tunic adapted for better protection to attacks.",
+            "weight": 2,
+            "contextOptions": "equipt",
+            "slots": "body",
+            "blockWidth": 3,
+            "blockHeight": 3,
+            "value": 2250
+        },
+        "events": {
+            "onEquipt": "function(life) {\r\n\tlife.addStatsFrom(this);\r\n}",
+            "onUnEquipt": "function(life) {\r\n\tlife.removeStatsFrom(this);\r\n}",
+            "onCreate": "function(item) {\r\n  \titem.data.stats.bluntReduction = 12;\r\n  \titem.data.stats.ballisticReduction = 12;\r\n  \titem.data.stats.sharpReduction = 12;\r\n  \titem.data.stats.tempHeat = 15;\r\n  \titem.data.stats.tempCold = -10;\r\n}"
+        }
+    }
+}

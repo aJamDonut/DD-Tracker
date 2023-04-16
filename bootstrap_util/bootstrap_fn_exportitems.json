@@ -1,0 +1,13 @@
+{
+    "name": "Export items",
+    "codename": "bootstrap_fn_exportitems",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_util",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "exec": "function() {\r\n  game.util.exportItems = function(){\r\n    \r\n    let csv = \"name,codename,hasBp,hasRecipe,recipe\"\r\n    \r\n    let bpCsv = \"name,codename\"\r\n\r\n    let recipes = _BLUEPRINTS.RECIPES;\r\n    let recipesKeys = Object.keys(recipes);\r\n    \r\n    let itemRecipes = {};\r\n    let itemBps = {};\r\n    \r\n    for(let i = 0; i < recipesKeys.length; i++) {\r\n\t\tlet key = recipesKeys[i];\r\n      \tlet recipe = recipes[key];\r\n      \titemRecipes[recipe.crafts] = recipe;\r\n      \titemRecipes[recipe.crafts].name = key;\r\n    }\r\n    \r\n    let invItems = Object.assign({}, _BLUEPRINTS.COMPLEX_ITEMS, _BLUEPRINTS.INV_ITEMS);\r\n    let invItemsKeys = Object.keys(invItems);\r\n    \r\n    \r\n     for(let i = 0; i < invItemsKeys.length; i++) {\r\n      \t\r\n\t\tlet key = invItemsKeys[i];\r\n      \tlet item = invItems[key];\r\n       \r\n      \tif(!item.meta || !item.meta.recipe) {\r\n\t\t\tcontinue;\r\n        }\r\n      \t\r\n       \titemBps['recipe_'+item.meta.recipe] = item;\r\n      \tbpCsv = bpCsv +\"\\n\"+item.name+\",\"+key;\r\n       \r\n    }\r\n    \r\n    console.log(\"bps\",itemBps);\r\n    \r\n    \r\n    for(let i = 0; i < invItemsKeys.length; i++) {\r\n      \t\r\n\t\tlet key = invItemsKeys[i];\r\n      \tlet item = invItems[key];\r\n      \tlet recipe = itemRecipes[key] || false;\r\n      \tlet hasRecipe = (!recipe) ? false : true;\r\n      \tlet hasBlueprint = (!itemBps[recipe.name]) ? false : true\r\n      \t\r\n      \tif(item.meta && item.meta.recipe) {\r\n\t\t\tcontinue;\r\n        }\r\n      \r\n      \tcsv = csv +\"\\n\"+item.name+\",\"+key+\",\"+hasBlueprint+\",\"+hasRecipe+\",'\"+JSON.stringify(recipe)+\"'\";\r\n      \r\n      \tconsole.log(key, hasRecipe, item, itemRecipes[key]);\r\n    }\r\n    \r\n    console.log(bpCsv);\r\n    console.log(csv);\r\n    \r\n  }\r\n}"
+    }
+}

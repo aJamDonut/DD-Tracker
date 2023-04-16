@@ -1,0 +1,17 @@
+{
+    "name": "Gazoline",
+    "codename": "item_gazoline",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_inventory",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_miscitems",
+        "across": 13,
+        "down": 4,
+        "w": 128,
+        "h": 128
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Royal Garment",
+    "codename": "body_royal",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_bodies",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_humanoid2",
+        "across": 5,
+        "down": 5,
+        "w": 128,
+        "h": 128
+    }
+}

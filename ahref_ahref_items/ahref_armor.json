@@ -1,0 +1,14 @@
+{
+    "name": "Armor",
+    "codename": "ahref_armor",
+    "value": "2",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ahref_ahref_items",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "url": "items.php?type=ss_items_body&template=ss_items",
+        "submenu": []
+    }
+}

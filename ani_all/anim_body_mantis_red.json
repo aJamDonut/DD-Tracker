@@ -1,0 +1,16 @@
+{
+    "name": "Red Mantis",
+    "codename": "anim_body_mantis_red",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ani_all",
+    "color": "#202327",
+    "editedtime": "1676664459",
+    "vars": {
+        "textures": "idle_right:\r\nbody_mantis_redright\r\n\r\nidle_down:\r\nbody_mantis_red\r\n\r\nidle_up:\r\nbody_mantis_redup\r\n\r\nwalk_right:\r\nbody_mantis_redright2\r\nbody_mantis_redright\r\nbody_mantis_redright3\r\nbody_mantis_redright\r\n\r\nwalk_down:\r\nbody_mantis_red2\r\nbody_mantis_red\r\nbody_mantis_red3\r\nbody_mantis_red\r\n\r\nwalk_up:\r\nbody_mantis_redup2\r\nbody_mantis_redup\r\nbody_mantis_redup3\r\nbody_mantis_redup\r\n\r\ndead_1:\r\nbody_mantis_reddead",
+        "speed": "24",
+        "width": 256,
+        "height": 192
+    }
+}

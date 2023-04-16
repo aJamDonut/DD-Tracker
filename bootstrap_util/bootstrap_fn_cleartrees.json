@@ -1,0 +1,13 @@
+{
+    "name": "Clear Trees",
+    "codename": "bootstrap_fn_cleartrees",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_util",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "exec": "function() {\r\n  \r\ngame.util.clearTrees = function() {\r\n\tconsole.log(\"Clearing trees\");\r\n\tvar trees = Object.assign(game.index.getIndex('sprite_lots_o_grass'), game.index.getIndex('sprite_tree_redfern'), game.index.getIndex('sprite_tree_redfernsmalld'), game.index.getIndex('sprite_tree_yellowfern'))\r\n    for(let name in trees) {\r\n\t\ttrees[name].markDelete();\r\n    }\r\n}\r\n  \r\n}"
+    }
+}

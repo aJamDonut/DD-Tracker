@@ -1,0 +1,17 @@
+{
+    "name": "Reine Plank",
+    "codename": "recipe_ss_weapon_reine_plank",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_weapon_reine_plank",
+        "sprite": "weapon_reine_plank",
+        "crafted_in": "ss_smithy",
+        "require": "adhesive,wood,skin,composites,sheetmetal",
+        "amount": "2,20,14,34,10"
+    }
+}

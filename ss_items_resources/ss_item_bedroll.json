@@ -1,0 +1,24 @@
+{
+    "name": "Bedroll",
+    "codename": "ss_item_bedroll",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_resources",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_bedroll",
+        "meta": {
+            "description": "Strongest crafting material for defense and strength",
+            "weight": 2,
+            "slots": "resource",
+            "blockWidth": 3,
+            "blockHeight": 2,
+            "value": 300
+        },
+        "events": {
+            "onCreate": "function() {\r\n  \tthis.maxStack = 1;\r\n  \tthis.isQuantity = true;\r\n}"
+        }
+    }
+}

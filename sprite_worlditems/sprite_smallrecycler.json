@@ -1,0 +1,17 @@
+{
+    "name": "Small Recycler",
+    "codename": "sprite_smallrecycler",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_worlditems",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_world_items",
+        "across": 11,
+        "down": 13,
+        "w": 192,
+        "h": 128
+    }
+}

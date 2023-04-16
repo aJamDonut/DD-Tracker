@@ -1,0 +1,14 @@
+{
+    "name": "explodeOnTouch",
+    "codename": "explodeOnTouch",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "phys_collisions",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "start": "function(me, toucher, first) {\r\n  return false;\r\n  console.error(\"explodeOnTouch ran\");\r\n\tservers.physics.updateInternalObject(me.id, {die: true});\r\n\r\n\tservers.physics.helper.broadcastUpdate('helperFuncs', 'fireballAtCoords', {x:Math.ceil(me.x\/64), y: Math.ceil(me.y\/64)});\r\n  \t\r\n  \r\n}",
+        "end": "function(){\r\n}"
+    }
+}

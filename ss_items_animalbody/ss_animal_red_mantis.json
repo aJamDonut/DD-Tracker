@@ -1,0 +1,26 @@
+{
+    "name": "Red Mantis",
+    "codename": "ss_animal_red_mantis",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_animalbody",
+    "color": "#202327",
+    "editedtime": "1675813566",
+    "vars": {
+        "sprite": "body_mantis_red",
+        "meta": {
+            "description": "Keep it away!!",
+            "weight": 2,
+            "contextOptions": "equipt",
+            "slots": "body",
+            "blockWidth": 3,
+            "blockHeight": 3
+        },
+        "events": {
+            "onEquipt": "function(life, item) {\r\n  \/\/In a timeout to cause a random offset between animations\r\n  life.addExtension('ext_vehicle', {\r\n    doDriven: function (life) {\r\n\r\n      console.log(\"Doing driving\", life);\r\n      life.driving = this;\r\n      if (!life.driving) {\r\n        console.log(\"Nothing to drive\");\r\n        life.stopDriving(); \/\/Failed to drive?\r\n        console.log(\"[ABE-ERROR] Failed to find driving object, stop driving.\");\r\n        return;\r\n      }\r\n      game.grid.updateChunk(life.driving);\r\n      life.data.do = \"drive\";\r\n      life.data.lockedInPlace = true;\r\n\r\n      life.driving.meta.sort = false;\r\n      life.driving.zOrder = 0;\r\n      if (!life.driving.animUp) {\r\n        life.driving.animUp = 0;\r\n      }\r\n\r\n      let stance = \"idle\";\r\n\r\n      if (life.moving) {\r\n        stance = \"walk\";\r\n      }\r\n\r\n      life.driving.x = life.x - 50;\r\n      life.driving.y = life.y - 20;\r\n\r\n      life.rotation = 0;\r\n\r\n      let drivingAnim = \"none\/\" + stance + \"_\" + life.data.dir;\r\n\r\n      life.setAnim(\"none\/idle_\" + life.data.dir, true);\r\n      life.aim();\r\n      life.zUnder = false;\r\n      life.driving.data.dir = life.data.dir;\r\n      life.driving.forceAnim = drivingAnim;\r\n      life.driving.data.lockedInPlace = false;\r\n      life.driving.noAim();\r\n\r\n      if (life.data.dir == \"down\") {\r\n        life.zUnder = true;\r\n      }\r\n      return;\r\n    }\r\n  });\r\n\r\n\r\n\r\n}",
+            "onUnEquipt": "function(life) {\r\n  \r\n}",
+            "onCreate": "function(item) {\r\n  \t\r\n  \r\n}"
+        }
+    }
+}

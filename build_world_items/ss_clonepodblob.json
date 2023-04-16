@@ -1,0 +1,23 @@
+{
+    "name": "Clone Pod Blob",
+    "codename": "ss_clonepodblob",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_world_items",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "w_emptyclonepod",
+        "description": "A clone pod",
+        "blockWidth": 2,
+        "blockHeight": 4,
+        "data": {
+            "physicsType": "solid"
+        },
+        "events": {
+            "onCreateJSON": "[{\"x\":-3.430148078895968,\"y\":-56.56200830658213,\"layer\":\"self\",\"customFilter\":\"none\",\"anim\":\"play2\",\"scale\":1,\"sprite\":\"clonepod\",\"type\":\"spine\",\"anchor\":0,\"alpha\":1,\"tween\":\"none\"},{\"x\":-30.164391484925602,\"y\":-7.835608515074284,\"layer\":\"self\",\"customFilter\":\"none\",\"scale\":1,\"sprite\":\"lightgreen_screen\",\"type\":\"sprite\",\"anchor\":0,\"alpha\":1,\"tween\":\"none\"},{\"x\":124.69590467286628,\"y\":65.35347061256903,\"layer\":\"self\",\"customFilter\":\"none\",\"scale\":0.9989368327901276,\"sprite\":\"lightbluesheencolumn\",\"type\":\"sprite\",\"anchor\":0.5,\"alpha\":0.5,\"tween\":\"none\"},{\"x\":139.2521055035245,\"y\":65.86029615779194,\"layer\":\"lights\",\"customFilter\":\"none\",\"scale\":1,\"sprite\":\"lightbluesheencolumn_black\",\"type\":\"sprite\",\"anchor\":0.5,\"alpha\":1,\"tween\":\"none\"}]"
+        },
+        "destroyBase": "1"
+    }
+}

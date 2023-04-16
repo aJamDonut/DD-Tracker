@@ -1,0 +1,19 @@
+{
+    "name": "Walt",
+    "codename": "dialog_walt",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "dialogs_generic",
+    "color": "#202327",
+    "editedtime": "1678591675",
+    "vars": {
+        "dialog": "::: Initiating Greeting Routine...\r\n\r\nHello there <<species missing>>, I'm Walt 3000. One of 3 AI aids built to help my creators.\r\n\r\nHow can I help you today?",
+        "option1": "What can you tell me about your purpose and your creators?",
+        "option1_func": "function(caller) {\r\n\treturn \"I am an advanced AI, created by an extremely advanced race who deemed this planet not worthy of colonization, I was left behind after I informed my fellow crewmembers that attempting to leave the planet with my equipment on board will result in a 24% risk or rapid deconstruction during takeoff.`n`nIn all truth.. I just like being left alone here.\";\r\n}",
+        "option2": "How can I make some cash?",
+        "option2_func": "function() {\r\n\treturn \"Oh there are loads of ways to make some hard cash, you can sell resources, complete bounties or sell old loot to name a few ways...\";\r\n}",
+        "option3": "[CHECK] Yeah sure, i'll pay it",
+        "option3_func": "function(caller, player) {\r\n  \tif(game.session.canAfford(100)) {\r\n\t\t\/\/take the cash\r\n      game.session.removeCash(100);\r\n      \t\/\/Turn this NPC into player NPC\r\n      caller.inventory.brain.empty();\r\n      caller.inventory.brain.addItem(new InventoryItem('ss_brain_player_mk1'), true);\r\n      \treturn \"Great, let's go then!\";\r\n    } else {\r\n\t\treturn \"You can't afford this right now\";\r\n    }\r\n}"
+    }
+}

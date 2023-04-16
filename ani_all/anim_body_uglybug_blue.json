@@ -1,0 +1,16 @@
+{
+    "name": "Blue Ugly Bug",
+    "codename": "anim_body_uglybug_blue",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ani_all",
+    "color": "#202327",
+    "editedtime": "1676664080",
+    "vars": {
+        "textures": "idle_right:\r\nbody_uglybug_blueright\r\n\r\nidle_down:\r\nbody_uglybug_blue\r\n\r\nidle_up:\r\nbody_uglybug_blueup\r\n\r\nwalk_right:\r\nbody_uglybug_blueright2\r\nbody_uglybug_blueright\r\nbody_uglybug_blueright3\r\nbody_uglybug_blueright\r\n\r\nwalk_down:\r\nbody_uglybug_blue2\r\nbody_uglybug_blue\r\nbody_uglybug_blue3\r\nbody_uglybug_blue\r\n\r\nwalk_up:\r\nbody_uglybug_blueup2\r\nbody_uglybug_blueup\r\nbody_uglybug_blueup3\r\nbody_uglybug_blueup\r\n\r\ndead_1:\r\nbody_uglybug_bluedead\r\n",
+        "speed": "24",
+        "width": 256,
+        "height": 192
+    }
+}

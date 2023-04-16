@@ -1,0 +1,17 @@
+{
+    "name": "Box Robot Body Up",
+    "codename": "body_robot_boxup",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_bodiesup",
+    "color": "#202327",
+    "editedtime": "1679236224",
+    "vars": {
+        "tileset": "sheet_humanoid2",
+        "across": 13,
+        "down": 9,
+        "w": 128,
+        "h": 128
+    }
+}

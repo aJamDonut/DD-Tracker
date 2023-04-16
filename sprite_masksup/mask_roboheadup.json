@@ -1,0 +1,17 @@
+{
+    "name": "Robo head Up",
+    "codename": "mask_roboheadup",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_masksup",
+    "color": "#202327",
+    "editedtime": "1679249553",
+    "vars": {
+        "tileset": "sheet_humanoid3",
+        "across": 1,
+        "down": 1,
+        "w": 128,
+        "h": 128
+    }
+}

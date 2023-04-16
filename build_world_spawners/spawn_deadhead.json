@@ -1,0 +1,18 @@
+{
+    "name": "Deadhead",
+    "codename": "spawn_deadhead",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_world_spawners",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "sprite": "btn_blank_sqr",
+        "meta": [],
+        "events": {
+            "onCreate": "function(spawner){\r\n  \tif(game.editMode) {\r\n\t\treturn;\r\n    }\r\n\r\n    var player = new LifeObject();\r\n    player.x = spawner.x;\r\n    player.y = spawner.y;\r\n    player.setAnim('none\/idle_down', true);\r\n    player.data.static = true;\r\n    player.data.faction='deadhead';\r\n  \tplayer.data.name = \"Deadhead\";\r\n    game.render.lifeLayer.addChild(player);\r\n  \tgame.world.addObject(player);\r\n    game.world.addToServer(player);\r\n  \r\n    player.setBlank();\r\n  \ttry {\r\n  \tplayer.inventory.brain.addItem(new InventoryItem('ss_brain_deadhead'), true);\r\n    \/\/player.inventory.brain.addItem(new InventoryItem('ss_brain_clone_mk1'), true);\r\n  \tplayer.inventory.body.addItem(new InventoryItem('ss_body_gray'), true);\r\n    player.inventory.mask.addItem(new InventoryItem('ss_mask_deadhead'), true);\r\n  \t\r\n    } catch(e) {\r\n      console.error(e);\r\n    }\r\n  \r\n  \r\n  \tgame.lastp = player;\r\n  \tspawner.destroy();\r\n}"
+        },
+        "destroyBase": "0"
+    }
+}

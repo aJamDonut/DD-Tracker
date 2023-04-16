@@ -1,0 +1,13 @@
+{
+    "name": "World middle click",
+    "codename": "script_event_w_middleclick_down",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_events",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "exec": "function() {\r\n\tgame.ee.on('world-middleclick-down', function () {\r\n     \r\n      game.cameraFollow = false; \/\/If we click to pan, unfollow pawn\r\n      \r\n\t});\r\n}"
+    }
+}

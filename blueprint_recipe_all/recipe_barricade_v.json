@@ -1,0 +1,16 @@
+{
+    "name": "Barricade Vertical",
+    "codename": "recipe_barricade_v",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_item_barricade_v",
+        "require": "wood,adhesives,fabric",
+        "amount": "100,25,25",
+        "sprite": "sprite_barricade_v"
+    }
+}

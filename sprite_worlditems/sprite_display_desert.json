@@ -1,0 +1,17 @@
+{
+    "name": "Desert Display",
+    "codename": "sprite_display_desert",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_worlditems",
+    "color": "#202327",
+    "editedtime": "1676771992",
+    "vars": {
+        "tileset": "sheet_world_items",
+        "across": 25,
+        "down": 14,
+        "w": 128,
+        "h": 192
+    }
+}

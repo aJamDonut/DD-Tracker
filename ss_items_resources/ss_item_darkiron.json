@@ -1,0 +1,23 @@
+{
+    "name": "Dark Iron",
+    "codename": "ss_item_darkiron",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_resources",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_darkiron",
+        "meta": {
+            "description": "Strongest crafting material for defense and strength",
+            "slots": "resource",
+            "blockWidth": 2,
+            "blockHeight": 2,
+            "value": 650
+        },
+        "events": {
+            "onCreate": "function() {\r\n  \tthis.maxStack = 3;\r\n  \tthis.isQuantity = true;\r\n}"
+        }
+    }
+}

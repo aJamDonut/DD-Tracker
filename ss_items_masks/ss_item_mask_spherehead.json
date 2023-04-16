@@ -1,0 +1,20 @@
+{
+    "name": "Sphere head",
+    "codename": "ss_item_mask_spherehead",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_masks",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "mask_spherehead",
+        "meta": {
+            "slots": "mask",
+            "blockWidth": 2,
+            "blockHeight": 2,
+            "value": 2850
+        },
+        "events": []
+    }
+}

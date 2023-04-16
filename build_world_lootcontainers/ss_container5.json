@@ -1,0 +1,22 @@
+{
+    "name": "Small Wooden Container",
+    "codename": "ss_container5",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_world_lootcontainers",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "container_5",
+        "meta": {
+            "blockZone": "all",
+            "physicsType": "logic",
+            "contextOptions": "loot",
+            "description": "A handy item container"
+        },
+        "events": {
+            "onCreate": "function(furni){\r\n  \t\r\n  \tvar hasSaveData = (furni.data.inventory) ? true : false;\r\n  \tgame.inventories.createInventoryForItem(furni, 5 ,5);\r\n \r\n    var myLight = new Sprite('container_2_light', {anchor:'center'});\r\n    myLight.x = furni.width\/2;\r\n    myLight.y = furni.height\/2+15;\r\n\r\n\tmyLight.filters = [game.render.filters.bloom]\r\n  \tgame.tween(myLight, 'breathe');\r\n  \tfurni.addChild(myLight);\r\n  \r\n  \tvar myLight = new Sprite('lightcookie_oval', {anchor:'center'});\r\n    myLight.x = furni.x+(furni.width\/2);\r\n    myLight.y = furni.y+(furni.height\/2)+15;\r\n\t\r\n  \tgame.tween(myLight, 'breathe');\r\n  \tgame.render.lights.addChild(myLight);\r\n\r\n\r\n  \/*\r\n  \tvar item = new InventoryItem('ss_mask_thejester');\r\n  \tfurni.inventory.addItem(item, true);\r\n  \r\n  \tvar item = new InventoryItem('ss_body_smoker');\r\n  \tfurni.inventory.addItem(item, true);\r\n  \r\n  \tvar item = new InventoryItem('ss_brain_clone_mk1');\r\n  \tfurni.inventory.addItem(item, true);\r\n  \r\n  \tvar item = new InventoryItem('ss_backpack_large');\r\n  \tfurni.inventory.addItem(item, true);\r\n  \r\n\tvar item = new InventoryItem('ss_backpack_small');\r\n  \tfurni.inventory.addItem(item, true);\r\n  \r\n  \tvar item = new InventoryItem('ss_weapon_xbow');\r\n  \tfurni.inventory.addItem(item, true);\r\n *\/\r\n  \r\n  \/*\r\n  var item = new VanillaItem('test_shotty', 'test_shotty');\r\n      item.description = '';\r\n      item.stats = {};\r\n      item.data.blockWidth=4;\r\n      item.data.blockHeight=1;\r\n      item.data.stance = 'longgun';\r\n      game.inventories.attachInventoryFuncs(item);\r\n  \tfurni.data.inventory.addItem(item)\r\n  var items = ['mask_thejester', 'mask_junkdroid', 'mask_gasmask', 'mask_plainmask', 'mask_sunglasses', 'mask_throwbackmask'];\r\n  for(var i = 0; i < items.length; i++) {\r\n    var sprite = items[i]\r\n    var item = new VanillaItem(sprite, sprite);\r\n      item.description = '';\r\n      item.stats = {};\r\n      item.data.blockWidth=3;\r\n      item.data.blockHeight=3;\r\n      item.data.stance = 'handgun';\r\n      game.inventories.attachInventoryFuncs(item);\r\n  \tfurni.data.inventory.addItem(item)\r\n  }\r\n  var items = ['body_smoker', 'body_camo', 'body_medical'];\r\n  for(var i = 0; i < items.length; i++) {\r\n    var sprite = items[i]\r\n    var item = new VanillaItem(sprite, sprite);\r\n      item.description = '';\r\n      item.stats = {};\r\n      item.data.blockWidth=3;\r\n      item.data.blockHeight=3;\r\n      item.data.stance = 'handgun';\r\n      game.inventories.attachInventoryFuncs(item);\r\n  \tfurni.data.inventory.addItem(item)\r\n  }\r\n  *\/\r\n}"
+        }
+    }
+}

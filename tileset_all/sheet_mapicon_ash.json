@@ -1,0 +1,14 @@
+{
+    "name": "Map Icon Ash",
+    "codename": "sheet_mapicon_ash",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "tileset_all",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "filename": "map_icon_ash.png",
+        "blockSize": 1
+    }
+}

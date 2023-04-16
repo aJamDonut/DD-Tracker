@@ -1,0 +1,17 @@
+{
+    "name": "SinCorp Recon",
+    "codename": "recipe_ss_sin_recon",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_sin_recon",
+        "sprite": "body_sin_2",
+        "crafted_in": "ss_loom",
+        "require": "fiber,skin,composites,sinchip",
+        "amount": "43,24,2,1"
+    }
+}

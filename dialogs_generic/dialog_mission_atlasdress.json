@@ -1,0 +1,17 @@
+{
+    "name": "Atlas Wants a Dress",
+    "codename": "dialog_mission_atlasdress",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "dialogs_generic",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "dialog": "I want to be soo pretty, but I'm just an ugly clone :(. I once saw a lady in a dress. She was so beautiful! I wish I was a human and could have nice things.",
+        "option1": "You're just a clone. You don't need a dress.",
+        "option1_func": "function(caller) {\r\n\treturn \"Maybe you're right... No need to be so mean about it though. :(\";\r\n}",
+        "option2": "[CHECK] Do I have a dress?",
+        "option2_func": "function(caller, player) {\r\n  \tlet items = player.inventory.main.getItemArray();\r\n  \tconsole.log(player);\r\n  \tconsole.log(\"itemlist\",player.inventory.main.itemList);\r\n  \tconsole.log(items);\r\n  \tlet hasItem = false;\r\n \tfor(let i = 0; i < items.length; i++) {\r\n\t\tlet item = items[i];\r\n    \tif(item.codename==\"ss_body_bluedress\") {\r\n          \tplayer.inventory.main.removeItem(item);\r\n          \tcaller.inventory.brain.empty();\r\n          \tcaller.inventory.body.empty();\r\n          \tcaller.inventory.body.addItem(item, true);\r\n          \tcaller.inventory.brain.addItem(new InventoryItem('ss_brain_player_mk1'), true);\r\n          \t\/\/Found it so break loop\r\n          \treturn \"OMG WOW! Thank you! Hey listen, I'll help you with anything you want from now on! Just ask!\";\r\n        \tbreak; \r\n        }\r\n    }\r\n  \r\n\treturn \"You don't have a dress :( Maybe you could find one in an armour shop.\";\r\n}"
+    }
+}

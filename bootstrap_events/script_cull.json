@@ -1,0 +1,13 @@
+{
+    "name": "Cull Items",
+    "codename": "script_cull",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_events",
+    "color": "#202327",
+    "editedtime": "1677440827",
+    "vars": {
+        "exec": "function() {\r\n  game.cull = {};\r\n  game.cull.batch = 250;\r\n  game.cull.count = -1;\r\n  game.cull.cullCheck = function (item) {\r\n\r\n    \/\/This will run 10 times, could precalc elsewhere\r\n    let tl = game.render.viewport.toWorld(0, 0);\r\n    let br = game.render.viewport.toWorld(game.ui._VIEWPORT_RIGHT, game.ui._VIEWPORT_BOTTOM);\r\n\r\n    let bounds = item.getLocalBounds(false, true); \/\/More performant, skip children (already calculated)\r\n\r\n    let {x, y} = item;\r\n\r\n    \/\/Add padding\r\n    tl.x -= 500;\r\n    tl.y -= 500;\r\n    br.x += 500;\r\n    br.y += 500;\r\n\r\n    item.renderable = true; \/\/Visible by default\r\n    item.visible = true; \/\/Visible by default\r\n    \r\n    if (\r\n      x + bounds.width < tl.x\r\n      || y + bounds.height < tl.y\r\n      || x > br.x\r\n      || y > br.y\r\n    ) {\r\n      item.renderable = false; \/\/Cull (hide only)\r\n      item.visible = false; \/\/Cull (hide only)\r\n    }\r\n\r\n  }\r\n  \r\n  game.setTicker('cull', function () {\r\n    game.cull.count++;\r\n    var items = game.index.getIndex('cull');\r\n    var keys = Object.keys(items);\r\n    var batches = Math.ceil(keys.length \/ game.cull.batch); \/\/How many batches required\r\n    if (game.cull.count > batches) {\r\n      \/\/Nothing to cull\r\n      game.cull.count = -1;\r\n      return;\r\n    }\r\n    var start = game.cull.count * game.cull.batch;\r\n    for (var c = start; c < start + game.cull.batch; c++) {\r\n\r\n      if (!items[keys[c]]) {\r\n        continue; \/\/No more items to process\r\n      }\r\n      game.cull.cullCheck(items[keys[c]]);\r\n    }\r\n\r\n  });\r\n  \r\n}"
+    }
+}

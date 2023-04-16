@@ -1,0 +1,17 @@
+{
+    "name": "Codec",
+    "codename": "item_codec",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_inventory",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_miscitems",
+        "across": 1,
+        "down": 1,
+        "w": 64,
+        "h": 64
+    }
+}

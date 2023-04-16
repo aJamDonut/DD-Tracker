@@ -1,0 +1,15 @@
+{
+    "name": "Attack",
+    "codename": "aistate_attack",
+    "value": "101",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ai_states",
+    "color": "#202327",
+    "editedtime": "1675969718",
+    "vars": {
+        "start": "function(life) {\r\n  \r\n  life.attackStartX = life.x; \/\/Use own value if not false;\r\n  life.attackStartY = life.y;\r\n  \r\n  life.lastShot = Date.now();\r\n  \r\n  \r\n  life.pathFind = false;\r\n  if(life.target !== undefined) {\r\n    if(life.target.markedForDestroy == true) {\r\n      \/\/No valid target, either undefined, or set to be cleaned up.\r\n      return false;\r\n    }\r\n  }\r\n}",
+        "end": "function() {\r\n\r\n}",
+        "weight": "function(life) {\r\n\r\n  if(!life.data.targetId) {\r\n    return 0;\r\n  }\r\n\r\n  var target = servers.world.index.getFromIndex(life.data.targetId, 'all');\r\n\r\n  if (!target) {\r\n    console.error(\"Tried to attack non existing target\");\r\n    life.removeTarget();\r\n    return 0;\r\n  }\r\n\r\n\r\n  if (life.data.targetId) { \/\/TODO: can we move hasLOS?\r\n    life.data.doAttack = true;\r\n\r\n    let dist = (life.isMelee) ? 128 : 600;\r\n    let targetDist = life.dist(target);\r\n\r\n    if (targetDist > dist) {\r\n      return 0;\r\n    }\r\n\r\n    if (target == undefined) {\r\n      life.removeTarget();\r\n      return false;\r\n    }\r\n\r\n    if (target.data.dead) {\r\n      life.removeTarget();\r\n      return false;\r\n    }\r\n\r\n    if (life.sees[target.id] && life.id !== servers.world.playerId) {\r\n      life.stopMoving();\r\n    }\r\n\r\n    let cooldown = (life.data.bullet && life.data.bullet.cooldown) ? life.data.bullet.cooldown : 2;\r\n\r\n    \/\/TODO: reduce to not be vars, written out to be easily read.\r\n\r\n    let skill = 1; \/\/Fill with skill level\r\n\r\n    let cooldownCap = 75;\r\n\r\n    let onePercent = cooldownCap \/ 100;\r\n\r\n    let newCooldownReduction = onePercent * skill;\r\n\r\n    newCooldownReduction = newCooldownReduction \/ 100;\r\n\r\n    cooldown *= 1 - newCooldownReduction;\r\n\r\n    if (Date.now() > life.lastShot + (1000 * cooldown)) {\r\n\r\n      life.shoot();\r\n\r\n      life.lastShot = Date.now() + life.helper.rng(100, 2000); \/\/Add rng so that rythmms dont occur\r\n      if (life.data.stance == 'melee') {\r\n        life.searchStart = Date.now();\r\n        life.pathFind = true;\r\n        servers.world.helper.pathUpdate('asyncPathFind', { id: life.id, x: life.x, y: life.y, endX: life.attackStartX + servers.world.helper.rng(-64, 256), endY: life.attackStartY + servers.world.helper.rng(-64, 256) });\r\n      }\r\n    }\r\n\r\n\r\n\r\n    return 101;\r\n\r\n\r\n  }\r\n  return 0;\r\n}"
+    }
+}

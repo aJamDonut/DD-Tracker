@@ -1,0 +1,14 @@
+{
+    "name": "Hud Died",
+    "codename": "hud_died",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "component_stages",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "options": "'tip'",
+        "getElement": "function(options) {\r\n\r\n  game.cameraFollow = false;\r\n  game.p = {\r\n    x: 0,\r\n    y: 0,\r\n  }\r\n  \r\n\r\n  var pane = new UIContainer();\r\n  game.cover = new UIPane({ fullscreen: false, fill: '0x000000', padding: 0, x: 0, y: 0, w: game.ui._VIEWPORT_RIGHT, h: game.ui._VIEWPORT_BOTTOM })\r\n  game.cover.alpha = 0;\r\n  pane.addChild(game.cover);\r\n\r\n  game.setTicker(\"cover\", () => {\r\n    game.cover.height = game.ui._VIEWPORT_BOTTOM;\r\n    game.cover.width = game.ui._VIEWPORT_RIGHT;\r\n    game.cover.alpha += 0.01;\r\n  });\r\n\r\n  if (!options) {\r\n    options = {};\r\n  }\r\n\r\n  if (!options.tip) {\r\n    options.tip = \"Your entire squad has been wiped out!`n`nRemember: save often, plan ahead and most important, bring backup!\"\r\n  }\r\n\r\n  var x = 150;\r\n  var y = 150;\r\n  var pad = 50;\r\n  var btnType = 'hud_button';\r\n\r\n  var text = game.render.text('Uh-Oh! YOU WIPED!!', 'HUDCASH');\r\n  pane.addChild(text);\r\n  text.x = 10;\r\n  text.y = 10;\r\n\r\n  var text = game.render.text(options.tip, 'item-desc');\r\n  pane.addChild(text);\r\n  text.x = 10;\r\n  text.y = 50;\r\n  var btn = game.render.componentRaw(btnType, { name: 'Load' });\r\n  pane.addChild(btn);\r\n  btn.x = x;\r\n  btn.alpha = 0.5;\r\n  btn.y = y;\r\n  y += pad;\r\n  btn.isInteractive();\r\n  btn.on('pointerup', function () {\r\n    let ui = game.render.componentRaw('hud_load', { title: 'Load Game', type: 'load' }, 'hud_load');\r\n    game.render.aboveAll.addChild(ui);\r\n    ui.x = 100;\r\n    ui.y = 100;\r\n  });\r\n\r\n\r\n  return pane;\r\n}"
+    }
+}

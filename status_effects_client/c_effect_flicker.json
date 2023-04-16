@@ -1,0 +1,18 @@
+{
+    "name": "Flicker",
+    "codename": "c_effect_flicker",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "status_effects_client",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "start": "function(item, options){\r\n  item.alpha = 0.5;\r\n}",
+        "tick": "function(item, options){\r\n  item.alpha = Math.random();\r\n}",
+        "end": "function(item, options){\r\n  item.alpha = 1;\r\n}",
+        "remove": "function(item, options){\r\n  item.alpha = 1;\r\n}",
+        "stacks": "0",
+        "hidden": "1"
+    }
+}

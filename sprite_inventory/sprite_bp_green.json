@@ -1,0 +1,17 @@
+{
+    "name": "BP Green",
+    "codename": "sprite_bp_green",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_inventory",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_miscitems",
+        "across": 10,
+        "down": 9,
+        "w": 64,
+        "h": 64
+    }
+}

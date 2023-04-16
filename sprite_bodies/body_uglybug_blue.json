@@ -1,0 +1,17 @@
+{
+    "name": "Blue Ugly Bug",
+    "codename": "body_uglybug_blue",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_bodies",
+    "color": "#202327",
+    "editedtime": "1676661794",
+    "vars": {
+        "tileset": "sheet_animalia_spyder",
+        "across": 1,
+        "down": 1,
+        "w": 256,
+        "h": 192
+    }
+}

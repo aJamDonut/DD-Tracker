@@ -1,0 +1,22 @@
+{
+    "name": "Handgun Barrel",
+    "codename": "ss_item_handgunbarrel",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_gunparts",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_handgunbarrel",
+        "meta": {
+            "description": "A barrel for a handgun, could be useful",
+            "slots": "resource",
+            "blockWidth": 2,
+            "blockHeight": 1
+        },
+        "events": {
+            "onCreate": "function() {\r\n  \tthis.maxStack = 2;\r\n  \tthis.isQuantity = true;\r\n}"
+        }
+    }
+}

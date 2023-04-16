@@ -1,0 +1,25 @@
+{
+    "name": "Doctors Jacket",
+    "codename": "ss_body_medical",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_body",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "body_medical",
+        "meta": {
+            "description": "Medical jacket, slightly increases the intelligence of the wearer somehow",
+            "weight": 2,
+            "contextOptions": "equipt",
+            "slots": "body",
+            "blockWidth": 3,
+            "blockHeight": 3,
+            "value": 1450
+        },
+        "events": {
+            "onCreate": "function(item) {\r\n  \titem.data.stats.bluntReduction = 8;\r\n  \titem.data.stats.ballisticReduction = 4;\r\n  \titem.data.stats.sharpReduction = 8;\r\n  \titem.data.stats.tempHeat = 5;\r\n  \titem.data.stats.tempCold = -0;\r\n  \titem.data.stats.intelligence = 5;\r\n}"
+        }
+    }
+}

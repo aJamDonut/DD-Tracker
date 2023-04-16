@@ -1,0 +1,18 @@
+{
+    "name": "Touched",
+    "codename": "s_effect_touched",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "status_effects_server",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "start": "function(item, options){\r\n  item.alpha = 0.5;\r\n  item.touchers[options.source] = true;\r\n}",
+        "tick": "function(item, options){\r\n  \/\/item.alpha = Math.random();\r\n}",
+        "end": "function(item, options){\r\n  item.touchers[options.source] = false;\r\n  delete item.touchers[options.source];\r\n  item.alpha = 1;\r\n}",
+        "remove": "function(item, options){\r\n  item.alpha = 1;\r\n}",
+        "stacks": "0",
+        "hidden": "1"
+    }
+}

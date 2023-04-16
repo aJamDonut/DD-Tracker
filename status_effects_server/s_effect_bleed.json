@@ -1,0 +1,15 @@
+{
+    "name": "Bleed",
+    "codename": "s_effect_bleed",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "status_effects_server",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "start": "function(item, options){\r\n  \r\n}",
+        "tick": "function(item, options){\r\n  item.data.stats.hp -= options.tickDmg || 0.025;\r\n  if(item.data.stats.hp < 1 && !item.data.dead) {\r\n\titem.addStatus('dead');\r\n  }\r\n  item.sync();\r\n}",
+        "stacks": "1"
+    }
+}

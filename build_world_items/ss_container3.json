@@ -1,0 +1,17 @@
+{
+    "name": "Saveable Container",
+    "codename": "ss_container3",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_world_items",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "container_2",
+        "meta": [],
+        "events": {
+            "onCreate": "function(furni, loadData){\r\n\tgame.inventories.createInventoryForItem(furni, 15,15);\r\n}"
+        }
+    }
+}

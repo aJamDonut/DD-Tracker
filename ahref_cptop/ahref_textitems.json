@@ -1,0 +1,14 @@
+{
+    "name": "Text items",
+    "codename": "ahref_textitems",
+    "value": "3",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ahref_cptop",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "url": "item_types.php",
+        "submenu": []
+    }
+}

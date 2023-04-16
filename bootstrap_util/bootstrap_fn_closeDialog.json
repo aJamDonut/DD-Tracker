@@ -1,0 +1,13 @@
+{
+    "name": "Close Dialog",
+    "codename": "bootstrap_fn_closeDialog",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_util",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "exec": "function() {\r\n  \r\n  game.util.closeDialog = function() {\r\n      game.index.index.open_components['game_dialog'].destroy();\r\n  }\r\n  \r\n}"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Smoke 1",
+    "codename": "particles_smoke_1",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "particles",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprites": "tex_particle_1",
+        "data": "{\r\n\t\"alpha\": {\r\n\t\t\"start\": 0.74,\r\n\t\t\"end\": 0\r\n\t},\r\n\t\"scale\": {\r\n\t\t\"start\": 2,\r\n\t\t\"end\": 1.2,\r\n\t\t\"minimumScaleMultiplier\": 1\r\n\t},\r\n\t\"color\": {\r\n\t\t\"start\": \"#ffdfa0\",\r\n\t\t\"end\": \"#100f0c\"\r\n\t},\r\n\t\"speed\": {\r\n\t\t\"start\": 700,\r\n\t\t\"end\": 0,\r\n\t\t\"minimumSpeedMultiplier\": 0.1\r\n\t},\r\n\t\"acceleration\": {\r\n\t\t\"x\": 0,\r\n\t\t\"y\": 0\r\n\t},\r\n\t\"maxSpeed\": 0,\r\n\t\"startRotation\": {\r\n\t\t\"min\": 0,\r\n\t\t\"max\": 360\r\n\t},\r\n\t\"noRotation\": false,\r\n\t\"rotationSpeed\": {\r\n\t\t\"min\": 0,\r\n\t\t\"max\": 200\r\n\t},\r\n\t\"lifetime\": {\r\n\t\t\"min\": 0.5,\r\n\t\t\"max\": 0.75\r\n\t},\r\n\t\"blendMode\": \"normal\",\r\n\t\"ease\": [\r\n\t\t{\r\n\t\t\t\"s\": 0,\r\n\t\t\t\"cp\": 0.329,\r\n\t\t\t\"e\": 0.548\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"s\": 0.548,\r\n\t\t\t\"cp\": 0.767,\r\n\t\t\t\"e\": 0.876\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"s\": 0.876,\r\n\t\t\t\"cp\": 0.985,\r\n\t\t\t\"e\": 1\r\n\t\t}\r\n\t],\r\n\t\"frequency\": 0.001,\r\n\t\"emitterLifetime\": 0.1,\r\n\t\"maxParticles\": 50,\r\n\t\"pos\": {\r\n\t\t\"x\": 0,\r\n\t\t\"y\": 0\r\n\t},\r\n\t\"addAtBack\": true,\r\n\t\"spawnType\": \"point\"\r\n}"
+    }
+}

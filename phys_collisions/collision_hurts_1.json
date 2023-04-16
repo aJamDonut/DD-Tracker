@@ -1,0 +1,14 @@
+{
+    "name": "Hurts a bit",
+    "codename": "collision_hurts_1",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "phys_collisions",
+    "color": "#202327",
+    "editedtime": "1679157383",
+    "vars": {
+        "start": "function(me, toucher, first) {\r\n  if (toucher.codename !== 'life') {\r\n    return false;\r\n  }\r\n\r\n  if (typeof toucher.addStatus == 'function') {\r\n    if (me.class == 'Projectile') {\r\n\r\n      if (me.data.faction !== toucher.data.faction) {\r\n\r\n        \/\/If there are statuses on the bullet, pass them onto the collider\r\n        if (me.data.statuses && me.data.statuses.length > 0) {\r\n          for (let i = 0; i < me.data.statuses.length; i++) {\r\n            if (toucher.shouldAddStatus(me.data.statuses[i])) {\r\n              toucher.addStatus(me.data.statuses[i].status, Object.assign(me.data.statuses[i], { creatorId: me.data.creatorId, source: me.id + '-' + i }))\r\n            }\r\n          }\r\n        }\r\n\r\n        if (me.data.created < game.ts - 500) {\r\n          me.removePhysics = true;\r\n        }\r\n      }\r\n    }\r\n\r\n  }\r\n\r\n}",
+        "end": "function(me, toucher, first) {\r\n\r\n}"
+    }
+}

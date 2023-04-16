@@ -1,0 +1,26 @@
+{
+    "name": "Animal Yeux Ball",
+    "codename": "ss_animal_yeuxball",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_animalbody",
+    "color": "#202327",
+    "editedtime": "1678638171",
+    "vars": {
+        "sprite": "body_yeuxball",
+        "meta": {
+            "description": "Is this thing looking at me?",
+            "weight": 2,
+            "contextOptions": "equipt",
+            "slots": "body",
+            "blockWidth": 3,
+            "blockHeight": 3
+        },
+        "events": {
+            "onEquipt": "function(life) {\r\n}",
+            "onUnEquipt": "function(life) {\r\n  \r\n}",
+            "onCreate": "function(item) {\r\n  \t\r\n  \r\n}"
+        }
+    }
+}

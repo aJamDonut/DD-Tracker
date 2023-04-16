@@ -1,0 +1,15 @@
+{
+    "name": "Item is Craftbench",
+    "codename": "ext_craftingbench",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "entity_extension_items_client",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "events": {
+            "onCreate": "function(item){\r\n\r\n\tconsole.error(\"RUNNING CRAFTBENCH EXTENDER\");\r\n  \r\n  \tgame.inventories.createInventoryForItem(item, 10, 10, false, function(item){\r\n    \t\/\/When item added\r\n      console.log(this);\r\n      \tthis.sync();\r\n    });\r\n  \r\n\tif(this.data.queue) {\r\n  \t\tthis.queue = new CraftQueue(this, item.data.queue);\r\n    } else {\r\n\t\tthis.queue = new CraftQueue(this);\r\n    }\r\n\r\n\titem.data.queue = this.queue;\r\n  \r\n  \tthis.contextMenus['Craft'] = (caller) => {\r\n      let craft = game.render.component('hud_bench_crafting', {crafter: this}, 'hud_bench_crafting');\r\n      craft.x = 400;\r\n      craft.y = 200;\r\n\t  game.render.aboveAll.addChild(craft);\r\n\t}\r\n  \r\n  \titem.sync();\r\n\tconsole.error(\"RUNNING CRAFTBENCH EXTENDER SYNC\");\r\n  \tgame.offloader.addToIndex('ticker', item);\r\n  \tgame.offloader.addToIndex('playerstorage', item);\r\n  \tgame.index.addToIndex('playerstorage', item);\r\n\tconsole.error(\"RUNNING CRAFTBENCH EXTENDER ADD TO INDEXES\");\r\n  \r\n}"
+        }
+    }
+}

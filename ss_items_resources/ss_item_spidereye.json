@@ -1,0 +1,23 @@
+{
+    "name": "Arachnid Eye",
+    "codename": "ss_item_spidereye",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_resources",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_spider_eye",
+        "meta": {
+            "description": "Is it looking at me, or you?",
+            "slots": "resource",
+            "blockWidth": 2,
+            "blockHeight": 2,
+            "value": 80
+        },
+        "events": {
+            "onCreate": "function() {\r\n  \tthis.maxStack = 5;\r\n  \tthis.isQuantity = true;\r\n}"
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "name": "Default Stage",
+    "codename": "stages_default_stage",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "component_stages",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "getElement": "function(options) {\r\n  \r\n  if(!options) {\r\n\toptions = {};\r\n  }\r\n  \r\n  \r\n  var text = options.text || \"LOADED WITHOUT STAGE\";\r\n  \r\n  var w = 400;\r\n  var h = 150;\r\n  var pane = game.render.componentRaw('drawBoxPane', {title:'Notification', moveable: true, showX: true, w: w, h: h});\r\n  \r\n\r\n  \r\n  \r\n  var text = game.render.text(text, 'longerwhitedesc');\r\n  text.x = pane.width\/2\r\n  text.y = pane.height\/2\r\n  text.anchor.set(0.55,1);\r\n  pane.addChild(text);\r\n  return pane;\r\n  \r\n}\r\n"
+    }
+}

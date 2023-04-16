@@ -1,0 +1,17 @@
+{
+    "name": "Skin Crawler Right",
+    "codename": "body_skincrawlerright",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_bodiesright",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_animalia",
+        "across": 3,
+        "down": 3,
+        "w": 128,
+        "h": 128
+    }
+}

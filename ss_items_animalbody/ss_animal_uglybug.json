@@ -1,0 +1,26 @@
+{
+    "name": "Animal Ugly Bug",
+    "codename": "ss_animal_uglybug",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_animalbody",
+    "color": "#202327",
+    "editedtime": "1674427948",
+    "vars": {
+        "sprite": "body_uglybug",
+        "meta": {
+            "description": "Such an ugly bug.",
+            "weight": 2,
+            "contextOptions": "equipt",
+            "slots": "body",
+            "blockWidth": 3,
+            "blockHeight": 3
+        },
+        "events": {
+            "onEquipt": "function(life) {\r\n\r\n  game.queue.add(()=>{\r\n  \r\n   \tgame.render.spine.hackSpineSlot('head_down', life.spine, game.render.getSpriteTexture('blank'));\r\n    game.render.spine.hackSpineSlot('head_right', life.spine, game.render.getSpriteTexture('blank'));\r\n    game.render.spine.hackSpineSlot('head_up', life.spine, game.render.getSpriteTexture('blank'));\r\n    game.render.spine.hackSpineSlot('hand', life.spine, game.render.getSpriteTexture('blank'));\r\n    game.render.spine.hackSpineSlot('hand2', life.spine, game.render.getSpriteTexture('blank'));\r\n  });\r\n  \r\n    this.dontBump = true;\r\n    game.tween(this, 'critter');\r\n\r\n  \r\n  \r\n}",
+            "onUnEquipt": "function(life) {\r\n  \r\n}",
+            "onCreate": "function(item) {\r\n  \t\r\n  \r\n}"
+        }
+    }
+}

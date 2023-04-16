@@ -1,0 +1,18 @@
+{
+    "name": "Codec: The Dead Desert",
+    "codename": "codec_b3",
+    "value": "3",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_textitems_codecs",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "item_codec",
+        "meta": {
+            "blockWidth": 1,
+            "blockHeight": 1,
+            "description": "[Author: The Bookmaker] [Year: 4080]\r\nI still remember arrival day at the landing zone. Everyone was so excited, lined up at the windows of the deployment pod. It was quite a moving sight, even the children who were born a long the way who had never even seen a planet before; silent for the first time in years. Complete silence around the entire ship, only the engines thrusters could be heard. Until the thud. We'd arrived.\r\n\r\nAt first nobody knew what to call our new home, some suggested fantastical names like Planet Perfect, Utopia and Natures Bounty. Ha. It still gives me a good chuckle. Imagine... Utopia!\r\n\r\nFor a long time the crew and new clones simply referred to the place as \"The Desert\", suggestions that drew any attention to this being anything other than miserable were quickly shot down by the majority of the now tired and cynical colony.\r\n\r\nAfter a while a few started to quip about it being the \"Dead Desert\". I can't argue.. Out of all the names we've tried to attribute to this place... This one seems the most fitting."
+        }
+    }
+}

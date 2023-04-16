@@ -1,0 +1,14 @@
+{
+    "name": "Front Menu BG",
+    "codename": "frontmenu_bg",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "tileset_all",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "filename": "menu_bg.png",
+        "blockSize": 1
+    }
+}

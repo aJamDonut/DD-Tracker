@@ -1,0 +1,17 @@
+{
+    "name": "Lab IV Drip",
+    "codename": "lab_ivdrip",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_lab",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_lab_items",
+        "across": 16,
+        "down": 27,
+        "w": 128,
+        "h": 192
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Obsidian Stuct Tri",
+    "codename": "sprite_obsidian_struct_tri",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_worlditems",
+    "color": "#202327",
+    "editedtime": "1678583358",
+    "vars": {
+        "tileset": "sheet_random_pieces",
+        "across": 7,
+        "down": 21,
+        "w": 192,
+        "h": 256
+    }
+}

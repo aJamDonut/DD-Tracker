@@ -1,0 +1,27 @@
+{
+    "name": "Padded Rags",
+    "codename": "ss_rags",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_body",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "body_rags",
+        "meta": {
+            "description": "Barely scraps, this clothing is best recycled",
+            "weight": 2,
+            "contextOptions": "equipt",
+            "slots": "body",
+            "blockWidth": 2,
+            "blockHeight": 2,
+            "value": 750
+        },
+        "events": {
+            "onEquipt": "function(life) {\r\n\tlife.addStatsFrom(this);\r\n}",
+            "onUnEquipt": "function(life) {\r\n\tlife.removeStatsFrom(this);\r\n}",
+            "onCreate": "function(item) {\r\n  \titem.data.stats.bluntReduction = 10;\r\n  \titem.data.stats.ballisticReduction = 2;\r\n  \titem.data.stats.sharpReduction = 11;\r\n  \titem.data.stats.tempHeat = 6;\r\n  \titem.data.stats.tempCold = -6;\r\n}"
+        }
+    }
+}

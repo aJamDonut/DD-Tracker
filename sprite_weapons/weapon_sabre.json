@@ -1,0 +1,18 @@
+{
+    "name": "Sabre",
+    "codename": "weapon_sabre",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_weapons",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_weapons",
+        "description": "Katana",
+        "across": 1,
+        "down": 7,
+        "w": 128,
+        "h": 64
+    }
+}

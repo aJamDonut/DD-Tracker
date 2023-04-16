@@ -1,0 +1,17 @@
+{
+    "name": "Blue Ugly Bug Right3",
+    "codename": "body_uglybug_blueright3",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_bodiesright",
+    "color": "#202327",
+    "editedtime": "1676661946",
+    "vars": {
+        "tileset": "sheet_animalia_spyder",
+        "across": 9,
+        "down": 4,
+        "w": 256,
+        "h": 192
+    }
+}

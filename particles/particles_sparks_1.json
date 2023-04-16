@@ -1,0 +1,14 @@
+{
+    "name": "Sparks 1",
+    "codename": "particles_sparks_1",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "particles",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprites": "tex_spark_1",
+        "data": "{\r\n\t\"alpha\": {\r\n\t\t\"start\": 1,\r\n\t\t\"end\": 0\r\n\t},\r\n\t\"scale\": {\r\n\t\t\"start\": 0.5,\r\n\t\t\"end\": 1,\r\n\t\t\"minimumScaleMultiplier\": 1\r\n\t},\r\n\t\"color\": {\r\n\t\t\"start\": \"#d1b200\",\r\n\t\t\"end\": \"#f2ff03\"\r\n\t},\r\n\t\"speed\": {\r\n\t\t\"start\": 300,\r\n\t\t\"end\": 100,\r\n\t\t\"minimumSpeedMultiplier\": 0.2\r\n\t},\r\n\t\"acceleration\": {\r\n\t\t\"x\": 0,\r\n\t\t\"y\": 0\r\n\t},\r\n\t\"maxSpeed\": 0,\r\n\t\"startRotation\": {\r\n\t\t\"min\": 180,\r\n\t\t\"max\": 180\r\n\t},\r\n\t\"noRotation\": false,\r\n\t\"rotationSpeed\": {\r\n\t\t\"min\": 0,\r\n\t\t\"max\": 0\r\n\t},\r\n\t\"lifetime\": {\r\n\t\t\"min\": 0.5,\r\n\t\t\"max\": 0.81\r\n\t},\r\n\t\"blendMode\": \"normal\",\r\n\t\"frequency\": 1,\r\n\t\"emitterLifetime\": -1,\r\n\t\"maxParticles\": 200,\r\n\t\"pos\": {\r\n\t\t\"x\": 0,\r\n\t\t\"y\": 0\r\n\t},\r\n\t\"addAtBack\": true,\r\n\t\"spawnType\": \"burst\",\r\n\t\"particlesPerWave\": 3,\r\n\t\"particleSpacing\": 0,\r\n\t\"angleStart\": 0\r\n}"
+    }
+}

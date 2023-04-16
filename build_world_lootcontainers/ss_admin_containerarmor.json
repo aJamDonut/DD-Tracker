@@ -1,0 +1,22 @@
+{
+    "name": "Admin Armors",
+    "codename": "ss_admin_containerarmor",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_world_lootcontainers",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "container_2",
+        "meta": {
+            "blockZone": "all",
+            "physicsType": "logic",
+            "contextOptions": "loot,hack,pickup",
+            "description": "A handy item container"
+        },
+        "events": {
+            "onCreate": "function(furni){\r\n \r\n  \tgame.inventories.createInventoryForItem(furni, 25,25, true);\r\n  \r\n \tfor(var codename in _BLUEPRINTS.INV_ITEMS) {\r\n      if(_BLUEPRINTS.INV_ITEMS[codename].meta.slots=='body') {\r\n  \t\tfurni.inventory.addItem(new InventoryItem(codename), true);\r\n      }\r\n    }\r\n  \r\n}"
+        }
+    }
+}

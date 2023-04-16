@@ -1,0 +1,19 @@
+{
+    "name": "Robot Body",
+    "codename": "ss_item_body_robot",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_body",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "body_robot",
+        "meta": {
+            "blockWidth": 2,
+            "blockHeight": 2,
+            "value": 2900
+        },
+        "events": []
+    }
+}

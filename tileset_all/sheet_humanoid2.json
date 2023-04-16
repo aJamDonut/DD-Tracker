@@ -1,0 +1,14 @@
+{
+    "name": "Humanin2",
+    "codename": "sheet_humanoid2",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "tileset_all",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "filename": "humanoid2.png",
+        "blockSize": 64
+    }
+}

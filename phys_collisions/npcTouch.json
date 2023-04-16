@@ -1,0 +1,14 @@
+{
+    "name": "npcTouch",
+    "codename": "npcTouch",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "phys_collisions",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "start": "function(me, toucher, first, event) {\r\n  \tif(first) {\r\n      if(event == 'start') {\r\n          servers.physics.helper.physicsUpdate('nudge', {id: toucher.id});\r\n      } else {\r\n          servers.physics.helper.physicsUpdate('endNudge', {id: toucher.id});\r\n      }\r\n    }\r\n}",
+        "end": "function(){}"
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "name": "Satchel Backback",
+    "codename": "ss_backpack_satchel",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_backpack",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "backpack_satchel",
+        "meta": {
+            "weight": 1,
+            "contextOptions": "equipt",
+            "slots": "backpack",
+            "blockWidth": 3,
+            "blockHeight": 3
+        },
+        "events": []
+    }
+}

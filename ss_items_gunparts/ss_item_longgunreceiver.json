@@ -1,0 +1,22 @@
+{
+    "name": "Long Gun Receiver",
+    "codename": "ss_item_longgunreceiver",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_gunparts",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_receiver_longgun",
+        "meta": {
+            "description": "Receiver for a longgun, could be useful",
+            "slots": "resource",
+            "blockWidth": 2,
+            "blockHeight": 2
+        },
+        "events": {
+            "onCreate": "function() {\r\n  \tthis.maxStack = 1;\r\n  \tthis.isQuantity = true;\r\n}"
+        }
+    }
+}

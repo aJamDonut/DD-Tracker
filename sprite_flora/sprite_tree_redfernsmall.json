@@ -1,0 +1,17 @@
+{
+    "name": "Small red fern",
+    "codename": "sprite_tree_redfernsmall",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_flora",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_world_items",
+        "across": 6,
+        "down": 26,
+        "w": 192,
+        "h": 192
+    }
+}

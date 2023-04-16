@@ -1,0 +1,17 @@
+{
+    "name": "Satchel",
+    "codename": "backpack_satchel",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_misc",
+    "color": "",
+    "editedtime": "1670882765",
+    "vars": {
+        "tileset": "sheet_miscitems",
+        "across": 1,
+        "down": 4,
+        "w": 128,
+        "h": 128
+    }
+}

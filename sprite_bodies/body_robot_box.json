@@ -1,0 +1,17 @@
+{
+    "name": "Box Robot Body",
+    "codename": "body_robot_box",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_bodies",
+    "color": "#202327",
+    "editedtime": "1679236204",
+    "vars": {
+        "tileset": "sheet_humanoid2",
+        "across": 13,
+        "down": 5,
+        "w": 128,
+        "h": 128
+    }
+}

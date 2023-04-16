@@ -1,0 +1,24 @@
+{
+    "name": "Collector Mask",
+    "codename": "ss_item_mask_collector",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_masks",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "mask_collector",
+        "meta": {
+            "slots": "mask",
+            "blockWidth": 2,
+            "blockHeight": 2,
+            "value": 1850
+        },
+        "events": {
+            "onEquipt": "function(life) {\r\n\tlife.addStatsFrom(this);\r\n}",
+            "onUnEquipt": "function(life) {\r\n\tlife.removeStatsFrom(this);\r\n}",
+            "onCreate": "function(item) {\r\n  \titem.data.stats.bluntReduction = 5;\r\n  \titem.data.stats.ballisticReduction = 1;\r\n  \titem.data.stats.sharpReduction = 5;\r\n  \titem.data.stats.tempHeat = 2.5;\r\n  \titem.data.stats.tempCold = -2.5;\r\n}"
+        }
+    }
+}

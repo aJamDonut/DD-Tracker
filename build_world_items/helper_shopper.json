@@ -1,0 +1,18 @@
+{
+    "name": "Shopper point",
+    "codename": "helper_shopper",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_world_items",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "btn_blank_sqr2",
+        "meta": [],
+        "events": {
+            "onCreate": "function(spawner){\r\n\r\n    game.offloader.addToIndex('helper_shopper_point', spawner);\r\n  \tgame.offloader.addToIndex('helper_guard_point', spawner); \/\/Guards can use it too\r\n  \t\/\/spawner.alpha = !!game.editMode; \/\/Hide self\r\n}"
+        },
+        "destroyBase": "0"
+    }
+}

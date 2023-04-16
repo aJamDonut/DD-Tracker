@@ -1,0 +1,17 @@
+{
+    "name": "Spider Eye",
+    "codename": "sprite_spider_eye",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_inventory",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_miscitems",
+        "across": 7,
+        "down": 12,
+        "w": 128,
+        "h": 128
+    }
+}

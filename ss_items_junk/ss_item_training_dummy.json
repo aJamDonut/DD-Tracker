@@ -1,0 +1,19 @@
+{
+    "name": "Training Dummy",
+    "codename": "ss_item_training_dummy",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_junk",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_training_dummy",
+        "meta": {
+            "blockWidth": 2,
+            "blockHeight": 2,
+            "value": 400
+        },
+        "events": []
+    }
+}

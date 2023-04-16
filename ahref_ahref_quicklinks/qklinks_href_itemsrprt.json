@@ -1,0 +1,13 @@
+{
+    "name": "Items Report",
+    "codename": "qklinks_href_itemsrprt",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ahref_ahref_quicklinks",
+    "color": "#202327",
+    "editedtime": "1678105077",
+    "vars": {
+        "url": "..\/..\/gd_cp_modules\/http\/modules\/gd_mod_2d\/pages\/items_report.php"
+    }
+}

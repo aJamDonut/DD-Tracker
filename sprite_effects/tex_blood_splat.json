@@ -1,0 +1,17 @@
+{
+    "name": "Blood Splat",
+    "codename": "tex_blood_splat",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_effects",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "texture_effect_blood",
+        "across": 1,
+        "down": 1,
+        "w": 64,
+        "h": 64
+    }
+}

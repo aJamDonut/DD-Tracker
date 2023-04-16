@@ -1,0 +1,17 @@
+{
+    "name": "Battery Tall",
+    "codename": "e_ss_battery_tall",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "si_extension_misc",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "ss_battery_tall",
+        "meta": {
+            "blockZone": "top"
+        },
+        "events": []
+    }
+}

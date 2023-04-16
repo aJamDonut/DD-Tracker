@@ -1,0 +1,13 @@
+{
+    "name": "New Game",
+    "codename": "script_event_newgame_init",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_events",
+    "color": "#202327",
+    "editedtime": "1680346766",
+    "vars": {
+        "exec": "function() {\r\n  game.ee.on('newgame-init', function (options) {\r\n\r\n\r\n    game.saves.unload();\r\n\r\n    console.error(\"[ABE] New game started!\", options);\r\n\r\n    game.session.newGame();\r\n\r\n\r\n    game.ui.mainUI();\r\n\r\n    let x = game.urlVar('x');\r\n    let y = game.urlVar('y');\r\n\r\n    if (game.spawnPoint) {\r\n      x = game.spawnPoint[0];\r\n      y = game.spawnPoint[1];\r\n    }\r\n\r\n    game.render.viewport.x = -((64 * 10) * x)\r\n    game.render.viewport.y = -((64 * 10) * y)\r\n\r\n    game.grid.loadFirstChunk(x, y);\r\n\r\n    game.audio.play('windLoop');\r\n    game.audio.play('track01');\r\n\r\n    game.session.newGame();\r\n\r\n    game.slot = options.slot;\r\n    game.fs.setFolder(options.slot, true);\r\n\r\n    \/\/game.ui.showUI('newgame');\r\n\r\n\r\n\r\n  });\r\n}"
+    }
+}

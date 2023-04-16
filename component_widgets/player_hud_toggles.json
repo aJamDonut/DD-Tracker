@@ -1,0 +1,14 @@
+{
+    "name": "Pawn Commands",
+    "codename": "player_hud_toggles",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "component_widgets",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "options": "'name, value, x, y, w, h, lblW'",
+        "getElement": "function(options) { \r\n  \r\n  return new TickerContainer({}, function(){\r\n  \r\n  \r\n    \r\n  \tlet w = 100;\r\n  \tlet h = 800;\r\n  \r\n  \tlet page = 1;\r\n                \r\n    let list = [\r\n\r\n        game.render.component('hud_checkbox',\r\n                              {\r\n        name: 'Move',\r\n          isEnabled: function(){\r\n            return game.session.getCommand() == 'move';\r\n          },\r\n          onEnable: function() {\r\n\t\t\tgame.session.setAllCommand('move');\r\n      \t  }\r\n        }),\r\n   \r\n      game.render.component('hud_checkbox',\r\n        {\r\n        name: 'Defend',\r\n          isEnabled: function(){\r\n            return game.session.getCommand() == 'defend';\r\n          },\r\n          onEnable: function() {\r\n\t\t\tgame.session.setAllCommand('defend');\r\n      \t  }\r\n        }),\r\n      \r\n      game.render.component('hud_checkbox',\r\n        {\r\n        name: 'Attack',\r\n          isEnabled: function(){\r\n            return game.session.getCommand() == 'attack';\r\n          },\r\n          onEnable: function() {\r\n\t\t\tgame.session.setAllCommand('attack');\r\n      \t  }\r\n        }),\r\n      \r\n      game.render.component('hud_checkbox',\r\n        {\r\n        name: 'Jobs',\r\n          isEnabled: function(){\r\n            return game.session.getCommand() == 'jobs';\r\n          },\r\n          onEnable: function() {\r\n\t\t\tgame.session.setAllCommand('jobs');\r\n      \t  }\r\n        }),\r\n      \r\n      game.render.component('hud_checkbox',\r\n        {\r\n        name: 'Stay',\r\n          isEnabled: function(){\r\n            return game.session.getCommand() == 'stay';\r\n          },\r\n          onEnable: function() {\r\n\t\t\tgame.session.setAllCommand('stay');\r\n      \t  }\r\n        }),\r\n\r\n    ];\r\n \r\n    var pane = new UIContainer({fullscreen:false, fill: '0x303030', padding:0, x: -10, y: 5, w: 330, h:h-55});\r\n    let pager = game.render.componentRaw('pager', {ticks: true, page: page, width:320, items:list, itemsPerPage:10});\r\n  \t\r\n    pager.x = -5\r\n    pager.y = 10;\r\n                   \r\n    pane.addChild(pager)\r\n   \tthis.addChild(pane);\r\n  }, 0.1);\r\n }"
+    }
+}

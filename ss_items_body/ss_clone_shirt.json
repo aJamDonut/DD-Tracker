@@ -1,0 +1,25 @@
+{
+    "name": "Clone Shirt",
+    "codename": "ss_clone_shirt",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_body",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "body_cloneshirt",
+        "meta": {
+            "description": "A simple shirt, offers little protection but some cooling",
+            "weight": 2,
+            "contextOptions": "equipt",
+            "slots": "body",
+            "blockWidth": 2,
+            "blockHeight": 2,
+            "value": 900
+        },
+        "events": {
+            "onCreate": "function(item) {\r\n  \titem.data.stats.bluntReduction = 4;\r\n  \titem.data.stats.ballisticReduction = 2;\r\n  \titem.data.stats.sharpReduction = 4;\r\n  \titem.data.stats.tempHeat = 10;\r\n  \titem.data.stats.tempCold = -10;\r\n}"
+        }
+    }
+}

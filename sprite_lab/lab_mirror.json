@@ -1,0 +1,17 @@
+{
+    "name": "Lab Mirror",
+    "codename": "lab_mirror",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_lab",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_lab_items",
+        "across": 10,
+        "down": 26,
+        "w": 128,
+        "h": 128
+    }
+}

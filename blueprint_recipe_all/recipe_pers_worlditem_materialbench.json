@@ -1,0 +1,17 @@
+{
+    "name": "Material Bench",
+    "codename": "recipe_pers_worlditem_materialbench",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "pers_worlditem_materialbench",
+        "sprite": "sprite_stonebench",
+        "crafted_in": "build",
+        "require": "wood,stone",
+        "amount": "10,10"
+    }
+}

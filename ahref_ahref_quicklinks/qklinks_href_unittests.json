@@ -1,0 +1,13 @@
+{
+    "name": "Unit Tests",
+    "codename": "qklinks_href_unittests",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ahref_ahref_quicklinks",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "url": "..\/..\/ABE\/deaddesert-test-suite.html?suite=core"
+    }
+}

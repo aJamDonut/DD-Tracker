@@ -1,0 +1,14 @@
+{
+    "name": "KToon Smoke",
+    "codename": "tileset_ktoon_smoke",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "tileset_all",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "filename": "ktoon_smoke.png",
+        "blockSize": 1
+    }
+}

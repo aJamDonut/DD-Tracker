@@ -1,0 +1,16 @@
+{
+    "name": "Template",
+    "codename": "recipe_template",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_backpack_satchel",
+        "require": "carbon,adhesive",
+        "amount": "50000,10000",
+        "sprite": "backpack_small"
+    }
+}

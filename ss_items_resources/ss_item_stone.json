@@ -1,0 +1,23 @@
+{
+    "name": "Stone Pile",
+    "codename": "ss_item_stone",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_resources",
+    "color": "#202327",
+    "editedtime": "1675955848",
+    "vars": {
+        "sprite": "item_stonepile",
+        "meta": {
+            "description": "Rock hard desert rock",
+            "slots": "resource",
+            "blockWidth": 2,
+            "blockHeight": 2,
+            "value": 15
+        },
+        "events": {
+            "onCreate": "function() {\r\n  \tthis.maxStack = 10;\r\n  \tthis.isQuantity = true;\r\n}"
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "name": "Emitter",
+    "codename": "ss_emitter",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_world_items",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "container_2",
+        "description": "An item container",
+        "blockWidth": 4,
+        "blockHeight": 3,
+        "meta": {
+            "blockZone": "all",
+            "physicsType": "sensor",
+            "contextOptions": "loot,hack,pickup"
+        },
+        "events": {
+            "onCreate": "function(furni){\r\n  var particle = new Particles('sparks_1')\r\n  \r\n  particle.furni = furni;\r\n  particle.x = furni.x;\r\n  particle.y = furni.y;\r\n  game.render.aboveLife.addChild(particle);\r\n  try {\r\n  \tparticle.playOnce();\r\n  } catch(e) {\r\n\tconsole.error(e);\r\n  }\r\n}"
+        },
+        "destroyBase": "1"
+    }
+}

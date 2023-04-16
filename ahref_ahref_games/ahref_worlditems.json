@@ -1,0 +1,14 @@
+{
+    "name": "Buildable Items",
+    "codename": "ahref_worlditems",
+    "value": "5",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ahref_ahref_games",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "url": "items.php?template=build&direct=true",
+        "submenu": []
+    }
+}

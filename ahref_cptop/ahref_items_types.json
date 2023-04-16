@@ -1,0 +1,14 @@
+{
+    "name": "Types",
+    "codename": "ahref_items_types",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ahref_cptop",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "url": "item_types.php",
+        "submenu": []
+    }
+}

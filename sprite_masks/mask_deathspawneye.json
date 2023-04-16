@@ -1,0 +1,17 @@
+{
+    "name": "Deathspawn Eye",
+    "codename": "mask_deathspawneye",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_masks",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_humanoid2",
+        "across": 11,
+        "down": 1,
+        "w": 128,
+        "h": 128
+    }
+}

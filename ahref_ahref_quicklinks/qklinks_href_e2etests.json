@@ -1,0 +1,13 @@
+{
+    "name": "e2e Tests",
+    "codename": "qklinks_href_e2etests",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ahref_ahref_quicklinks",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "url": "..\/..\/ABE\/deaddesert-test-suite.html?suite=ai_states&noAudio=true&test=true&type=scene&unit=lvltest&x=1&y=1&tt=y&map=dev&readOnly=true&labels=true&showPathing=true"
+    }
+}

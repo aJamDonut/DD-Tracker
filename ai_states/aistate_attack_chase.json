@@ -1,0 +1,15 @@
+{
+    "name": "Attack Chase",
+    "codename": "aistate_attack_chase",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ai_states",
+    "color": "#202327",
+    "editedtime": "1675958195",
+    "vars": {
+        "start": "function(life) {\r\n if(life.attackStartX == false) {    \r\n    life.attackStartX = (life.attackStartX) ? life.attackStartX : life.x; \/\/Use own value if not false;\r\n    life.attackStartY = (life.attackStartY) ? life.attackStartY : life.y;\r\n  }\r\n  life.lastShot = Date.now();\r\n  \r\n  \r\n  life.pathFind = false;\r\n  if(life.target !== undefined) {\r\n    if(life.target.markedForDestroy == true) {\r\n      \/\/No valid target, either undefined, or set to be cleaned up.\r\n      return false;\r\n    }\r\n  }\r\n  return true;\r\n}",
+        "run": "function(life) {\r\n    var target = servers.world.index.getFromIndex(life.data.targetId, 'all');\r\n  \r\n  if(target == undefined) {\r\n    \r\n    life.log(\"Target removed\");\r\n    return false;\r\n  }\r\n\r\n  life.seekObj = target;\r\n\r\n  return true;\r\n}",
+        "weight": "function(life) {\r\n\r\n  life.log(\"Chase? \" + life.data.command + \" \" + life.data.command);\r\n\r\n  if (life.data.isPlayer && life.data.command !== 'attack' && life.data.command !== 'defend') {\r\n    return 0; \/\/Commanded to stay\r\n  }\r\n\r\n  if(life.data.holdPosition) {\r\n    return 0;\r\n  }\r\n\r\n  life.log(\"Chase?\");\r\n\r\n  if (!life.data.targetId) {\r\n    return 0;\r\n  }\r\n\r\n  life.log(\"No target\");\r\n\r\n  var target = servers.world.index.getFromIndex(life.data.targetId, 'all');\r\n\r\n  if (!target) {\r\n    life.data.targetId = false;\r\n    return 0;\r\n  }\r\n\r\n  if (target.data.dead) {\r\n    return 0;\r\n  }\r\n\r\n  life.log(\"Target dead\");\r\n\r\n  let dist = (life.isMelee) ? 80 : 600;\r\n\r\n  let targetDist = life.dist(target);\r\n  let hasLOS = life.sees[target.id];\r\n\r\n  life.log(\"Distance: \" + targetDist);\r\n\r\n\r\n  if (!life.isMelee && hasLOS && targetDist < 600) {\r\n    console.log(\"Life no seek\", life.path, life);\r\n    life.seekObj = false;\r\n    life.gotoId = false;\r\n    return 0; \/\/Close enough to shoot\r\n  }\r\n\r\n  if (life.data.targetId) {\r\n    if (life.isMelee || (targetDist > dist || !hasLOS)) {\r\n      life.log(\"LOS\" + hasLOS);\r\n      life.log(\"Chasing\" + targetDist + \"<\" + dist);\r\n      life.seekObj = target;\r\n      life.gotoId = target.id;\r\n    } else {\r\n      life.seekObj = false;\r\n      life.gotoId = false;\r\n    }\r\n  }\r\n\r\n  if (life.attackStartX == false) {\r\n    life.attackStartX = (life.attackStartX) ? life.attackStartX : life.x; \/\/Use own value if not false;\r\n    life.attackStartY = (life.attackStartY) ? life.attackStartY : life.y;\r\n  }\r\n\r\n  return 0;\r\n}"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Black Diamond",
+    "codename": "anisprite_blackdiamond",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ani_all",
+    "color": "#202327",
+    "editedtime": "1678579420",
+    "vars": {
+        "textures": "sprite_blackdiamond_1\r\nsprite_blackdiamond_2\r\nsprite_blackdiamond_3\r\nsprite_blackdiamond_2\r\nsprite_blackdiamond_1\r\nsprite_blackdiamond_6\r\nsprite_blackdiamond_5\r\nsprite_blackdiamond_4\r\nsprite_blackdiamond_5\r\nsprite_blackdiamond_6",
+        "speed": "100",
+        "width": 192,
+        "height": 320
+    }
+}

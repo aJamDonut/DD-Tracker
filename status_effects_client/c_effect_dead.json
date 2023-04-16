@@ -1,0 +1,14 @@
+{
+    "name": "Dead",
+    "codename": "c_effect_dead",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "status_effects_client",
+    "color": "#202327",
+    "editedtime": "1679142522",
+    "vars": {
+        "start": "function(item, options){\r\n  item.setAnim('none\/dead_1',true);\r\n  item.data.dead = true;\r\n    if(item.id == game.session.data.firstPawnId) { \/\/If it's the main pawn\r\n   \/\/Player died\r\n    \r\n    \/\/game.render.aboveAll.addChild(game.render.componentRaw('hud_died', {}, 'frontMenu'));\r\n  }\r\n}",
+        "stacks": "1"
+    }
+}

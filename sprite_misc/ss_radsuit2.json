@@ -1,0 +1,17 @@
+{
+    "name": "Rad suit 2",
+    "codename": "ss_radsuit2",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_misc",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_lab_items",
+        "across": 1,
+        "down": 29,
+        "w": 128,
+        "h": 128
+    }
+}

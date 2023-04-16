@@ -1,0 +1,17 @@
+{
+    "name": "Slim Robot Body",
+    "codename": "recipe_body_robot_slim",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_item_body_robot_slim",
+        "sprite": "body_robot_slim",
+        "crafted_in": "ss_loom",
+        "require": "adhesive,composites,sheetmetal,redgem",
+        "amount": "1,5,20,1"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Barricade Horizontal",
+    "codename": "sprite_barricade_h",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_worlditems",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_world_items",
+        "across": 1,
+        "down": 12,
+        "w": 448,
+        "h": 192
+    }
+}

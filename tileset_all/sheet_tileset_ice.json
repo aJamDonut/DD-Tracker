@@ -1,0 +1,14 @@
+{
+    "name": "Ice Tileset",
+    "codename": "sheet_tileset_ice",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "tileset_all",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "filename": "snowtileset.png",
+        "blockSize": 64
+    }
+}

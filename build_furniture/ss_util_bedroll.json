@@ -1,0 +1,20 @@
+{
+    "name": "Bedroll",
+    "codename": "ss_util_bedroll",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_furniture",
+    "color": "#202327",
+    "editedtime": "1679162637",
+    "vars": {
+        "sprite": "sprite_bed",
+        "meta": {
+            "blockZone": "all",
+            "physicsType": "helper"
+        },
+        "events": {
+            "onCreate": "function() {\r\n\r\n    this.contextMenus['Sleep'] = function(item){\r\n        game.p.addStatusFromClient('sleeping', {sleepX: item.x+5, sleepY: item.y-22, duration: Infinity, source: this.id, canCancelWithMove: true});\r\n    }\r\n\r\n}"
+        }
+    }
+}

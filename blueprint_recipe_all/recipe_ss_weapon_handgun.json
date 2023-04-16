@@ -1,0 +1,17 @@
+{
+    "name": "Handgun",
+    "codename": "recipe_ss_weapon_handgun",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_weapon_handgun",
+        "sprite": "weapon_handgun",
+        "crafted_in": "ss_smithy",
+        "require": "adhesive,wood,skin,composites,nano_chip",
+        "amount": "1,20,10,20,1"
+    }
+}

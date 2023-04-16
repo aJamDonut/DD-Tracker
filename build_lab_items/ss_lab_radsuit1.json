@@ -1,0 +1,21 @@
+{
+    "name": "Radiation Suit 1",
+    "codename": "ss_lab_radsuit1",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_lab_items",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "lab_suit_1",
+        "description": "A radiation suit",
+        "blockWidth": 1,
+        "blockHeight": 1,
+        "data": {
+            "physicsType": "solid"
+        },
+        "events": [],
+        "destroyBase": "0"
+    }
+}

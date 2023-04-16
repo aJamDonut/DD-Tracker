@@ -1,0 +1,21 @@
+{
+    "name": "Syn Clone Room Key",
+    "codename": "ss_item_key_cr1",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_keys",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_keycard_orange",
+        "meta": {
+            "description": "Access rooms within the Syn Corps lab",
+            "blockWidth": 1,
+            "blockHeight": 1
+        },
+        "events": {
+            "onAddToInventory": "function(item, life) {\r\n\t\r\n  \tif(!life.data.keys) {\r\n      life.data.keys = {};\r\n    }\r\n  \r\n  console.log(\"Add key\");\r\n  \tlife.data.keys['synlab'] = true;\r\n  \t\r\n  life.sync();\r\n  \r\n}"
+        }
+    }
+}

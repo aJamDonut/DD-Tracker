@@ -1,0 +1,17 @@
+{
+    "name": "Splicer",
+    "codename": "recipe_ss_splicer",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": "1679170193",
+    "vars": {
+        "crafts": "ss_splicer",
+        "sprite": "sprite_splicer",
+        "crafted_in": "build",
+        "require": "adhesive,sinchip,nano_chip,roboeye,mechscrap",
+        "amount": "5,1,5,2,5"
+    }
+}

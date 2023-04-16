@@ -1,0 +1,17 @@
+{
+    "name": "Adapted Tunic Mk 1",
+    "codename": "recipe_ss_body_tunic_1",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_body_tunic_1",
+        "sprite": "body_tunic_1",
+        "crafted_in": "ss_loom",
+        "require": "fiber,skin,sheetmetal",
+        "amount": "20,10,10"
+    }
+}

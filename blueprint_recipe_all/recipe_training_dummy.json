@@ -1,0 +1,16 @@
+{
+    "name": "Training Dummy",
+    "codename": "recipe_training_dummy",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_item_training_dummy",
+        "require": "wood,adhesives,fabric",
+        "amount": "100,25,25",
+        "sprite": "sprite_training_dummy"
+    }
+}

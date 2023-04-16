@@ -1,0 +1,23 @@
+{
+    "name": "Shopkeeper Brain",
+    "codename": "ss_brain_clone_shop",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_brains",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "brain_clone_1",
+        "meta": {
+            "weight": 1,
+            "contextOptions": "equipt",
+            "slots": "brain",
+            "blockWidth": 3,
+            "blockHeight": 3
+        },
+        "events": {
+            "onEquipt": "function(item, life) {\r\n  \tlife.data.dialog = 'dialog_syn_shopkeeper';\r\n\tlife.data.brain = 'police';\r\n\tlife.data.faction = 'sincorp';\r\n  \tlife.sync();\r\n}"
+        }
+    }
+}

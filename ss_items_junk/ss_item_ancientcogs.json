@@ -1,0 +1,19 @@
+{
+    "name": "Ancient Cogs",
+    "codename": "ss_item_ancientcogs",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_junk",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "item_cogs",
+        "meta": {
+            "blockWidth": 1,
+            "blockHeight": 1,
+            "value": 400
+        },
+        "events": []
+    }
+}

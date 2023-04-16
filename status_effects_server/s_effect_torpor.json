@@ -1,0 +1,15 @@
+{
+    "name": "Torpor",
+    "codename": "s_effect_torpor",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "status_effects_server",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "start": "function(item, options) {\r\n  item.data.stats.torp = item.data.stats.torp + options.dmg;\r\n  if (item.data.stats.torp > item.data.levels.toughness.level * 10) {\r\n    item.data.stats.torp = item.data.levels.toughness.level * 10;\r\n    item.addStatus('ko', { duration: 5, source: item.id, creatorId: item.id })\r\n  }\r\n  item.sync();\r\n}",
+        "end": "function(item, options){\r\n  item.sync();\r\n}",
+        "stacks": "1"
+    }
+}

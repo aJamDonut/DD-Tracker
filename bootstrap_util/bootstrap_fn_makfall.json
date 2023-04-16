@@ -1,0 +1,13 @@
+{
+    "name": "Make Object Fall",
+    "codename": "bootstrap_fn_makfall",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_util",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "exec": "function() {\r\n  game.util.makeObjectFall = function(sprite) {\r\n      if(!sprite || !sprite.y) {\r\n          return false; \/\/No valid sprite\r\n      }\r\n      sprite.gotoY = sprite.y; \/\/it's original Y\r\n      sprite.y -= 1500 \/\/Probaly above screen\r\n      setTimeout(()=>{\r\n\r\n        \/\/A little delay\r\n        game.tween(sprite, 'slideTo', {x: sprite.x, y: sprite.gotoY, duration: 2500});\r\n\r\n        let shadow = new Sprite('effect_floor_shadow');\r\n        game.render.objectLayer.addChild(shadow);\r\n        shadow.x = sprite.x-32;\r\n        shadow.y = sprite.gotoY;\r\n        shadow.alpha = 0;\r\n        game.tween(shadow, 'fadeIn', {alpha: 0.75});\r\n        \r\n      }, game.rng(100,1000))\r\n  }\r\n\r\n  game.util.makeAllFall = function() {\r\n\tgame.index.getIndexesAsArray(['objects','life']).forEach((i)=>{game.util.makeObjectFall(i);})\r\n  }\r\n  \r\n}"
+    }
+}

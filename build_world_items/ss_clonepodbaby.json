@@ -1,0 +1,18 @@
+{
+    "name": "Clone Pod Baby",
+    "codename": "ss_clonepodbaby",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_world_items",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "w_emptyclonepod",
+        "meta": [],
+        "events": {
+            "onCreateJSON": "[{\"x\":-6.430148078895854,\"y\":-2.562008306582129,\"type\":\"spine\",\"layer\":\"self\",\"filter\":\"none\",\"scale\":1,\"sprite\":\"clonepod\",\"anchor\":0,\"alpha\":1,\"tween\":\"none\"},{\"x\":-26.164391484925545,\"y\":54.16439148492577,\"type\":\"sprite\",\"layer\":\"self\",\"filter\":\"none\",\"scale\":1,\"sprite\":\"lightgreen_screen\",\"anchor\":0,\"alpha\":1,\"tween\":\"none\"},{\"x\":125.69590467286616,\"y\":145.35347061256903,\"type\":\"sprite\",\"layer\":\"self\",\"filter\":\"bloom\",\"scale\":1,\"sprite\":\"lightbluesheencolumn\",\"anchor\":0.5,\"alpha\":0.5,\"tween\":\"breathe\"},{\"x\":71,\"y\":4,\"type\":\"sprite\",\"layer\":\"lights\",\"filter\":\"none\",\"scale\":0.5,\"sprite\":\"lightbluesheencolumn_black\",\"anchor\":0,\"alpha\":1,\"tween\":\"none\"}]"
+        },
+        "destroyBase": "1"
+    }
+}

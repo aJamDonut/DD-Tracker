@@ -1,0 +1,17 @@
+{
+    "name": "Battery Tall",
+    "codename": "ss_battery_tall",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_lab",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_lab_items",
+        "across": 18,
+        "down": 16,
+        "w": 192,
+        "h": 192
+    }
+}

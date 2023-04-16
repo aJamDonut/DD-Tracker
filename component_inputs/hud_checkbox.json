@@ -1,0 +1,14 @@
+{
+    "name": "hud_checkbox",
+    "codename": "hud_checkbox",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "component_inputs",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "options": "'name, isEnabled, onEnable, onDisable, w, h, lblW'",
+        "getElement": "function(options) {\r\n  if(options == undefined) {\r\n    options = {};\r\n    \r\n    options.isEnabled = function(c) {\r\n      return this.enabled || false;\r\n    }\r\n\r\n    options.onEnable = function(c) {\r\n      this.enabled = true;\r\n    }\r\n\r\n    options.onDisable = function(c) {\r\n      this.enabled = false;\r\n    }\r\n    \r\n  }\r\n\r\n  \r\n  let container = new UIContainer();\r\n  container.name = name;\r\n  container.value = options.value || 0;\r\n  container.createChildren = function(options){\r\n    \r\n    if(this.pane) {\r\n\t\tthis.pane.destroy();\r\n    }\r\n    \r\n    name = options.name || false;\r\n    value = options.value || '0';\r\n    x = options.x || 0;\r\n    y = options.y || 0;\r\n    w = options.w || 150;\r\n    h = options.h || 40;\r\n    lblW = options.lblW || 150;\r\n\r\n    var pane = new UIContainer();\r\n\r\n    restW = w-lblW;\r\n    pane.addChild(new UIPane({fullscreen:false, fill: '0x212121', padding:0, x: x, y: y, w: w, h:h}));\r\n    pane.addChild(new UIPane({fullscreen:false, fill: '0x3d3d3d', padding:5, x: x+5, y: y+5, w: w-10, h:h-10}));\r\n\t\r\n    if(!options.name) {\r\n\t\tname = this.options.isEnabled.call(this) ? \"ENABLED\" : \"DISABLED\";\r\n    }\r\n    \r\n    lbl1 = game.render.text(name, 'ingame-label');\r\n    lbl1.anchor.set(0.5, 0);\r\n    lbl1.x = w\/2;\r\n    lbl1.y = y+10;\r\n    lbl1.alpha = 0.8\r\n\r\n    pane.addChild(lbl1);\r\n    \r\n    \r\n    this.pane = pane;\r\n    this.addChild(pane);\r\n    \r\n    this.alpha = this.isEnabled.call(this) ? 1 : 0.5;\r\n    \r\n  }\r\n  \r\n  \r\n  container.options = options;\r\n  \r\n  container.isEnabled = function(){\r\n  \treturn this.options.isEnabled.call(this);\r\n  }\r\n  \r\n \r\n  container.createChildren(options); \/\/First run\r\n  \r\n  container.isInteractive(); \/\/Set interactive after creating children so we have w\/h\r\n  \r\n  container.on('pointerup', function(){\r\n    console.log(\"click\");\r\n    if(this.isEnabled()) {\r\n      if(typeof this.options.onDisable == 'function') {\r\n\t\tthis.options.onDisable.call(this);\r\n      }\r\n    } else {\r\n\t\tthis.options.onEnable.call(this);\r\n    }\r\n    this.createChildren(this.options);\r\n  })\r\n  \r\n  \r\n  return container;\r\n  \r\n}"
+    }
+}

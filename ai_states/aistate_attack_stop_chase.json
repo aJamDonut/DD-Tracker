@@ -1,0 +1,16 @@
+{
+    "name": "Attack Stop Chase",
+    "codename": "aistate_attack_stop_chase",
+    "value": "110",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ai_states",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "start": "function(life) {\r\n  life.searchStart = 0\r\n  life.pathFind = false;\r\n  life.seekObj = false;\r\n  life.removeTarget();\r\n  if((!life.data.isPlayer || life.data.do == 'defend') && life.attackStartX && life.attackStartY) {\r\n  \tservers.world.helper.pathUpdate('asyncPathFind', {id: life.id, x:life.x, y:life.y, endX:life.attackStartX, endY: life.attackStartY, isPlayer: life.data.isPlayer});\r\n  }\r\n\r\n  \r\n}",
+        "run": "function(life) {\r\n    if(life.path.length>0) {\r\n      return true;\r\n    }\r\n}",
+        "end": "function(life) {\r\n  life.lastShot = Date.now();\r\n}",
+        "weight": "function(life) {\r\n  \r\n  \r\n  if(!life.data.targetId) {\r\n\treturn 0;\r\n  }\r\n  \r\n  var target = servers.world.index.getFromIndex(life.data.targetId, 'all');\r\n  if(!target) {\r\n    console.error(\"[ABE] Invalid target\");\r\n    life.removeTarget();\r\n    life.sync();\r\n\treturn 0;\r\n  }\r\n  \r\n\tif(target.data.dead) {\r\n\treturn 110;\r\n  }\r\n     \r\n     \r\n \r\n  \/\/Too far away?\r\n  if((servers.world.helper.dist(target, life) > 15*64)){\r\n    return 110; \r\n  }\r\n\r\n  \/\/Taken ages to shoot maybe just ignore this guy\r\n  if(Date.now() > life.lastShot + 60000) {\r\n    console.error(\"[ABE] Target timeout\");\r\n    life.removeTarget();\r\n    life.lastShot = Date.now();\r\n    return 110;\r\n  }\r\n\r\n  if(target.data.dead == true) {\r\n    return 110;\r\n  }\r\n  \r\n  if(servers.world.helper.dist(target, life) > 5024) {\r\n     return 110;\r\n  }\r\n\r\n  if(!life.data.isPlayer && life.dist(life.data.home) > 15*64) {\r\n    return 110;\r\n  }\r\n  return 0;\r\n}"
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "name": "Trade Armour",
+    "codename": "ss_sign_armour",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_world_items",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_sign_road",
+        "meta": [],
+        "events": {
+            "onCreateJSON": "[{\"x\":40,\"y\":11,\"type\":\"sprite\",\"layer\":\"self\",\"filter\":\"black\",\"scale\":0.8,\"sprite\":\"mask_thejester\",\"anchor\":0,\"alpha\":1,\"tween\":\"none\"}]"
+        },
+        "destroyBase": "0"
+    }
+}

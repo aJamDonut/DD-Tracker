@@ -1,0 +1,17 @@
+{
+    "name": "Blood 3",
+    "codename": "effect_blood3",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_effects",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_effects",
+        "across": 10,
+        "down": 4,
+        "w": 128,
+        "h": 64
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "name": "White Camera",
+    "codename": "item_white_camera",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_world_items",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "camera_white",
+        "description": "A white camera",
+        "blockWidth": 1,
+        "blockHeight": 1,
+        "data": {
+            "physicsType": "solid",
+            "weight": 3
+        },
+        "events": []
+    }
+}

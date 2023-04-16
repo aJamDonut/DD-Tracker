@@ -1,0 +1,17 @@
+{
+    "name": "Happy Mask",
+    "codename": "recipe_ss_mask_happymask",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_mask_happymask",
+        "sprite": "mask_happymask",
+        "crafted_in": "ss_loom",
+        "require": "wood,fiber,skin,sheetmetal",
+        "amount": "11,5,3,5"
+    }
+}

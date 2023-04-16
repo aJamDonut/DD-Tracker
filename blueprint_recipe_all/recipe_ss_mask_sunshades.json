@@ -1,0 +1,17 @@
+{
+    "name": "Sun Shades",
+    "codename": "recipe_ss_mask_sunshades",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_mask_sunshades",
+        "sprite": "mask_sunglasses",
+        "crafted_in": "ss_loom",
+        "require": "skin,sheetmetal,glass",
+        "amount": "5,3,4"
+    }
+}

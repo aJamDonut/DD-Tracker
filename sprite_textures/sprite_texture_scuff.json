@@ -1,0 +1,17 @@
+{
+    "name": "Scuff",
+    "codename": "sprite_texture_scuff",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_textures",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "texture_effect_scuff",
+        "across": 1,
+        "down": 1,
+        "w": 799,
+        "h": 799
+    }
+}

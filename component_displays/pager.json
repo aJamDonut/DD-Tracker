@@ -1,0 +1,14 @@
+{
+    "name": "Pager Component",
+    "codename": "pager",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "component_displays",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "options": "'items[], width, rowWidth, rowHeight, itemsPerPage'",
+        "getElement": "function(options) {\r\n            \r\n            if(options.items.length == 0) {\r\n                return new UIContainer(); \/\/No items\r\n            }\r\n\r\n            var buttonsHeight = 50;\r\n            var items = options.items;\r\n            var total = items.length;\r\n            var width = options.width\r\n            let gap = options.gap || 0;\r\n            var rowHeight = options.rowHeight || items[0].height;\r\n            var rowWidth = options.rowWidth || items[0].width;\r\n            var itemsPerPage = options.itemsPerPage || Math.floor(options.height \/ rowHeight);\r\n            var page = options.page || 1;\r\n            var ticks = options.ticks || false;\r\n            var container = new UIContainer();\r\n            var template = options.template || 'pagerlist';\r\n            var cols = options.cols || 4;\r\n            if(itemsPerPage == undefined || !Number.isInteger(itemsPerPage)) {\r\n                console.error('[ABE] Items per page incorrectly passes');\r\n                return container; \/\/Return early, empty container\r\n            }\r\n\r\n            var pagerList = game.render.componentRaw(template, {gap: gap, cols:cols, ticks: ticks, page:page, itemsPerPage: itemsPerPage, items: items});\r\n\r\n            container.addChild(pagerList);\r\n\r\n            var pagerButtons = container.addChild(game.render.componentRaw('pagerbuttons', {ticks: ticks, w: width, page:1, container: container, pagerList: pagerList}));\r\n            pagerButtons.y = pagerList.y+pagerList.height + 15;\r\n            container.buttons = pagerButtons;\r\n            container.pages = pagerList;\r\n            container.addChild(pagerButtons);\r\n            container.addChild(pagerList);\r\n\r\n            return container;\r\n        }"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Animalia Humanoid",
+    "codename": "sheet_animalia",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "tileset_all",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "filename": "animalia_humanoid.png",
+        "blockSize": 64
+    }
+}

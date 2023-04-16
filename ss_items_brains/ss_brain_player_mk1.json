@@ -1,0 +1,24 @@
+{
+    "name": "MK 1 Player Brain",
+    "codename": "ss_brain_player_mk1",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_brains",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "brain_clone_1",
+        "meta": {
+            "weight": 1,
+            "contextOptions": "equipt",
+            "slots": "brain",
+            "blockWidth": 3,
+            "blockHeight": 3
+        },
+        "events": {
+            "onEquipt": "function(item, life) {\r\n\tlife.data.brain = 'player_clone';\r\n  \tgame.session.addPlayerPawn(life);\r\n  \tlife.sync();\r\n    \r\n    if(!game.mainHud) {\r\n      game.mainHud = game.render.component('hud_main');\r\n      game.render.aboveAll.addChild(game.mainHud);\r\n    }\r\n    \/\/TODO: move this elsewhere?\r\n   life.craft = function () {\r\n      console.log(\"Do crafto\");\r\n\r\n\r\n      var requires = this.recipe.require.split(\",\");\r\n      var amounts = this.recipe.amount.split(\",\");\r\n\r\n      if (requires.length !== amounts.length) {\r\n          console.error(\"[ABE] Recipe requirements don't match amounts (mismatch of data)\");\r\n      }\r\n\r\n      \/\/Get inventory\r\n      let inventory = this.inventory.main;\r\n\r\n      let resources = inventory.getResources();\r\n\r\n      for (let i = 0; i < requires.length; i++) {\r\n\r\n          var need = requires[i]; \/\/Avoiding word require\r\n          var amount = amounts[i];\r\n\r\n          if(!resources['ss_item_'+need]) {\r\n              game.notify(\"Need \" + (amount) + \" \" + need + \"!\");\r\n              return false;\r\n          }\r\n\r\n          if (resources['ss_item_'+need] < parseInt(amount)) {\r\n              game.notify(\"Need \" + (resources['ss_item_'+need] - amount) + \" more \" + need + \"!\");\r\n              return false;\r\n          }\r\n\r\n      }\r\n\r\n      \/\/Remove items now\r\n\r\n      for (let i = 0; i < requires.length; i++) {\r\n\r\n          var need = requires[i]; \/\/Avoiding word require\r\n          var amount = amounts[i];\r\n\r\n          inventory.removeResource(need, amount);\r\n\r\n      }\r\n\r\n      console.log(\"Gonna craft!\")\r\n\r\n      \/\/All good will craft.\r\n\r\n      this.isCrafting = true;\r\n\r\n      setTimeout(() => {\r\n          this.isCrafting = false;\r\n          \r\n          let item = this.inventory.craft.addItem(new InventoryItem(this.recipe.crafts), true);\r\n          this.xpAction('craftedInventoryItem', item);\r\n      }, 2500);\r\n\r\n}\r\n}",
+            "onUnEquipt": "function(item, life) {\r\n  \tdelete life.data.brain;\r\n\tgame.session.removePlayerPawn(life);\r\n\tlife.sync();\r\n}"
+        }
+    }
+}

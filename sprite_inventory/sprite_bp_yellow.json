@@ -1,0 +1,17 @@
+{
+    "name": "BP Yellow",
+    "codename": "sprite_bp_yellow",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_inventory",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_miscitems",
+        "across": 11,
+        "down": 9,
+        "w": 64,
+        "h": 64
+    }
+}

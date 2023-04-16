@@ -1,0 +1,17 @@
+{
+    "name": "Eye Scanner",
+    "codename": "recipe_ss_mask_eyescanner",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_mask_eyescanner",
+        "sprite": "mask_eyescanner",
+        "crafted_in": "ss_loom",
+        "require": "sheetmetal,roboeye,mechscrap",
+        "amount": "4,1,7"
+    }
+}

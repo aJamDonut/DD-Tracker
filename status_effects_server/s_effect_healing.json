@@ -1,0 +1,16 @@
+{
+    "name": "Healing",
+    "codename": "s_effect_healing",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "status_effects_server",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "start": "function(item, options){\r\n\t\r\n}",
+        "tick": "function(item, options){\r\n  item.path = [];\r\n\titem.sync();\r\n}",
+        "end": "function(item, options){\r\n\titem.data.stats.hp = parseInt(item.data.stats.hp) + 10;\r\n}",
+        "stacks": "1"
+    }
+}

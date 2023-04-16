@@ -1,0 +1,17 @@
+{
+    "name": "Smart Watch",
+    "codename": "item_smartwatch",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_inventory",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_miscitems",
+        "across": 7,
+        "down": 8,
+        "w": 64,
+        "h": 64
+    }
+}

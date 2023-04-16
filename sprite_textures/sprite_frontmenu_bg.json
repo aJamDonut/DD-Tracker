@@ -1,0 +1,17 @@
+{
+    "name": "Menu Background",
+    "codename": "sprite_frontmenu_bg",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_textures",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "frontmenu_bg",
+        "across": 1,
+        "down": 1,
+        "w": 1920,
+        "h": 1080
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Goto Gather",
+    "codename": "aistate_goto_gather",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ai_states",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "start": "function(life) {\r\n  life.seekObj = servers.world.index.getFromIndex(life.data.gatherId, 'all');\r\n}",
+        "run": "function(life) {\r\n  return true;\r\n  \r\n    var target = servers.world.index.getFromIndex(life.data.gatherId, 'all');\r\n  \r\n  \tif(life.searchStart === 0) {\r\n\t\tlife.searchStart = Date.now();\r\n      \tif(target == undefined) {\r\n          life.data.gatherId = false;\r\n          console.error(\"Cant find target\");\r\n          return false;\r\n        }\r\n      \t\r\n      \tif(life.pathFind == false) {\r\n            life.pathFind = true;\r\n            servers.world.helper.pathUpdate('asyncPathFind', {id: life.id, targetId:life.data.gatherId, x:life.x, y:life.y, endX:target.x, endY: target.y+target.height});\r\n\t\t\tconsole.error(\"Finding LOS\");\r\n        }\t\r\n    }\r\n}",
+        "end": "function(life) {\r\n  life.seekObj = false;\r\n\tif(life.id !== servers.world.playerId) {\r\n      life.stopMoving();\r\n      return;\r\n    }\r\n}",
+        "weight": "function(life) {\r\n  \r\n  if(!life.data.gatherId || life.data.do !== 'gather') {\r\n    return 0; \/\/Nothing to gather\r\n  }\r\n  \r\n  var target = servers.world.index.getFromIndex(life.data.gatherId, 'all');\r\n  \r\n  if(!target) {\r\n\tconsole.error(\"[ABE] Cannot find to harvest: \"+life.data.gatherId);\r\n    life.data.gatherId = false;\r\n    return 0; \/\/Can't find item to gather\r\n  }\r\n  \r\n  if(life.dist(target) > 128) {\r\n    return 51; \/\/Far away, so lets execute\r\n  } else {\r\n\treturn 0; \/\/Already there\r\n  }\r\n  \r\n  return 0; \/\/Already there or not gathering\r\n}"
+    }
+}

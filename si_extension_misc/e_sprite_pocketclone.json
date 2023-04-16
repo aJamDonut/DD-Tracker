@@ -1,0 +1,16 @@
+{
+    "name": "Pocket Clone",
+    "codename": "e_sprite_pocketclone",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "si_extension_misc",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "meta": [],
+        "events": {
+            "onCreate": "function(spawner){\r\n\r\n    var player = new LifeObject();\r\n    console.error(\"ss_weapon thngiy 1\");\r\n    player.x = spawner.x;\r\n    player.y = spawner.y;\r\n    player.setAnim('none\/idle_down', true);\r\n    player.data.static = true;\r\n  \tplayer.data.big = true;\r\n    game.render.lifeLayer.addChild(player);\r\n  \tgame.world.addObject(player);\r\n    game.world.addToServer(player);\r\n  \r\n    player.setAnim('none\/idle_down', true);\r\n    player.setWep({sprite: 'blank', data: {stance: 'none'}});\r\n    player.setBackWep({sprite:'blank'});\r\n    player.setMask({sprite:'blank'});\r\n    player.setBody({sprite:'body_naked'});\r\n    player.setBackpack({sprite:'blank'});\r\n  \tplayer.scale.x = 2;\r\n  \tplayer.scale.y = 2;\r\n  \tconsole.error(\"ss_weapon thngiy 2\");\r\n  \ttry {\r\n  \tplayer.inventory.brain.addItem(new InventoryItem('ss_brain_clone_mk1'), true);\r\n  \tplayer.inventory.body.addItem(new InventoryItem('ss_plate_armor'), true);\r\n    player.inventory.mask.addItem(new InventoryItem('ss_mask_failedclone'), true);\r\n  \t\r\n    } catch(e) {\r\n      console.error(e);\r\n    }\r\n  \tconsole.error(\"ss_weapon thngiy 3\");\r\n  \tplayer.data.size = \"xl\";\r\n    player.data.enraged = true;\r\n    player.sync();\r\n  \r\n  \tplayer.pivot.x = -16;\r\n    player.pivot.y = -16;\r\n  \r\n  \tgame.lastp = player;\r\n  \tspawner.destroy();\r\n}"
+        }
+    }
+}

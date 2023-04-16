@@ -1,0 +1,18 @@
+{
+    "name": "Yeux Ball",
+    "codename": "spawn_yeuxball",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_world_spawners",
+    "color": "#202327",
+    "editedtime": "1678998258",
+    "vars": {
+        "sprite": "body_yeuxball",
+        "meta": [],
+        "events": {
+            "onCreate": "function(spawner){\r\n  \tif(game.editMode) {\r\n\t\treturn;\r\n    }\r\n\r\n    var player = new LifeObjectSimple();\r\n      player.x = spawner.x;\r\n    player.y = spawner.y;\r\n\t\r\n\tplayer.data.ko = true;\r\n\r\n\t\/\/TODO: should these be meta? i think so....\r\n\tplayer.data.physIsSensor = false;\r\n\tplayer.data.physDensity = 10;\r\n\tplayer.data.physRestitution = 0;\r\n\tplayer.data.physAvoid = false;\r\n\tplayer.data.physIsMoveable = true;\r\n\tplayer.data.worldNoLOS = true;\r\n\r\n\tplayer.data.dir = \"up\";\r\n    game.render.lifeLayer.addChild(player);\r\n  \tgame.world.addObject(player);\r\n    game.world.addToServer(player);\r\n  \r\n  \tplayer.inventory.body.addItem(new InventoryItem('ss_animal_yeuxball'), true);\r\n  \t\/\/player.inventory.brain.addItem(new InventoryItem('ss_brain_deadhead'), true);\r\n    \r\n    \r\n  \tgame.lastp = player;\r\n  \tspawner.destroy();\r\n}"
+        },
+        "destroyBase": "0"
+    }
+}

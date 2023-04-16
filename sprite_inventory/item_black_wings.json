@@ -1,0 +1,17 @@
+{
+    "name": "Black Wings",
+    "codename": "item_black_wings",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_inventory",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_miscitems",
+        "across": 9,
+        "down": 4,
+        "w": 128,
+        "h": 128
+    }
+}

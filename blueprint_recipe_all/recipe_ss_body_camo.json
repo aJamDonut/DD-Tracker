@@ -1,0 +1,16 @@
+{
+    "name": "Camo Jacket",
+    "codename": "recipe_ss_body_camo",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_body_camo",
+        "sprite": "body_camo",
+        "require": "fiber,skin",
+        "amount": "25,25"
+    }
+}

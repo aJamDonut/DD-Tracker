@@ -1,0 +1,17 @@
+{
+    "name": "Advanced Bow",
+    "codename": "recipe_ss_weapon_abow",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_weapon_abow",
+        "sprite": "weapon_advancedbow",
+        "crafted_in": "ss_smithy",
+        "require": "adhesive,wood,fiber,skin,composites,mechscrap",
+        "amount": "2,15,10,12,5,10"
+    }
+}

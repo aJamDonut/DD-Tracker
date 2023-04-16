@@ -1,0 +1,14 @@
+{
+    "name": "Hud Recycler",
+    "codename": "hud_recycler",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "component_widgets",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "options": "'recycler'",
+        "getElement": "function(options) {\r\n  \r\n  if(!options) {\r\n\toptions = {};\r\n  }\r\n  \r\n  var recycler = options.recycler\r\n  \r\n  if(!recycler) { \/\/Stub\r\n    recycler = {id:'test', recycle: function(){}};\r\n    recycler.inventory = new Inventory('main', 10, 4, recycler);\r\n  }\r\n  \r\n  var w = 340;\r\n  var pane = game.render.componentRaw('drawBoxPane', {title:'Recycler', moveable:true, showX: true, w: w, h: 480});\r\n  \r\n  var container = new UIContainer();\r\n  pane.addChild(container);\r\n  container.x = 30;\r\n  container.y = 10;\r\n\r\n  \r\n  recycler.inventory.getInventoryGrid();\r\n  recycler.inventory.gridComponent.x -= 22;\r\n  recycler.inventory.gridComponent.y += 20\r\n  container.addChild(recycler.inventory.gridComponent);\r\n  \r\n  \r\n  \r\n  \r\n  var btnRecycle = new TickerContainer(recycler, function(recycler){\r\n    if(this.btn) {\r\n      this.btn.destroy();\r\n    }\r\n  \tvar btnRecycle = game.render.component('hud_button', {name:'Recycle'});\r\n    this.btn = btnRecycle;\r\n    this.addChild(btnRecycle);\r\n    btnRecycle.x = w \/2 - btnRecycle.width\/2 - 30\r\n    btnRecycle.y = recycler.inventory.gridComponent.y + recycler.inventory.gridComponent.height +30\r\n    btnRecycle.isInteractive();\r\n    btnRecycle.recycler = recycler;\r\n    \r\n    \r\n    \r\n    if(recycler.recycling) {\r\n    \tbtnRecycle.alpha = 0.5;\r\n    } else {\r\n\t    btnRecycle.on('pointerup', function(){\r\n          this.recycler.recycle();\r\n        });\r\n    }\r\n  }, 0.1);\r\n  \r\n  container.addChild(btnRecycle);\r\n  \r\n  \r\n  \r\n  var resourceList = game.render.component('component_playerresources');\r\n  container.addChild(resourceList);\r\n  resourceList.x = 15;\r\n  resourceList.y = container.y + container.height + 100;\r\n  \r\n  return pane;\r\n  \r\n}"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Mecha Spyder Dead",
+    "codename": "body_mechaspyderdead",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_bodies",
+    "color": "#202327",
+    "editedtime": "1677423289",
+    "vars": {
+        "tileset": "sheet_animalia_mechaspyder",
+        "across": 1,
+        "down": 10,
+        "w": 256,
+        "h": 192
+    }
+}

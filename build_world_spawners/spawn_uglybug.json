@@ -1,0 +1,18 @@
+{
+    "name": "Ugly Bug",
+    "codename": "spawn_uglybug",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_world_spawners",
+    "color": "#202327",
+    "editedtime": "1676662707",
+    "vars": {
+        "sprite": "btn_blank_sqr",
+        "meta": [],
+        "events": {
+            "onCreate": "function(spawner) {\r\n  if (game.editMode) {\r\n    return;\r\n  }\r\n\r\n  var player = new LifeObjectAnim();\r\n  player.x = spawner.x;\r\n  player.y = spawner.y;\r\n  player.data.faction = 'wild';\r\n  game.render.lifeLayer.addChild(player);\r\n  game.world.addObject(player);\r\n  game.world.addToServer(player);\r\n\r\n  player.inventory.main.addResource('rawmeat', game.rng(1, 2));\r\n  player.inventory.main.addResource('skin', game.rng(1, 3));\r\n  player.inventory.main.addResource('spidereye', 1);\r\n\r\n  player.inventory.body.addItem(new InventoryItem('ss_animal_blue_uglybug', { disabled: true }), true);\r\n\r\n  \/\/  \tplayer.inventory.brain.addItem(new InventoryItem('ss_brain_deadhead'), true);\r\n  player.inventory.brain.addItem(new InventoryItem('ss_brain_deadhead', { disabled: true }), true);\r\n\r\n\r\n\r\n  game.lastp = player;\r\n  spawner.destroy();\r\n}"
+        },
+        "destroyBase": "0"
+    }
+}

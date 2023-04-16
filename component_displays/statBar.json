@@ -1,0 +1,13 @@
+{
+    "name": "statBar",
+    "codename": "statBar",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "component_displays",
+    "color": "#202327",
+    "editedtime": "1674356305",
+    "vars": {
+        "getElement": "function(options) {\r\n\r\n  var container = new UIContainer();\r\n\r\n  container.updateVal = function (val, max) {\r\n    let valuePane = this.valuePane;\r\n    let padding = this.padding;\r\n    var onePercent = max \/ 100;\r\n    var percentTaken = val \/ onePercent;\r\n    var onePercentOfWidth = (options.w - (padding * 2)) \/ 100;\r\n    valuePane.width = onePercentOfWidth * percentTaken;\r\n  }\r\n\r\n  if (!options) {\r\n    options = {\r\n      w: 200,\r\n      h: 50,\r\n      name: 'HP',\r\n      value: 100,\r\n\r\n      fill: 0xcccccc\r\n    };\r\n  }\r\n\r\n  if (!options.maxValue) {\r\n    options.maxValue = 100; \/\/Assumes max value is 100\r\n  }\r\n  if (!options.fill) {\r\n    options.fill = 0xcccccc;\r\n  }\r\n\r\n\r\n\r\n  var padding = options.padding || 5;\r\n  container.padding = padding;\r\n\r\n  var backPane = new UIPane({ background: 'darker', w: options.w, h: options.h });\r\n  container.addChild(backPane);\r\n\r\n\r\n  var valuePane = new UIPane({ fill: options.fill, w: options.w, h: options.h - (padding * 2) });\r\n  valuePane.x = padding;\r\n  valuePane.y = padding;\r\n  container.valuePane = valuePane;\r\n  container.addChild(valuePane);\r\n\r\n  container.updateVal(options.value, options.maxValue);\r\n\r\n\r\n\r\n  if (options.name) {\r\n    let text = game.render.text(options.name, 'ui-subtle');\r\n    text.anchor.set(0, 0.5);\r\n    text.x = 15;\r\n    text.y = 15;\r\n    container.addChild(text);\r\n  }\r\n  return container;\r\n\r\n}"
+    }
+}

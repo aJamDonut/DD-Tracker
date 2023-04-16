@@ -1,0 +1,14 @@
+{
+    "name": "Killed",
+    "codename": "c_effect_killed",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "status_effects_client",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "start": "function(item, options){\r\n\titem.data.dead = true;\r\n}",
+        "stacks": "0"
+    }
+}

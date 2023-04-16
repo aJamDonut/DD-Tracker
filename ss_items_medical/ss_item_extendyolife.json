@@ -1,0 +1,18 @@
+{
+    "name": "ExtendYoLife",
+    "codename": "ss_item_extendyolife",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_medical",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "item_extendyolife",
+        "meta": {
+            "blockWidth": 1,
+            "blockHeight": 2
+        },
+        "events": []
+    }
+}

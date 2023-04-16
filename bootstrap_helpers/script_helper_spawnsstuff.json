@@ -1,0 +1,13 @@
+{
+    "name": "Spawns Stuff",
+    "codename": "script_helper_spawnsstuff",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_helpers",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "exec": "function() {  \r\n\r\n  class PixelCircle {\r\n    constructor(x, y, rad, callback, iterations) {\r\n      iterations = iterations || 1;\r\n      let deg = 0;\r\n      let blocked = {};\r\n      for(let i = 0; i < 360; i += 360\/iterations) {\r\n        deg++;\r\n        let angleX = Math.floor(x + rad * Math.cos(deg));\r\n        let angleY = Math.floor(y + rad * Math.sin(deg)); \r\n        let key = angleX + \"-\" + angleY;\r\n        if(blocked[key]) {\r\n          continue;\r\n        }\r\n        callback(angleX, angleY);\r\n        blocked[key] = true;\r\n      }\r\n    }\r\n  }\r\n  \r\n  game.quickSpawn = {};\r\n  \r\n   game.loopy2 = function() {\r\n    \r\n     let x = 10;\r\n     let y = 10;\r\n     \r\n     let degIncrease = 10;\r\n     \r\n    game.degree = game.degree ? game.degree+degIncrease : 0;\r\n     \r\n     \r\n    new PixelCircle(x, y, rad, game.quickSpawn.fire, 90);\r\n     \r\n     \r\n   setTimeout(game.loopy2, 100);\r\n    \r\n    \r\n  }\r\n  \r\n  game.loopy = function() {\r\n    \r\n    game.radX = game.radX ? game.radX : 10;\r\n    game.radY = game.radY ? game.radY : 10;\r\n    \r\n    if(!game.rad) {game.rad = 0;}\r\n    if(game.radAsc == undefined) {game.radAsc = true;}\r\n    \r\n    if(game.rad > 10) {\r\n      game.radAsc = false;\r\n      game.radX += game.rng(-2,1);\r\n\r\n      game.radY += game.rng(-2,1);\r\n\r\n    }\r\n    \r\n    if(game.rad < 0) {\r\n\t\tgame.radAsc = true;\r\n    }\r\n    \r\n    game.rad += game.radAsc ? 1 : -1;\r\n    \r\n    game.quickSpawn.fireCircle(game.radX, game.radY, game.rad);\r\n    \r\n   setTimeout(game.loopy, 100);\r\n    \r\n    \r\n  }\r\n  \r\n  game.quickSpawn.fireCircle = function(x, y, rad) {\r\n\tlet circle = new PixelCircle(x, y, rad, game.quickSpawn.fire, 90);\r\n  }\r\n  \r\n  game.quickSpawn.fire = function(x, y){\r\n    \r\n    let fire = game.render.createSdAnimatedSprite('anisprite_fire1');\r\n    fire.x = x * 64;\r\n    fire.y = y * 64;\r\n    fire.play();\r\n    game.render.underLifeLayer.addChild(fire);\r\n    \r\n  }\r\n  \r\n  game.quickSpawn.skulls = function(x, y) {\r\n    game.quickSpawn.fire(x, y);\r\n    let fire = game.render.createSdAnimatedSprite('anisprite_skulls1');\r\n    fire.anchor.set(0.5);\r\n    fire.scale.set(3);\r\n    \r\n    fire.x = x * 64;\r\n    fire.y = y * 64;\r\n    fire.play();\r\n    game.render.underLifeLayer.addChild(fire);\r\n    \r\n    \r\n  }\r\n  \r\n}"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Projectile Melee",
+    "codename": "pers_projectile_melee",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_persistent_items",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "meta": [],
+        "events": {
+            "onPhysicsTick": "function() {\r\n  \r\n  this.dieOnWallCheck();\r\n  \r\n}"
+        }
+    }
+}

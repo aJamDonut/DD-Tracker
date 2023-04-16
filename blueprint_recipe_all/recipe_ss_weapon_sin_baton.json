@@ -1,0 +1,17 @@
+{
+    "name": "Sin Baton",
+    "codename": "recipe_ss_weapon_sin_baton",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_weapon_sin_baton",
+        "sprite": "weapon_baton",
+        "crafted_in": "ss_smithy",
+        "require": "adhesive,composites,sinchip,sheetmetal,nano_chip",
+        "amount": "1,30,1,10,1"
+    }
+}

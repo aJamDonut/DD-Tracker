@@ -1,0 +1,14 @@
+{
+    "name": "Pager Buttons Component",
+    "codename": "pagerbuttons",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "component_inputs",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "options": "'pagerList{}, '",
+        "getElement": "function(options) {\r\n\r\n    if (!options) {\r\n        options = {\r\n            pagerList: game.render.componentRaw('pagerlist')\r\n        }\r\n    }\r\n    var pane = new UIContainer();\r\n\r\n    var back = game.render.componentRaw('squareWBorder', { x: 0, y: 0, w: 32, h: 32 });\r\n    pane.back = back;\r\n    back.addChild(new UIPane({ fullscreen: false, fill: '0x212121', padding: 0, x: 0, y: 0, w: 32, h: 32 }));\r\n    back.pagerList = options.pagerList;\r\n    back.isInteractive();\r\n    back.on('pointerup', function () {\r\n        this.pagerList.pageDown();\r\n    });\r\n\r\n    var fwd = game.render.componentRaw('squareWBorder', { x: 0, y: 0, w: 32, h: 32 });\r\n    fwd.addChild(new UIPane({ fullscreen: false, fill: '0x212121', padding: 0, x: 0, y: 0, w: 32, h: 32 }));\r\n    fwd.pagerList = options.pagerList;\r\n    pane.fwd = fwd;\r\n    fwd.isInteractive();\r\n    fwd.x = options.w - fwd.width;\r\n    fwd.on('pointerup', function () {\r\n        this.pagerList.pageUp();\r\n    });\r\n    xText = game.render.text('>>', 'ui-bold');\r\n    xText.x = 7.5;\r\n    xText.y = 7.5;\r\n\r\n    fwd.addChild(xText);\r\n\r\n    xText = game.render.text('<<', 'ui-bold');\r\n    xText.x = 7.5;\r\n    xText.y = 7.5;\r\n    back.addChild(xText);\r\n    pane.addChild(back);\r\n    pane.addChild(fwd);\r\n    options.pagerList.addPageButtons(pane); \/\/first init\r\n    options.pagerList.refresh();\r\n    return pane;\r\n}"
+    }
+}

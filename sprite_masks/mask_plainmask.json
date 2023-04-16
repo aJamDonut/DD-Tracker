@@ -1,0 +1,17 @@
+{
+    "name": "Plain Mask",
+    "codename": "mask_plainmask",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_masks",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_humanoid",
+        "across": 13,
+        "down": 1,
+        "w": 128,
+        "h": 128
+    }
+}

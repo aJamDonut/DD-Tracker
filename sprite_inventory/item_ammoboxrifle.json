@@ -1,0 +1,17 @@
+{
+    "name": "Ammobox Rifle",
+    "codename": "item_ammoboxrifle",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_inventory",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_miscitems",
+        "across": 9,
+        "down": 8,
+        "w": 64,
+        "h": 64
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "name": "Gas Mask",
+    "codename": "ss_mask_gasmask",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_masks",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "mask_gasmask",
+        "meta": {
+            "description": "This removes flavour from the taste of air. Oh, and protects from hazardous smells.",
+            "weight": 3,
+            "contextOptions": "equipt",
+            "slots": "mask",
+            "blockWidth": 3,
+            "blockHeight": 3,
+            "value": 2000
+        },
+        "events": {
+            "onEquipt": "function(life) {\r\n\tlife.data.stats.hp += this.data.stats.hp;\r\n  \tlife.data.stats.savage += this.data.stats.savage;\r\n}",
+            "onUnEquipt": "function(life) {\r\n\tlife.data.stats.hp -= this.data.stats.hp;\r\n  \tlife.data.stats.savage -= this.data.stats.savage;\r\n}",
+            "onCreate": "function(item) {\r\n  \t  \titem.data.stats = {};\r\n\titem.data.stats.hp = -10;\r\n  \titem.data.stats.savage = 2;\r\n}"
+        }
+    }
+}

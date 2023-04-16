@@ -1,0 +1,14 @@
+{
+    "name": "Blood pool",
+    "codename": "particles_blood_pool",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "particles",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprites": "tex_blood_splat",
+        "data": "{\r\n\t\"alpha\": {\r\n\t\t\"start\": 1,\r\n\t\t\"end\": 0\r\n\t},\r\n\t\"scale\": {\r\n\t\t\"start\": 0.05,\r\n\t\t\"end\": 3,\r\n\t\t\"minimumScaleMultiplier\": 1\r\n\t},\r\n\t\"color\": {\r\n\t\t\"start\": \"#ff0000\",\r\n\t\t\"end\": \"#ff0011\"\r\n\t},\r\n\t\"speed\": {\r\n\t\t\"start\": 1,\r\n\t\t\"end\": 2,\r\n\t\t\"minimumSpeedMultiplier\": 1\r\n\t},\r\n\t\"acceleration\": {\r\n\t\t\"x\": 0,\r\n\t\t\"y\": 0\r\n\t},\r\n\t\"maxSpeed\": 0,\r\n\t\"startRotation\": {\r\n\t\t\"min\": 0,\r\n\t\t\"max\": 0\r\n\t},\r\n\t\"noRotation\": false,\r\n\t\"rotationSpeed\": {\r\n\t\t\"min\": 0,\r\n\t\t\"max\": 0\r\n\t},\r\n\t\"lifetime\": {\r\n\t\t\"min\": 5,\r\n\t\t\"max\": 20\r\n\t},\r\n\t\"blendMode\": \"normal\",\r\n\t\"frequency\": 0.01,\r\n\t\"emitterLifetime\": 0.2,\r\n\t\"maxParticles\": 4,\r\n\t\"pos\": {\r\n\t\t\"x\": 0,\r\n\t\t\"y\": 0\r\n\t},\r\n\t\"addAtBack\": false,\r\n\t\"spawnType\": \"circle\",\r\n\t\"spawnCircle\": {\r\n\t\t\"x\": 0,\r\n\t\t\"y\": 50,\r\n\t\t\"r\": 50\r\n\t}\r\n}"
+    }
+}

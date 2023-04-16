@@ -1,0 +1,14 @@
+{
+    "name": "Swords",
+    "codename": "ahref_swords",
+    "value": "2",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ahref_ahref_items",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "url": "items.php?type=ss_items_swords&template=ss_items",
+        "submenu": []
+    }
+}

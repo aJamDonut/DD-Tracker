@@ -1,0 +1,24 @@
+{
+    "name": "Wandering Brain",
+    "codename": "ss_brain_wander_mk1",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_brains",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "brain_clone_1",
+        "meta": {
+            "description": "This clones brain has become wandering, it will attempt to live a normal human life, buying, selling and defending for itself.",
+            "weight": 1,
+            "contextOptions": "equipt",
+            "slots": "brain",
+            "blockWidth": 3,
+            "blockHeight": 3
+        },
+        "events": {
+            "onEquipt": "function(item, life) {\r\n\tlife.data.brain = 'wander';\r\n  \tlife.sync();\r\n}"
+        }
+    }
+}

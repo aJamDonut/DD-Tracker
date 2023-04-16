@@ -1,0 +1,18 @@
+{
+    "name": "Bounty: The Rat m2000",
+    "codename": "bounty_therat",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_textitems_bounties",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "item_bounty",
+        "meta": {
+            "description": "Wanted for association to organised crime within Landzo as well as kidnapping; this is the notice to bring to justice the Bandit Leader named The Rat.\r\nHis whereabouts are unknown though it's been said he is within one of the camps nearby to Landzo City.",
+            "blockWidth": 1,
+            "blockHeight": 1
+        }
+    }
+}

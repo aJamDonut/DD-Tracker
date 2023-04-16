@@ -1,0 +1,16 @@
+{
+    "name": "Change Weapon",
+    "codename": "aistate_changeweapon",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ai_states",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "start": "function(life) {\r\n  \r\n}",
+        "run": "function(life) {\r\n\r\n}",
+        "end": "function() {\r\n}",
+        "weight": "function(life) {\r\n    \r\n  if(!life.data.targetId\r\n     || (this.lastSwap && this.lastSwap > game.ts - 2000)) { \/\/Already swapped recently\r\n\treturn 0;\r\n  }\r\n  \r\n  var target = servers.world.index.getFromIndex(life.data.targetId, 'all');\r\n\r\n  if(!target) {\r\n\treturn 0; \/\/Got invalid target\r\n  }\r\n\r\n  let dist = (life.isMelee) ? 128 : 600;\r\n  let targetDist = life.dist(target);\r\n\r\n  if((life.data.stance == 'none' || life.data.stance == 'melee') && targetDist < 64*5) {\r\n    return 0;\r\n  }\r\n\r\n  if((life.data.stance !== 'none' && life.data.stance !== 'melee') && targetDist < 64*2) {\r\n    console.error(life.data.stance, \"Close so swap\");\r\n\t  life.swapWeaponSlots();\r\n    this.lastSwap = game.ts;\r\n    return 0;\r\n  }\r\n  \r\n  if((life.data.stance == 'none' || life.data.stance == 'melee') && targetDist > 64*5) {\r\n    if(life.data.hasRangedBackWeapon) { \/\/Maybe the back weapon is good\r\n    console.error(life.data.stance, \"Far so swap\");\r\n      life.swapWeaponSlots();\r\n      this.lastSwap = game.ts;\r\n    }\r\n  }\r\n  \r\n  return 0;\r\n  \r\n}"
+    }
+}

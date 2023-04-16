@@ -1,0 +1,14 @@
+{
+    "name": "Mini Map",
+    "codename": "hud_mini_map",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "component_widgets",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "options": "'recycler'",
+        "getElement": "function(options) {\r\n  \r\n  if(!options) {\r\n\toptions = {};\r\n  }\r\n  \r\n  var recycler = options.recycler\r\n  \r\n  \r\n  var w = 200;\r\n  var h = 200;\r\n  var pane = game.render.componentRaw('drawBoxPane', {title: false, moveable:true, showX: false, w: w, h: h});\r\n  \r\n  var container = new UIContainer();\r\n  pane.addChild(container);\r\n\r\n  \r\n\tcontainer.x = 5;\r\n  \tcontainer.y = 5;\r\n  \r\n  viewport = new Viewport.Viewport({\r\n    screenWidth: w-10,\r\n    screenHeight: h-10,\r\n    worldWidth:1000,\r\n    worldHeight:1000,\r\n    interaction: game.render.pixi.renderer.plugins.interaction\r\n  });\r\n  \r\n  container.addChild(viewport);\r\n  viewport.drag({mouseButtons:'left',clampWheel: true}).wheel().pinch({'noDrag': true, percent: 5}).decelerate();\r\n  viewport.clamp({direction: 'all'});\r\n  viewport.addChild(new Sprite('sprite_world_map'));\r\n\r\n  const graphics = new PIXI.Graphics();\r\n graphics.beginFill(0xFF3300);\r\n graphics.drawRect(0, 0, viewport.screenWidth, viewport.screenHeight);\r\n graphics.endFill();\r\n\tcontainer.addChild(graphics);\r\n  \r\n viewport.mask = graphics;\r\n  \r\n  let playerPos = new Sprite('mask_thejester');\r\n  playerPos.width = 32;\r\n  playerPos.height = 32;\r\n  playerPos.x = game.p.x\/64;\r\n  playerPos.y = game.p.y\/64;\r\n  game.mapMarker2 = playerPos\r\n  viewport.addChild(playerPos);\r\n  \r\n  viewport.ensureVisible(playerPos.x, playerPos.y, 200, 200); \/\/Bring player icon into view\r\n  \r\n  game.minimap = viewport;\r\n  \r\n  game.setTicker('moveminimap', function(){\r\n    game.mapMarker2.x = game.p.x\/64;\r\n    game.mapMarker2.y = game.p.y\/64;\r\n    game.mapMarker2.x -= 16;\r\n    game.mapMarker2.y -= 16;\r\n    \r\n  \tgame.minimap.moveCenter(game.p.x\/64, game.p.y\/64); \/\/Bring player icon into view\r\n    \r\n  });\r\n  \r\n  \r\n  return pane;\r\n  \r\n}"
+    }
+}

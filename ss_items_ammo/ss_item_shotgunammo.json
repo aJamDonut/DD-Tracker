@@ -1,0 +1,19 @@
+{
+    "name": "Shotgun Ammo",
+    "codename": "ss_item_shotgunammo",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_ammo",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "item_ammoboxshotgun",
+        "meta": {
+            "blockWidth": 2,
+            "blockHeight": 2,
+            "value": 150
+        },
+        "events": []
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Follow Player",
+    "codename": "aistate_follow_player",
+    "value": "100",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ai_states",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "start": "function(life) {\r\n  \r\n  life.searchStart = Date.now();\r\n  life.pathFind = true;\r\n  var player = servers.world.getPlayer();\r\n  life.seekObj = player;\r\n}",
+        "run": "function(life) {\r\n  \tif(life.pathFind && life.path.length > 0) {\r\n\t\tlife.pathFind = false;\r\n      \tlife.path.pop();\r\n        life.path.pop();\r\n        life.path.pop();\r\n    }\r\n  var player = servers.world.getPlayer();\r\n  if(life.dist(player) < 128) {\r\n\tthis.seekObj = false;\r\n    this.path = [];\r\n  }\r\n  \r\n  \treturn true;\r\n}",
+        "weight": "function(life) {\r\n  if(life.data.command !== 'follow' && life.data.command !== 'retreat' && life.data.command !== 'recall') {\r\n    return 0; \/\/Commanded to stay\r\n  }\r\n\r\n  if(life.pathFind || life.path.length > 0) {\r\n    if(Date.now() > life.searchStart + 2500) {\r\n      life.pathFind = false;\r\n      return 0;\r\n    } else {\r\n\t\treturn 100;\r\n    }\r\n  }\r\n  \r\n  if(life.state !== 'aistate_follow_player') {\r\n\treturn 90;\r\n  } else {\r\n\treturn 0;\r\n  }\r\n}"
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "name": "DocoBot",
+    "codename": "spawn_docobot",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_world_spawners",
+    "color": "#202327",
+    "editedtime": "1679249756",
+    "vars": {
+        "sprite": "btn_blank_sqr",
+        "meta": [],
+        "events": {
+            "onCreate": "function(spawner) {\r\n\r\n  \/*Don't spawn in NPCs in editor (might change in future)*\/\r\n  if (game.editMode) {\r\n    return;\r\n  }\r\n\r\n  var player = new LifeObject();\r\n\r\n  player.data.spawnX = spawner.x;\r\n  player.data.spawnY = spawner.y;\r\n  \/*Set position*\/\r\n  player.x = spawner.x;\r\n  player.y = spawner.y;\r\n\r\n  \/*Make useable and blank, give random stats*\/\r\n  player.setBlank();\r\n  player.randomizeStats(1);\r\n  player.data.faction = 'sincorp';\r\n\r\n  \/*Add to layers and servers*\/\r\n  game.render.lifeLayer.addChild(player);\r\n  game.world.addObject(player);\r\n  game.world.addToServer(player);\r\n\r\n  player.data.species = \"humanoidbot\";\r\n\r\n\r\n  \/*Add armors, loot and weapons*\/\r\n  try {\r\n\r\n\r\n    player.data.name = \"Docobot\"\r\n    player.data.dialog = 'dialog_docobot_start';\r\n    player.data.stats.hp = 10;\r\n\r\n    \/\/Weapon\r\n    let wep = new InventoryItem('ss_weapon_sin_baton_weak', { disabled: true });\r\n    player.inventory.weapon.addItem(wep, true);\r\n\r\n    \/\/Body\r\n    let body = new InventoryItem('ss_item_body_robot_slim', { disabled: true });\r\n    player.inventory.body.addItem(body, true);\r\n\r\n    \/\/Mask\r\n    let mask = new InventoryItem('ss_item_mask_skinbothead', { disabled: true });\r\n    player.inventory.mask.addItem(mask, true);\r\n\r\n    \/\/Brain\r\n    let brain = new InventoryItem('ss_brain_clone_sp1', { disabled: true });\r\n    player.inventory.brain.addItem(brain, true);\r\n\r\n\r\n    player.inventory.main.addItem(new InventoryItem('ss_item_key_cr1'), true);\r\n    player.inventory.main.addItem(new InventoryItem('codec_resources'), true);\r\n\r\n  } catch (e) {\r\n    console.error(e);\r\n  }\r\n\r\n  \/*Sync changes to server*\/\r\n  player.sync();\r\n\r\n  \/*Let game know last NPC to spawn*\/\r\n  game.lastp = player;\r\n\r\n  \/*Destroy spawner, potentialy changes in future*\/\r\n  spawner.destroy();\r\n}"
+        },
+        "destroyBase": "0"
+    }
+}

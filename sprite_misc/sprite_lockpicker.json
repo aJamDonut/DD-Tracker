@@ -1,0 +1,17 @@
+{
+    "name": "Lockpicker",
+    "codename": "sprite_lockpicker",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_misc",
+    "color": "#202327",
+    "editedtime": "1677340903",
+    "vars": {
+        "tileset": "sheet_ui",
+        "across": 1,
+        "down": 10,
+        "w": 128,
+        "h": 512
+    }
+}

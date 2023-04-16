@@ -1,0 +1,22 @@
+{
+    "name": "Bandage Container",
+    "codename": "ss_bandage_container",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_world_lootcontainers",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_med_box",
+        "meta": {
+            "blockZone": "all",
+            "physicsType": "logic",
+            "contextOptions": "loot",
+            "description": "A handy item container"
+        },
+        "events": {
+            "onCreate": "function(furni) {\r\n  \r\n  if(game.editMode) {\r\n\treturn false; \/\/Do nothing in edit mode\r\n  }\r\n\r\n  var hasSaveData = (furni.data.inventory) ? true : false;\r\n  \r\n  game.inventories.createInventoryForItem(furni, 7,4);\r\n  \r\n  if(hasSaveData) {\r\n\treturn; \/\/Already has been created once or is edit mode don't add any new items.\r\n  }\r\n  \r\n  furni.inventory.addItem(new InventoryItem('ss_item_bandage_small'), true);\r\n  furni.inventory.addItem(new InventoryItem('ss_item_adhesive'), true);\r\n  furni.inventory.addItem(new InventoryItem('ss_item_medical_pen'), true);\r\n  \r\n   \r\n}"
+        }
+    }
+}

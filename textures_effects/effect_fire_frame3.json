@@ -1,0 +1,17 @@
+{
+    "name": "Effect Fire Frame 3",
+    "codename": "effect_fire_frame3",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "textures_effects",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "across": 3,
+        "down": 4,
+        "w": 64,
+        "h": 64,
+        "tileset": "sheet_effects"
+    }
+}

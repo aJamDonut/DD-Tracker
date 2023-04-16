@@ -1,0 +1,17 @@
+{
+    "name": "Blue Ugly Bug Dead",
+    "codename": "body_uglybug_bluedead",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_bodies",
+    "color": "#202327",
+    "editedtime": "1676663577",
+    "vars": {
+        "tileset": "sheet_animalia_spyder",
+        "across": 1,
+        "down": 10,
+        "w": 256,
+        "h": 192
+    }
+}

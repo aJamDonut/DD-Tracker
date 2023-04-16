@@ -1,0 +1,20 @@
+{
+    "name": "Longpipe Bike",
+    "codename": "vehicle_longpipebike",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_vehicles",
+    "color": "#202327",
+    "editedtime": "1675817730",
+    "vars": {
+        "sprite": "sprite_vehicle_longpipebike",
+        "meta": {
+            "physicsType": "logic",
+            "contextOptions": "custom"
+        },
+        "events": {
+            "onCreate": "(item) => {\r\n\r\n\r\n  item.sprites['up'] = 'sprite_vehicle_bikeup';\r\n  item.sprites['down'] = 'sprite_vehicle_bikedown';\r\n  item.sprites['right'] = 'sprite_vehicle_longpipebike';\r\n  item.sprites['left'] = 'sprite_vehicle_longpipebike';\r\n  \r\n  item._sprite.anchor.set(0.5);\r\n\r\n  item.addExtension('ext_vehicle', {\r\n    doDriven: function (life) {\r\n      console.log(\"Doing driving\");\r\n      life.driving = game.index.find(life.data.drivingId);\r\n      if (!life.driving) {\r\n        console.log(\"Nothing to drive\");\r\n        life.stopDriving(); \/\/Failed to drive?\r\n        console.log(\"[ABE-ERROR] Failed to find driving object, stop driving.\");\r\n        return;\r\n      }\r\n      game.grid.updateChunk(life.driving);\r\n      life.data.do = \"drive\";\r\n      life.data.lockedInPlace = true;\r\n\r\n      life.driving.meta.sort = false;\r\n      life.driving.zOrder = 0;\r\n      if (!life.driving.animUp) {\r\n        life.driving.animUp = 0;\r\n      }\r\n\r\n      life.driving.x = life.x - 50;\r\n      life.driving.y = life.y - 20;\r\n\r\n      life.rotation = 0;\r\n\r\n      life.driving._sprite.x = 0;\r\n\r\n      life.driving.y -= 2;\r\n\r\n      if (life.data.dir == \"right\") {\r\n        life.rotation = 25;\r\n        life.driving._sprite.scale.x = 1;\r\n\r\n        life.driving.changeSprite(\"right\");\r\n      }\r\n      if (life.data.dir == \"left\") {\r\n        life.rotation = -25;\r\n        life.driving._sprite.x = life.driving._sprite.width;\r\n        life.driving._sprite.scale.x = -1;\r\n\r\n        life.driving.x = life.x - 100;\r\n\r\n        life.driving.changeSprite(\"left\");\r\n      }\r\n\r\n      if (life.data.dir == \"up\") {\r\n        life.driving.x += 32;\r\n        life.driving.changeSprite(\"up\");\r\n      }\r\n\r\n      if (life.data.dir == \"down\") {\r\n        life.driving.x += 32;\r\n        life.driving.changeSprite(\"down\");\r\n      }\r\n\r\n      \/\/Make vibrate\r\n      if (life.driving.animUp == 10) {\r\n        life.driving.y += 2;\r\n\r\n        life.driving.animUp = 0;\r\n      }\r\n\r\n      life.driving.animUp++;\r\n\r\n      life.setAnim(\"none\/idle_\" + life.data.dir, true);\r\n      life.aim();\r\n    }\r\n  });\r\n\r\n\r\n}"
+        }
+    }
+}

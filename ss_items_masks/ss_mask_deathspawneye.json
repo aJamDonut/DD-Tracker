@@ -1,0 +1,27 @@
+{
+    "name": "Deathspawn Eye",
+    "codename": "ss_mask_deathspawneye",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_masks",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "mask_deathspawneye",
+        "meta": {
+            "description": "An eye from a deathspawn. Makes the wearer look quite creepy and increases ranged accuracy",
+            "weight": 3,
+            "contextOptions": "equipt",
+            "slots": "mask",
+            "blockWidth": 1,
+            "blockHeight": 1,
+            "value": 1950
+        },
+        "events": {
+            "onEquipt": "function(life) {\r\n\tlife.addStatsFrom(this);\r\n}",
+            "onUnEquipt": "function(life) {\r\n\tlife.removeStatsFrom(this);\r\n}",
+            "onCreate": "function(item) {\r\n  \titem.data.stats.bluntReduction = 10;\r\n  \titem.data.stats.ballisticReduction = 10;\r\n  \titem.data.stats.sharpReduction = 10;\r\n  \titem.data.stats.tempHeat = 0;\r\n  \titem.data.stats.tempCold = -0;\r\n  \titem.data.stats.ranged = 2;\r\n}"
+        }
+    }
+}

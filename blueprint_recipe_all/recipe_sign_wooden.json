@@ -1,0 +1,16 @@
+{
+    "name": "Wooden Sign",
+    "codename": "recipe_sign_wooden",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_item_sign_wooden",
+        "require": "wood",
+        "amount": "10",
+        "sprite": "sprite_sign_wooden"
+    }
+}

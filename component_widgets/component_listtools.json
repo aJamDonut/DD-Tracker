@@ -1,0 +1,14 @@
+{
+    "name": "Tools list",
+    "codename": "component_listtools",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "component_widgets",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "options": "'x, y, w, h, title, showX, titleW, titleH, name, callerObject, onClose, moveable'",
+        "getElement": "function(options) {\r\n\tif (options == undefined) {\r\n\t\toptions = {\r\n\t\t\ttools: game.world.objectTemplates.walls\r\n\t\t};\r\n\t}\r\n\r\n\tgame.ui.pinningTool = {\r\n\t\treset: function () { },\r\n\t\tclickFunction: function () { }\r\n\t}\r\n\r\n\tlet container = game.render.component('drawBoxPane', { showX: true, w: 400, h: 500 });\r\n\tlet tools = options.tools;\r\n\tlet pageItems = [];\r\n \r\n\r\n\tfor (let key in tools) {\r\n\t\tlet tool = tools[key];\r\n\t\tlet icon = {};\r\n\r\n\t\tif (tool.sprite) {\r\n\t\t\ticon = new ItemIcon(tool.sprite);\r\n\t\t} else {\r\n\t\t\ticon = new WorldObject(0, 0, game.render.newTexture(game.render.tilesets.background, (tool.across - 1) * 64, (tool.down - 1) * 64, 64, 64));\r\n\t\t}\r\n\r\n\r\n\t\tlet toolContainer = new UIContainer();\r\n\t\ttoolContainer.addChild(icon);\r\n\r\n\t\tlet label = game.render.text(tool.readName.split('').splice(0, Math.min(tool.readName.length, 13)).join(''), 'item-desc-small');\r\n\t\tlabel.scale.set(0.75);\r\n\t\tlabel.y = icon.height + 15;\r\n\t\tlabel.x = icon.width \/ 2;\r\n\t\tlabel.anchor.set(0.5);\r\n\t\ttoolContainer.addChild(label)\r\n\t\ttoolContainer.isInteractive();\r\n\t\ttoolContainer.tool = tool;\r\n\t\ttoolContainer.on('pointerup', function () {\r\n\t\t\tlet toolType = this.tool.toolName || this.tool.codename; \/\/Use the toolname or codename to decide which tool to use\r\n\t\t\tswitch (toolType) {\r\n\t\t\t\tcase 'godfurni':\r\n\t\t\t\t\tgame.tools.setGodFurniTool(this.tool);\r\n\t\t\t\t\tbreak;\r\n\t\t\t\tcase 'playersquaring':\r\n\t\t\t\t\tgame.tools.setPlayerSquaringTool(this.tool);\r\n\t\t\t\t\tbreak;\r\n\t\t\t\tcase 'floor':\r\n\t\t\t\t\tgame.tools.setSquaringTool(this.tool)\r\n\t\t\t\t\tbreak;\r\n\t\t\t\tdefault:\r\n\t\t\t\t\tgame.util.placeObject(this.tool)\r\n\t\t\t\t\tbreak;\r\n\t\t\t}\r\n\t\t});\r\n\t\tpageItems.push(\r\n\t\t\ttoolContainer\r\n\t\t);\r\n\t}\r\n\r\n\tlet pager = game.render.component('pager', {\r\n\t\titemsPerPage: 4 * 4,\r\n\t\ttemplate: 'pagergrid',\r\n\t\titems: pageItems,\r\n\t\twidth: container.width - 55,\r\n\t\theight: container.height + 500,\r\n\t\tgap: 25\r\n\t});\r\n\r\n\tpager.x = 20;\r\n\tpager.y = 20;\r\n\tcontainer.addChild(pager);\r\n  \r\n  \tlet toggles = game.render.component('component_le_menutoggles', {});\r\n  \tcontainer.addChild(toggles);\r\n  \ttoggles.y = container.height;\r\n  \r\n\treturn container;\r\n}"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Light Switch",
+    "codename": "ss_lightswitch",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_lab",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_lab_items",
+        "across": 8,
+        "down": 16,
+        "w": 64,
+        "h": 64
+    }
+}

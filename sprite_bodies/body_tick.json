@@ -1,0 +1,17 @@
+{
+    "name": "Tick",
+    "codename": "body_tick",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_bodies",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_animalia",
+        "across": 7,
+        "down": 1,
+        "w": 128,
+        "h": 128
+    }
+}

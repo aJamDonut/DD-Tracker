@@ -1,0 +1,18 @@
+{
+    "name": "Rusty Boomstick",
+    "codename": "sprite_rusty_boomstick",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_weapons",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_weapons",
+        "description": "Shotgun",
+        "across": 10,
+        "down": 2,
+        "w": 192,
+        "h": 64
+    }
+}

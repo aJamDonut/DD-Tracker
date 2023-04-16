@@ -1,0 +1,16 @@
+{
+    "name": "Mecha Spyder",
+    "codename": "anim_body_mechaspyder",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ani_all",
+    "color": "#202327",
+    "editedtime": "1677423945",
+    "vars": {
+        "textures": "idle_right:\r\nbody_mechaspyderright\r\n\r\nidle_down:\r\nbody_mechaspyder\r\n\r\nidle_up:\r\nbody_mechaspyderup\r\n\r\nwalk_right:\r\nbody_mechaspyderright2\r\nbody_mechaspyderright\r\nbody_mechaspyderright3\r\nbody_mechaspyderright\r\n\r\nwalk_down:\r\nbody_mechaspyder2\r\nbody_mechaspyder\r\nbody_mechaspyder3\r\nbody_mechaspyder\r\n\r\nwalk_up:\r\nbody_mechaspyderup2\r\nbody_mechaspyderup\r\nbody_mechaspyderup3\r\nbody_mechaspyderup\r\n\r\ndead_1:\r\nbody_mechaspyderdead\r\n",
+        "speed": "24",
+        "width": 256,
+        "height": 192
+    }
+}

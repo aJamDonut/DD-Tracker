@@ -1,0 +1,17 @@
+{
+    "name": "Mecha Spyder Up2",
+    "codename": "body_mechaspyderup2",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_bodiesup",
+    "color": "#202327",
+    "editedtime": "1677423455",
+    "vars": {
+        "tileset": "sheet_animalia_mechaspyder",
+        "across": 5,
+        "down": 7,
+        "w": 256,
+        "h": 192
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Building Material",
+    "codename": "recipe_building_material",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_item_building_material",
+        "require": "stone,wood",
+        "amount": "3,3",
+        "sprite": "sprite_buildingmaterial",
+        "crafted_in": "materialbench"
+    }
+}

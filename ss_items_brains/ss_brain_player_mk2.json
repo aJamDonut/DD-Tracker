@@ -1,0 +1,24 @@
+{
+    "name": "MK 2 Player Brain",
+    "codename": "ss_brain_player_mk2",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_brains",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "brain_clone_1",
+        "meta": {
+            "weight": 1,
+            "contextOptions": "equipt",
+            "slots": "brain",
+            "blockWidth": 3,
+            "blockHeight": 3
+        },
+        "events": {
+            "onEquipt": "function(item, life) {\r\n\tlife.data.brain = 'player_clone';\r\n  \tgame.session.addPlayerPawn(life);\r\n  \tlife.sync();\r\n}",
+            "onUnEquipt": "function(item, life) {\r\n  \tdelete life.data.brain;\r\n\tgame.session.removePlayerPawn(life);\r\n\tlife.sync();\r\n}"
+        }
+    }
+}

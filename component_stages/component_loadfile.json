@@ -1,0 +1,13 @@
+{
+    "name": "CLEAN ME - LoadFile",
+    "codename": "component_loadfile",
+    "value": "200",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "component_stages",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "getElement": "function() {\r\n    console.error(\"Load file now\");\r\n\r\n    game.slot = game.urlVar('load') || game.slot;\r\n\r\n\r\n\r\n    game.fs.setFolder(game.slot, true);\r\n\r\n    let hasName = (game.grid.saveGames[game.slot] && game.grid.saveGames[game.slot].name);\r\n\r\n    game.niceName = hasName ? game.grid.saveGames[game.slot].name : 'Dead Desert';\r\n\r\n    if(game.testMode) {\r\n        return new UIContainer(); \/\/TODO: return so test doesnt fail\r\n    }\r\n\r\n    game.grid.reset();\r\n\r\n    game.session = new GameSession(game);\r\n\r\n    game.render.viewport.x = game.session.viewport.x;\r\n    game.render.viewport.y = game.session.viewport.y;\r\n\r\n    game.grid.loadFirstChunk(Math.ceil((game.session.viewport.px \/ 64) \/ 10), Math.ceil((game.session.viewport.py \/ 64) \/ 10));\r\n\r\n    game.ui.mainUI();\r\n\r\n\r\n}"
+    }
+}

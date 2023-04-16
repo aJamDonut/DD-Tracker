@@ -1,0 +1,17 @@
+{
+    "name": "icon Build Spot",
+    "codename": "icon_build_spot",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_icon",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "across": 4,
+        "down": 1,
+        "w": 128,
+        "h": 128,
+        "tileset": "sheet_ui"
+    }
+}

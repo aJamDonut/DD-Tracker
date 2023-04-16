@@ -1,0 +1,17 @@
+{
+    "name": "Earth Display",
+    "codename": "sprite_display_earth",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_worlditems",
+    "color": "#202327",
+    "editedtime": "1676771972",
+    "vars": {
+        "tileset": "sheet_world_items",
+        "across": 23,
+        "down": 14,
+        "w": 128,
+        "h": 192
+    }
+}

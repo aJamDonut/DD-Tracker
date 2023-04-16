@@ -1,0 +1,18 @@
+{
+    "name": "Baton",
+    "codename": "weapon_baton",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_weapons",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_weapons",
+        "description": "Baton",
+        "across": 3,
+        "down": 7,
+        "w": 128,
+        "h": 64
+    }
+}

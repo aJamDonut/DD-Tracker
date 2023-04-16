@@ -1,0 +1,14 @@
+{
+    "name": "Damage",
+    "codename": "s_effect_damage",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "status_effects_server",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "start": "function(item, options){\r\n  if(options.creatorId && !item.data.targetId) {\r\n\t\/\/item.data.targetId = options.creatorId; \/\/TODO: readd something for this, the guy who shot me.\r\n  }\r\n  item.hurt(options.dmg, options.type, options);\r\n  \r\n  \r\n\t\r\n  if(item.data.stats.hp < 1) {\r\n\titem.addStatus('dead');\r\n  }\r\n  if(item.data.isPlayer && typeof item.addStatus == 'function') { \/\/Level up player\r\n  \titem.addStatus('levelling_up',{action: 'tookdamage', additional: {}});\r\n  }\r\n}",
+        "stacks": "1"
+    }
+}

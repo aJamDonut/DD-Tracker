@@ -1,0 +1,16 @@
+{
+    "name": "Talking",
+    "codename": "c_effect_talking",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "status_effects_client",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "start": "function(item, options){\r\n  item.talk = game.render.text(options.msg, 'ingame-dialog');\r\n  item.talk.anchor.set(0.5);\r\n  game.render.aboveLife.addChild(item.talk);\r\n}",
+        "tick": "function(item, options){\r\n  \r\n  item.talk.x = item.x + 32;\r\n  item.talk.y = item.y - 25;\r\n}",
+        "end": "function(item, options) {\r\n  item.talk.alpha = 0.5;\r\n  item.talk.destroy();\r\n}",
+        "stacks": "0"
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "name": "TP",
+    "codename": "tp",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "phys_collisions",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "start": "function(me, toucher, first) {\r\n  if(me.data.usedata1.length>0) {\r\n    servers.physics.removeAllObjects();\r\n    servers.physics.helper.broadcastUpdate('helperFuncs', 'transitionLevel', {level: me.data.usedata1});\r\n    me.data.usedata1 = '';\r\n\t\r\n  } else {\r\n\tconsole.error(\"Can't find TP\");\r\n  }\r\n}"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Blue Ugly Bug Up3",
+    "codename": "body_uglybug_blueup3",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_bodiesup",
+    "color": "#202327",
+    "editedtime": "1676662018",
+    "vars": {
+        "tileset": "sheet_animalia_spyder",
+        "across": 9,
+        "down": 7,
+        "w": 256,
+        "h": 192
+    }
+}

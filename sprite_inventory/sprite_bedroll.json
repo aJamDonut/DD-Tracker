@@ -1,0 +1,17 @@
+{
+    "name": "Bedroll",
+    "codename": "sprite_bedroll",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_inventory",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_invitems2",
+        "across": 1,
+        "down": 3,
+        "w": 256,
+        "h": 128
+    }
+}

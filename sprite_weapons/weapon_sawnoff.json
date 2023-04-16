@@ -1,0 +1,18 @@
+{
+    "name": "Sawn off",
+    "codename": "weapon_sawnoff",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_weapons",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_weapons",
+        "description": "Sawnyoffy",
+        "across": 11,
+        "down": 3,
+        "w": 128,
+        "h": 128
+    }
+}

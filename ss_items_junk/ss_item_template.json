@@ -1,0 +1,19 @@
+{
+    "name": "Template",
+    "codename": "ss_item_template",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_junk",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_bandage_small",
+        "meta": {
+            "blockWidth": 1,
+            "blockHeight": 1,
+            "value": 500
+        },
+        "events": []
+    }
+}

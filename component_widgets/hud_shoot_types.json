@@ -1,0 +1,13 @@
+{
+    "name": "HUD Shoot types",
+    "codename": "hud_shoot_types",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "component_widgets",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "getElement": "function () {\r\n\r\n    var pane = game.render.componentRaw('drawBoxPane', { showX: game.editMode, x: 0, y: 0, w: 200, h: 60 });\r\n\r\n    var icon = new Sprite('icon_shoot_sniper');\r\n    icon.id = 'icon_shoot_sniper';\r\n    game.index.addToIndex('hud_elements', icon)\r\n    icon.setScale(0.5)\r\n    icon.x = 15;\r\n    icon.y = 15;\r\n    icon.alpha = game.playerGlobals.shootType == 'sniper' ? 1 : 0.25;\r\n    icon.isInteractive();\r\n    icon.on('pointerup', function () {\r\n        var sn = game.index.getFromIndex('icon_shoot_sniper', 'hud_elements');\r\n        var sp = game.index.getFromIndex('icon_shoot_spray', 'hud_elements');\r\n        var ba = game.index.getFromIndex('icon_shoot_balance', 'hud_elements');\r\n        sn.alpha = 1;\r\n        sp.alpha = 0.25;\r\n        ba.alpha = 0.25;\r\n\r\n    });\r\n    pane.addChild(icon);\r\n\r\n    icon = new Sprite('icon_shoot_spray');\r\n    icon.id = 'icon_shoot_spray';\r\n    game.index.addToIndex('hud_elements', icon)\r\n    icon.setScale(0.5)\r\n    icon.x = 15 + 10 + 32;\r\n    icon.y = 15;\r\n    icon.alpha = game.playerGlobals.shootType == 'spray' ? 1 : 0.25;\r\n    icon.isInteractive();\r\n    icon.on('pointerup', function () {\r\n        var sn = game.index.getFromIndex('icon_shoot_sniper', 'hud_elements');\r\n        var sp = game.index.getFromIndex('icon_shoot_spray', 'hud_elements');\r\n        var ba = game.index.getFromIndex('icon_shoot_balance', 'hud_elements');\r\n        sn.alpha = 0.25;\r\n        sp.alpha = 1;\r\n        ba.alpha = 0.25;\r\n\r\n    });\r\n    pane.addChild(icon);\r\n\r\n    icon = new Sprite('icon_shoot_balance');\r\n    icon.id = 'icon_shoot_balance';\r\n    game.index.addToIndex('hud_elements', icon)\r\n    icon.setScale(0.5)\r\n    icon.x = 15 + 10 + 32 + 10 + 32;\r\n    icon.y = 15;\r\n    icon.alpha = game.playerGlobals.shootType == 'balance' ? 1 : 0.25;\r\n    icon.isInteractive();\r\n    icon.on('pointerup', function () {\r\n        var sn = game.index.getFromIndex('icon_shoot_sniper', 'hud_elements');\r\n        var sp = game.index.getFromIndex('icon_shoot_spray', 'hud_elements');\r\n        var ba = game.index.getFromIndex('icon_shoot_balance', 'hud_elements');\r\n        sn.alpha = 0.25;\r\n        sp.alpha = 0.25;\r\n        ba.alpha = 1;\r\n\r\n    });\r\n    pane.addChild(icon);\r\n\r\n    return pane;\r\n}"
+    }
+}

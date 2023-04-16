@@ -1,0 +1,17 @@
+{
+    "name": "Robot Body",
+    "codename": "recipe_body_robot",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_item_body_robot",
+        "sprite": "body_robot",
+        "crafted_in": "ss_loom",
+        "require": "composites,sheetmetal,redgem,mechscrap",
+        "amount": "2,20,1,4"
+    }
+}

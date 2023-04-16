@@ -1,0 +1,17 @@
+{
+    "name": "Jail Door",
+    "codename": "sprite_door_jail",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_worlditems",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_world_items",
+        "across": 1,
+        "down": 15,
+        "w": 128,
+        "h": 128
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Lock Unlocked",
+    "codename": "sprite_lock_unlocked",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_misc",
+    "color": "#202327",
+    "editedtime": "1677344328",
+    "vars": {
+        "tileset": "sheet_ui",
+        "across": 6,
+        "down": 10,
+        "w": 192,
+        "h": 192
+    }
+}

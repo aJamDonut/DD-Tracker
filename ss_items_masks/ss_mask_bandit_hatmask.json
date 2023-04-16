@@ -1,0 +1,27 @@
+{
+    "name": "Western Hat and Mask",
+    "codename": "ss_mask_bandit_hatmask",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_masks",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "mask_bandit_hatmask",
+        "meta": {
+            "description": "A has and mask to protect from the dust of the dead desert. Offers good protection from the heat",
+            "weight": 3,
+            "contextOptions": "equipt",
+            "slots": "mask",
+            "blockWidth": 3,
+            "blockHeight": 3,
+            "value": 1600
+        },
+        "events": {
+            "onEquipt": "function(life) {\r\n\tlife.addStatsFrom(this);\r\n}",
+            "onUnEquipt": "function(life) {\r\n\tlife.removeStatsFrom(this);\r\n}",
+            "onCreate": "function(item) {\r\n  \titem.data.stats.bluntReduction = 15;\r\n  \titem.data.stats.ballisticReduction = 15;\r\n  \titem.data.stats.sharpReduction = 15;\r\n  \titem.data.stats.tempHeat = 25;\r\n  \titem.data.stats.tempCold = -0;\r\n}"
+        }
+    }
+}

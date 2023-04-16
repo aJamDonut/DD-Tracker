@@ -1,0 +1,13 @@
+{
+    "name": "Start Game",
+    "codename": "qklinks_href_editdev",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ahref_ahref_quicklinks",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "url": "..\/..\/ABE\/deaddesert.html?noAudio=true&test=true&type=component&unit=frontMenu&x=67&y=88&tt=y&map=live"
+    }
+}

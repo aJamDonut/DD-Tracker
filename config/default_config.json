@@ -1,0 +1,19 @@
+{
+    "name": "default",
+    "codename": "default_config",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "config",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "cp_bgColor": "#2e3233",
+        "cp_btnColor": "#2e3339",
+        "cp_txtColor": "#c7c7c7",
+        "cp_accent1": "#212325",
+        "cp_accent2": "#2b2b2b",
+        "cp_showBgImg": "1",
+        "cp_menu": "ahref_cptop"
+    }
+}

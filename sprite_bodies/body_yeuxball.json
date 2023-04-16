@@ -1,0 +1,17 @@
+{
+    "name": "Yeux Ball",
+    "codename": "body_yeuxball",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_bodies",
+    "color": "#202327",
+    "editedtime": "1678637548",
+    "vars": {
+        "tileset": "sheet_animalia",
+        "across": 13,
+        "down": 1,
+        "w": 128,
+        "h": 128
+    }
+}

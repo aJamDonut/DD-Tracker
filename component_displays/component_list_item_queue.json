@@ -1,0 +1,14 @@
+{
+    "name": "List Item for Queue",
+    "codename": "component_list_item_queue",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "component_displays",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "options": "'w, h, label, startTime, duration, queue, queueIndex'",
+        "getElement": "function(options) {\r\n\r\n    if(!options) {\r\n      options = {\r\n        w: 450, h: 50\r\n      };\r\n    }\r\n\r\n  \r\n    var w = options.w || 450;\r\n  \tvar h = options.h || 50;\r\n  \r\n  \tlet recipe = options.recipe || 'pickaxe';\r\n  \t\r\n    \r\n    let crafts = new InventoryItem(_BLUEPRINTS.RECIPES['recipe_'+recipe].crafts);\r\n    \r\n  \tvar label = crafts.readName || 'Antique Shotgun'\r\n  \r\n    var startTime = options.startTime || false;\r\n  \tvar duration = options.duration || 250000;\r\n  \tvar timeLeft = (startTime + duration) - Date.now();\r\n  \tvar queue = options.queue\r\n    var queueIndex = options.queueIndex\r\n  \r\n    let timeLeftString;\r\n    \r\n    if(startTime === false) {\r\n      \ttimeLeftString = Math.floor(duration) \/ 10000;\r\n    } else {\r\n  \t\ttimeLeftString = Math.floor(timeLeft) \/ 10000;\r\n    }\r\n  \r\n    var pane = game.render.componentRaw('drawBoxPane', {moveable:false, showX: false, w: w, h: h});\r\n\r\n\tvar text = game.render.text(timeLeftString+\"mins :: \"+label, 'ingame-label');\r\n  \ttext.x = 25;\r\n  \ttext.y = 15;\r\n  \t\r\n  \tpane.addChild(text);\r\n  \r\n  \r\n  \tvar btn = game.render.component('hud_button', {name:'Cancel'});\r\n    pane.addChild(btn);\r\n    btn.x = w - btn.width - 5;\r\n    btn.y = 5;\r\n  \tbtn.queue = queue;\r\n  \tbtn.queueIndex = queueIndex;\r\n    btn.isInteractive();\r\n    btn.options = options;\r\n    btn.on('pointerup', function(){\r\n      this.queue.removeItemAt(this.queueIndex); \/\/Remove it from the queue\r\n    });\r\n  \t\r\n  \treturn pane;\r\n  \r\n  }"
+    }
+}

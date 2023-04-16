@@ -1,0 +1,27 @@
+{
+    "name": "Spacevader Mk 1",
+    "codename": "ss_body_spacevader_1",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_body",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "body_spacevader_1",
+        "meta": {
+            "description": "Highly advanced power armour made by SinCorp.",
+            "weight": 2,
+            "contextOptions": "equipt",
+            "slots": "body",
+            "blockWidth": 3,
+            "blockHeight": 3,
+            "value": 3450
+        },
+        "events": {
+            "onEquipt": "function(life) {\r\n\tlife.addStatsFrom(this);\r\n}",
+            "onUnEquipt": "function(life) {\r\n\tlife.removeStatsFrom(this);\r\n}",
+            "onCreate": "function(item) {\r\n  \titem.data.stats.bluntReduction = 25;\r\n  \titem.data.stats.ballisticReduction = 25;\r\n  \titem.data.stats.sharpReduction = 25;\r\n  \titem.data.stats.tempHeat = 25;\r\n  \titem.data.stats.tempCold = -25;\r\n}"
+        }
+    }
+}

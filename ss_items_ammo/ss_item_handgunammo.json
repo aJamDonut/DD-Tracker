@@ -1,0 +1,19 @@
+{
+    "name": "Handgun Ammo",
+    "codename": "ss_item_handgunammo",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_ammo",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "item_ammoboxhandgun",
+        "meta": {
+            "blockWidth": 2,
+            "blockHeight": 2,
+            "value": 100
+        },
+        "events": []
+    }
+}

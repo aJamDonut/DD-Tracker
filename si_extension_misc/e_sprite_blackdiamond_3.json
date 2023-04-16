@@ -1,0 +1,17 @@
+{
+    "name": "Black Diamond 3",
+    "codename": "e_sprite_blackdiamond_3",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "si_extension_misc",
+    "color": "#202327",
+    "editedtime": "1678587456",
+    "vars": {
+        "sprite": "sprite_blackdiamond_3",
+        "meta": [],
+        "events": {
+            "onCreate": "function(obj) {\r\n    game.tween(obj, 'levitate', {randomStart: true});\r\n}"
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "name": "List Craft Resources",
+    "codename": "component_playerresources",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "component_widgets",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "getElement": "function(options) {\r\n  \r\n  var container = new UIContainer();\r\n  \r\n  var listItem = new TickerContainer(container, function(container){\r\n    \r\n  \tif(container.listItem) {\r\n\t\tcontainer.listItem.destroy();\r\n    }\r\n    var mulch =  game.p.data.stats.mulch || 0;\r\n    var stone =  game.p.data.stats.stone || 0;\r\n    var components =  game.p.data.stats.components || 0;\r\n    var adhesive =  game.p.data.stats.adhesives || 0;\r\n    var wood =  game.p.data.stats.wood || 0;\r\n    var fabric =  game.p.data.stats.fabric || 0;\r\n\r\n    var list = [\r\n      game.render.component('drawLabel', {\r\n        name:'Wood',\r\n        value: game.format(wood),\r\n      }),\r\n      game.render.component('drawLabel', {\r\n        name:'Stone',\r\n        value: game.format(stone),\r\n      }),\r\n      game.render.component('drawLabel', {\r\n        name:'Fabric',\r\n        value: game.format(fabric),\r\n      }),\r\n      game.render.component('drawLabel', {\r\n        name:'Adhesive',\r\n        value: game.format(adhesive),\r\n      }),\r\n      game.render.component('drawLabel', {\r\n        name:'Mulch',\r\n        value: game.format(mulch),\r\n      }),\r\n      game.render.component('drawLabel', {\r\n        name:'Components',\r\n        value: game.format(components),\r\n      })\r\n      \r\n\r\n    ];\r\n\r\n  \r\n    var column = game.render.componentRaw('pager', {items:list, itemsPerPage:6});\r\n    container.listItem = column;\r\n    this.addChild(column);\r\n  }, 0.5);\r\n  \r\n  container.addChild(listItem);\r\n\r\n  return container;\r\n  \r\n}"
+    }
+}

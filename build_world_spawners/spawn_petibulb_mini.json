@@ -1,0 +1,18 @@
+{
+    "name": "Petibulb Mini Spawn",
+    "codename": "spawn_petibulb_mini",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_world_spawners",
+    "color": "#202327",
+    "editedtime": "1674938337",
+    "vars": {
+        "sprite": "btn_blank_sqr",
+        "meta": [],
+        "events": {
+            "onCreate": "function(spawner) {\r\n  if (game.editMode) {\r\n    return;\r\n  }\r\n\r\n  var player = new LifeObjectSimple();\r\n\r\n  player.x = spawner.x;\r\n  player.y = spawner.y;\r\n\r\n  player.setOwner(spawner);\r\n\r\n  player.data.faction = 'wild';\r\n\r\n  game.render.lifeLayer.addChild(player);\r\n\r\n  game.world.addObject(player);\r\n  game.world.addToServer(player);\r\n  \r\n  player.inventory.body.addItem(new InventoryItem('ss_animal_petibulb_'+game.rng(1,2), { disabled: true }), true);\r\n  player.inventory.brain.addItem(new InventoryItem('ss_brain_deadhead', { disabled: true }), true);\r\n\r\n  game.lastp = player;\r\n  spawner.destroy();\r\n}"
+        },
+        "destroyBase": "0"
+    }
+}

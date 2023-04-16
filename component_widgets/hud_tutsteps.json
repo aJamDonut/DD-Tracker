@@ -1,0 +1,13 @@
+{
+    "name": "Tutorial Steps",
+    "codename": "hud_tutsteps",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "component_widgets",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "getElement": "function(options) {\r\n  \r\n  let container = new UIContainer();\r\n\r\n  \/\/let pane = new TickerContainer(false, function () {\r\n\r\n    let tutSteps = {\r\n      found_weapon: 'Find a weapon',\r\n      found_armor: 'Find armour',\r\n      found_food: 'Find food',\r\n      placed_campfire: 'Place a campfire',\r\n      recruit_member: 'Recruit a squad member',\r\n      join_faction: 'Join a faction',\r\n      establish_base: 'Build a base',\r\n      complete_bounty: 'Complete a bounty'\r\n    };\r\n\r\n    let keys = Object.keys(tutSteps);\r\n\r\n    let yOffset = 0;\r\n\r\n    for (let i = 0; i < keys.length; i++) {\r\n      if(game.session.data.tut_steps[keys[i]]) {\r\n        continue;\r\n      }\r\n      let desc = tutSteps[keys[i]];\r\n      let text = game.render.text(':: ' + desc, 'ingame-label');\r\n      container.addChild(text);\r\n      text.y = yOffset\r\n      yOffset += 20;\r\n    }\r\n\r\n\r\n    \r\n\r\n  \/\/}, 10000);\r\n  \r\n  \/\/pane.alpha = 0.70;\r\n  \/\/container.addChild(pane);\r\n\r\n  return container;\r\n}"
+    }
+}

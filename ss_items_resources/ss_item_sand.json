@@ -1,0 +1,23 @@
+{
+    "name": "Sand",
+    "codename": "ss_item_sand",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_resources",
+    "color": "#202327",
+    "editedtime": "1675955859",
+    "vars": {
+        "sprite": "sprite_sand",
+        "meta": {
+            "description": "Used in crafting glass",
+            "slots": "resource",
+            "blockWidth": 2,
+            "blockHeight": 2,
+            "value": 20
+        },
+        "events": {
+            "onCreate": "function() {\r\n  \tthis.maxStack = 3;\r\n  \tthis.isQuantity = true;\r\n}"
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "name": "Helper - Drop Off",
+    "codename": "pers_dropoff_helper",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_persistent_items",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "icon_build_spot",
+        "meta": [],
+        "events": {
+            "onCreate": "function(item) {\r\n\titem.data.job = 'haul';\r\n  \titem.sync();\r\n  \tgame.offloader.addToIndex('jobs', item);\r\n  \r\n  \titem.alpha = 1;\r\n  \titem.steps = 0;\r\n  \titem.jobAnim = 'build';\r\n  \titem.maxSteps = 3;\r\n  \r\n  \titem.jobStep = function(data){\r\n      \r\n      console.error(\"Job step\", this.phase, this.steps);\r\n      this.steps++;\r\n      \r\n      let caller = game.index.getFromIndex(data.callerId, 'all');\r\n      \r\n      caller.forceAnim = 'util\/build_'+caller.data.dir; \/\/Some animation to look like something is happening\r\n      \r\n      let parent = game.index.getFromIndex(this.data.parentId, 'all');\r\n      let resource = this.data.resource;\r\n      let qty = this.data.qty;\r\n      \r\n      if(this.steps === this.maxSteps) {\r\n        \r\n        let callerResources = caller.inventory.main.getResources();\r\n        \r\n        if(!callerResources['ss_item_'+resource]) {\r\n\t\t\tcaller.completeJob(this);\r\n          \treturn;\r\n        }\r\n        \r\n        let giveMax = (qty < callerResources['ss_item_'+resource]) ? qty : callerResources[resource]; \/\/Only give what we can\r\n        \r\n        if(parent.inventory.addResource(resource, giveMax)) {\r\n        \tif(!caller.inventory.main.removeResource(resource, giveMax)) {\r\n              parent.inventory.removeResource(resource, giveMax);\r\n            }\r\n        }\r\n        \r\n        console.error(\"GIB ITEMS\", this);\r\n        \r\n        this.sync();\r\n        \r\n        caller.forceAnim = false;\r\n        \r\n        caller.completeJob(this);\r\n        this.alpha = 0;\r\n        \r\n      }\r\n      \r\n  \t}\r\n}",
+            "onJobCheck": "function(item, life) {\r\n  \r\n  \/\/Check that local life has required resource\r\n  let resource = item.data.resource;\r\n  let qty = item.data.qty;\r\n  let lifeQty = life.itemList['ss_item_'+resource];\r\n  \r\n  console.log(\"Looking for \"+qty+\" \"+resource + \" Has +\"+lifeQty, life.itemList);\r\n  \r\n  if(lifeQty && lifeQty > 0) {\r\n  \treturn true; \r\n  }\r\n  \r\n  return false;\r\n  \r\n  \r\n  \r\n  \r\n  \r\n}"
+        }
+    }
+}

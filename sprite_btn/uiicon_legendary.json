@@ -1,0 +1,17 @@
+{
+    "name": "UI Icon Legendary",
+    "codename": "uiicon_legendary",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_btn",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_effects",
+        "across": 4,
+        "down": 1,
+        "w": 64,
+        "h": 64
+    }
+}

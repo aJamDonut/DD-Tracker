@@ -1,0 +1,19 @@
+{
+    "name": "Lokal head",
+    "codename": "ss_item_mask_lokal",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_masks",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "sprite": "mask_lokal",
+        "meta": {
+            "slots": "mask",
+            "blockWidth": 2,
+            "blockHeight": 2
+        },
+        "events": []
+    }
+}

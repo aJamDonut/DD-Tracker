@@ -1,0 +1,16 @@
+{
+    "name": "Knocked out",
+    "codename": "aistate_ko",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ai_states",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "start": "function(){\r\n  this.path = [];\r\n  return true;\r\n}",
+        "run": "function(){\r\n    return true;\r\n}",
+        "end": "function(){\r\n    return true;\r\n}",
+        "weight": "function(){\r\n  \r\n  if(this.data.ko) {\r\n\treturn 1000; \/\/Always KO if this is true\r\n  }\r\n  \r\n}"
+    }
+}

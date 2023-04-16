@@ -1,0 +1,17 @@
+{
+    "name": "Peace Sign",
+    "codename": "sprite_peacesign",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_yamaitems",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_world_items",
+        "across": 16,
+        "down": 27,
+        "w": 640,
+        "h": 384
+    }
+}

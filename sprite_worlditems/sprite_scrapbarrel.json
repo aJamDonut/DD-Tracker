@@ -1,0 +1,17 @@
+{
+    "name": "Scrap Barrel",
+    "codename": "sprite_scrapbarrel",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_worlditems",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_world_items",
+        "across": 15,
+        "down": 3,
+        "w": 128,
+        "h": 128
+    }
+}

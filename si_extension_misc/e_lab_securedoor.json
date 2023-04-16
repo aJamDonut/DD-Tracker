@@ -1,0 +1,21 @@
+{
+    "name": "Lab Secure Door",
+    "codename": "e_lab_securedoor",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "si_extension_misc",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "meta": {
+            "physicsType": "logic",
+            "contextOptions": "custom",
+            "persist": "1"
+        },
+        "events": {
+            "onCreate": "function(item) {\r\n\titem.addExtension('ext_door');\r\n}",
+            "onUpdate": "function(item, oldData, newData) {\r\n\r\n  console.log(item, oldData, newData);\r\n \r\n\r\n}"
+        }
+    }
+}

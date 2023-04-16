@@ -1,0 +1,20 @@
+{
+    "name": "Cooked Meat Blueprint",
+    "codename": "ss_item_bp_cooked_meat",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_blueprints",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_bp_green",
+        "meta": {
+            "contextOptions": "usebp",
+            "blockWidth": 1,
+            "blockHeight": 1,
+            "recipe": "cooked_meat"
+        },
+        "events": []
+    }
+}

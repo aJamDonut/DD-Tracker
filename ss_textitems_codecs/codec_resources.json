@@ -1,0 +1,18 @@
+{
+    "name": "Codec: Resources",
+    "codename": "codec_resources",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_textitems_codecs",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "item_codec",
+        "meta": {
+            "blockWidth": 1,
+            "blockHeight": 1,
+            "description": "[Author: Bob How] [Year: 4001]\r\nSo I suppose it's not all doom and gloom here. It looks like the trees and plants here at least offer something in the way of resources.\r\nJust setting a few clones on the trees for an hour yielded huge stacks of wood for us to use in manufacturing.\r\nThe plants work great as a fiber material too. It's surprising how well it performs when compare to Earthly materials."
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "DocoBot Start",
+    "codename": "dialog_docobot_start",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "dialogs_generic",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "dialog": "01010:: Beginning human interaction routine... \r\n10010:: Scanning. You are an unregistered clone\r\n01000:: Identify",
+        "option1": "...what?",
+        "option1_func": "function(caller, player) {\r\n  \/\/Attack player\r\n  \tcaller.data.dialog = false;\r\n  \tcaller.data.faction = 'wild';\r\n  \tcaller.data.rageId = player.id\r\n  \tcaller.sync();\r\n    setTimeout(()=>{\r\n      game.util.closeDialog();\r\n    },2000);\r\n\treturn \"01100:: Identity failed. Terminate!\";\r\n}"
+    }
+}

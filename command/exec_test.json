@@ -1,0 +1,13 @@
+{
+    "name": "Sync changes",
+    "codename": "exec_test",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "command",
+    "color": "#202327",
+    "editedtime": "1670882688",
+    "vars": {
+        "command": "\"..\/..\/..\/php\/php.exe\" backup_items.php\r\ncd ..\/..\/ABE\r\nnode -v\r\nnpm -v\r\ngit pull\r\ngit status\r\ngit add adam-sync.json\r\ngit commit -m\"sync adam db\"\r\ngit push\r\n"
+    }
+}

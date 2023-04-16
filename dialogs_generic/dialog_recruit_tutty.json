@@ -1,0 +1,19 @@
+{
+    "name": "Recruit Tutty",
+    "codename": "dialog_recruit_tutty",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "dialogs_generic",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "dialog": "Psssst. I'm hiding in here. I'm so fed up of working hard for these smucks making nothing for myself. Look, maybe you can prove yourself? If you can pay me 100 I'll join you.",
+        "option1": "I don't want to pay that",
+        "option1_func": "function(caller) {\r\n\treturn \"Okay well let me know if you change your mind\";\r\n}",
+        "option2": "How can I make some cash?",
+        "option2_func": "function() {\r\n\treturn \"Oh there are loads of ways to make some hard cash, you can sell resources, complete bounties or sell old loot to name a few ways...\";\r\n}",
+        "option3": "[CHECK] Yeah sure, i'll pay it",
+        "option3_func": "function(caller, player) {\r\n  \tif(game.session.canAfford(100)) {\r\n\t\t\/\/take the cash\r\n      game.session.removeCash(100);\r\n      \t\/\/Turn this NPC into player NPC\r\n      caller.inventory.brain.empty();\r\n      caller.inventory.brain.addItem(new InventoryItem('ss_brain_player_mk1'), true);\r\n      \treturn \"Great, let's go then!\";\r\n    } else {\r\n\t\treturn \"You can't afford this right now\";\r\n    }\r\n}"
+    }
+}

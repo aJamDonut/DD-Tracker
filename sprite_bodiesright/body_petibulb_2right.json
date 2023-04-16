@@ -1,0 +1,17 @@
+{
+    "name": "Petibulb 2 Right",
+    "codename": "body_petibulb_2right",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_bodiesright",
+    "color": "#202327",
+    "editedtime": "1674904909",
+    "vars": {
+        "tileset": "sheet_animalia",
+        "across": 11,
+        "down": 3,
+        "w": 128,
+        "h": 128
+    }
+}

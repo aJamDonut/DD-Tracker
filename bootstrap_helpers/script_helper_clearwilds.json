@@ -1,0 +1,13 @@
+{
+    "name": "Clear Wilds",
+    "codename": "script_helper_clearwilds",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_helpers",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "exec": "function() {\r\n  game.clearWilds = function () {\r\n    let lives = game.index.getIndex('life');\r\n\r\n    for(id in lives) {\r\n      let life = lives[id];\r\n      if(life.data.isPlayer) {\r\n        continue;\r\n      }\r\n      life.markDelete();\r\n    }\r\n\r\n  }\r\n}"
+    }
+}

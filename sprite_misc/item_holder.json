@@ -1,0 +1,17 @@
+{
+    "name": "Item Holder",
+    "codename": "item_holder",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_misc",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_world_items",
+        "across": 1,
+        "down": 4,
+        "w": 32,
+        "h": 32
+    }
+}

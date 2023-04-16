@@ -1,0 +1,22 @@
+{
+    "name": "Weak Rope",
+    "codename": "ss_item_bp_weakrope",
+    "value": "-10",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_blueprints",
+    "color": "#202327",
+    "editedtime": "1675985738",
+    "vars": {
+        "sprite": "sprite_bp_green",
+        "meta": {
+            "description": "A weak rope for tying up knocked out bounties and animals",
+            "contextOptions": "usebp",
+            "blockWidth": 1,
+            "blockHeight": 1,
+            "recipe": "ss_item_weakrope",
+            "value": 10
+        },
+        "events": []
+    }
+}

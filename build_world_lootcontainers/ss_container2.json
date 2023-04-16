@@ -1,0 +1,22 @@
+{
+    "name": "Codec Container",
+    "codename": "ss_container2",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_world_lootcontainers",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "container_2",
+        "meta": {
+            "blockZone": "all",
+            "physicsType": "logic",
+            "contextOptions": "loot",
+            "description": "A handy item container"
+        },
+        "events": {
+            "onCreate": "function(furni){\r\n  \t\r\n  \tvar hasSaveData = (furni.data.inventory) ? true : false;\r\n  \tgame.inventories.createInventoryForItem(furni, 10 ,10);\r\n \r\n    var myLight = new Sprite('container_2_light', {anchor:'center'});\r\n    myLight.x = furni.width\/2;\r\n    myLight.y = furni.height\/2+15;\r\n\r\n\tmyLight.filters = [game.render.filters.bloom]\r\n  \tgame.tween(myLight, 'breathe');\r\n  \tfurni.addChild(myLight);\r\n  \r\n  \tvar myLight = new Sprite('lightcookie_oval', {anchor:'center'});\r\n    myLight.x = furni.x+(furni.width\/2);\r\n    myLight.y = furni.y+(furni.height\/2)+15;\r\n\t\r\n  \tgame.tween(myLight, 'breathe');\r\n  \tgame.render.lights.addChild(myLight);\r\n\r\n  \tif(hasSaveData) {\r\n      return false;\r\n    }\r\n\t\r\n  \tvar item = new InventoryItem('codec_a1');\r\n  \tfurni.inventory.addItem(item, true);\r\n  \r\n}"
+        }
+    }
+}

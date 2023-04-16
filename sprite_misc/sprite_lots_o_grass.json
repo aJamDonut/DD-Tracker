@@ -1,0 +1,17 @@
+{
+    "name": "Lots o Grass",
+    "codename": "sprite_lots_o_grass",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_misc",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_world_items",
+        "across": 9,
+        "down": 27,
+        "w": 448,
+        "h": 384
+    }
+}

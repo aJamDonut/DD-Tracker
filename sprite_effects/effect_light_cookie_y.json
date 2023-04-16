@@ -1,0 +1,17 @@
+{
+    "name": "Light Cookie Oval Y",
+    "codename": "effect_light_cookie_y",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_effects",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_effects",
+        "across": 12,
+        "down": 9,
+        "w": 192,
+        "h": 192
+    }
+}

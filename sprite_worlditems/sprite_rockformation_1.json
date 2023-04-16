@@ -1,0 +1,17 @@
+{
+    "name": "Rock Formation 1",
+    "codename": "sprite_rockformation_1",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_worlditems",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_geo_flora",
+        "across": 4,
+        "down": 4,
+        "w": 192,
+        "h": 192
+    }
+}

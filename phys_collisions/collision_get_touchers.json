@@ -1,0 +1,14 @@
+{
+    "name": "Get Touchers",
+    "codename": "collision_get_touchers",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "phys_collisions",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "start": "function(me, toucher, first) {\r\n  if(me.data.parentId == toucher.id || toucher.data.parentId == me.id) { \/\/Skip if me\r\n    return false;\r\n  }\r\n  if(typeof toucher.addStatus == 'function') {\r\n  \ttoucher.addStatus('touched', {source:me.data.parentId, duration: Infinity});\r\n  } else {\r\n\tconsole.error(\"[ABE] Toucher has no addStatus\", toucher);\r\n  }\r\n}",
+        "end": "function(me, toucher, first) {\r\n  if(me.data.parentId == toucher.id || toucher.data.parentId == me.id) { \/\/Skip if me\r\n    return false;\r\n  }\r\n  if(typeof toucher.removeStatus == 'function' && first) {\r\n  \ttoucher.removeStatus('touched', {source: me.data.parentId});\r\n  }\r\n}"
+    }
+}

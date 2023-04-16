@@ -1,0 +1,13 @@
+{
+    "name": "Local Scripts",
+    "codename": "qklinks_href_localscripts",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ahref_ahref_quicklinks",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "url": "items.php?type=command"
+    }
+}

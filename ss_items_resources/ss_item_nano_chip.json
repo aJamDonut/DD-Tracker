@@ -1,0 +1,23 @@
+{
+    "name": "Nano Chip",
+    "codename": "ss_item_nano_chip",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_resources",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "item_computer_chip",
+        "meta": {
+            "description": "Used to join crafting componenets together",
+            "slots": "resource",
+            "blockWidth": 2,
+            "blockHeight": 2,
+            "value": 500
+        },
+        "events": {
+            "onCreate": "function() {\r\n  \tthis.maxStack = 3;\r\n  \tthis.isQuantity = true;\r\n}"
+        }
+    }
+}

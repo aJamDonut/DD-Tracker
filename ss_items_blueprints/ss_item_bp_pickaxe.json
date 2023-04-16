@@ -1,0 +1,21 @@
+{
+    "name": "Pickaxe Blueprint",
+    "codename": "ss_item_bp_pickaxe",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_blueprints",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_bp_yellow",
+        "meta": {
+            "contextOptions": "usebp",
+            "blockWidth": 1,
+            "blockHeight": 1,
+            "recipe": "pickaxe",
+            "value": 1000
+        },
+        "events": []
+    }
+}

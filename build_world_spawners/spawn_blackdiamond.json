@@ -1,0 +1,18 @@
+{
+    "name": "Custom",
+    "codename": "spawn_blackdiamond",
+    "value": "-1",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_world_spawners",
+    "color": "#202327",
+    "editedtime": "1678576211",
+    "vars": {
+        "sprite": "sprite_blackdiamond_1",
+        "meta": [],
+        "events": {
+            "onCreate": "function(spawner){\r\n\t\r\n  var fire = game.render.createAnimatedSprite('anisprite_blackdiamond');\r\n  \tfire.x = 5\r\n  \tfire.y = 0;\r\n  \t\r\n  \t\/\/fire.scale.x = 0.8;\r\n  \t\/\/fire.scale.y = 0.8;\r\n  \tfire.animationSpeed = 0.1;\r\n    this.addChild(fire);\r\n}"
+        },
+        "destroyBase": "0"
+    }
+}

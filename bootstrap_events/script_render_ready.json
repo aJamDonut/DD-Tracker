@@ -1,0 +1,13 @@
+{
+    "name": "Render Ready",
+    "codename": "script_render_ready",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_events",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "exec": "function() {\r\n    game.customRenderReady = function () {\r\n        \/\/Custom function when render is ready\r\n        console.error(\"Custom render ready\", this);\r\n    }\r\n}"
+    }
+}

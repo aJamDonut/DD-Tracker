@@ -1,0 +1,27 @@
+{
+    "name": "Failed Clone Mask",
+    "codename": "ss_mask_failedclone",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_masks",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "mask_failedclone",
+        "meta": {
+            "description": "Oh what the heck! This nightmare is a result of failed cloning in Landzo city",
+            "weight": 3,
+            "contextOptions": "equipt",
+            "slots": "mask",
+            "blockWidth": 2,
+            "blockHeight": 2,
+            "value": 1000
+        },
+        "events": {
+            "onEquipt": "function(life) {\r\n\tlife.addStatsFrom(this);\r\n  \tlife.addStatus('ugly', {source: this.id});\r\n}",
+            "onUnEquipt": "function(life) {\r\n\tlife.removeStatsFrom(this);\r\n  \tlife.removeStatus('ugly', {source: this.id});\r\n}",
+            "onCreate": "function(item) {\r\n  \titem.data.stats.bluntReduction = 2;\r\n  \titem.data.stats.ballisticReduction = 2;\r\n  \titem.data.stats.sharpReduction = 2;\r\n  \titem.data.stats.tempHeat = 5;\r\n  \titem.data.stats.tempCold = -5;\r\n  \titem.data.stats.savage = 5;\r\n  \titem.data.stats.toughness = 2;\r\n}"
+        }
+    }
+}

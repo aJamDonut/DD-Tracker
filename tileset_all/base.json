@@ -1,0 +1,14 @@
+{
+    "name": "Base",
+    "codename": "base",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "tileset_all",
+    "color": "",
+    "editedtime": "1670889067",
+    "vars": {
+        "filename": "base.png",
+        "blockSize": 64
+    }
+}

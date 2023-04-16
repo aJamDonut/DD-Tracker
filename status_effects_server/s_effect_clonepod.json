@@ -1,0 +1,17 @@
+{
+    "name": "Clone Pod",
+    "codename": "s_effect_clonepod",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "status_effects_server",
+    "color": "#202327",
+    "editedtime": "1679156435",
+    "vars": {
+        "start": "function(item, options){\r\n  \r\n}",
+        "tick": "function(item, options) {\r\n    \r\n}",
+        "end": "function(item, options){\r\n  \r\n}",
+        "remove": "function(item, options){\r\n  \r\n}",
+        "stacks": "0"
+    }
+}

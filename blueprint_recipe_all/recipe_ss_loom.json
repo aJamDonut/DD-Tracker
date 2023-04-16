@@ -1,0 +1,17 @@
+{
+    "name": "Crafting Loom",
+    "codename": "recipe_ss_loom",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_loom",
+        "sprite": "sprite_loom",
+        "crafted_in": "build",
+        "require": "adhesive,wood,fiber,skin",
+        "amount": "2,25,25,10,15"
+    }
+}

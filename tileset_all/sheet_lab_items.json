@@ -1,0 +1,14 @@
+{
+    "name": "Lab Items",
+    "codename": "sheet_lab_items",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "tileset_all",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "filename": "labitems.png",
+        "blockSize": 64
+    }
+}

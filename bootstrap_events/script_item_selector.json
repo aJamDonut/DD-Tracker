@@ -1,0 +1,13 @@
+{
+    "name": "Selector Box",
+    "codename": "script_item_selector",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_events",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "exec": "function() {\r\ngame.setTicker('update-selected-box', function () {\r\n    \/\/TODO: handle destroyed objects\r\n    if(!game.editMode) {\r\n      return false;\r\n    }\r\n    if (game.selectedObject !== undefined && game.selectedObject !== false) {\r\n      game.watcherBox.alpha = 1;\r\n      if (game.selectedObject.class == 'LifeObject') {\r\n        game.watcherBox.x = game.selectedObject.x;\r\n        game.watcherBox.y = game.selectedObject.y;\r\n      } else {\r\n        game.watcherBox.x = game.selectedObject.x - (game.watcherBox.width \/ 8);\r\n        game.watcherBox.y = game.selectedObject.y - (game.watcherBox.height \/ 8);\r\n      }\r\n    }\r\n  });\r\n\r\n  game.select = function (selectObject) {\r\n    if (game.watcherBox) {\r\n      game.watcherBox.destroy();\r\n    }\r\n    if (selectObject.class == 'LifeObject') {\r\n      game.watcherBox = game.render.component('squareWBorder', { x: 0, y: 0, w: 64, h: 64});\r\n    } else {\r\n      game.watcherBox = game.render.component('squareWBorder', { x: 0, y: 0, w: selectObject.width + 16, h: selectObject.height + 16 });\r\n    }\r\n    game.render.aboveLife.addChild(game.watcherBox);\r\n    game.selectedObject = selectObject;\r\n  }\r\n}"
+    }
+}

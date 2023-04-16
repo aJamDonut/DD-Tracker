@@ -1,0 +1,14 @@
+{
+    "name": "Effects",
+    "codename": "sheet_effects",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "tileset_all",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "filename": "effects.png",
+        "blockSize": 64
+    }
+}

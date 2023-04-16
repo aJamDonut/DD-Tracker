@@ -1,0 +1,17 @@
+{
+    "name": "Small Black Diamond",
+    "codename": "e_sprite_blackdiamond_small",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "si_extension_misc",
+    "color": "#202327",
+    "editedtime": "1678587404",
+    "vars": {
+        "sprite": "sprite_blackdiamond_small",
+        "meta": [],
+        "events": {
+            "onCreate": "function(obj) {\r\n    game.tween(obj, 'levitate', {randomStart: true});\r\n}"
+        }
+    }
+}

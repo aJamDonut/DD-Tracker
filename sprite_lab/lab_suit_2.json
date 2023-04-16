@@ -1,0 +1,17 @@
+{
+    "name": "Hanging Rad Suit 2",
+    "codename": "lab_suit_2",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_lab",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_lab_items",
+        "across": 3,
+        "down": 29,
+        "w": 128,
+        "h": 128
+    }
+}

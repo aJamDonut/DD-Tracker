@@ -1,0 +1,22 @@
+{
+    "name": "Pocket Clone",
+    "codename": "ss_item_pocketclone",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_placeable",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_pocketclone",
+        "meta": {
+            "description": "It appears to be a transporter device... I wonder what it's going to transport?",
+            "weight": 10,
+            "contextOptions": " ",
+            "blockWidth": 3,
+            "blockHeight": 3,
+            "value": 900
+        },
+        "events": []
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "name": "Toggle Circle Tool",
+    "codename": "bootstrap_fn_circletool",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_util",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "exec": "function() {\r\n\r\n  game.util.toggleCircleTool = function() {\r\n\t  game.buildTools.toggleCircle();\r\n  }\r\n\r\n  game.util.allowUndo = function() {\r\n\t  game.grid.allowUndo();\r\n  }\r\n\r\n  game.util.undo = function() {\r\n\t  game.grid.undo();\r\n  }\r\n  \r\n}"
+    }
+}

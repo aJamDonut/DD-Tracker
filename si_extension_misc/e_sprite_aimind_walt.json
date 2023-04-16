@@ -1,0 +1,19 @@
+{
+    "name": "AI Mind Walt",
+    "codename": "e_sprite_aimind_walt",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "si_extension_misc",
+    "color": "#202327",
+    "editedtime": "1678589625",
+    "vars": {
+        "sprite": "sprite_aimind_walt",
+        "meta": {
+            "contextOptions": "use"
+        },
+        "events": {
+            "onCreate": "function(walt) {\r\n    walt.contextMenus['Chat'] = function (caller) {\r\n        if (!caller.data.dead) {\r\n            if (game.world.cDistance(game.p, caller) > 1250) {\r\n                game.input.mouseMsg('Too far away');\r\n                return false;\r\n            }\r\n            game.render.component(\r\n                \"game_dialog\",\r\n                { dialog: 'dialog_walt', callerObject: walt },\r\n                \"game_dialog\"\r\n            );\r\n        }\r\n    }\r\n}"
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Battery Small",
+    "codename": "e_ss_battery",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "si_extension_misc",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "meta": {
+            "blockZone": "all"
+        },
+        "events": []
+    }
+}

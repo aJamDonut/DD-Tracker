@@ -1,0 +1,17 @@
+{
+    "name": "Wood Table Horizontal",
+    "codename": "e_sprite_wood_table_h",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "si_extension_misc",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_wood_table_h",
+        "meta": {
+            "blockZone": "top"
+        },
+        "events": []
+    }
+}

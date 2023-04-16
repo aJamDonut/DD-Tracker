@@ -1,0 +1,16 @@
+{
+    "name": "Recycler",
+    "codename": "recipe_recycler",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_item_recycler",
+        "sprite": "sprite_smallrecycler",
+        "require": "components",
+        "amount": "100"
+    }
+}

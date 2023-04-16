@@ -1,0 +1,21 @@
+{
+    "name": "Black Wings",
+    "codename": "ss_black_wings",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_backpack",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "item_black_wings",
+        "meta": {
+            "weight": 1,
+            "contextOptions": "equipt",
+            "slots": "backpack",
+            "blockWidth": 3,
+            "blockHeight": 3
+        },
+        "events": []
+    }
+}

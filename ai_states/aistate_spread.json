@@ -1,0 +1,13 @@
+{
+    "name": "Spread Apart",
+    "codename": "aistate_spread",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ai_states",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "weight": "function(life) {\r\n  \r\n  if(this.path.length > 0 || life.data.targetId) {\r\n  \treturn 0;\r\n  }\r\n  \r\n  if(typeof life.searchIndex == 'undefined') {\r\n\tlife.searchIndex = -1;\r\n    life.lastSweep = Date.now() - 10000;\r\n    \r\n  }\r\n\r\nlife.searchIndex++\r\n  \r\n  \/\/life.searchIndex++; \/\/Already incremented in find enemies hmmmm\r\n  \r\n  let keys = Object.keys(life.touchers);\r\n\r\n  if(keys.length==0) {\r\n\treturn false;\r\n  }\r\n  \r\n  if(life.searchIndex >= keys.length) {\r\n\tlife.searchIndex = 0;\r\n  }\r\n  \r\n  let toucher = this.touchers[keys[life.searchIndex]];\r\n  \r\n  if(!toucher) {\r\n\t\/\/Invalid toucher?\r\n    console.error(\"[ABE] Got invalid toucher?\"+this.searchIndex);\r\n    console.log(this.touchers);\r\n    return 0;\r\n  }\r\n  \r\n  let target = servers.world.index.getFromIndex(keys[life.searchIndex], 'all');\r\n  \r\n  \r\n  if(target.codename !== 'life') {\r\n\treturn 0; \/\/Not life, skip this one\r\n  }\r\n\r\n  if(target.data.dead) {\r\n    return 0; \/\/Is dead so find another\r\n  }\r\n  \r\n if(life.dist(target) < 20) {\r\n\t\/\/On top of eachother\r\n   life.makeSpace(target);\r\n }  \r\n  \/\/Ready to check\r\n  return 0;\r\n  \r\n}"
+    }
+}

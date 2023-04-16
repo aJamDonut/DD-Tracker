@@ -1,0 +1,17 @@
+{
+    "name": "Dragon Plant Adult",
+    "codename": "sprite_dragonplant_a",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_flora",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_geo_flora",
+        "across": 1,
+        "down": 1,
+        "w": 192,
+        "h": 192
+    }
+}

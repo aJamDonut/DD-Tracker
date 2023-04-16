@@ -1,0 +1,16 @@
+{
+    "name": "Pickaxe",
+    "codename": "recipe_pickaxe",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "pickaxe",
+        "sprite": "weapon_pickaxe",
+        "require": "wood,stone",
+        "amount": "5,5"
+    }
+}

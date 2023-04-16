@@ -1,0 +1,20 @@
+{
+    "name": "Bed",
+    "codename": "ss_item_bp_bed",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_blueprints_build",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_bp_blue",
+        "meta": {
+            "contextOptions": "usebp",
+            "blockWidth": 1,
+            "blockHeight": 1,
+            "recipe": "bed"
+        },
+        "events": []
+    }
+}

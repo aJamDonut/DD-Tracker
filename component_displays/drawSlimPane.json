@@ -1,0 +1,13 @@
+{
+    "name": "drawSlimPane",
+    "codename": "drawSlimPane",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "component_displays",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "getElement": "function(options) {\r\n    if(options==undefined) {\r\n\t\toptions = {};\r\n    }\r\n    x = options.x || 0;\r\n    y = options.y || 0;\r\n    w = options.w || 64;\r\n    h = options.h || 64;\r\n    title = options.title || false;\r\n    showX = options.showX || false;\r\n    titleW = options.titleW || 180;\r\n    titleH = options.titleH || 60;\r\n  \tname = options.name || \"NONAMEADDED\"  \r\n  \r\n    if(title !== false) {\r\n    \ty = y + (titleH \/ 2);\r\n    }\r\n    \r\n    var pane = new UIContainer();\r\n    pane.addChild(new UIPane({fullscreen:false, fill: '0x3d3d3d', padding:0, x: x, y: y, w: w, h:h}));\r\n    pane.addChild(new UIPane({fullscreen:false, fill: '0x212121', padding:2, x: x, y: y, w: w-2, h:h-2}));\r\n    pane.addChild(new UIPane({fullscreen:false, fill: '0x3c3c3c', padding:5, x: x, y: y, w: w-2, h:h-2}));\r\n    \r\n    \r\n    \r\n    if(title != false) {\r\n      pane.addChild(new UIPane({fullscreen:false, fill: '0x212121',padding: 10, x: x+10, y: y-(titleH\/2)+5, w: titleW, h: titleH}));\r\n      \r\n    \r\n      title = game.render.text(title, 'ingame-menu-title');\r\n\r\n      title.x = x+35;\r\n      title.y = y-10;\r\n      title.alpha = 0.8\r\n\r\n      pane.addChild(title);\r\n    }\r\n    \r\n    if(showX) {\r\n      xButton = new UIContainer();\r\n      xButton.addChild(new UIPane({fullscreen:false, fill: '0x212121',padding: 0, x: 0, y: 2, w: 25, h: 25}));\r\n      xButton.addChild(new UIPane({fullscreen:false, fill: '0x3d3d3d',padding: 0, x: 2, y: 4, w: 21, h: 21}));\r\n      xButton.isInteractive();\r\n      xButton.name = name;\r\n      xButton.on('pointerup', function() {\r\n          game.ui.closeUI(this.name);\r\n      });\r\n      xButton.x = pane.width - 10\r\n      xButton.y = 45;\r\n      pane.addChild(xButton);\r\n\r\n      xText = game.render.text('X', 'ingame-menu-title');\r\n      xText.x = 5;\r\n      xText.y = 0;\r\n\r\n      xButton.addChild(xText);\r\n    }\r\n    \r\n  \treturn pane;\r\n  }"
+    }
+}

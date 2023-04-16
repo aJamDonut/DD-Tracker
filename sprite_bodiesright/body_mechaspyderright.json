@@ -1,0 +1,17 @@
+{
+    "name": "Mecha Spyder Right",
+    "codename": "body_mechaspyderright",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_bodiesright",
+    "color": "#202327",
+    "editedtime": "1677423374",
+    "vars": {
+        "tileset": "sheet_animalia_mechaspyder",
+        "across": 1,
+        "down": 4,
+        "w": 256,
+        "h": 192
+    }
+}

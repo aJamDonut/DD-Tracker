@@ -1,0 +1,16 @@
+{
+    "name": "Stealing",
+    "codename": "s_effect_stealing",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "status_effects_server",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "start": "function(item, options){\r\n  console.log(\"STEALING\");\r\n\titem.data.stealing = true;\r\n}",
+        "tick": "function(item, options){\r\n\titem.path = [];\r\n  \titem.sync();\r\n}",
+        "end": "function(item, options){\r\n  console.log(\"END STEALING\");\r\n\titem.data.stealing = false;\r\n}",
+        "stacks": "1"
+    }
+}

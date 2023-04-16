@@ -1,0 +1,13 @@
+{
+    "name": "Context Menu",
+    "codename": "context_menu",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "component_widgets",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "getElement": "function(options) {\r\n    game.ui.contextMenuShowing = true;\r\n\r\n    if(!options) {\r\n        options = {\r\n            links: {\r\n                \"None\" : function() {}\r\n            },\r\n            callerObject: new LifeObject()\r\n        }\r\n    }\r\n\r\n    var rowCount = Object.keys(options.links).length;\r\n\r\n    var pane = game.render.componentRaw('drawSlimPane', { x: 0, y: 0, w: 200, h: 38 * rowCount });\r\n\r\n    var yOffset = 0;\r\n    var xOffset = 0;\r\n\r\n    for (var linkName in options.links) {\r\n        \/\/Display btn\r\n        let longName = linkName;\r\n        linkName = (linkName.length >= 15) ? linkName.substr(0, 15) + \"...\" : linkName;\r\n\r\n        var linkBtn = game.render.componentRaw('hud_button', { name: linkName, x: 0, y: 0, w: 200, h: 40 });\r\n\r\n        linkBtn.isInteractive();\r\n        linkBtn.callerObject = options.callerObject;\r\n        linkBtn.callerFunction = options.links[longName];\r\n        linkBtn.on('pointerdown', function () {\r\n            if (typeof this.callerFunction == 'function') {\r\n                this.callerFunction(this.callerObject);\r\n            } else {\r\n                console.log(\"[ABE] No caller function for this button\");\r\n            }\r\n        })\r\n        linkBtn.on('pointerover', function () {\r\n            this.alpha = 0.8\r\n        })\r\n        linkBtn.on('pointerout', function () {\r\n            this.alpha = 1;\r\n        })\r\n        linkBtn.x = xOffset;\r\n        linkBtn.y = yOffset;\r\n        pane.addChild(linkBtn);\r\n        yOffset += 35\r\n    }\r\n    game.index.addToIndex('context_menus', pane);\r\n    pane.x = options.callerObject.x + 64;\r\n    pane.y = options.callerObject.y + 64;\r\n    \/\/pane.pinTo(options.callerObject, options.callerObject.width, options.callerObject.height)\r\n    return pane;\r\n}"
+    }
+}

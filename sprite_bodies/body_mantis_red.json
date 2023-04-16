@@ -1,0 +1,17 @@
+{
+    "name": "Red Mantis",
+    "codename": "body_mantis_red",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_bodies",
+    "color": "#202327",
+    "editedtime": "1675722290",
+    "vars": {
+        "tileset": "sheet_animalia_mantis",
+        "across": 1,
+        "down": 1,
+        "w": 256,
+        "h": 192
+    }
+}

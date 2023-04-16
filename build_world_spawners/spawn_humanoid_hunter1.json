@@ -1,0 +1,18 @@
+{
+    "name": "Hunter 1",
+    "codename": "spawn_humanoid_hunter1",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_world_spawners",
+    "color": "#202327",
+    "editedtime": "1675877758",
+    "vars": {
+        "sprite": "btn_blank_sqr",
+        "meta": [],
+        "events": {
+            "onCreate": "function(spawner){\r\n  \r\n  \t\/*Don't spawn in NPCs in editor (might change in future)*\/\r\n  \tif(game.editMode) {\r\n\t\treturn;\r\n    }\r\n\r\n    var player = new LifeObject();\r\n  \r\n  \t\/*Set position*\/\r\n\tplayer.x = spawner.x;\r\n    player.y = spawner.y;\r\n  \r\n  \t\/*Make useable and blank, give random stats*\/\r\n  \tplayer.setBlank();\r\n  \tplayer.randomizeStats(1);\r\n  \r\n  \t\/*Set faction*\/\r\n  \tplayer.data.faction='hunter';\r\n  \r\n  \t\/*Add to layers and servers*\/\r\n    game.render.lifeLayer.addChild(player);\r\n  \tgame.world.addObject(player);\r\n    game.world.addToServer(player);\r\n  \r\n  \t\r\n  \t\/*Add armors, loot and weapons*\/\r\n  \ttry {\r\n      masks = ['ss_mask_junkdroid', 'ss_mask_deathspawneye'];\r\n      bodies = ['ss_body_tunic_1', 'ss_body_tunic_2'];\r\n      weapons = ['ss_weapon_crossbow','ss_weapon_hatchet_st']\r\n      \r\n      player.inventory.brain.addItem(new InventoryItem('ss_brain_clone_mk1'), true);\r\n      player.inventory.body.addItem(new InventoryItem(bodies[game.rng(0, bodies.length-1)]), true);\r\n      player.inventory.mask.addItem(new InventoryItem(masks[game.rng(0, masks.length-1)]), true);\r\n      \r\n      player.inventory.weapon.addItemNow(new InventoryItem(weapons[game.rng(0, weapons.length-1)]), true);\r\n    } catch(e) {\r\n      console.error(e);\r\n    }\r\n  \t\r\n  \t\/*Sync changes to server*\/\r\n  \tplayer.sync();\r\n  \r\n  \t\/*Let game know last NPC to spawn*\/\r\n  \tgame.lastp = player;\r\n  \r\n  \t\/*Destroy spawner, potentialy changes in future*\/\r\n  \tspawner.destroy();\r\n}"
+        },
+        "destroyBase": "0"
+    }
+}

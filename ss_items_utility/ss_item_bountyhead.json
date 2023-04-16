@@ -1,0 +1,19 @@
+{
+    "name": "Bounty Head",
+    "codename": "ss_item_bountyhead",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_utility",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "sprite": "item_sevhead",
+        "meta": {
+            "description": "Bounty of a person wanted.",
+            "blockWidth": 2,
+            "blockHeight": 2
+        },
+        "events": []
+    }
+}

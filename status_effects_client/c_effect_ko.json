@@ -1,0 +1,16 @@
+{
+    "name": "Knockout",
+    "codename": "c_effect_ko",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "status_effects_client",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "start": "function(item, options){\r\n  item.forceAnim = 'none\/dead_1';\r\n}",
+        "end": "function(item, options){\r\n  item.forceAnim = false;\r\n}",
+        "stacks": "0",
+        "hidden": "0"
+    }
+}

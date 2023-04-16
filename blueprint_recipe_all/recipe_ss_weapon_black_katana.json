@@ -1,0 +1,17 @@
+{
+    "name": "Black Katana",
+    "codename": "recipe_ss_weapon_black_katana",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_weapon_black_katana",
+        "sprite": "weapon_black_katana",
+        "crafted_in": "ss_smithy",
+        "require": "adhesive,skin,composites,darkiron",
+        "amount": "4,30,20,15"
+    }
+}

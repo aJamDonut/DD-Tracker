@@ -1,0 +1,17 @@
+{
+    "name": "Square 1",
+    "codename": "tex_square_1",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "textures_particles",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "across": 1,
+        "down": 1,
+        "w": 25,
+        "h": 25,
+        "tileset": "tileset_square_1"
+    }
+}

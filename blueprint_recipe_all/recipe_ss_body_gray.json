@@ -1,0 +1,16 @@
+{
+    "name": "Dead Head Skin",
+    "codename": "recipe_ss_body_gray",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_body_gray",
+        "sprite": "body_gray",
+        "require": "whitemeat",
+        "amount": "2"
+    }
+}

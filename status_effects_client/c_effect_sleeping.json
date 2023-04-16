@@ -1,0 +1,17 @@
+{
+    "name": "Sleeping",
+    "codename": "c_effect_sleeping",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "status_effects_client",
+    "color": "#202327",
+    "editedtime": "1679162862",
+    "vars": {
+        "start": "function(item, options){\r\n  item.forceAnim = 'none\/dead_1';\r\n  item.x = options.sleepX;\r\n  item.y = options.sleepY;\r\n  item.syncXY();\r\n}",
+        "tick": "function(item, options) {\r\n    \r\n}",
+        "end": "function(item, options){\r\n  item.syncXY();\r\n item.forceAnim = false;\r\n\r\n}",
+        "remove": "function(item, options){\r\n  item.syncXY();\r\n item.forceAnim = false;\r\n\r\n}",
+        "stacks": "0"
+    }
+}

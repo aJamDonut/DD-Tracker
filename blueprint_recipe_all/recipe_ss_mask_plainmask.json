@@ -1,0 +1,17 @@
+{
+    "name": "Plain Mask",
+    "codename": "recipe_ss_mask_plainmask",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_mask_plainmask",
+        "sprite": "mask_plainmask",
+        "crafted_in": "ss_smithy",
+        "require": "sheetmetal",
+        "amount": "1"
+    }
+}

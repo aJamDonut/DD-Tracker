@@ -1,0 +1,17 @@
+{
+    "name": "Icon Stance Walk",
+    "codename": "icon_stance_walk",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_icon",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "across": 2,
+        "down": 1,
+        "w": 64,
+        "h": 64,
+        "tileset": "sheet_ui"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Chomp",
+    "codename": "anim_sprite_chomp",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ani_all",
+    "color": "#202327",
+    "editedtime": "1675995010",
+    "vars": {
+        "textures": "chomp:\r\nsprite_chomp_3\r\nsprite_chomp_1\r\nsprite_chomp_2\r\nsprite_chomp_2\r\nsprite_chomp_3\r\nsprite_chomp_3",
+        "speed": "12",
+        "width": 128,
+        "height": 128
+    }
+}

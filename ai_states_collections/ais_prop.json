@@ -1,0 +1,13 @@
+{
+    "name": "Prop",
+    "codename": "ais_prop",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ai_states_collections",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "states": "aistate_idle\r\naistate_attack\r\naistate_attack_chase\r\naistate_attack_stop_chase\r\naistage_go_home"
+    }
+}

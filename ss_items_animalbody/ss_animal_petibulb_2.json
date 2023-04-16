@@ -1,0 +1,26 @@
+{
+    "name": "Petibulb Tree 2",
+    "codename": "ss_animal_petibulb_2",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_animalbody",
+    "color": "#202327",
+    "editedtime": "1674936754",
+    "vars": {
+        "sprite": "body_petibulb_2",
+        "meta": {
+            "description": "Super bark",
+            "weight": 2,
+            "contextOptions": "equipt",
+            "slots": "body",
+            "blockWidth": 3,
+            "blockHeight": 3
+        },
+        "events": {
+            "onEquipt": "function(life, item) {\r\n    \/\/In a timeout to cause a random offset between animations\r\n    setTimeout(() => {\r\n        life.y = 0;\r\n        life.pivot.set(0, life.height - 32);\r\n        let scale = life.scale.y;\r\n        const range = 0.9;\r\n\r\n        createjs.Tween.get(life.scale, { override: false, loop: -1 }).to({\r\n            y: scale * range,\r\n        }, 3250, createjs.Ease.quadInOut).to({\r\n            y: scale,\r\n        }, 4250, createjs.Ease.quadInOut);\r\n    }, game.rng(100, 2000));\r\n}",
+            "onUnEquipt": "function(life) {\r\n  \r\n}",
+            "onCreate": "function(item) {\r\n  \t\r\n  \r\n}"
+        }
+    }
+}

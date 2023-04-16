@@ -1,0 +1,15 @@
+{
+    "name": "Crafting Chem Bench",
+    "codename": "ss_chembench",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_persistent_craftbench",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_chembench",
+        "meta": [],
+        "events": []
+    }
+}

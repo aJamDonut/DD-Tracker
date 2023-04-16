@@ -1,0 +1,17 @@
+{
+    "name": "Obsidian Stuct Min",
+    "codename": "sprite_obsidian_struct_min",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_worlditems",
+    "color": "#202327",
+    "editedtime": "1678583389",
+    "vars": {
+        "tileset": "sheet_random_pieces",
+        "across": 7,
+        "down": 25,
+        "w": 192,
+        "h": 256
+    }
+}

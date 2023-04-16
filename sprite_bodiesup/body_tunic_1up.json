@@ -1,0 +1,17 @@
+{
+    "name": "Adapted Tunic Mk 1 Up",
+    "codename": "body_tunic_1up",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_bodiesup",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_humanoid",
+        "across": 3,
+        "down": 15,
+        "w": 128,
+        "h": 128
+    }
+}

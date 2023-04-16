@@ -1,0 +1,23 @@
+{
+    "name": "Cooked Meat",
+    "codename": "ss_item_cookedmeat",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_resources",
+    "color": "#202327",
+    "editedtime": "1675955904",
+    "vars": {
+        "sprite": "sprite_meat_cooked",
+        "meta": {
+            "description": "Yummy burgers!",
+            "slots": "resource",
+            "blockWidth": 2,
+            "blockHeight": 2,
+            "value": 55
+        },
+        "events": {
+            "onCreate": "function() {\r\n  \tthis.resourceType = 'Food';\r\n  \tthis.maxStack = 5;\r\n  \tthis.isQuantity = true;\r\n}"
+        }
+    }
+}

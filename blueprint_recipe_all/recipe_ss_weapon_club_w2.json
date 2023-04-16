@@ -1,0 +1,16 @@
+{
+    "name": "Wooden Club 2",
+    "codename": "recipe_ss_weapon_club_w2",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_weapon_club_w2",
+        "require": "carbon,adhesive",
+        "amount": "50000,10000",
+        "sprite": "weapon_wooden_club"
+    }
+}

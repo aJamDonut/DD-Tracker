@@ -1,0 +1,18 @@
+{
+    "name": "Camp fire",
+    "codename": "e_ss_campfire",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "si_extension_misc",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "meta": {
+            "blockZone": "all"
+        },
+        "events": {
+            "onCreate": "function(options) {\r\n\tvar fire = game.render.createAnimatedSprite('anisprite_fire2');\r\n  \tfire.x = 5\r\n  \tfire.y = 0;\r\n  \tfire.alpha = 0.75\r\n  \tfire.scale.x = 0.8;\r\n  \tfire.scale.y = 0.8;\r\n  \tfire.animationSpeed = 0.1;\r\n    this.addChild(fire);\r\n  \r\n\tvar particle = new Particles('fire_1');\r\n    \r\n    particle.x = 32;\r\n \tparticle.y = 32;\r\n    this.addChild(particle);\r\n  \tparticle.playForever();\r\n  \r\n  \tvar particle = new Particles('smoke_3');\r\n    \r\n    particle.x = 32;\r\n \tparticle.y = 20;\r\n    this.addChild(particle);\r\n  \tparticle.playForever();\r\n  \r\n    var myLight = new Sprite('lightcookie_oval', {anchor:'center'});\r\n    myLight.x = this.x+(this.width\/2)-5;\r\n    myLight.y = this.y+(this.height\/2);\r\n\t\r\n  \tgame.tween(myLight, 'breathe');\r\n  \tgame.render.lights.addChild(myLight);\r\n  \r\n  \t\r\n  \t\r\n  }"
+        }
+    }
+}

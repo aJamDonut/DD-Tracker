@@ -1,0 +1,16 @@
+{
+    "name": "Satchel Backback",
+    "codename": "recipe_ss_backpack_satchel",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_backpack_satchel",
+        "sprite": "backpack_satchel",
+        "require": "wood,fiber,skin",
+        "amount": "10,20,5"
+    }
+}

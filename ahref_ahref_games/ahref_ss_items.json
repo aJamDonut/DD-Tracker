@@ -1,0 +1,14 @@
+{
+    "name": "Inventory Items",
+    "codename": "ahref_ss_items",
+    "value": "200",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ahref_ahref_games",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "url": "items.php?template=ss_items",
+        "submenu": []
+    }
+}

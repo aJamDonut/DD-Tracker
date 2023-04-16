@@ -1,0 +1,13 @@
+{
+    "name": "Hurt",
+    "codename": "s_effect_hurt",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "status_effects_server",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "stacks": "1"
+    }
+}

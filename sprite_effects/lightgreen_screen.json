@@ -1,0 +1,17 @@
+{
+    "name": "Screen Light Green",
+    "codename": "lightgreen_screen",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_effects",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_effects",
+        "across": 1,
+        "down": 11,
+        "w": 128,
+        "h": 128
+    }
+}

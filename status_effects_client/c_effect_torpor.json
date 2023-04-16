@@ -1,0 +1,16 @@
+{
+    "name": "Torpor",
+    "codename": "c_effect_torpor",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "status_effects_client",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "start": "function(item, options){\r\n}",
+        "end": "function(item, options){\r\n}",
+        "stacks": "0",
+        "hidden": "0"
+    }
+}

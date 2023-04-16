@@ -1,0 +1,14 @@
+{
+    "name": "Animal Codecs",
+    "codename": "ahref_codecs_animal",
+    "value": "3",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ahref_ahref_textitems",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "url": "items.php?type=ss_textitems_codecs_animal",
+        "submenu": []
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Flies",
+    "codename": "util_flies",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_util_objects",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "icon_build_spot",
+        "meta": [],
+        "events": {
+            "onCreate": "function(){\r\n\r\n  \/\/this.alpha = !!game.editMode;\r\n  \r\n  this.sparkX = 0;\r\n  this.sparkY = 0;\r\n  this.counter = 0;\r\n  \r\n  this.addTicker('move', ()=>{\r\n   \tthis.counter++;\r\n    if(this.counter < 100) {\r\n\t\treturn;\r\n    }\r\n    this.counter = 0;\r\n    \r\n      \r\n    \r\n      let sparkles = new Particles('flies');\r\n      sparkles.playOnceAndDestroy();\r\n      this.addChild(sparkles);\r\n    \r\n     \r\n  })\r\n\r\n}"
+        }
+    }
+}

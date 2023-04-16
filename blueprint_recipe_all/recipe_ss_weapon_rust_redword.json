@@ -1,0 +1,17 @@
+{
+    "name": "Rusty Redword",
+    "codename": "recipe_ss_weapon_rust_redword",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_weapon_rust_redword",
+        "sprite": "weapon_rusty_redsword",
+        "crafted_in": "ss_smithy",
+        "require": "adhesive,wood,fiber,spidereye,sheetmetal",
+        "amount": "1,10,10,1,6"
+    }
+}

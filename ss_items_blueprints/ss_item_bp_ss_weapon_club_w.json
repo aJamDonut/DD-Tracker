@@ -1,0 +1,21 @@
+{
+    "name": "Wooden Club",
+    "codename": "ss_item_bp_ss_weapon_club_w",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_blueprints",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_bp_yellow",
+        "meta": {
+            "contextOptions": "usebp",
+            "blockWidth": 1,
+            "blockHeight": 1,
+            "recipe": "ss_weapon_club_w",
+            "value": 400
+        },
+        "events": []
+    }
+}

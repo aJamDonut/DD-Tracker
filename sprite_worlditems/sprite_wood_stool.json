@@ -1,0 +1,17 @@
+{
+    "name": "Wood Stool",
+    "codename": "sprite_wood_stool",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_worlditems",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_world_items",
+        "across": 13,
+        "down": 3,
+        "w": 128,
+        "h": 128
+    }
+}

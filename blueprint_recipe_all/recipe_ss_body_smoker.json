@@ -1,0 +1,17 @@
+{
+    "name": "Smokers Jacket",
+    "codename": "recipe_ss_body_smoker",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_body_smoker",
+        "sprite": "body_smoker",
+        "crafted_in": "ss_loom",
+        "require": "fiber,skin",
+        "amount": "25,10"
+    }
+}

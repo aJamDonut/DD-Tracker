@@ -1,0 +1,17 @@
+{
+    "name": "matrix_morphy",
+    "codename": "sprite_morphy",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_misc",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_world_items",
+        "across": 28,
+        "down": 18,
+        "w": 128,
+        "h": 128
+    }
+}

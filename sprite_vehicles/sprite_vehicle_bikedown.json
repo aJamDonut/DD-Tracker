@@ -1,0 +1,17 @@
+{
+    "name": "Bike down",
+    "codename": "sprite_vehicle_bikedown",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_vehicles",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_vehicles",
+        "across": 10,
+        "down": 1,
+        "w": 192,
+        "h": 256
+    }
+}

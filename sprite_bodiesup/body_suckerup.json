@@ -1,0 +1,17 @@
+{
+    "name": "Sucker up",
+    "codename": "body_suckerup",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_bodiesup",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_animalia",
+        "across": 5,
+        "down": 5,
+        "w": 128,
+        "h": 128
+    }
+}

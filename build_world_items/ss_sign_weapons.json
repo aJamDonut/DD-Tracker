@@ -1,0 +1,18 @@
+{
+    "name": "Weapons Sign",
+    "codename": "ss_sign_weapons",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_world_items",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_sign_road",
+        "meta": [],
+        "events": {
+            "onCreateJSON": "[{\"x\":32,\"y\":-1,\"type\":\"sprite\",\"layer\":\"self\",\"filter\":\"black\",\"scale\":1,\"sprite\":\"weapon_handgun\",\"anchor\":0,\"alpha\":1,\"tween\":\"none\"}]"
+        },
+        "destroyBase": "0"
+    }
+}

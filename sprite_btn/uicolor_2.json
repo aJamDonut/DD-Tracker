@@ -1,0 +1,17 @@
+{
+    "name": "UI Icon High Quality",
+    "codename": "uicolor_2",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_btn",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_effects",
+        "across": 2,
+        "down": 1,
+        "w": 64,
+        "h": 64
+    }
+}

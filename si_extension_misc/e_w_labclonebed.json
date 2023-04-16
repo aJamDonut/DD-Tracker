@@ -1,0 +1,16 @@
+{
+    "name": "Lab Clone Bed",
+    "codename": "e_w_labclonebed",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "si_extension_misc",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "meta": {
+            "blockZone": "all"
+        },
+        "events": []
+    }
+}

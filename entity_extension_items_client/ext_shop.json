@@ -1,0 +1,15 @@
+{
+    "name": "Shop",
+    "codename": "ext_shop",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "entity_extension_items_client",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "events": {
+            "onCreate": "function(furni, options) {\r\n  \r\n  \tif(game.editMode) {\r\n\t\treturn;\r\n    }\r\n  \r\n  \tif(!options) {\r\n\t\toptions = {};\r\n    }\r\n  \r\n  \tif(!options.xSlots) {\r\n\t\toptions.xSlots = 16;\r\n    }\r\n  \tif(!options.ySlots) {\r\n\t\toptions.ySlots = 16;\r\n    }\r\n  \r\n  \tif(!options.min) {\r\n\t\toptions.min = 5;\r\n    }\r\n  \r\n  \tif(!options.max) {\r\n\t\toptions.max = 12;\r\n    }\r\n  \r\n  \tvar hasSaveData = (furni.data.inventory) ? true : false;\r\n  \tgame.inventories.createInventoryForItem(furni, options.xSlots, options.ySlots);\r\n\tthis.inventory.isShop = true; \/\/Set it to a shop\r\n  \r\n    if(!hasSaveData) {\r\n\t\tgame.loot.genLoot(Object.assign(options, {inventory: this.inventory}));\r\n    }\r\n  \r\n}"
+        }
+    }
+}

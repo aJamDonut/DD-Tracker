@@ -1,0 +1,17 @@
+{
+    "name": "Simple Arrow",
+    "codename": "projectile_arrow",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_projectile",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_effects",
+        "across": 9,
+        "down": 9,
+        "w": 64,
+        "h": 64
+    }
+}

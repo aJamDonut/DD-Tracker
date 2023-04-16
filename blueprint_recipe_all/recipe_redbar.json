@@ -1,0 +1,17 @@
+{
+    "name": "Redbar recipe",
+    "codename": "recipe_redbar",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_item_redbar",
+        "sprite": "sprite_redbar",
+        "crafted_in": "smelter",
+        "require": "redgem",
+        "amount": "5"
+    }
+}

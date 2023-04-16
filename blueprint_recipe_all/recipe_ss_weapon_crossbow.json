@@ -1,0 +1,16 @@
+{
+    "name": "Crossbow",
+    "codename": "recipe_ss_weapon_crossbow",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_weapon_crossbow",
+        "sprite": "wep_crossbow",
+        "require": "adhesive,wood,fiber",
+        "amount": "1,10,10"
+    }
+}

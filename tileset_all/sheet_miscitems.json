@@ -1,0 +1,14 @@
+{
+    "name": "Misc Items",
+    "codename": "sheet_miscitems",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "tileset_all",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "filename": "inventoryitems.png",
+        "blockSize": 64
+    }
+}

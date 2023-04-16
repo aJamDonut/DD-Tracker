@@ -1,0 +1,16 @@
+{
+    "name": "Guard Patrol",
+    "codename": "aistate_guardpatrol",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ai_states",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "start": "function(life) {\r\n  if(!life.wait) {\r\n  return life.startSeekRandomObj('helper_guard_point');\r\n  }\r\n  \r\n}",
+        "run": "function(life) {\r\n  if(!life.search || !life.search.startTime) {\r\n    console.error(\"[ABE] Weird start on run\");\r\n\treturn false;\r\n  }\r\n  if(!life.findId) {\r\n    console.error(\"[ABE] Can't find findId\");\r\n\treturn false;\r\n  }\r\n  \r\n  if(life.data.do !== 'helper_guard_point') {\r\n    return false;\r\n  }\r\n  \r\n  let guardPoint = this.seekObj;\r\n \r\n  if(!guardPoint) {\r\n    console.error(\"[ABE] Can't find guard point \"+life.findId);\r\n    return false; \/\/Guard point doesn't exist so can't run this\r\n  }\r\n\r\n  if(life.wait && life.wait < Date.now()) {\r\n    this.log(\"Arrived already\");\r\n    \/\/Already arrived\r\n    life.findId = false;\r\n    delete life.wait;\r\n    return false;\r\n  }\r\n  \r\n  if(life.dist(guardPoint) < 100) {\r\n    this.log(\"Arrived\");\r\n    \r\n\tlife.findId = false;\r\n      \r\n  \tlife.seekObj = false;\r\n    if(!life.wait) {\r\n      this.log(\"Set WAIT\");\r\n      life.wait = Date.now()+servers.world.helper.rng(1000,5000);\r\n      \r\n      \r\n    }\r\n  }\r\n  \r\n  if(!life.wait && life.search.startTime < Date.now() - 30000) {\r\n\tif(life.path.length == 0) {\r\n\t\t\/\/Failed to path\r\n      \tconsole.log(game.ts, life.search.startTime);\r\n      \tconsole.log(life.dist(guardPoint), guardPoint, life.seekObj);\r\n      \tguardPoint.failed();\r\n      \treturn false;\r\n    }\r\n  }\r\n  \r\n}",
+        "end": "function(life) {\r\n   \tdelete life.search;\r\n\tlife.findId = false;\r\n  \tlife.data.do = '';\r\n  \tlife.wait = false;\r\n  \tlife.seekObj = false;\r\n}",
+        "weight": "function(life) {\r\n  \r\n  var guardPoints = servers.world.index.getIndex('helper_guard_point');\r\n  var pointIds = Object.keys(guardPoints);\r\n  \r\n  if(pointIds.length == 0 || life.wait) {\r\n    \r\n    \/\/Is walking somewhere or\r\n    \r\n\treturn 0; \/\/Can't find any guard points so will never work.\r\n  }\r\n  \r\n  return 15;\r\n  \r\n}"
+    }
+}

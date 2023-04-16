@@ -1,0 +1,14 @@
+{
+    "name": "Levelling Up",
+    "codename": "c_effect_levelling_up",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "status_effects_client",
+    "color": "#202327",
+    "editedtime": "1675907940",
+    "vars": {
+        "start": "function(item, options){\r\n\r\n\r\n  console.log(\"Level up\", item, options);\r\n  if (!item.data.isPlayer) {\r\n    console.log(\"Dont level up its not a player\")\r\n    return;\r\n  }\r\n\r\n  try {\r\n    console.log(\"Try level up\");\r\n    game.xpActions[options.action].call(item, item, options.additional);\r\n  } catch (e) {\r\n    console.error(e);\r\n  }\r\n\r\n}",
+        "stacks": "1"
+    }
+}

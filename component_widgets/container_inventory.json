@@ -1,0 +1,13 @@
+{
+    "name": "Container inventory",
+    "codename": "container_inventory",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "component_widgets",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "getElement": "function(container) {\r\n\r\n    if(!container || !container.id) {\r\n        container = new ComplexItem('ss_container5')\r\n        container.onCreate();\r\n    }\r\n    indexName = 'container_inventory';\r\n    indexKey = 'container' + container.id;\r\n\r\n    if (container == undefined) {\r\n        console.error(\"Passed undefined life\")\r\n        return false;\r\n    }\r\n\r\n    if (game.index.isInIndex(indexName, indexKey)) {\r\n        lastContainer = game.index.getFromIndex(indexKey, indexName);\r\n        lastContainer.invUI.destroy();\r\n        game.index.removeFromIndex(indexName, indexKey, false);\r\n    }\r\n\r\n    game.index.addToIndex(indexName, container, indexKey);\r\n\r\n    console.log(\"Opening inventory:\" + container.inventory.id);\r\n    console.log(container.inventory);\r\n    var inv = game.inventories.displayInventory('CONTAINER', container.inventory, container.id)\r\n    container.invUI = inv;\r\n\r\n    return inv;\r\n}"
+    }
+}

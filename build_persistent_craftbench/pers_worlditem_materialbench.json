@@ -1,0 +1,24 @@
+{
+    "name": "Material Bench",
+    "codename": "pers_worlditem_materialbench",
+    "value": "-1",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_persistent_craftbench",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_stonebench",
+        "meta": {
+            "blockZone": "all",
+            "collisionGroups": "all",
+            "physicsType": "helper",
+            "contextOptions": "loot"
+        },
+        "events": {
+            "onCreate": "function(item){\r\n  \titem.data.recipeList = 'materialbench'\r\n  \tthis.addExtension('ext_craftingbench', {bench: 'materialbench'});\r\n  \r\n}",
+            "onWorldTick": "function(){\r\n  this.hauls();\r\n}"
+        },
+        "destroyBase": "0"
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "name": "The Jester",
+    "codename": "ss_mask_thejester",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_masks",
+    "color": "#202327",
+    "editedtime": "1670887313",
+    "vars": {
+        "sprite": "mask_thejester",
+        "meta": {
+            "description": "The legendary fabled jester, worn by 'Sit sum can'",
+            "weight": 3,
+            "contextOptions": "equipt",
+            "slots": "mask",
+            "blockWidth": 3,
+            "blockHeight": 3,
+            "value": 1600
+        },
+        "events": {
+            "onEquipt": "function(life) {\r\n\tlife.addStatsFrom(this);\r\n}",
+            "onUnEquipt": "function(life) {\r\n\tlife.removeStatsFrom(this);\r\n}",
+            "onCreate": "function(item) {\r\n  \titem.data.stats.bluntReduction = 15;\r\n  \titem.data.stats.ballisticReduction = 15;\r\n  \titem.data.stats.sharpReduction = 15;\r\n  \titem.data.stats.tempHeat = 0;\r\n  \titem.data.stats.tempCold = -0;\r\n}"
+        }
+    }
+}

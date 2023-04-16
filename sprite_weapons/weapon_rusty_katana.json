@@ -1,0 +1,18 @@
+{
+    "name": "Rusty Katana",
+    "codename": "weapon_rusty_katana",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_weapons",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_weapons",
+        "description": "Katana",
+        "across": 1,
+        "down": 14,
+        "w": 128,
+        "h": 64
+    }
+}

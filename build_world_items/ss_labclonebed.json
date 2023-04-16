@@ -1,0 +1,18 @@
+{
+    "name": "Lab Clone Bed",
+    "codename": "ss_labclonebed",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_world_items",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "w_labclonebed",
+        "meta": [],
+        "events": {
+            "onCreate": "function(){\r\n  \r\n}"
+        },
+        "destroyBase": "0"
+    }
+}

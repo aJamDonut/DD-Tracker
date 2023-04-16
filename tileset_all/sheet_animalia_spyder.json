@@ -1,0 +1,14 @@
+{
+    "name": "Sheet Animalia Spyder",
+    "codename": "sheet_animalia_spyder",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "tileset_all",
+    "color": "#202327",
+    "editedtime": "1676661733",
+    "vars": {
+        "filename": "animalia_spyder.png",
+        "blockSize": 64
+    }
+}

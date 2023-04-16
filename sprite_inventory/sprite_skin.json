@@ -1,0 +1,17 @@
+{
+    "name": "Skin",
+    "codename": "sprite_skin",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_inventory",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_miscitems",
+        "across": 5,
+        "down": 12,
+        "w": 128,
+        "h": 128
+    }
+}

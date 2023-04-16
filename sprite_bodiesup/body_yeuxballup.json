@@ -1,0 +1,17 @@
+{
+    "name": "Yeux Ball Up",
+    "codename": "body_yeuxballup",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_bodiesup",
+    "color": "#202327",
+    "editedtime": "1678637599",
+    "vars": {
+        "tileset": "sheet_animalia",
+        "across": 13,
+        "down": 5,
+        "w": 128,
+        "h": 128
+    }
+}

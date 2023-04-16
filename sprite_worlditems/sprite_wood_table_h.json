@@ -1,0 +1,17 @@
+{
+    "name": "Wood Table Horizontal",
+    "codename": "sprite_wood_table_h",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_worlditems",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_world_items",
+        "across": 9,
+        "down": 1,
+        "w": 256,
+        "h": 192
+    }
+}

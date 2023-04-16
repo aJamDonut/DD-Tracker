@@ -1,0 +1,17 @@
+{
+    "name": "Rusty Metal",
+    "codename": "item_rusty_metal",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_inventory",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_miscitems",
+        "across": 7,
+        "down": 6,
+        "w": 128,
+        "h": 128
+    }
+}

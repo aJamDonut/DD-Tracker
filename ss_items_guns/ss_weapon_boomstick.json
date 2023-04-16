@@ -1,0 +1,27 @@
+{
+    "name": "Boomstick",
+    "codename": "ss_weapon_boomstick",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_guns",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_boomstick",
+        "meta": {
+            "description": "An antique boomstick replica from Earth. The gun was made popular after it was featured in \"Vault 11\", a western movie based in the mojave desert.",
+            "weight": 1,
+            "contextOptions": "equipt",
+            "slots": "weapon",
+            "blockWidth": 3,
+            "blockHeight": 3,
+            "stance": "longgun",
+            "value": 1300
+        },
+        "events": {
+            "onEquipt": "function(item, life) {\r\n  \tlife.data.bullet = {\r\n    statuses: [\r\n      { status: 'damage', dmg: item.data.BASE_DMG, type: item.data.TYPE },\r\n      { status: 'bleed', duration: item.data.BLEED_DURATION, chance: item.data.BLEED_CHANCE }\r\n    ],\r\n    sprite: item.data.SPRITE,\r\n    lifetime: item.data.LIFETIME,\r\n    speed: item.data.SPEED\r\n  };\r\n}",
+            "onCreate": "function(item, life) {\r\n  item.addExtension('ext_bullet_default', {\r\n    BASE_DMG: 10,\r\n    LIFETIME: 3,\r\n    SPEED: 0.2,\r\n    BLEED_DURATION: 10,\r\n    BLEED_CHANCE: 10,\r\n    SPRITE: 'projectile_simple',\r\n    TYPE: 'ballistic'\r\n  });\r\n}"
+        }
+    }
+}

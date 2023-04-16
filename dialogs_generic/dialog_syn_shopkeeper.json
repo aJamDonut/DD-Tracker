@@ -1,0 +1,15 @@
+{
+    "name": "Shopkeeper",
+    "codename": "dialog_syn_shopkeeper",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "dialogs_generic",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "dialog": "I collect. I sell... Whadya want?",
+        "option1": "Let's trade",
+        "option1_func": "function(caller) {\r\n  console.error(\"Shoppe caller\", caller);\r\n  if(!caller.data.usedata1) {\r\n\treturn 'It appears I have nothing to sell right now.'; \/\/No shop\r\n  }\r\n  \r\n  let shop = game.index.getFromIndex(caller.data.usedata1, 'all');\r\n  console.error(\"Shoppe\", shop);\r\n  if(!shop) {\r\n    return 'It appears I have nothing to sell right now.'; \/\/No shop\r\n  }\r\n  \r\n  shop.showInventory();\r\n\t\/\/do trade\r\n}"
+    }
+}

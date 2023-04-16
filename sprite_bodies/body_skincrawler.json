@@ -1,0 +1,17 @@
+{
+    "name": "Skin Crawler",
+    "codename": "body_skincrawler",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_bodies",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_animalia",
+        "across": 3,
+        "down": 1,
+        "w": 128,
+        "h": 128
+    }
+}

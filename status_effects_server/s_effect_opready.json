@@ -1,0 +1,17 @@
+{
+    "name": "Operation Ready",
+    "codename": "s_effect_opready",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "status_effects_server",
+    "color": "#202327",
+    "editedtime": "1678063692",
+    "vars": {
+        "start": "function(item, options){\r\n  item.opready = true;\r\n}",
+        "tick": "function(item, options) {\r\n    \r\n}",
+        "end": "function(item, options){\r\n  item.opready = false;\r\n}",
+        "remove": "function(item, options){\r\n  item.opready = false;\r\n}",
+        "stacks": "0"
+    }
+}

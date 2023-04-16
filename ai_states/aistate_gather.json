@@ -1,0 +1,15 @@
+{
+    "name": "Gather",
+    "codename": "aistate_gather",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ai_states",
+    "color": "#202327",
+    "editedtime": "1674395258",
+    "vars": {
+        "start": "function(life) {\r\n  life.stopMoving();\r\n  life.lastGather = Date.now();\r\n\r\n  var target = servers.world.index.getFromIndex(life.data.gatherId, 'all');\r\n\r\n  const HARVEST_AT = 10;\r\n\r\n  life.data.harvest = 0;\r\n  life.data.harvestAt = HARVEST_AT;\r\n  target.data.harvest = 0;\r\n\r\n\r\n}",
+        "run": "function(life) {\r\n\tif (game.ts < life.lastGather + 1000) {\r\n\t\treturn;\r\n\t}\r\n\r\n\tvar target = servers.world.index.getFromIndex(life.data.gatherId, 'all');\r\n\r\n\tlife.lastGather = game.ts;\r\n\r\n\tlife.data.lastGather = game.ts;\r\n\r\n\tlife.data.harvest++;\r\n\ttarget.data.harvest++;\r\n\ttarget.data.gatherer = life.id;\r\n\ttarget.data.gatherNow = false;\r\n\r\n\tif (life.data.harvest >= life.data.harvestAt) {\r\n\t\tlife.data.harvest = 0;\r\n\t\t\/\/target.data.gatherNow = true;\r\n\t\tlife.data.gatherNow = true;\r\n\t}\r\n\r\n\tlife.sync();\r\n\ttarget.sync();\r\n\r\n}",
+        "weight": "function(life) {\r\n\r\n  if (!life.data.gatherId || life.data.do !== 'gather') {\r\n    return 0;\r\n  }\r\n\r\n  var target = servers.world.index.getFromIndex(life.data.gatherId, 'all');\r\n\r\n  if (!target) {\r\n    console.error(\"[ABE] Cannot find to harvest: \" + life.data.gatherId);\r\n    life.data.gatherId = false;\r\n    return 0;\r\n  }\r\n\r\n  if (life.dist(target) > 128) {\r\n    return 0;\r\n  } else {\r\n    return 52;\r\n  }\r\n\r\n  return 0;\r\n}"
+    }
+}

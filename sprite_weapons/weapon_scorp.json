@@ -1,0 +1,18 @@
+{
+    "name": "Scorpion",
+    "codename": "weapon_scorp",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_weapons",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_weapons",
+        "description": "Handgunny",
+        "across": 3,
+        "down": 3,
+        "w": 128,
+        "h": 128
+    }
+}

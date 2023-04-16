@@ -1,0 +1,14 @@
+{
+    "name": "Map",
+    "codename": "sheet_map",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "tileset_all",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "filename": "map.png",
+        "blockSize": 1
+    }
+}

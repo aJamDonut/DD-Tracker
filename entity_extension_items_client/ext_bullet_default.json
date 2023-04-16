@@ -1,0 +1,15 @@
+{
+    "name": "Bullet Default",
+    "codename": "ext_bullet_default",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "entity_extension_items_client",
+    "color": "#202327",
+    "editedtime": "1679157471",
+    "vars": {
+        "events": {
+            "onCreate": "function(item, options) {\r\n  if (!options) {\r\n    options = {\r\n      BASE_DMG: 15,\r\n      LIFETIME: 3,\r\n      SPEED: 0.2,\r\n      BLEED_DURATION: 10,\r\n      BLEED_CHANCE: 10,\r\n      SPRITE: 'projectile_simple',\r\n      TYPE: 'ballistic',\r\n    };\r\n  }\r\n\r\n  item.data.stats.type = options.TYPE;\r\n  item.data.stats.baseDmg = options.BASE_DMG;\r\n  item.data.stats.speed = options.SPEED;\r\n  item.data.stats.range = options.LIFETIME;\r\n\r\n  if (options.bleedChance) {\r\n    item.data.stats.bleedChance = options.BLEED_CHANCE;\r\n    item.data.stats.bleedDuration = options.BLEED_DURATION * 1000;\r\n  }\r\n  item.data = Object.assign(options, item.data);\r\n\r\n\r\n\r\n}"
+        }
+    }
+}

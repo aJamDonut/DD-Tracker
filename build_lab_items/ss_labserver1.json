@@ -1,0 +1,21 @@
+{
+    "name": "Server 1",
+    "codename": "ss_labserver1",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_lab_items",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "w_server1",
+        "description": "A clone pod",
+        "blockWidth": 2,
+        "blockHeight": 4,
+        "data": {
+            "physicsType": "solid"
+        },
+        "events": [],
+        "destroyBase": "0"
+    }
+}

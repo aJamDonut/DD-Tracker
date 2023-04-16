@@ -1,0 +1,17 @@
+{
+    "name": "Slim Robot Body Right",
+    "codename": "body_robot_slimright",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_bodiesright",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_humanoid2",
+        "across": 11,
+        "down": 7,
+        "w": 128,
+        "h": 128
+    }
+}

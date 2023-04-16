@@ -1,0 +1,27 @@
+{
+    "name": "Ropey Platmail",
+    "codename": "ss_plate_armor",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_body",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "body_platemail",
+        "meta": {
+            "description": "Hastily fashioned armor which offers medium protection at the cost of being high weight. Also it looks a bit dumb",
+            "weight": 15,
+            "contextOptions": "equipt",
+            "slots": "body",
+            "blockWidth": 3,
+            "blockHeight": 3,
+            "value": 1900
+        },
+        "events": {
+            "onEquipt": "function(life) {\r\n\tlife.addStatsFrom(this);\r\n}",
+            "onUnEquipt": "function(life) {\r\n\tlife.removeStatsFrom(this);\r\n}",
+            "onCreate": "function(item) {\r\n  \titem.data.stats.bluntReduction = 25;\r\n  \titem.data.stats.ballisticReduction = 25;\r\n  \titem.data.stats.sharpReduction = 25;\r\n  \titem.data.stats.tempHeat = 5;\r\n  \titem.data.stats.tempCold = -5;\r\n}"
+        }
+    }
+}

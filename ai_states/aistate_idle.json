@@ -1,0 +1,16 @@
+{
+    "name": "Idle",
+    "codename": "aistate_idle",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ai_states",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "start": "function(life) {\r\n  life.idletime = Date.now();\r\n  return true;\r\n}",
+        "run": "function(life) {\r\n\t\r\n}",
+        "end": "function() {\r\n\t\r\n}",
+        "weight": "function(life) {\r\n  if(Date.now() > life.idletime + 100) {\r\n    return 0;\r\n  }\r\n  return 1; \/\/Least important\r\n}"
+    }
+}

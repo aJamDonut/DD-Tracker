@@ -1,0 +1,17 @@
+{
+    "name": "Vault",
+    "codename": "container_vault",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_icon",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "across": 8,
+        "down": 17,
+        "w": 192,
+        "h": 192,
+        "tileset": "sheet_world_items"
+    }
+}

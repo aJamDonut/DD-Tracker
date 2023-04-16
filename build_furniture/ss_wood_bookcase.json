@@ -1,0 +1,15 @@
+{
+    "name": "Wood Bookcase",
+    "codename": "ss_wood_bookcase",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_furniture",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_wood_bookcase",
+        "meta": [],
+        "events": []
+    }
+}

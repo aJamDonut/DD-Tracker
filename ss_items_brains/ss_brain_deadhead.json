@@ -1,0 +1,25 @@
+{
+    "name": "Useless Brain",
+    "codename": "ss_brain_deadhead",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_brains",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "brain_clone_1",
+        "meta": {
+            "weight": 1,
+            "contextOptions": "equipt",
+            "slots": "brain",
+            "blockWidth": 3,
+            "blockHeight": 3
+        },
+        "events": {
+            "onEquipt": "function(item, life) {\r\n\tlife.data.brain = 'deadhead';\r\n  \tlife.data.stats.maxSpeed = 3;\r\n  \tlife.sync();\r\n}",
+            "onUnEquipt": "function(life) {\r\n\tlife.data.stats.maxSpeed = 5;\r\n}",
+            "onCreate": "function(item) {\r\n  \titem.data.stats.maxSpeed = 3;\r\n}"
+        }
+    }
+}

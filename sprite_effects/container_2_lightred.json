@@ -1,0 +1,17 @@
+{
+    "name": "Container 2 Light Red",
+    "codename": "container_2_lightred",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_effects",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_effects",
+        "across": 1,
+        "down": 16,
+        "w": 64,
+        "h": 64
+    }
+}

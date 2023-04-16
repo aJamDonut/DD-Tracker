@@ -1,0 +1,19 @@
+{
+    "name": "Simple Projectile",
+    "codename": "e_projectile_simple",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "si_extension_misc",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "meta": {
+            "collisionGroups": "collision_hurts_1",
+            "physicsType": "projectile"
+        },
+        "events": {
+            "onCreate": "function(item) {\r\n  item.alpha = 1;\r\n  \r\n  let sparkles = new Particles('boomstick_smoke');\r\n  sparkles.x = this.x;\r\n  sparkles.y = this.y;\r\n  sparkles.scale.set(0.25);\r\n  sparkles.playOnceAndDestroy();\r\n  game.render.lifeLayer.addChild(sparkles);\r\n  \r\n  \r\n  var life = game.index.getFromIndex(item.data.creatorId, 'all');\r\n  if (life.aiming !== true) {\r\n          life.toggleAim();\r\n        }\r\n  game.audio.playAt('chunkshot', life.x, life.y);\r\n  life.shoot();\r\n  \r\n  \r\n  this.addTicker('move', ()=>{\r\n    \r\n   \tthis.counter++;\r\n    \r\n    if(this.counter < 5) {\r\n\t\treturn;\r\n    }\r\n    \r\n    this.counter = 0;\r\n    \r\n      \r\n      let sparkles = new Particles('small_smoke');\r\n      sparkles.x = this.x;\r\n      sparkles.y = this.y;\r\n    \tsparkles.scale.set(0.25);\r\n      sparkles.playOnceAndDestroy();\r\n      game.render.lifeLayer.addChild(sparkles);\r\n    \r\n  });\r\n  \r\n  this.events.onDestroy = function() {\r\n    console.error(\"Dreoyo\");\r\n    let sparkles = new Particles('boomstick_smoke');\r\n    sparkles.x = this.x;\r\n    sparkles.y = this.y;\r\n    sparkles.scale.set(0.25);\r\n    sparkles.playOnceAndDestroy();\r\n    game.render.lifeLayer.addChild(sparkles);\r\n    \r\n  }\r\n  \r\n}"
+        }
+    }
+}

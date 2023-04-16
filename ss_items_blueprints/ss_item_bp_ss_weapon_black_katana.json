@@ -1,0 +1,21 @@
+{
+    "name": "Black Katana",
+    "codename": "ss_item_bp_ss_weapon_black_katana",
+    "value": "-10",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_blueprints",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_bp_yellow",
+        "meta": {
+            "contextOptions": "usebp",
+            "blockWidth": 1,
+            "blockHeight": 1,
+            "recipe": "ss_weapon_black_katana",
+            "value": 9000
+        },
+        "events": []
+    }
+}

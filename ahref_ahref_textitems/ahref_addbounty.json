@@ -1,0 +1,14 @@
+{
+    "name": "Add Bounty",
+    "codename": "ahref_addbounty",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ahref_ahref_textitems",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "url": "items.php?add=true&type=ss_textitems_bounties&template=",
+        "submenu": []
+    }
+}

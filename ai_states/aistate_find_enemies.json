@@ -1,0 +1,13 @@
+{
+    "name": "Find Enemies",
+    "codename": "aistate_find_enemies",
+    "value": "25",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ai_states",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "weight": "function(life) {\r\n\r\n  if (life.data.isPlayer && life.data.command !== 'defend') {\r\n    return 0; \/\/Skip for players not attacking or defending\r\n  }\r\n\r\n\r\n  let target = life.scanningLife;\r\n\r\n  if (!target) {\r\n    return 0;\r\n  }\r\n\r\n  if(life.data.targetId && life.id == target.id) {\r\n    return 0; \/\/Same target\r\n  }\r\n\r\n  if (target.codename !== 'life') {\r\n    return 0; \/\/Not life, skip this one\r\n  }\r\n\r\n  if (target.data.dead) {\r\n    return 0; \/\/Is dead so find another\r\n  }\r\n\r\n  if (life.dist(target) > 15 * 64) {\r\n    return 0; \/\/Ignore those more than 15 squares away\r\n  }\r\n\r\n\r\n  if (!game.factions.enemies(life, target) && !target.data.stealing && !life.data.enraged) {\r\n    return 0; \/\/We never really care about these.. Maybe it bites me in future and we move this\r\n  }\r\n\r\n  if (life.data.targetId) {\r\n    \/\/Already has an enemy, but should we swap?\r\n    let currentTarget = servers.world.index.find(life.data.targetId);\r\n    if (!currentTarget) {\r\n      life.removeTarget(); \/\/Target is no longer on the server?\r\n    }\r\n    \r\n    \/\/Opposite of: If the current target is far away, and the new target is close, take close.\r\n    if (!(life.dist(currentTarget) > 64 * 3 && life.dist(target) < 64 * 3)) {\r\n      return 0;\r\n    }\r\n  }\r\n\r\n  \/\/It's far away and we can't see it.\r\n  if (life.dist(target) > 1 * 64 && !life.sees[target.id]) {\r\n    return 0;\r\n  }\r\n\r\n  this.helper.lastTargetId = target.id\r\n  life.removeTarget();\r\n  life.data.targetId = target.id;\r\n\r\n  return 90; \/\/Found a valid enemy\r\n\r\n}"
+    }
+}

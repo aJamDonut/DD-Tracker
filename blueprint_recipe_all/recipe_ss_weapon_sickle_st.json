@@ -1,0 +1,16 @@
+{
+    "name": "Stone Sickle",
+    "codename": "recipe_ss_weapon_sickle_st",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_weapon_sickle_st",
+        "require": "wood,stone,fabric",
+        "amount": "50,75,75",
+        "sprite": "weapon_sickle_stone"
+    }
+}

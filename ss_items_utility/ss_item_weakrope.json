@@ -1,0 +1,24 @@
+{
+    "name": "Weak Rope",
+    "codename": "ss_item_weakrope",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_utility",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "item_weak_rope",
+        "meta": {
+            "description": "A weak rope useful for tying things up",
+            "weight": 5,
+            "slots": "hands",
+            "blockWidth": 2,
+            "blockHeight": 2
+        },
+        "events": {
+            "onEquipt": "function(item, life){\r\n    life.data.hasRope = true;\r\n}",
+            "onUnEquipt": "function(item, life){\r\n    life.data.hasRope = false;\r\n    life.stopCarrying();\r\n}"
+        }
+    }
+}

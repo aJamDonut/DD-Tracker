@@ -1,0 +1,17 @@
+{
+    "name": "Rancher Hat",
+    "codename": "recipe_ss_mask_ranchet",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_mask_ranchet",
+        "sprite": "mask_rancher",
+        "crafted_in": "ss_loom",
+        "require": "fiber,skin",
+        "amount": "10,10"
+    }
+}

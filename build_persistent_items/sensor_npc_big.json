@@ -1,0 +1,23 @@
+{
+    "name": "Big NPC Sensor",
+    "codename": "sensor_npc_big",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_persistent_items",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "btn_blank_sqr2",
+        "meta": {
+            "collisionGroups": "collision_get_touchers",
+            "physicsType": "sensor"
+        },
+        "events": {
+            "onCreate": "function() {\r\n  \/*\r\n  const container = new PIXI.Container();\r\n  const gr  = new PIXI.Graphics();\r\n  gr.beginFill(0xffffff);\r\n  gr.drawCircle(0, 0, this.data.radius);\r\n  gr.endFill();\r\n  container.addChild(gr);\r\n  container.alpha = 0.2;\r\n  this._container.addChild(container)\r\n  *\/\r\n}",
+            "onPhysicsTick": "function() {\r\n  let life = servers.physics.index.getFromIndex(this.data.parentId, 'all');\r\n  if(!life) {\r\n    this.helper.debug(\"Can't find: \"+this.data.parentId);\r\n\treturn false;\r\n  }\r\n  this.lastX = 0\r\n  this.lastY = 0;\r\n  servers.physics.Body.setPosition(this.body, life.body.position);\r\n}",
+            "onPreCreate": "function() {\r\n\tthis.data.radius = 1000;\r\n}"
+        },
+        "destroyBase": "0"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Yama Short Post",
+    "codename": "sprite_yamashortpost",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_yamaitems",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_world_items",
+        "across": 28,
+        "down": 30,
+        "w": 128,
+        "h": 192
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "name": "Super Computer",
+    "codename": "ss_supercomputerreal",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_world_items",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "ss_supercomputer",
+        "meta": {
+            "blockZone": "top"
+        },
+        "events": {
+            "onCreateJSON": "[{\"x\":-14,\"y\":38,\"type\":\"sprite\",\"layer\":\"self\",\"scale\":1,\"sprite\":\"lightgreen_screen\",\"anchor\":0,\"alpha\":1,\"tween\":\"none\"},{\"x\":74,\"y\":8,\"type\":\"sprite\",\"layer\":\"self\",\"scale\":1,\"sprite\":\"lightgreen_screen\",\"anchor\":0,\"alpha\":1,\"tween\":\"none\"},{\"x\":158,\"y\":38,\"type\":\"sprite\",\"layer\":\"self\",\"scale\":1,\"sprite\":\"lightgreen_screen\",\"anchor\":0,\"alpha\":1,\"tween\":\"none\"},{\"x\":145,\"y\":190,\"type\":\"sprite\",\"layer\":\"lights\",\"scale\":2,\"sprite\":\"lightcookie_oval\",\"anchor\":0.5,\"alpha\":1,\"tween\":\"none\"}]"
+        },
+        "destroyBase": "0"
+    }
+}

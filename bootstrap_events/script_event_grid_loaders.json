@@ -1,0 +1,13 @@
+{
+    "name": "Grid Loading and Loaded",
+    "codename": "script_event_grid_loaders",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_events",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "exec": "function(){\r\n\r\n\r\n  game.c = 0;\r\ngame.ee.on('grid-loading', function(){\r\n  game.c++\r\n  if(game.c > 1) {\r\n\t\treturn false;\r\n  }\r\n  game.hider = new UIPane();\r\n  game.hider.x = 0;\r\n  game.hider.y = 0;\r\n  game.hider.width = game.ui._VIEWPORT_RIGHT;\r\n  game.hider.height = game.ui._VIEWPORT_BOTTOM;\r\n  game.render.aboveAll.addChild(game.hider);\r\n  let text = game.render.text('Loading... '+game.c)\r\n  text.x = 100;\r\n  text.y = 100;\r\n  game.hider.addChild(text);\r\n  game.hider.alpha = 1;\r\n\r\n  game.hider.isInteractive(); \/\/Block passthru\r\n\r\n});\r\ngame.ee.on('grid-loaded', function(){\r\n  console.error(\"Grid loaded\");\r\n\r\n  game.hider.alpha = 0;\r\n  game.hider.interactive = false;\r\n  game.hider.hitArea = new PIXI.Rectangle(0,0,0,0);\r\n\r\n});\r\n\r\n\r\n}"
+    }
+}

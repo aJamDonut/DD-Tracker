@@ -1,0 +1,13 @@
+{
+    "name": "Refreshing Stat Bar",
+    "codename": "component_stat_bar",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "component_displays",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "getElement": "function(options) {\r\n\r\n  var container = new UIContainer();\r\n  \r\n  container\r\n\r\n  if(!options) {\r\n\toptions = {\r\n    \twatch: {'hp':10, 'maxHp': 100},\r\n      \tkey: 'hp',\r\n      \tmax: 'maxHp',\r\n      \tw: 200,\r\n      \th: 30,\r\n      \tfill: 0x009900,\r\n      \tlabel: '',\r\n      \tticker: 1\r\n    };\r\n  }\r\n  \r\n  let ticker = options.ticker || 1;\r\n  \r\n  var stat = new TickerContainer(options, function () {\r\n    let options = this.ref;\r\n    let watch = options.watch;\r\n    let w = options.w || 200;\r\n    let h = options.h || 30;\r\n    let max = watch[options.max] || 100;\r\n    let key = options.key;\r\n    let fill = options.fill || 0x990000;\r\n    let label = options.label || '';\r\n    let onePercent = max \/ 100;\r\n    let value = watch[key];\r\n    let percentDone = value \/ onePercent;\r\n    label = label + percentDone + \"%\";\r\n    if (this.stat) {\r\n      this.stat.destroy();\r\n    }\r\n    this.stat = game.render.componentRaw('statBar', { callerObject: watch, valueKey: key, w: w, h: h, name: label, maxValue: max, value: value, fill: fill });\r\n    this.addChild(this.stat);\r\n  }, ticker);\r\n  \r\n  container.addChild(stat);\r\n  \r\n  return container;\r\n  \r\n}"
+    }
+}

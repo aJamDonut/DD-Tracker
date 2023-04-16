@@ -1,0 +1,17 @@
+{
+    "name": "Crafting Bench",
+    "codename": "recipe_pers_worlditem_craftingbench",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "pers_worlditem_craftingbench",
+        "sprite": "sprite_craftingworkbench",
+        "crafted_in": "build",
+        "require": "adhesive,wood,stone",
+        "amount": "40,40,2"
+    }
+}

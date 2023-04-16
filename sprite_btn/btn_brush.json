@@ -1,0 +1,18 @@
+{
+    "name": "Brush Button",
+    "codename": "btn_brush",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_btn",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_editor",
+        "description": "Test button",
+        "across": 3,
+        "down": 2,
+        "w": 64,
+        "h": 64
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "name": "Antique Shotgun",
+    "codename": "ss_weapon_antique_shotgun",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_guns",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_old_shotgun",
+        "meta": {
+            "description": "An old antique from Earth. It appears to have been well looked after, but should you ever really trust old earth technology?",
+            "weight": 10,
+            "contextOptions": "equipt",
+            "slots": "weapon",
+            "blockWidth": 4,
+            "blockHeight": 2,
+            "stance": "longgun",
+            "value": 1000
+        },
+        "events": {
+            "onEquipt": "function(item, life) {\r\n  \tlife.data.bullet = {\r\n    statuses: [\r\n      { status: 'damage', dmg: item.data.BASE_DMG, type: item.data.TYPE },\r\n      { status: 'bleed', duration: item.data.BLEED_DURATION, chance: item.data.BLEED_CHANCE }\r\n    ],\r\n    sprite: item.data.SPRITE,\r\n    lifetime: item.data.LIFETIME,\r\n    speed: item.data.SPEED\r\n  };\r\n}",
+            "onCreate": "function(item, life) {\r\n  item.addExtension('ext_bullet_default', {\r\n    BASE_DMG: 15,\r\n    LIFETIME: 3,\r\n    SPEED: 0.2,\r\n    BLEED_DURATION: 10,\r\n    BLEED_CHANCE: 10,\r\n    SPRITE: 'projectile_simple',\r\n    TYPE: 'ballistic'\r\n  });\r\n}"
+        }
+    }
+}

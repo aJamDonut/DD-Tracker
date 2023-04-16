@@ -1,0 +1,13 @@
+{
+    "name": "Life Ticker",
+    "codename": "script_life_ticker",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_tickers",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "exec": "function(){\r\n\tgame.setTicker('lifetick', function() {\r\n      var lives = game.index.getIndex('life');\r\n      for(var lifeId in lives) {\r\n          try {\r\n            lives[lifeId].tick();\r\n          } catch(e) {\r\n            console.error(\"[ABE] !!!FATAL!!!! !!!FATAL!!!! !!!FATAL!!!!\");\r\n            console.error(e);\r\n            delete lives[lifeId]; \/\/TODO: remove, add self-heal?\r\n          }\r\n      }\r\n  })\r\n}"
+    }
+}

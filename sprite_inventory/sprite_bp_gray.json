@@ -1,0 +1,17 @@
+{
+    "name": "Blueprint Gray",
+    "codename": "sprite_bp_gray",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_inventory",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_miscitems",
+        "across": 7,
+        "down": 9,
+        "w": 64,
+        "h": 64
+    }
+}

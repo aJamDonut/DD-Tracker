@@ -1,0 +1,17 @@
+{
+    "name": "Cooked Meat",
+    "codename": "recipe_cooked_meat",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_item_cookedmeat",
+        "require": "rawmeat",
+        "amount": "1",
+        "sprite": "sprite_meat_cooked",
+        "crafted_in": "campfire"
+    }
+}

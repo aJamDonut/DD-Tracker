@@ -1,0 +1,27 @@
+{
+    "name": "Blue Dress",
+    "codename": "ss_body_bluedress",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_body",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "body_bluedress",
+        "meta": {
+            "description": "A fanciful dress meant for special occasions like weddings.",
+            "weight": 2,
+            "contextOptions": "equipt",
+            "slots": "body",
+            "blockWidth": 3,
+            "blockHeight": 3,
+            "value": 850
+        },
+        "events": {
+            "onEquipt": "function(life) {\r\n\tlife.addStatsFrom(this);\r\n}",
+            "onUnEquipt": "function(life) {\r\n\tlife.removeStatsFrom(this);\r\n}",
+            "onCreate": "function(item) {\r\n  \titem.data.stats.bluntReduction = 5;\r\n  \titem.data.stats.ballisticReduction = 5;\r\n  \titem.data.stats.sharpReduction = 5;\r\n  \titem.data.stats.tempHeat = 10;\r\n  \titem.data.stats.tempCold = -10;\r\n}"
+        }
+    }
+}

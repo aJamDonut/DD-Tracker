@@ -1,0 +1,17 @@
+{
+    "name": "AI Mind Syd",
+    "codename": "sprite_aimind_syd",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_worlditems",
+    "color": "#202327",
+    "editedtime": "1678583248",
+    "vars": {
+        "tileset": "sheet_random_pieces",
+        "across": 13,
+        "down": 13,
+        "w": 384,
+        "h": 512
+    }
+}

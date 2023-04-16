@@ -1,0 +1,22 @@
+{
+    "name": "Recycler",
+    "codename": "ss_item_recycler",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_placeable",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_smallrecycler",
+        "meta": {
+            "description": "Small recycler",
+            "weight": 10,
+            "contextOptions": " ",
+            "blockWidth": 3,
+            "blockHeight": 3,
+            "value": 600
+        },
+        "events": []
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "name": "Bone Pile",
+    "codename": "ss_item_bonepile",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_junk",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "item_bonepile",
+        "meta": {
+            "blockWidth": 2,
+            "blockHeight": 1,
+            "value": 200
+        },
+        "events": []
+    }
+}

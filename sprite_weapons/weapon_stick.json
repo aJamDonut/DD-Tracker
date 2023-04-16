@@ -1,0 +1,18 @@
+{
+    "name": "Stick",
+    "codename": "weapon_stick",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_weapons",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_weapons",
+        "description": "Katana",
+        "across": 3,
+        "down": 9,
+        "w": 128,
+        "h": 64
+    }
+}

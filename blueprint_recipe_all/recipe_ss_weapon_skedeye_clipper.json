@@ -1,0 +1,17 @@
+{
+    "name": "Skedeye Clipper",
+    "codename": "recipe_ss_weapon_skedeye_clipper",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_weapon_skedeye_clipper",
+        "sprite": "weapon_skedeye_clipper",
+        "crafted_in": "ss_smithy",
+        "require": "adhesive,wood,fiber,skin,spidereye,composites,sheetmetal",
+        "amount": "2,20,11,13,4,23,7"
+    }
+}

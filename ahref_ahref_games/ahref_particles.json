@@ -1,0 +1,14 @@
+{
+    "name": "Particles",
+    "codename": "ahref_particles",
+    "value": "199",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ahref_ahref_games",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "url": "items.php?type=particles&direct=true",
+        "submenu": []
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "name": "Wooden Junk shop",
+    "codename": "ss_container_s_junk",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_world_lootcontainers",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "container_vault",
+        "meta": {
+            "blockZone": "all",
+            "physicsType": "logic",
+            "contextOptions": "hack",
+            "description": "A handy item container",
+            "persist": "1"
+        },
+        "events": {
+            "onCreate": "function(){\r\n  this.addExtension('ext_shop', {count: 20, table: 'basic_junk'});\r\n}"
+        }
+    }
+}

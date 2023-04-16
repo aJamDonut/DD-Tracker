@@ -1,0 +1,17 @@
+{
+    "name": "Floor Shadow",
+    "codename": "effect_floor_shadow",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_effects",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_effects",
+        "across": 7,
+        "down": 1,
+        "w": 128,
+        "h": 128
+    }
+}

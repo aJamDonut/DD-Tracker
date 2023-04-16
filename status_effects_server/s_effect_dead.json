@@ -1,0 +1,14 @@
+{
+    "name": "Dead",
+    "codename": "s_effect_dead",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "status_effects_server",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "start": "function(item, options){\r\n  item.data.dead=true;\r\n  item.sync();\r\n}",
+        "stacks": "0"
+    }
+}

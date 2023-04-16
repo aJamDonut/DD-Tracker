@@ -1,0 +1,14 @@
+{
+    "name": "Map Icon Desert",
+    "codename": "sheet_mapicon_desert",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "tileset_all",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "filename": "map_icon_desert.png",
+        "blockSize": 1
+    }
+}

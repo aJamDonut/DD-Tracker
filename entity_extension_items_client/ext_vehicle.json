@@ -1,0 +1,15 @@
+{
+    "name": "Vehicle extension",
+    "codename": "ext_vehicle",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "entity_extension_items_client",
+    "color": "#202327",
+    "editedtime": "1675813299",
+    "vars": {
+        "events": {
+            "onCreate": "function(item, options) {\r\n  if(options.doDriven) {\r\n    item.doDriven = options.doDriven\r\n  }\r\n  item.use = function (options) {\r\n\r\n    let life = game.index.getFromIndex(options.callerId, 'life')\r\n    life.drive(this);\r\n  }\r\n  item.contextMenus['Drive'] = function (item) {\r\n    console.log(\"Set drive now\", game.p, item)\r\n    game.p.data.gotoId = item.id;\r\n    game.session.setCommand(game.p, 'useitem', { gotoId: item.id });\r\n  }\r\n}"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "name": "Robot Head",
+    "codename": "ss_item_bp_mask_robothead",
+    "value": "-10",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_blueprints",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_bp_pink",
+        "meta": {
+            "contextOptions": "usebp",
+            "blockWidth": 1,
+            "blockHeight": 1,
+            "recipe": "mask_robothead",
+            "value": 3400
+        },
+        "events": []
+    }
+}

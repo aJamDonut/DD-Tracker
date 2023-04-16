@@ -1,0 +1,16 @@
+{
+    "name": "Damage",
+    "codename": "c_effect_damage",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "status_effects_client",
+    "color": "#202327",
+    "editedtime": "1675964882",
+    "vars": {
+        "start": "function(item, options){\r\n    item.tookDmg(Math.ceil(options.dmg));\r\n    item.data.stats.hp -= options.dmg;\r\n    item.xpAction('tookdamage', options);\r\n}",
+        "tick": "function(item, options){\r\n  item.alpha = Math.random();\r\n}",
+        "end": "function(item, options){\r\n  item.alpha = 1;\r\n}",
+        "stacks": "1"
+    }
+}

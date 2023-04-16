@@ -1,0 +1,13 @@
+{
+    "name": "Map Generator",
+    "codename": "script_helper_map_generator",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_helpers",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "exec": "function() {\r\n\r\n  const map = {};\r\n\r\n  map.newDrawMatrix = function(regionSize, x, y) {\r\n    let drawMatrix = [];\r\n    for (let i = 0; i < regionSize; i++) {\r\n      drawMatrix.push([]);\r\n      for (let j = 0; j < regionSize; j++) {\r\n        drawMatrix[i].push([[1,1]]);\r\n      }\r\n    }\r\n    return drawMatrix;\r\n  }\r\n\r\n  map.genMap = function (size) {\r\n    if (size < 1) {\r\n      console.error(\"[ABE-ERROR] Cannot generate a map smaller than 1\");\r\n      return false; \/\/Too small\r\n    }\r\n\r\n    const regionSize = 10;\r\n    const newMap = {};\r\n\r\n\r\n    for (let i = 0; i < size; i++) {\r\n\r\n      for (let j = 0; j < size; j++) {\r\n        \/\/New region\r\n        newMap['region_' + i + '_' + j + '.json'] = {\r\n          objects: {},\r\n          drawMatrix: this.newDrawMatrix(regionSize, i, j)\r\n        }\r\n\r\n      }\r\n\r\n    }\r\n\r\n    console.error(\"Map\", newMap);\r\n\r\n    return newMap;\r\n\r\n  }\r\n\r\n  map.gotoGenMap = function(size) {\r\n    let chunkTree = this.genMap(size);\r\n    game.grid.reset(chunkTree);\r\n    let center = ((size*10)*64)\/2;\r\n    game.render.viewport.moveCenter(center, center);\r\n  }\r\n\r\n  game.mapGenerator = map;\r\n\r\n\r\n\r\n}"
+    }
+}

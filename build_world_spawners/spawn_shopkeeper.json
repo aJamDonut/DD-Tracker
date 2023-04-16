@@ -1,0 +1,18 @@
+{
+    "name": "Shop Keeper",
+    "codename": "spawn_shopkeeper",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_world_spawners",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "sprite": "btn_blank_sqr",
+        "meta": [],
+        "events": {
+            "onCreate": "function(spawner){\r\n\r\n  \r\n\r\n    var player = new LifeObject();\r\n    player.x = spawner.x;\r\n    player.y = spawner.y;\r\n    player.setAnim('none\/idle_down', true);\r\n    player.data.static = true;\r\n  \tplayer.data.faction='sincorp';\r\n    game.render.lifeLayer.addChild(player);\r\n  \r\n  \tplayer.data.levels.toughness.level = game.rng(50,75);\r\n  \r\n  \tgame.world.addObject(player);\r\n    game.world.addToServer(player);\r\n  \r\n    player.setAnim('none\/idle_down', true);\r\n    player.setWep({sprite: 'blank', data: {stance: 'none'}});\r\n    player.setBackWep({sprite:'blank'});\r\n    player.setMask({sprite:'blank'});\r\n    player.setBody({sprite:'body_naked'});\r\n    player.setBackpack({sprite:'blank'});\r\n  \ttry {\r\n  \t\tplayer.inventory.brain.addItem(new InventoryItem('ss_brain_clone_mk1'), true);\r\n    } catch(e) {\r\n      console.error(e);\r\n    }\r\n  \r\n  \t\r\n  \tplayer.sync();\r\n  \r\n  \r\n  \tgame.lastp = player;\r\n  \tspawner.destroy();\r\n}"
+        },
+        "destroyBase": "0"
+    }
+}

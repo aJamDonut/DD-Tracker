@@ -1,0 +1,16 @@
+{
+    "name": "Small Bandage",
+    "codename": "recipe_ss_item_bandage_small",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_item_bandage_small",
+        "sprite": "sprite_bandage_small",
+        "require": "fiber",
+        "amount": "10"
+    }
+}

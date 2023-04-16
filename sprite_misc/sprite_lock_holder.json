@@ -1,0 +1,17 @@
+{
+    "name": "Lock Holder",
+    "codename": "sprite_lock_holder",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_misc",
+    "color": "#202327",
+    "editedtime": "1677354657",
+    "vars": {
+        "tileset": "sheet_ui",
+        "across": 9,
+        "down": 9,
+        "w": 512,
+        "h": 256
+    }
+}

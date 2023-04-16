@@ -1,0 +1,14 @@
+{
+    "name": "Simple Extender",
+    "codename": "ahref_si_ext",
+    "value": "999",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ahref_ahref_games",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "url": "items.php?template=si_extension",
+        "submenu": []
+    }
+}

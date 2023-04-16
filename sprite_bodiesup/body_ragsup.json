@@ -1,0 +1,17 @@
+{
+    "name": "Rags Up",
+    "codename": "body_ragsup",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_bodiesup",
+    "color": "#202327",
+    "editedtime": "1677424903",
+    "vars": {
+        "tileset": "sheet_humanoid",
+        "across": 23,
+        "down": 9,
+        "w": 128,
+        "h": 128
+    }
+}

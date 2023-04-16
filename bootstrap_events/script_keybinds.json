@@ -1,0 +1,13 @@
+{
+    "name": "Keybinds",
+    "codename": "script_keybinds",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_events",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "exec": "function(){\r\n    game.ee.on('keyup-Escape', function (life) {\r\n      console.log(\"New show\");\r\n\t\tgame.render.aboveAll.addChild(game.render.component('frontMenu', {close:true}, 'frontMenu'));\r\n    });\r\n}"
+    }
+}

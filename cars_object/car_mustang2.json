@@ -1,0 +1,14 @@
+{
+    "name": "Mustang2",
+    "codename": "car_mustang2",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "cars_object",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "wheelCount": 10,
+        "Stick": "0"
+    }
+}

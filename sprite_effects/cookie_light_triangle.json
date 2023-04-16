@@ -1,0 +1,17 @@
+{
+    "name": "Triangle Light Cookie",
+    "codename": "cookie_light_triangle",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_effects",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_effects",
+        "across": 12,
+        "down": 13,
+        "w": 256,
+        "h": 256
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "name": "Crossbow",
+    "codename": "test_xbow",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_btn",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_weapons",
+        "description": "Xbow",
+        "across": 1,
+        "down": 5,
+        "w": 128,
+        "h": 128
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Logo",
+    "codename": "sprite_logo",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_misc",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_logo",
+        "across": 1,
+        "down": 1,
+        "w": 800,
+        "h": 400
+    }
+}

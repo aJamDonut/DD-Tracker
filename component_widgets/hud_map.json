@@ -1,0 +1,14 @@
+{
+    "name": "Hud Map",
+    "codename": "hud_map",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "component_widgets",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "options": "'recycler'",
+        "getElement": "function(options) {\r\n\r\n  let isRightClick = function (event) {\r\n    if (event.which) {\r\n      return event.which == 3;\r\n    } else {\r\n      return event.data.originalEvent.which == 3;\r\n    }\r\n  }\r\n\r\n  if (!options) {\r\n    options = {};\r\n  }\r\n\r\n  var recycler = options.recycler\r\n\r\n\r\n  var w = 800;\r\n  var h = 600;\r\n  var pane = game.render.componentRaw('drawBoxPane', { title: 'World Map', moveable: true, showX: true, w: w, h: h });\r\n\r\n  var container = new UIContainer();\r\n  pane.addChild(container);\r\n\r\n\r\n  container.x = 25;\r\n  container.y = 25;\r\n\r\n  const mapViewport = new Viewport.Viewport({\r\n    screenWidth: w - 50,\r\n    screenHeight: h - 50,\r\n    worldWidth: 1000,\r\n    worldHeight: 1000,\r\n    interaction: game.render.pixi.renderer.plugins.interaction\r\n  });\r\n\r\n  container.addChild(mapViewport);\r\n  mapViewport.drag({ mouseButtons: 'left', clampWheel: true }).wheel().pinch({ 'noDrag': true, percent: 5 }).decelerate();\r\n  mapViewport.clamp({ direction: 'all' });\r\n  mapViewport.addChild(new Sprite('sprite_world_map'));\r\n  mapViewport.on('clicked', function (event) {\r\n    event.event.stopPropagation()\r\n    console.log(event, game.rDown);\r\n    if (isRightClick(event.event)) {\r\n      let gotoX = (event.world.x) * 64;\r\n      let gotoY = (event.world.y) * 64;\r\n      console.error(\"GOTO\", gotoX, gotoY);\r\n      game.session.setAllCommand('moveto', { x: Math.ceil(gotoX), y: Math.ceil(gotoY) });\r\n    }\r\n  });\r\n\r\n  const graphics = new PIXI.Graphics();\r\n  graphics.beginFill(0xFF3300);\r\n  graphics.drawRect(0, 0, mapViewport.screenWidth, mapViewport.screenHeight);\r\n  graphics.endFill();\r\n  container.addChild(graphics);\r\n\r\n  mapViewport.mask = graphics;\r\n\r\n  let playerPos = new Sprite('mask_thejester');\r\n  playerPos.width = 32;\r\n  playerPos.height = 32;\r\n  playerPos.x = game.p.x \/ 64;\r\n  playerPos.y = game.p.y \/ 64;\r\n  game.mapMarker = playerPos\r\n  mapViewport.addChild(playerPos);\r\n\r\n  mapViewport.ensureVisible(playerPos.x, playerPos.y, 200, 200); \/\/Bring player icon into view\r\n\r\n  game.setTicker('movemap', function () {\r\n    game.mapMarker.x = game.p.x \/ 64;\r\n    game.mapMarker.y = game.p.y \/ 64;\r\n    game.mapMarker.x -= 16;\r\n    game.mapMarker.y -= 16;\r\n  });\r\n\r\n\r\n  return pane;\r\n\r\n}"
+    }
+}

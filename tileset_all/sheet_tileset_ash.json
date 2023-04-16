@@ -1,0 +1,14 @@
+{
+    "name": "Ash Tileset",
+    "codename": "sheet_tileset_ash",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "tileset_all",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "filename": "ashtileset.png",
+        "blockSize": 64
+    }
+}

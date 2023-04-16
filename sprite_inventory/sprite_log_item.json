@@ -1,0 +1,17 @@
+{
+    "name": "Log",
+    "codename": "sprite_log_item",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_inventory",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_miscitems",
+        "across": 1,
+        "down": 11,
+        "w": 128,
+        "h": 64
+    }
+}

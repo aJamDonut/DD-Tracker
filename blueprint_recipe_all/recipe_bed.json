@@ -1,0 +1,17 @@
+{
+    "name": "Bed",
+    "codename": "recipe_bed",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_item_bed",
+        "require": "wood,adhesives,fabric",
+        "amount": "10,10,10",
+        "sprite": "sprite_bed",
+        "crafted_in": "build"
+    }
+}

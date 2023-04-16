@@ -1,0 +1,17 @@
+{
+    "name": "blank",
+    "codename": "blank",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_btn",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_weapons",
+        "across": 1,
+        "down": 1,
+        "w": 1,
+        "h": 1
+    }
+}

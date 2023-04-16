@@ -1,0 +1,17 @@
+{
+    "name": "Deathspawn Eye",
+    "codename": "recipe_ss_mask_deathspawneye",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_mask_deathspawneye",
+        "sprite": "mask_deathspawneye",
+        "crafted_in": "ss_loom",
+        "require": "fiber,skin,spidereye",
+        "amount": "4,7,1"
+    }
+}

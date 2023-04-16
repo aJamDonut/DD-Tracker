@@ -1,0 +1,24 @@
+{
+    "name": "Crafting Bench",
+    "codename": "worlditem_craftingbench",
+    "value": "-1",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_persistent_items",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_craftbench2",
+        "meta": {
+            "blockZone": "all",
+            "collisionGroups": "all",
+            "physicsType": "helper",
+            "contextOptions": "loot"
+        },
+        "events": {
+            "onCreate": "function(item){\r\n  \r\n  \tgame.inventories.createInventoryForItem(item, 10, 10, true);\r\n  \r\n\tif(this.data.queue) {\r\n  \t\tthis.data.queue = new CraftQueue(this, item.data.queue.data);\r\n    } else {\r\n\t\tthis.data.queue = new CraftQueue(this);\r\n    }\r\n  \r\n  \tthis.contextMenus['Craft'] = function (caller) {\r\n      let craft = game.render.component('hud_bench_crafting', {crafter: caller}, 'hud_bench_crafting');\r\n      craft.x = 400;\r\n      craft.y = 200;\r\n\t  game.render.aboveAll.addChild(craft);\r\n\t}\r\n  \r\n  \r\n  \r\n\titem.data.job = 'haul';\r\n  \titem.sync();\r\n  \tgame.offloader.addToIndex('jobs', item);\r\n  \tgame.offloader.addToIndex('ticker', item);\r\n  \tgame.offloader.addToIndex('playerstorage', item);\r\n}",
+            "onWorldTick": "function(){\r\nconsole.log(\"TICK BENCH\", this);\r\n}"
+        },
+        "destroyBase": "0"
+    }
+}

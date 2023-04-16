@@ -1,0 +1,14 @@
+{
+    "name": "Blueprints",
+    "codename": "ahref_blueprints",
+    "value": "2",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ahref_cptop",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "url": "items.php?type=ss_items_blueprints&template=ss_items",
+        "submenu": []
+    }
+}

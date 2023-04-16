@@ -1,0 +1,16 @@
+{
+    "name": "Fire 1",
+    "codename": "anisprite_fire2",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ani_all",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "textures": "effect_fire_frame5\r\neffect_fire_frame5\r\neffect_fire_frame7\r\neffect_fire_frame7\r\neffect_fire_frame6\r\neffect_fire_frame6\r\neffect_fire_frame7\r\neffect_fire_frame7",
+        "speed": "24",
+        "width": 64,
+        "height": 64
+    }
+}

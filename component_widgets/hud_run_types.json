@@ -1,0 +1,13 @@
+{
+    "name": "HUD Run Types",
+    "codename": "hud_run_types",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "component_widgets",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "getElement": "function () {\r\n\r\n    var pane = game.render.componentRaw('drawBoxPane', { showX: game.editMode, x: 0, y: 0, w: 200, h: 60 });\r\n\r\n    var icon = new Sprite('icon_stance_crouch');\r\n    icon.id = 'icon_stance_crouch';\r\n    game.index.addToIndex('hud_elements', icon)\r\n    icon.setScale(0.5)\r\n    icon.x = 15;\r\n    icon.y = 15;\r\n    icon.alpha = game.playerGlobals.stance == 'crouch' ? 1 : 0.25;\r\n    icon.isInteractive();\r\n    icon.on('pointerup', function () {\r\n        var cr = game.index.getFromIndex('icon_stance_crouch', 'hud_elements');\r\n        var wa = game.index.getFromIndex('icon_stance_walk', 'hud_elements');\r\n        var ru = game.index.getFromIndex('icon_stance_run', 'hud_elements');\r\n        cr.alpha = 1;\r\n        wa.alpha = 0.25;\r\n        ru.alpha = 0.25;\r\n    });\r\n    pane.addChild(icon);\r\n\r\n    var icon = new Sprite('icon_stance_walk');\r\n    icon.id = 'icon_stance_walk';\r\n    game.index.addToIndex('hud_elements', icon)\r\n    icon.setScale(0.5)\r\n    icon.x = 15 + 10 + 32;\r\n    icon.y = 15;\r\n    icon.alpha = game.playerGlobals.stance == 'walk' ? 1 : 0.25;\r\n    icon.isInteractive();\r\n    icon.on('pointerup', function () {\r\n        var cr = game.index.getFromIndex('icon_stance_crouch', 'hud_elements');\r\n        var wa = game.index.getFromIndex('icon_stance_walk', 'hud_elements');\r\n        var ru = game.index.getFromIndex('icon_stance_run', 'hud_elements');\r\n        cr.alpha = 0.25;\r\n        wa.alpha = 1;\r\n        ru.alpha = 0.25;\r\n    });\r\n    pane.addChild(icon);\r\n\r\n    var icon = new Sprite('icon_stance_run');\r\n    icon.id = 'icon_stance_run';\r\n    game.index.addToIndex('hud_elements', icon)\r\n    icon.setScale(0.5)\r\n    icon.x = 15 + 10 + 32 + 10 + 32;\r\n    icon.y = 15;\r\n    icon.alpha = game.playerGlobals.stance == 'run' ? 1 : 0.25;\r\n    icon.isInteractive();\r\n    icon.on('pointerup', function () {\r\n        var cr = game.index.getFromIndex('icon_stance_crouch', 'hud_elements');\r\n        var wa = game.index.getFromIndex('icon_stance_walk', 'hud_elements');\r\n        var ru = game.index.getFromIndex('icon_stance_run', 'hud_elements');\r\n        cr.alpha = 0.25;\r\n        wa.alpha = 0.25;\r\n        ru.alpha = 1;\r\n    });\r\n    pane.addChild(icon);\r\n\r\n\r\n\r\n\r\n    return pane;\r\n\r\n}"
+    }
+}

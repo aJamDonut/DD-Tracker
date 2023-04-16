@@ -1,0 +1,17 @@
+{
+    "name": "Yama Free Herbs",
+    "codename": "sprite_yamafreeherbs",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_yamaitems",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_world_items",
+        "across": 30,
+        "down": 29,
+        "w": 128,
+        "h": 128
+    }
+}

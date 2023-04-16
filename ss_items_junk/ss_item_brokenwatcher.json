@@ -1,0 +1,19 @@
+{
+    "name": "Broken Watcher",
+    "codename": "ss_item_brokenwatcher",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_junk",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "item_brokenwatcher",
+        "meta": {
+            "blockWidth": 1,
+            "blockHeight": 1,
+            "value": 300
+        },
+        "events": []
+    }
+}

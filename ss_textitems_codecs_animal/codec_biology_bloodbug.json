@@ -1,0 +1,18 @@
+{
+    "name": "Biology: Blood bug",
+    "codename": "codec_biology_bloodbug",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_textitems_codecs_animal",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_codec_biology",
+        "meta": {
+            "blockWidth": 1,
+            "blockHeight": 1,
+            "description": "[Author: Ira Barber] [Year: 4062]\r\nSo even a desert like this can be home to a creature as annoying as earths mosquitos, okay, I see how it is! These giant flyers are quick to attack and should absolutely be avoided!\r\n\r\nWe've seen countless clones out in the desert drained of blood just baking in the desert suns waiting for the sand ticks to them finish off."
+        }
+    }
+}

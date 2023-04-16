@@ -1,0 +1,16 @@
+{
+    "name": "Move",
+    "codename": "aistate_move",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ai_states",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "start": "function(life) {\r\n  life.removeTarget()\r\n}",
+        "run": "function(life) {\r\n\t\r\n}",
+        "end": "function() {\r\n\t\r\n}",
+        "weight": "function(life) {\r\n  if(life.data.isPlayer && life.data.command == 'moveto') {\r\n  \tlife.removeTarget()\r\n  }\r\n  return 0;\r\n}"
+    }
+}

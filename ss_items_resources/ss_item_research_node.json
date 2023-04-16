@@ -1,0 +1,23 @@
+{
+    "name": "Research Node",
+    "codename": "ss_item_research_node",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_resources",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_item_researchbook",
+        "meta": {
+            "description": "A cache of nanites used for powering AI based research",
+            "slots": "resource",
+            "blockWidth": 2,
+            "blockHeight": 2,
+            "value": 750
+        },
+        "events": {
+            "onCreate": "function() {\r\n  \tthis.maxStack = 5;\r\n  \tthis.isQuantity = true;\r\n}"
+        }
+    }
+}

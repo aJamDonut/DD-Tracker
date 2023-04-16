@@ -1,0 +1,21 @@
+{
+    "name": "Rare Backpack",
+    "codename": "ss_rare_backpack",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_backpack",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "item_rarebackpack",
+        "meta": {
+            "weight": 5,
+            "contextOptions": "equipt",
+            "slots": "backpack",
+            "blockWidth": 4,
+            "blockHeight": 3
+        },
+        "events": []
+    }
+}

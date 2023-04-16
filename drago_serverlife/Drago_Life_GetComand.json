@@ -1,0 +1,13 @@
+{
+    "name": "Drago_Life_GetComand",
+    "codename": "Drago_Life_GetComand",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "drago_serverlife",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "exec": "class Drago_Life_GetCommand extends DragoContainer {\r\n\r\n    constructor(drago, id, options) {\r\n        super(drago, id, options);\r\n        this.title = 'Life';\r\n    }\r\n\r\n    static settings = {\r\n        cssClass: 'abe-server'\r\n    }\r\n\r\n    init() {\r\n\r\n      \r\n        this.addRow({\r\n            name: 'output1',\r\n            subcomponent: 'Drago__Output',\r\n            type: 'output',\r\n            label: 'Command',\r\n            multi: true,\r\n        });\r\n    }\r\n\r\n    code() {\r\n        let nodes = this.processInputsAndOutputs();\r\n        return `life.getCommand()`;\r\n    }\r\n\r\n}\r\n\r\nDragoComponents.prototype.Drago_Life_GetCommand = Drago_Life_GetCommand;\r\n"
+    }
+}

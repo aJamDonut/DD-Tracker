@@ -1,0 +1,16 @@
+{
+    "name": "Wooden Club",
+    "codename": "recipe_ss_weapon_club_w",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_weapon_club_w",
+        "sprite": "weapon_wooden_club",
+        "require": "wood",
+        "amount": "30"
+    }
+}

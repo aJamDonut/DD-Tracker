@@ -1,0 +1,16 @@
+{
+    "name": "Goto Find",
+    "codename": "aistate_goto_find",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ai_states",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "start": "function(life) {\r\n  life.searchStart = 0\r\n  life.pathFind = false;\r\n  \r\n  \/\/Ensure valid target, if not unset self\r\n  if(!life.data.findId || life.data.do !== 'find') {\r\n    return 0; \/\/Nothing to gather\r\n  }\r\n  \r\n  var target = servers.world.index.getFromIndex(life.data.findId, 'all');\r\n  if(target.markedForDestroy == true) {\r\n    \/\/No valid target, either undefined, or set to be cleaned up.\r\n    life.data.findId = false;\r\n    return false;\r\n  }\r\n}",
+        "run": "function(life) {\r\n    var target = servers.world.index.getFromIndex(life.data.findId, 'all');\r\n  \r\n  \tif(life.searchStart === 0) {\r\n\t\tlife.searchStart = Date.now();\r\n      \tif(target == undefined) {\r\n          life.data.findId = false;\r\n          console.error(\"Cant find target\");\r\n          return false;\r\n        }\r\n      \t\r\n      \tif(life.pathFind == false) {\r\n            life.pathFind = true;\r\n            servers.world.helper.pathUpdate('asyncPathFind', {id: life.id, targetId: life.data.findId, x:life.x, y:life.y, endX:target.x, endY: target.y+target.height});\r\n\t\t\tconsole.error(\"Finding LOS\");\r\n        }\t\r\n    }\r\n}",
+        "end": "function(life) {\r\n\tif(life.id !== servers.world.playerId) {\r\n      life.stopMoving();\r\n      return;\r\n    }\r\n}",
+        "weight": "function(life) {\r\n  \r\n  if(!life.data.findId || life.data.do !== 'find') {\r\n    return 0; \/\/Nothing to gather\r\n  }\r\n  \r\n  var target = servers.world.index.getFromIndex(life.data.findId, 'all');\r\n  \r\n  if(!target) {\r\n\tconsole.error(\"[ABE] Cannot find to harvest: \"+life.data.findId);\r\n    life.data.findId = false;\r\n    return 0; \/\/Can't find item to gather\r\n  }\r\n  \r\n  if(life.dist(target) > 64) {\r\n    return 61; \/\/Far away, so lets execute\r\n  } else {\r\n\treturn 0; \/\/Already there\r\n  }\r\n  \r\n  return 0; \/\/Already there or not gathering\r\n}"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Deathspawn Eye Right",
+    "codename": "mask_deathspawneyeright",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_masksright",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_humanoid2",
+        "across": 11,
+        "down": 3,
+        "w": 128,
+        "h": 128
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Heal (Use bandage)",
+    "codename": "ext_heal",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "entity_extension_items_client",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "events": {
+            "onCreate": "function(item, options) {\r\n\titem.data.block = true;\r\n\titem.contextMenus = {};\r\n    item.contextMenus['Heal'] = function (caller) {\r\n\t\tvar life = caller.inventory.owner\r\n        life.addStatusFromClient('bandaging', {duration: 4.5, source: this.id, canCancelWithMove: true});\r\n\t}\r\n}"
+        }
+    }
+}

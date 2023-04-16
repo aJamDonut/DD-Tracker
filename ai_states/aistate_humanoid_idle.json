@@ -1,0 +1,13 @@
+{
+    "name": "Humanoid Idle",
+    "codename": "aistate_humanoid_idle",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ai_states",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "weight": "function(life) {\r\n  return 10; \/\/Least important\r\n}"
+    }
+}

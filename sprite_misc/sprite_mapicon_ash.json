@@ -1,0 +1,17 @@
+{
+    "name": "Map Icon Ash",
+    "codename": "sprite_mapicon_ash",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_misc",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_mapicon_ash",
+        "across": 1,
+        "down": 1,
+        "w": 80,
+        "h": 80
+    }
+}

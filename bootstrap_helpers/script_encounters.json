@@ -1,0 +1,13 @@
+{
+    "name": "Encounters",
+    "codename": "script_encounters",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_helpers",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "exec": "function() {\r\n\r\n  game.activeEncounters = {\r\n\r\n  }\r\n\r\n  game.checkActiveEncounters = function () {\r\n\r\n    const ONE_MINUTE = 60;\r\n    const ENCOUNTER_DURATION = ONE_MINUTE * 10; \/\/10 minutes\r\n    let keys = Object.keys(game.activeEncounters);\r\n\r\n    for (let i = 0; i < keys.length; i++) {\r\n      let key = keys[i];\r\n      let encounter = game.activeEncounters[key];\r\n      if (encounter.start < game.ts - ENCOUNTER_DURATION) {\r\n        delete game.activeEncounters[key];\r\n      }\r\n    }\r\n  }\r\n\r\n  game.addEncounter = function (name, x, y, init) {\r\n    init(x, y);\r\n    game.activeEncounters[game.randID()] = {\r\n      start: game.ts\r\n    }\r\n  }\r\n\r\n  game.encounter = function (gridX, gridY) {\r\n\r\n\r\n    const MAX_ENCOUNTERS = 5;\r\n\r\n    const ONE_MINUTE = 60;\r\n\r\n    \/\/Decide the encounter here.\r\n    const ENCOUNTER_COOLDOWN_START_BEGINNER = ONE_MINUTE * 5; \/\/Every 5 minutes\r\n\r\n    if (Object.keys(game.activeEncounters).length >= MAX_ENCOUNTERS) {\r\n      return; \/\/ Too many encounters\r\n    }\r\n\r\n    if (!this.lastEncounter) {\r\n      this.lastEncounter = game.ts - ENCOUNTER_COOLDOWN_START_BEGINNER;\r\n    }\r\n\r\n    if(this.lastEncounter > game.ts - ENCOUNTER_COOLDOWN_START_BEGINNER) {\r\n      return; \/\/Already had an encounter recently\r\n    }\r\n\r\n    this.lastEncounter = game.ts;\r\n\r\n    game.spawnRandomEncounter(gridX, gridY);\r\n\r\n    game.checkActiveEncounters();\r\n\r\n  }\r\n\r\n  game.spawnRandomEncounter = function (gridX, gridY) {\r\n\r\n    if (1 == 1 \/*is it this difficulty?*\/) {\r\n      game.addEncounter(\r\n        'Spawn ticks',\r\n        gridX,\r\n        gridY,\r\n        function (gridX, gridY) {\r\n          let x = game.atGridPos(gridX);\r\n          let y = game.atGridPos(gridY);\r\n          let spawn = game.quickAdd(x, y, new ComplexItem('spawn_tick'));\r\n        }\r\n      );\r\n    }\r\n\r\n  }\r\n\r\n}"
+    }
+}

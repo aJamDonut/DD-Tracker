@@ -1,0 +1,17 @@
+{
+    "name": "Small Black Diamond 2",
+    "codename": "sprite_blackdiamond_small_2",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_worlditems",
+    "color": "#202327",
+    "editedtime": "1678586108",
+    "vars": {
+        "tileset": "sheet_random_pieces",
+        "across": 10,
+        "down": 23,
+        "w": 128,
+        "h": 128
+    }
+}

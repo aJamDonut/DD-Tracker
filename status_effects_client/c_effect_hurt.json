@@ -1,0 +1,17 @@
+{
+    "name": "Hurt",
+    "codename": "c_effect_hurt",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "status_effects_client",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "start": "function(item, options){\r\n  \r\n  \/\/item.forceAnim = 'none\/hurt_right'\r\n\r\n}",
+        "tick": "function(item, options){\r\n\r\n}",
+        "end": "function(item, options){\r\n  \r\n item.forceAnim = false;\r\n\r\n}",
+        "remove": "function(item, options){\r\n  \r\n item.forceAnim = false;\r\n\r\n}",
+        "stacks": "0"
+    }
+}

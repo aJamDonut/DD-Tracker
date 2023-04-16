@@ -1,0 +1,17 @@
+{
+    "name": "Clone Pod",
+    "codename": "recipe_ss_clonepod",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": "1679169513",
+    "vars": {
+        "crafts": "ss_clonepod",
+        "sprite": "w_emptyclonepod",
+        "crafted_in": "build",
+        "require": "adhesive,composites,sinchip,glass,mechscrap",
+        "amount": "5,10,5,10,10"
+    }
+}

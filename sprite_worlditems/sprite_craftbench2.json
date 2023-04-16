@@ -1,0 +1,17 @@
+{
+    "name": "Tier 2 Craftbench",
+    "codename": "sprite_craftbench2",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_worlditems",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_world_items",
+        "across": 14,
+        "down": 13,
+        "w": 192,
+        "h": 256
+    }
+}

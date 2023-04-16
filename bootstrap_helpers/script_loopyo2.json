@@ -1,0 +1,13 @@
+{
+    "name": "Loopyo2",
+    "codename": "script_loopyo2",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_helpers",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "exec": "function(){\r\n\r\n  game.loopyo2 = function(){\r\n\r\n    \r\n    if(!game.radius) {\r\n    \tgame.radius = {x:6, y:6};\r\n    \tgame.tween(game.radius, 'slide', {x:6, y: 6, duration: 1000});\r\n    }\r\n    \r\n    if(!game.deg) {\r\n    \tgame.deg = {x:1, y:1};\r\n      \r\n      \r\n      \t\r\n    \tgame.tween(game.deg, 'slide', {x:360, y: 360, duration: 120000});\r\n      \r\n    }\r\n\r\n    if(!game.firepos) {\r\n    \tgame.firepos = {x:10, y:10};\r\n    }\r\n    \r\n    let offAngle = game.deg.x\r\n    \r\n    let angleX = Math.floor(game.firepos.x + game.radius.x * Math.cos(game.deg.x));\r\n    let angleY = Math.floor(game.firepos.y + game.radius.x * Math.sin(game.deg.x)); \r\n    \r\n    if(game.rng(1,1000) < 20) {\r\n      \r\n      let distance = game.radius.x * 2;\r\n      \r\n      \r\n      let newAngleX = Math.floor(game.firepos.x + game.radius.x + distance * Math.cos(game.deg.x));\r\n      let newAngleY = Math.floor(game.firepos.y + game.radius.x + distance * Math.cos(game.deg.x));\r\n      \r\n      game.firepos.x = newAngleX;\r\n      game.firepos.y = newAngleY;\r\n      \r\n      \r\n      game.radius.x = distance\/2;\r\n      game.radius.y = distance\/2;\r\n      \r\n      \/\/game.deg.x += 180 + 90;\r\n      \/\/game.deg.y += 180;\r\n      \r\n      createjs.Tween.removeTweens(game.deg);\r\n      \r\n      if(game.deg.x > 0 && game.deg.x < 180 && !game.degdesc) {\r\n      \tgame.tween(game.deg, 'slide', {x:1, y: 1, duration: 120000});\r\n        game.degdesc = true;\r\n      } else {\r\n        game.tween(game.deg, 'slide', {x:360, y: 360, duration: 120000});\r\n\t\tgame.degdesc = false;\r\n      }\r\n      \r\n    }\r\n    \r\n    \r\n   \r\n    game.quickSpawn.skulls(angleX, angleY)\r\n    \r\n    console.log(game.radius.x);\r\n    \r\n    setTimeout(game.loopyo2, 10);\r\n  }\r\n  \r\n}"
+    }
+}

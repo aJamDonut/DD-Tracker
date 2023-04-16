@@ -1,0 +1,19 @@
+{
+    "name": "Royal Garment",
+    "codename": "ss_item_body_royal",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_body",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "body_royal",
+        "meta": {
+            "blockWidth": 2,
+            "blockHeight": 2,
+            "value": 2000
+        },
+        "events": []
+    }
+}

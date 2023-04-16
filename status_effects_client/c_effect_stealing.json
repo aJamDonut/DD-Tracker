@@ -1,0 +1,16 @@
+{
+    "name": "Stealing",
+    "codename": "c_effect_stealing",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "status_effects_client",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "start": "function(item, options){\r\n  \r\n  item.data.stealing = true;\r\n  item.forceAnim = 'util\/bandage'\r\n\r\n}",
+        "tick": "function(item, options){\r\n\r\n}",
+        "end": "function(item, options){\r\n \r\n item.data.stealing = false;\r\n item.forceAnim = false;\r\n\r\n}",
+        "stacks": "1"
+    }
+}

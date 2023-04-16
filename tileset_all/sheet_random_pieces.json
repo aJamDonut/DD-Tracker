@@ -1,0 +1,14 @@
+{
+    "name": "Random Pieces",
+    "codename": "sheet_random_pieces",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "tileset_all",
+    "color": "#202327",
+    "editedtime": "1675716163",
+    "vars": {
+        "filename": "randompieces.png",
+        "blockSize": 64
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Boulder 2",
+    "codename": "sprite_boulder_2",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_worlditems",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_geo_flora",
+        "across": 1,
+        "down": 7,
+        "w": 192,
+        "h": 192
+    }
+}

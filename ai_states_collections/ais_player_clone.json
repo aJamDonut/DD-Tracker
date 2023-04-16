@@ -1,0 +1,13 @@
+{
+    "name": "Player Clone",
+    "codename": "ais_player_clone",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ai_states_collections",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "states": "aistate_find_enemies\r\naistate_ko\r\naistate_idle\r\naistate_gotocontainer\r\naistate_find_jobs\r\naistate_do_jobs\r\naistate_useitem\r\naistate_gather\r\naistate_goto_gather\r\naistate_attack\r\naistate_attack_chase\r\naistate_attack_stop_chase\r\naistate_follow_player\r\naistate_move"
+    }
+}

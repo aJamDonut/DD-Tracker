@@ -1,0 +1,17 @@
+{
+    "name": "Icon Stance Crouch",
+    "codename": "icon_stance_crouch",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_icon",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "across": 1,
+        "down": 1,
+        "w": 64,
+        "h": 64,
+        "tileset": "sheet_ui"
+    }
+}

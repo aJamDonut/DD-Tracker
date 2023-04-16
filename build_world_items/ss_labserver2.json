@@ -1,0 +1,18 @@
+{
+    "name": "Server 2",
+    "codename": "ss_labserver2",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_world_items",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "w_server2",
+        "meta": {
+            "blockZone": "top"
+        },
+        "events": [],
+        "destroyBase": "0"
+    }
+}

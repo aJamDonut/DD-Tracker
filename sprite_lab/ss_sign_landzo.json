@@ -1,0 +1,17 @@
+{
+    "name": "Sign Landzo",
+    "codename": "ss_sign_landzo",
+    "value": "100000",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_lab",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_lab_items",
+        "across": 26,
+        "down": 22,
+        "w": 448,
+        "h": 320
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "name": "Codec: Battle of the balance books",
+    "codename": "codec_b4",
+    "value": "3",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_textitems_codecs",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "item_codec",
+        "meta": {
+            "blockWidth": 1,
+            "blockHeight": 1,
+            "description": "[Author: The Bookmaker] [Year: 4080]\r\nControl and power. That's all Sincorp wants. It's a tyrannical dictatorship in business form. For hundreds of years Sincorp performed world wide wars on several countries, companies and establishments in order to get control. We all saw it as the norm. It was so normal for companies to fund armies, ships and even tanks. Heck they probably manufactured most of them! Once you get to absolute power over one nations supply chain do you really exist as a \"company\"? Aren't you just another nation?\r\n\r\nMost don't even remember how Sincorp was formed. Some say it was based around social media, others say it was a hardware house that began in a garage. I personally never paid care to the history; Sincorp was normal to me. Every product I owned had a Sincorp logo on it. I remember when I was young and I had a SammyCorp teddy bear. I called him Sammy! One day my parents start talking about what Sammy represents. I was pretty confused and just wanted my Teddy back! I didn't know until I was much older this was all about another battle for Sincorp to take control over SammyCorps market share. It turns out at the time SammyCorps CEO was found signing of on the experimentation with gene splicing on animal hybrids, an activity recently outlawed by the very same SinCorp."
+        }
+    }
+}

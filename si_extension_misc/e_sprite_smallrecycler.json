@@ -1,0 +1,21 @@
+{
+    "name": "Recycler",
+    "codename": "e_sprite_smallrecycler",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "si_extension_misc",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "meta": {
+            "blockZone": "all",
+            "contextOptions": "use",
+            "name": "Recycler"
+        },
+        "events": {
+            "onCreate": "function(item) {\r\n  item.data.block = true;\r\n  game.inventories.createInventoryForItem(item, 10, 4);\r\n\r\n  item.recycle = function() {\r\n    this.recycling = true;\r\n    this.start = Date.now();\r\n  }\r\n\r\n  item.addTicker('recycle', function() {\r\n    if(!this.recycling) {\r\n      return false;\r\n    }\r\n\r\n    if(Date.now() < this.start + 3000) {\r\n      return false;\r\n    }\r\n    \r\n    this.start = Date.now();\r\n    \r\n    console.log(this.inventory.itemList)\r\n    console.log(this.inventory);\r\n    \r\n    let items = Object.keys(this.inventory.itemList);\r\n    \r\n    if(items.length == 0) {\r\n      this.recycling = false; \/\/No items to recycle\r\n      return false;\r\n    }\r\n \r\n    let item = this.inventory.itemList[items[0]]; \/\/Use first item\r\n    \r\n    if(item.breakdown) {\r\n      \tgame.p.data.stats[item.breakdown.resource] += item.breakdown.amount;\r\n    } else {\r\n    \tgame.p.data.stats.components += game.rng(0,100);\r\n    }\r\n    \r\n    \r\n    \r\n    \r\n    this.inventory.removeItem(item);\r\n    this.inventory.refreshGrid();\r\n\r\n  });\r\n\r\n      \r\n  item.use = function(){\r\n    var recyler = game.render.component('hud_recycler', {recycler: this}, 'recycler');\r\n    recyler.x = 20;\r\n    recyler.y = 20;\r\n    game.render.aboveAll.addChild(recyler);\r\n  }\r\n}",
+            "onUpdate": "function(item, oldData, newData) {\r\n\r\n  console.log(item, oldData, newData);\r\n\r\n}"
+        }
+    }
+}

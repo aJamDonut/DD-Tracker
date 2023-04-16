@@ -1,0 +1,17 @@
+{
+    "name": "Training Dummy",
+    "codename": "sprite_training_dummy",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_worlditems",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_world_items",
+        "across": 16,
+        "down": 8,
+        "w": 128,
+        "h": 192
+    }
+}

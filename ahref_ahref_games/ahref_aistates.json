@@ -1,0 +1,14 @@
+{
+    "name": "AI States",
+    "codename": "ahref_aistates",
+    "value": "5",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ahref_ahref_games",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "url": "\/items.php?type=ai_states&direct=true",
+        "submenu": []
+    }
+}

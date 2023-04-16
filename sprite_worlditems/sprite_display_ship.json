@@ -1,0 +1,17 @@
+{
+    "name": "Ship Display",
+    "codename": "sprite_display_ship",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_worlditems",
+    "color": "#202327",
+    "editedtime": "1676772011",
+    "vars": {
+        "tileset": "sheet_world_items",
+        "across": 27,
+        "down": 14,
+        "w": 128,
+        "h": 192
+    }
+}

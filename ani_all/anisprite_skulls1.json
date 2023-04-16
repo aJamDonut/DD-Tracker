@@ -1,0 +1,16 @@
+{
+    "name": "Skulls 1",
+    "codename": "anisprite_skulls1",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ani_all",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "textures": "tex_skulls_1\r\ntex_skulls_1",
+        "speed": "24",
+        "width": 64,
+        "height": 64
+    }
+}

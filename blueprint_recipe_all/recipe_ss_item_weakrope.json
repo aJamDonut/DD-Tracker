@@ -1,0 +1,16 @@
+{
+    "name": "Weak Rope",
+    "codename": "recipe_ss_item_weakrope",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_item_weakrope",
+        "sprite": "item_weak_rope",
+        "require": "fiber,skin",
+        "amount": "40,5"
+    }
+}

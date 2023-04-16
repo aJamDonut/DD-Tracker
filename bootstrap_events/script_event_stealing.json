@@ -1,0 +1,13 @@
+{
+    "name": "Stealing Event",
+    "codename": "script_event_stealing",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_events",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "exec": "function() {\r\n\tgame.ee.on('inventory-removeitem', function(options){\r\n    \r\n      \t\/\/if(options.item.owner === 'game') {\r\n          \r\n      \t\t\/\/game.p.addStatusFromClient('stealing', {duration: 5, source: options.item.id});\r\n          \r\n        \/\/}\r\n    \r\n    });\r\n}"
+    }
+}

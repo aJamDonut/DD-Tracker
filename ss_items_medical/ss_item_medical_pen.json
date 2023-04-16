@@ -1,0 +1,20 @@
+{
+    "name": "Medical Pen",
+    "codename": "ss_item_medical_pen",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_medical",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_syringe",
+        "meta": {
+            "blockWidth": 2,
+            "blockHeight": 2
+        },
+        "events": {
+            "onCreate": "function(item, options) {\r\n\titem.data.block = true;\r\n\titem.contextMenus = {};\r\n    item.contextMenus['Heal'] = function (caller) {\r\n\t\tvar life = caller.inventory.owner\r\n        life.addStatusFromClient('healing', {duration: 4.5, source: this.id, canCancelWithMove: true});\r\n\t}\r\n}"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Build Wall",
+    "codename": "ss_build_wall",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_player_helpers",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "icon_build_spot",
+        "meta": [],
+        "events": {
+            "onCreate": "function(item) {\r\n\titem.data.job = 'buildwall';\r\n  \titem.sync();\r\n  \tgame.offloader.addToIndex('jobs', item);\r\n  \titem.alpha = 0.9;\r\n  \titem.steps = 0;\r\n  \titem.jobAnim = 'build';\r\n  \titem.maxSteps = 3;\r\n  \titem.jobStep = function(data){\r\n      this.steps++;\r\n      \r\n      let caller = game.index.getFromIndex(data.callerId, 'all');\r\n      caller.forceAnim = 'util\/build_'+caller.data.dir;\r\n      if(this.steps >= this.maxSteps) {\r\n        caller.completeJob(this);\r\n        game.grid.updateTile(game.gridPos(this.x), game.gridPos(this.y), 4, 4, game.drawLayer);\r\n        game.grid.drawWalls();\r\n        this.alpha =0;\r\n      }\r\n  \t}\r\n}"
+        }
+    }
+}

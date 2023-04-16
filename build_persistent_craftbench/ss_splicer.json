@@ -1,0 +1,22 @@
+{
+    "name": "Splicer",
+    "codename": "ss_splicer",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_persistent_craftbench",
+    "color": "#202327",
+    "editedtime": "1678109824",
+    "vars": {
+        "sprite": "sprite_splicer",
+        "meta": {
+            "physicsType": "helper",
+            "contextOptions": "loot",
+            "recipe": "pers_worlditem_materialbench"
+        },
+        "events": {
+            "onCreate": "function() {\r\n\r\n\tthis.contextMenus['Place'] = function (item) {\r\n\r\n\t\tconst SLEEP_TIMEOUT = 120000;\r\n\r\n\t\tif (!game.p) {\r\n\t\t\treturn false;\r\n\t\t}\r\n\r\n\t\tconst carrying = game.p.isCarrying();\r\n\r\n\t\tif (!carrying) {\r\n\t\t\tgame.notify(\"Nothing to place\");\r\n\t\t\treturn false;\r\n\t\t}\r\n\r\n\t\tgame.p.stopCarrying(carrying);\r\n\r\n\t\tcarrying.addStatusFromClient('opready', {\r\n\t\t\tduration: SLEEP_TIMEOUT,\r\n\t\t\tsource: this.id,\r\n\t\t});\r\n\r\n\t\tcarrying.x = item.x + 32;\r\n\t\tcarrying.y = item.y;\r\n\t\tcarrying.syncXY();\r\n\t\t\r\n\t\tcarrying.addStatusFromClient('sleeping', {\r\n\t\t\tsleepX: item.x + 5,\r\n\t\t\tsleepY: item.y - 22,\r\n\t\t\tduration: SLEEP_TIMEOUT,\r\n\t\t\tsource: this.id,\r\n\t\t\tcanCancelWithMove: false\r\n\t\t});\r\n\t}\r\n\r\n}",
+            "onWorldTick": "function(){\r\n  this.hauls();\r\n}"
+        }
+    }
+}

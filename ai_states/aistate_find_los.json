@@ -1,0 +1,13 @@
+{
+    "name": "Find LOS",
+    "codename": "aistate_find_los",
+    "value": "25",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ai_states",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "weight": "function(life) {\r\n\r\n\r\n  if (life.data.targetId && game.ts % 4) {\r\n    \/\/If chasing\/attacking check every 4th frame the person we're attacking\r\n    life.scanningLife = this.helper.world.index.getFromIndex(this.data.targetId, 'all');\r\n  }\r\n\r\n  let target = life.scanningLife;\r\n\r\n  if (!target) {\r\n    return 0;\r\n  }\r\n\r\n  if (target.codename !== 'life') {\r\n    return 0; \/\/Not life, skip this one\r\n  }\r\n\r\n  if (target.data.dead) {\r\n    return 0; \/\/Is dead so find another\r\n  }\r\n\r\n  if (!life.hasLOS(target) && life.losSearching) {\r\n    life.searchIndex--; \/\/Still searching so come back to this one.\r\n    return 0;\r\n  }\r\n\r\n  \/\/Fill sensor of what we see\r\n\r\n  if (!life.losRay.includes(target.id)) {\r\n    life.sees[target.id] = false;\r\n    \/\/Because of a wall\r\n    return 0; \/\/Can't see it\r\n  }\r\n  \/\/We can see this target\r\n\r\n  life.sees[target.id] = true;\r\n\r\n  \/\/Ready to check\r\n  return 0;\r\n\r\n}"
+    }
+}

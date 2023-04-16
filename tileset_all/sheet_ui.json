@@ -1,0 +1,14 @@
+{
+    "name": "User Interface",
+    "codename": "sheet_ui",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "tileset_all",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "filename": "ui.png",
+        "blockSize": 64
+    }
+}

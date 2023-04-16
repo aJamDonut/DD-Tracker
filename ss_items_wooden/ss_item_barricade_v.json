@@ -1,0 +1,18 @@
+{
+    "name": "Barricade Vertical",
+    "codename": "ss_item_barricade_v",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_wooden",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_barricade_v",
+        "meta": {
+            "blockWidth": 3,
+            "blockHeight": 2
+        },
+        "events": []
+    }
+}

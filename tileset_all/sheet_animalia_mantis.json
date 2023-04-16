@@ -1,0 +1,14 @@
+{
+    "name": "Sheet Animalia Mantis",
+    "codename": "sheet_animalia_mantis",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "tileset_all",
+    "color": "#202327",
+    "editedtime": "1675722671",
+    "vars": {
+        "filename": "animalia_mantis.png",
+        "blockSize": 64
+    }
+}

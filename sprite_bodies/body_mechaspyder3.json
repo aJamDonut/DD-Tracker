@@ -1,0 +1,17 @@
+{
+    "name": "Mecha Spyder 3",
+    "codename": "body_mechaspyder3",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_bodies",
+    "color": "#202327",
+    "editedtime": "1677423255",
+    "vars": {
+        "tileset": "sheet_animalia_mechaspyder",
+        "across": 9,
+        "down": 1,
+        "w": 256,
+        "h": 192
+    }
+}

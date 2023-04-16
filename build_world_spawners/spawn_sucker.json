@@ -1,0 +1,18 @@
+{
+    "name": "Sucker",
+    "codename": "spawn_sucker",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_world_spawners",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "sprite": "btn_blank_sqr",
+        "meta": [],
+        "events": {
+            "onCreate": "function(spawner){\r\n  \tif(game.editMode) {\r\n\t\treturn;\r\n    }\r\n\r\n    var player = new LifeObject();\r\n    player.x = spawner.x;\r\n    player.y = spawner.y;\r\n    \r\n  \t\/*Make useable and blank, give random stats*\/\r\n  \tplayer.setBlank();\r\n  \tplayer.randomizeStats(1);\r\n  \r\n  \t\/*Set faction*\/\r\n  \tplayer.data.faction='civilian';\r\n  \r\n    game.render.lifeLayer.addChild(player);\r\n  \tgame.world.addObject(player);\r\n    game.world.addToServer(player);\r\n  \r\n  \tplayer.inventory.body.addItem(new InventoryItem('ss_animal_sucker'), true);\r\n  \r\n\/\/  \tplayer.inventory.brain.addItem(new InventoryItem('ss_brain_deadhead'), true);\r\n  player.inventory.brain.addItem(new InventoryItem('ss_brain_deadhead'), true);\r\n    \r\n  \t\r\n  \r\n  \tgame.lastp = player;\r\n  \tspawner.destroy();\r\n}"
+        },
+        "destroyBase": "0"
+    }
+}

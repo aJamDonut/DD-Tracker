@@ -1,0 +1,14 @@
+{
+    "name": "Quick Links",
+    "codename": "ahref_quicklinks",
+    "value": "1",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ahref_cptop",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "url": "items.php?type=ahref_ahref_quicklinks&direct=true",
+        "submenu": []
+    }
+}

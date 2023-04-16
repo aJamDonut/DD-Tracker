@@ -1,0 +1,16 @@
+{
+    "name": "Revive",
+    "codename": "s_effect_revive",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "status_effects_server",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "start": "function(item, options){\r\n  console.log(item.statuses);\r\n\titem.removeAllOfStatus('bleed');\r\n    item.data.stats.hp = 100;\r\n\r\n      item.removeAllOfStatus('dead');\r\n    item.data.dead = false;\r\n  item.data.stats.hp = 100;\r\n    item.sync();\r\n}",
+        "tick": "function(item, options){\r\n\t\r\n}",
+        "end": "function(item, options){\r\n  \titem.removeAllOfStatus('bleed');\r\n    item.data.stats.hp = 100;\r\n\r\n      item.removeAllOfStatus('dead');\r\n    item.data.dead = false;\r\n  item.data.stats.hp = 100;\r\n    item.sync();\r\n}",
+        "stacks": "0"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Large Lamp post",
+    "codename": "sprite_lamppost_large",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_worlditems",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_world_items",
+        "across": 22,
+        "down": 1,
+        "w": 128,
+        "h": 256
+    }
+}

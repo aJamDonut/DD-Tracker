@@ -1,0 +1,14 @@
+{
+    "name": "Bootstraps",
+    "codename": "ahref_bootstraps",
+    "value": "10001",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ahref_ahref_games",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "url": "items.php?template=bootstrap",
+        "submenu": []
+    }
+}

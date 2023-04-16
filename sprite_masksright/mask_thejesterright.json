@@ -1,0 +1,17 @@
+{
+    "name": "The Jester",
+    "codename": "mask_thejesterright",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_masksright",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_humanoid",
+        "across": 7,
+        "down": 3,
+        "w": 128,
+        "h": 128
+    }
+}

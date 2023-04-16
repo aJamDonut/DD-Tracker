@@ -1,0 +1,17 @@
+{
+    "name": "Mud Path",
+    "codename": "sprite_tile_mudpatch",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_textures",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "background",
+        "across": 18,
+        "down": 7,
+        "w": 192,
+        "h": 192
+    }
+}

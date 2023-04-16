@@ -1,0 +1,14 @@
+{
+    "name": "hud_button",
+    "codename": "hud_button",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "component_inputs",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "options": "'name, onClick, pass, x, y, w, h, lblW'",
+        "getElement": "function(options) {\r\n  if(options == undefined) {\r\n    options = {};\r\n  }\r\n\r\n  name = options.name || 'NONAME';\r\n  x = options.x || 0;\r\n  y = options.y || 0;\r\n  w = options.w || 150;\r\n  h = options.h || 40;\r\n  pass = options.pass || false;\r\n  lblW = options.lblW || 150;\r\n\r\n  var pane = new UIContainer();\r\n\r\n  restW = w-lblW;\r\n  pane.addChild(new UIPane({fullscreen:false, fill: '0x212121', padding:0, x: x, y: y, w: w, h:h}));\r\n  pane.addChild(new UIPane({fullscreen:false, fill: '0x3d3d3d', padding:5, x: x+5, y: y+5, w: w-10, h:h-10}));\r\n\r\n  lbl1 = game.render.text(name, 'ingame-label');\r\n  lbl1.anchor.set(0.5, 0);\r\n  lbl1.x = w\/2;\r\n  lbl1.y = y+10;\r\n  lbl1.alpha = 0.8\r\n\r\n  pane.addChild(lbl1);\r\n  pane.isInteractive();\r\n  pane.on('pointerup', function(){\r\n  \tgame.audio.play('click');\r\n  });\r\n  \r\n  if(typeof options.onClick == 'function') {\r\n\tpane.on('pointerup', options.onClick);\r\n  }\r\n  \r\n  pane.passObj = pass;\r\n\r\n  return pane;\r\n}\r\n  "
+    }
+}

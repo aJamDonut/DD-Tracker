@@ -1,0 +1,17 @@
+{
+    "name": "Ugly Bug",
+    "codename": "body_uglybugright",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_bodiesright",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_animalia",
+        "across": 1,
+        "down": 3,
+        "w": 128,
+        "h": 128
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "name": "Animal Skin Crawler",
+    "codename": "ss_animal_skincrawler",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_animalbody",
+    "color": "#202327",
+    "editedtime": "1674427957",
+    "vars": {
+        "sprite": "body_skincrawler",
+        "meta": {
+            "description": "What... In hells name?",
+            "weight": 2,
+            "contextOptions": "equipt",
+            "slots": "body",
+            "blockWidth": 3,
+            "blockHeight": 3
+        },
+        "events": {
+            "onEquipt": "function(life) {\r\n  \tgame.render.spine.hackSpineSlot('head_down', life.spine, game.render.getSpriteTexture('blank'));\r\n    game.render.spine.hackSpineSlot('head_right', life.spine, game.render.getSpriteTexture('blank'));\r\n    game.render.spine.hackSpineSlot('head_up', life.spine, game.render.getSpriteTexture('blank'));\r\n    game.render.spine.hackSpineSlot('hand', life.spine, game.render.getSpriteTexture('blank'));\r\n  \tgame.render.spine.hackSpineSlot('hand2', life.spine, game.render.getSpriteTexture('blank'));\r\n}",
+            "onUnEquipt": "function(life) {\r\n  \r\n}",
+            "onCreate": "function(item) {\r\n  \t\r\n  \r\n}"
+        }
+    }
+}

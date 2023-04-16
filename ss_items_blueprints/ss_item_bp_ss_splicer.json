@@ -1,0 +1,20 @@
+{
+    "name": "Splicer",
+    "codename": "ss_item_bp_ss_splicer",
+    "value": "-10",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_blueprints",
+    "color": "#202327",
+    "editedtime": "1679170201",
+    "vars": {
+        "sprite": "item_blueprint",
+        "meta": {
+            "contextOptions": "usebp",
+            "blockWidth": 1,
+            "blockHeight": 1,
+            "recipe": "ss_splicer"
+        },
+        "events": []
+    }
+}

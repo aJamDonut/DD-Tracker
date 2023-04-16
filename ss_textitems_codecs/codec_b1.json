@@ -1,0 +1,18 @@
+{
+    "name": "Codec: Someone has to do it",
+    "codename": "codec_b1",
+    "value": "3",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_textitems_codecs",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "item_codec",
+        "meta": {
+            "blockWidth": 1,
+            "blockHeight": 1,
+            "description": "[Author: The Bookmaker] [Year: 4080]\r\nSo here we find ourselves, on a desert planet with low supplies; failing technology and local aliens who kill us on sight. How did I end up here? I thought I'd find adventure, friends and maybe more!\r\n\r\nOh well, I've gone long enough without a decents night sleep to know this isn't going to end well. Worse yet I can see the clone population growing while the human population is declining, this means eventually there must be no humans left! Imagine that! Would this even be a human colonized planet anymore? Or just some new civilization of bizarre mutated clones? A nightmare I've seen many times.\r\n\r\nIf I can't have my own adventures and humanity here is doomed, I might aswell begin to preserve the history of my time; so that clones and other cultures can learn from how this civilization began."
+        }
+    }
+}

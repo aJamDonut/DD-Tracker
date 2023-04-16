@@ -1,0 +1,13 @@
+{
+    "name": "Clicked New Game",
+    "codename": "script_event_newgame-clicked",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_events",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "exec": "function(){\r\n\r\n\tgame.ee.on('newgame-clicked', function(options){\r\n      try {\r\n        \r\n      game.ee.emit('newgame-init', options);\r\n \r\n      \/\/game.fs.copyFolder('deaddesert\/maps\/live', options.slot);\r\n      \r\n      \/\/Then load game...\r\n      } catch(e) {\r\n\t\tconsole.error(e);\r\n      }\r\n    });\r\n  \r\n  \r\n}"
+    }
+}

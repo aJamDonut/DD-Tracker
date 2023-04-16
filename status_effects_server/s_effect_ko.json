@@ -1,0 +1,16 @@
+{
+    "name": "Knockout",
+    "codename": "s_effect_ko",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "status_effects_server",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "start": "function(item, options){\r\n  item.data.ko = true;\r\n  item.sync();\r\n}",
+        "tick": "function(item, options) {\r\n     let decayPerSecond = 1;\r\n     let timeDelta = 60\/1000; \/\/Todo: replace with real delta\r\n     let decay = decayPerSecond * timeDelta;\r\n     item.data.stats.torp -= decay;\r\n}",
+        "end": "function(item, options){\r\n  item.data.ko = false;\r\n  item.sync();\r\n}",
+        "stacks": "0"
+    }
+}

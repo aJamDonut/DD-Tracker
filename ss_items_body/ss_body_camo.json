@@ -1,0 +1,27 @@
+{
+    "name": "Camo Jacket",
+    "codename": "ss_body_camo",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_body",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "body_camo",
+        "meta": {
+            "description": "Who needs green camo in an orange desert? YOU DO OFCOURSE!",
+            "weight": 2,
+            "contextOptions": "equipt",
+            "slots": "body",
+            "blockWidth": 3,
+            "blockHeight": 3,
+            "value": 1250
+        },
+        "events": {
+            "onEquipt": "function(life) {\r\n\tlife.addStatsFrom(this);\r\n}",
+            "onUnEquipt": "function(life) {\r\n\tlife.removeStatsFrom(this);\r\n}",
+            "onCreate": "function(item) {\r\n  \titem.data.stats.bluntReduction = 15;\r\n  \titem.data.stats.ballisticReduction = 15;\r\n  \titem.data.stats.sharpReduction = 15;\r\n  \titem.data.stats.tempHeat = 15;\r\n  \titem.data.stats.tempCold = -15;\r\n}"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Key card",
+    "codename": "sprite_keycard_orange",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_inventory",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_miscitems",
+        "across": 3,
+        "down": 3,
+        "w": 64,
+        "h": 64
+    }
+}

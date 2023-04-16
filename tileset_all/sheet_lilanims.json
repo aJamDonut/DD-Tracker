@@ -1,0 +1,14 @@
+{
+    "name": "Little animations",
+    "codename": "sheet_lilanims",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "tileset_all",
+    "color": "#202327",
+    "editedtime": "1675990930",
+    "vars": {
+        "filename": "lilanims.png",
+        "blockSize": 64
+    }
+}

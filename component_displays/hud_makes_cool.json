@@ -1,0 +1,14 @@
+{
+    "name": "Makes cool",
+    "codename": "hud_makes_cool",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "component_displays",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "options": "''",
+        "getElement": "function(options) {\r\n  if(options == undefined) {\r\n    options = {};\r\n  }\r\n\r\n \r\n  \r\n\r\n  var container = new UIContainer();\r\n\tlet pane = new UIContainer();\r\n  container.addChild(pane);\r\n  \r\n  let xOff =-150;\r\n  let gap = 10;\r\n  \r\n  game.tweens.hscreen = function(obj) {\r\n        obj.tween = createjs.Tween.get(obj, {override:false, loop: -1}).to({\r\n          \ty: -1000,\r\n        }, game.rng(10000,30000), createjs.Ease.getPowIn(game.rng(1,3)+0.2))\r\n    }\r\n  \r\n  let count = game.ui._VIEWPORT_RIGHT \/ 5;\r\n\r\n  for(let i = 0; i < count; i++) {\r\n    let scale = game.rng(1,2.5);\r\n\tlet ball1 = new Sprite('sprite_lavalamp_ball');\r\n    ball1.x = 5+xOff;\r\n    ball1.y = game.rng(0,game.ui._VIEWPORT_BOTTOM+500);\r\n    ball1.scale.x = scale;\r\n    ball1.scale.y = scale;\r\n    pane.addChild(ball1);\r\n    xOff += gap;\r\n    game.tween(ball1, 'hscreen');\r\n    \r\n  }\r\n  \r\n  pane.filters = [game.render.filters.bloom];\r\n  return container;\r\n}"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Tilesets",
+    "codename": "ahref_tilesets",
+    "value": "1",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ahref_ahref_games",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "url": "items.php?template=tileset",
+        "submenu": []
+    }
+}

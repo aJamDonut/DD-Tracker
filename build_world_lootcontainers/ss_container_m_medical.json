@@ -1,0 +1,22 @@
+{
+    "name": "Medical Medical",
+    "codename": "ss_container_m_medical",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_world_lootcontainers",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_med_box",
+        "meta": {
+            "blockZone": "all",
+            "physicsType": "logic",
+            "contextOptions": "loot",
+            "description": "A handy item container"
+        },
+        "events": {
+            "onCreate": "function(){\r\n\tthis.addExtension('ext_loot_w_light', {table: 'med_medical'});\r\n}"
+        }
+    }
+}

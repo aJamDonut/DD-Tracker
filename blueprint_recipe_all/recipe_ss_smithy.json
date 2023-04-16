@@ -1,0 +1,17 @@
+{
+    "name": "Crafting Smithy",
+    "codename": "recipe_ss_smithy",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_smithy",
+        "sprite": "sprite_smithy",
+        "crafted_in": "build",
+        "require": "adhesive,wood,stone,composites,sheetmetal",
+        "amount": "5,50,100,10,3"
+    }
+}

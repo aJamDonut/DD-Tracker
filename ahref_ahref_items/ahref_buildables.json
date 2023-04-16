@@ -1,0 +1,14 @@
+{
+    "name": "Buildables",
+    "codename": "ahref_buildables",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ahref_ahref_items",
+    "color": "#202327",
+    "editedtime": "1678104760",
+    "vars": {
+        "url": "items.php?type=build_persistent_craftbench&template=build",
+        "submenu": []
+    }
+}

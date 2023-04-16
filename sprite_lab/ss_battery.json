@@ -1,0 +1,17 @@
+{
+    "name": "Battery Small",
+    "codename": "ss_battery",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_lab",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_lab_items",
+        "across": 15,
+        "down": 16,
+        "w": 192,
+        "h": 192
+    }
+}

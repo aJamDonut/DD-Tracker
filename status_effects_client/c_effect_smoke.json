@@ -1,0 +1,16 @@
+{
+    "name": "Smoke",
+    "codename": "c_effect_smoke",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "status_effects_client",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "start": "function(item, options){\r\n   item.smoke = new Particles('poison_1');\r\n  \titem.smoke.flatten(); \/\/flatten to world\r\n  \titem.smoke.x =item.x + 32\r\n  \titem.smoke.y = item.y + 32\r\n  \tgame.render.aboveLife.addChild(item.smoke);\r\n  \titem.smoke.loop();\r\n}",
+        "tick": "function(item, options){\r\n  \r\n\titem.smoke.x = item.x+32;\r\n \titem.smoke.y = item.y+32;\r\n}",
+        "end": "function(item, options){\r\n\titem.smoke.play();\r\n}",
+        "stacks": "1"
+    }
+}

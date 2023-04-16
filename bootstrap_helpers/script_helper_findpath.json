@@ -1,0 +1,13 @@
+{
+    "name": "Find path",
+    "codename": "script_helper_findpath",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_helpers",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "exec": "function() {\r\n  game.findPath = function (startx, starty, endx, endy) {\r\n\r\n    game.offloader.do(this, 'findpath', { startx: startx, starty: starty, endx: endx, endy: endy }, function (res) {\r\n      console.error(res)\r\n    });\r\n\r\n  }\r\n}"
+    }
+}

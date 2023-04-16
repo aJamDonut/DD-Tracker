@@ -1,0 +1,15 @@
+{
+    "name": "Loot Container Extension",
+    "codename": "ext_loot_w_light",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "entity_extension_items_client",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "events": {
+            "onCreate": "function(furni, options) {\r\n  \r\n  \tif(game.editMode) {\r\n\t\treturn;\r\n    }\r\n  \r\n  \tif(!options) {\r\n\t\toptions = {};\r\n    }\r\n  \r\n  \tif(!options.xSlots) {\r\n\t\toptions.xSlots = 8;\r\n    }\r\n  \tif(!options.ySlots) {\r\n\t\toptions.ySlots = 8;\r\n    }\r\n  \r\n  \tvar hasSaveData = (furni.data.inventory) ? true : false;\r\n  \tgame.inventories.createInventoryForItem(furni, options.xSlots, options.ySlots);\r\n \r\n    var myLight = new Sprite('container_2_light', {anchor:'center'});\r\n    myLight.x = furni.width\/2;\r\n    myLight.y = furni.height\/2+15;\r\n\r\n\tmyLight.filters = [game.render.filters.bloom]\r\n  \tgame.tween(myLight, 'breathe');\r\n  \tfurni.addChild(myLight);\r\n  \r\n  \tvar myLight = new Sprite('lightcookie_oval', {anchor:'center'});\r\n    myLight.x = furni.x+(furni.width\/2);\r\n    myLight.y = furni.y+(furni.height\/2)+15;\r\n\t\r\n  \tgame.tween(myLight, 'breathe');\r\n  \tgame.render.lights.addChild(myLight);\r\n  \r\n    if(!hasSaveData) {\r\n\t\tgame.loot.genLoot(Object.assign(options, {inventory: this.inventory}));\r\n    }\r\n  \r\n}"
+        }
+    }
+}

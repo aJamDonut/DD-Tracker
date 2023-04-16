@@ -1,0 +1,20 @@
+{
+    "name": "Small Storage Container",
+    "codename": "bp_ss_container_smallstorage",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_blueprints_build",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_bp_blue",
+        "meta": {
+            "contextOptions": "usebuildingbp",
+            "blockWidth": 1,
+            "blockHeight": 1,
+            "recipe": "ss_container_smallstorage"
+        },
+        "events": []
+    }
+}

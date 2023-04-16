@@ -1,0 +1,27 @@
+{
+    "name": "Sun Shades",
+    "codename": "ss_mask_sunshades",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_masks",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "mask_sunglasses",
+        "meta": {
+            "description": "Sun shades, mostly they just make you cool - but they also offer some assistance with ranged combat",
+            "weight": 3,
+            "contextOptions": "equipt",
+            "slots": "mask",
+            "blockWidth": 3,
+            "blockHeight": 3,
+            "value": 800
+        },
+        "events": {
+            "onEquipt": "function(life) {\r\n\tlife.addStatsFrom(this);\r\n}",
+            "onUnEquipt": "function(life) {\r\n\tlife.removeStatsFrom(this);\r\n}",
+            "onCreate": "function(item) {\r\n  \titem.data.stats.bluntReduction = 1;\r\n  \titem.data.stats.ballisticReduction = 1;\r\n  \titem.data.stats.sharpReduction = 1;\r\n  \titem.data.stats.tempHeat = 1;\r\n  \titem.data.stats.tempCold = -0;\r\n  \titem.data.stats.ranged = 10;\r\n  \titem.data.stats.savage = 5;\r\n}"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "AI Mind Blu",
+    "codename": "sprite_aimind_blu",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_worlditems",
+    "color": "#202327",
+    "editedtime": "1678583226",
+    "vars": {
+        "tileset": "sheet_random_pieces",
+        "across": 7,
+        "down": 13,
+        "w": 384,
+        "h": 512
+    }
+}

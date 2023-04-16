@@ -1,0 +1,17 @@
+{
+    "name": "Spacevader Mk 1",
+    "codename": "recipe_ss_body_spacevader_1",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_body_spacevader_1",
+        "sprite": "body_spacevader_1",
+        "crafted_in": "ss_loom",
+        "require": "fiber,composites,sheetmetal",
+        "amount": "50,5,15"
+    }
+}

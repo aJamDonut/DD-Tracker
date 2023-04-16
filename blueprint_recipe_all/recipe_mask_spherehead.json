@@ -1,0 +1,17 @@
+{
+    "name": "Sphere head",
+    "codename": "recipe_mask_spherehead",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_item_mask_spherehead",
+        "sprite": "mask_spherehead",
+        "crafted_in": "ss_loom",
+        "require": "composites,roboeye,mechscrap",
+        "amount": "3,1,20"
+    }
+}

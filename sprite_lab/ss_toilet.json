@@ -1,0 +1,17 @@
+{
+    "name": "Toilet",
+    "codename": "ss_toilet",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_lab",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_lab_items",
+        "across": 9,
+        "down": 19,
+        "w": 128,
+        "h": 128
+    }
+}

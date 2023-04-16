@@ -1,0 +1,13 @@
+{
+    "name": "Quick Add Object",
+    "codename": "script_helper_quickaddobject",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_helpers",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "exec": "function() {\r\n  game.quickAdd = function (x, y, item) {\r\n    item.x = x;\r\n    item.y = y;\r\n    item.scaleToGame();\r\n    game.world.addObject(item);\r\n    game.render.objectLayer.addChild(item);\r\n    item.onCreate();\r\n  }\r\n}"
+    }
+}

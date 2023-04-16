@@ -1,0 +1,14 @@
+{
+    "name": "Collisions",
+    "codename": "ahref_collisions",
+    "value": "5",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ahref_ahref_games",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "url": "\/items.php?type=phys_collisions&direct=true",
+        "submenu": []
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Smelter",
+    "codename": "pers_worlditem_smelter",
+    "value": "-1",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_persistent_craftbench",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_smelter",
+        "meta": {
+            "blockZone": "all",
+            "collisionGroups": "all",
+            "physicsType": "helper",
+            "contextOptions": "loot"
+        },
+        "events": {
+            "onCreate": "function(item) {\r\n\titem.data.recipeList = 'smelter';\r\n\tthis.addExtension('ext_craftingbench', { bench: 'smelter' });\r\n\r\n}",
+            "onWorldTick": "function(){\r\n  this.hauls();\r\n}"
+        },
+        "destroyBase": "0"
+    }
+}

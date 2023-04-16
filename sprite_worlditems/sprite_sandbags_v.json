@@ -1,0 +1,17 @@
+{
+    "name": "Sandbags Vertical",
+    "codename": "sprite_sandbags_v",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_worlditems",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_world_items",
+        "across": 7,
+        "down": 8,
+        "w": 64,
+        "h": 256
+    }
+}

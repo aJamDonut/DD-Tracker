@@ -1,0 +1,23 @@
+{
+    "name": "Mechanical Scrap",
+    "codename": "ss_item_mechscrap",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_resources",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_mechscrap",
+        "meta": {
+            "description": "Mechanical scrap for moving components",
+            "slots": "resource",
+            "blockWidth": 2,
+            "blockHeight": 2,
+            "value": 130
+        },
+        "events": {
+            "onCreate": "function() {\r\n  \tthis.maxStack = 3;\r\n  \tthis.isQuantity = true;\r\n}"
+        }
+    }
+}

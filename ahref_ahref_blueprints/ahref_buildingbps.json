@@ -1,0 +1,14 @@
+{
+    "name": "Building BPs",
+    "codename": "ahref_buildingbps",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ahref_ahref_blueprints",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "url": "items.php?type=ss_items_blueprints_build&template=ss_items",
+        "submenu": []
+    }
+}

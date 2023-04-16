@@ -1,0 +1,20 @@
+{
+    "name": "Devil Tongue",
+    "codename": "e_sprite_deviltongue_a",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "si_extension_resources",
+    "color": "#202327",
+    "editedtime": "1674395575",
+    "vars": {
+        "meta": {
+            "physicsType": "logic",
+            "contextOptions": "gather"
+        },
+        "events": {
+            "onCreate": "function(item) {\r\n    item.gather = function (gatherer) {\r\n\r\n        let qty = 1;\r\n\r\n        if (gatherer.data.tool == 'stone_sickle') {\r\n            qty = 2;\r\n        }\r\n\r\n        gatherer.xpAction('gatheredfabric', item);\r\n\r\n        if (gatherer.inventory.main.addResource('fiber', qty * game.session.data.settings.lootMulti)) {\r\n            return true;\r\n        } else {\r\n            return false;\r\n        }\r\n    }\r\n}",
+            "onUpdate": "function (item, oldData, newData) {\r\n  var gatherer = game.index.find(newData.gatherer);\r\n\r\n  console.log(\"Gatherer\", gatherer.data.do, gatherer.data.command);\r\n  if (!gatherer) {\r\n    return false;\r\n  }\r\n\r\n  gatherer.data.isTargeting = true;\r\n\r\n  gatherer.shoot();\r\n\r\n  game.tween(item, 'shake');\r\n  var blood = new Particles('particles_fell_on_floor', 'sprite_deviltongue_item');\r\n  blood.x = item.x + 64;\r\n  blood.y = item.y + 64;\r\n  var scale = game.rng(0, 100);\r\n  blood.scale.x = scale \/ 100;\r\n  blood.scale.y = scale \/ 100;\r\n\r\n  game.render.underLifeLayer.addChild(blood);\r\n\r\n  item.nextSpit = Date.now() + 500;\r\n  blood.playOnceAndDestroy();\r\n\r\n}"
+        }
+    }
+}

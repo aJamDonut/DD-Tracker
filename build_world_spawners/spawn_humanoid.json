@@ -1,0 +1,18 @@
+{
+    "name": "Custom",
+    "codename": "spawn_humanoid",
+    "value": "-1",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_world_spawners",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "sprite": "btn_blank_sqr",
+        "meta": [],
+        "events": {
+            "onCreate": "function(spawner){\r\n\r\n    var player = new LifeObject();\r\n    bodies = ['body_smoker', 'body_camo', 'body_medical'];\r\n    player.x = spawner.x;\r\n    player.y = spawner.y;\r\n    player.setAnim('none\/idle_down', true);\r\n    player.data.static = true;\r\n\r\n    game.render.lifeLayer.addChild(player);\r\n  \tgame.world.addObject(player);\r\n    game.world.addToServer(player);\r\n  \t\r\n  \tspawner.destroy();\r\n}"
+        },
+        "destroyBase": "0"
+    }
+}

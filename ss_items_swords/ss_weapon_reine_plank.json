@@ -1,0 +1,27 @@
+{
+    "name": "Reine Plank",
+    "codename": "ss_weapon_reine_plank",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_swords",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "sprite": "weapon_reine_plank",
+        "meta": {
+            "description": "Get a big piece of metal. Sharpen it. Stick a handle on it. Enjoy.",
+            "weight": 1,
+            "contextOptions": "equipt",
+            "slots": "weapon",
+            "blockWidth": 4,
+            "blockHeight": 2,
+            "stance": "melee",
+            "value": 2000
+        },
+        "events": {
+            "onEquipt": "function(item, life) {\r\n  \tlife.data.bullet = {\r\n    statuses: [\r\n      { status: 'damage', dmg: item.data.BASE_DMG, type: item.data.TYPE },\r\n      { status: 'bleed', duration: item.data.BLEED_DURATION, chance: item.data.BLEED_CHANCE }\r\n    ],\r\n    sprite: item.data.SPRITE,\r\n    lifetime: item.data.LIFETIME,\r\n    speed: item.data.SPEED\r\n  };\r\n}",
+            "onCreate": "function(item, life) {\r\n  item.addExtension('ext_bullet_default', {\r\n    BASE_DMG: 7,\r\n    LIFETIME: 0.1,\r\n    SPEED: 0.2,\r\n    BLEED_DURATION: 10,\r\n    BLEED_CHANCE: 10,\r\n    SPRITE: 'projectile_melee',\r\n    TYPE: 'sharp'\r\n  });\r\n}"
+        }
+    }
+}

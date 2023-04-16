@@ -1,0 +1,14 @@
+{
+    "name": "State Groups",
+    "codename": "ahref_aicols",
+    "value": "100",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ahref_ahref_games",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "url": "items.php?type=ai_states_collections&direct=true",
+        "submenu": []
+    }
+}

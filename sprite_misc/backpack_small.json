@@ -1,0 +1,17 @@
+{
+    "name": "Small Backpack",
+    "codename": "backpack_small",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_misc",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_miscitems",
+        "across": 3,
+        "down": 4,
+        "w": 128,
+        "h": 128
+    }
+}

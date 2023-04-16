@@ -1,0 +1,17 @@
+{
+    "name": "Chomp 3",
+    "codename": "sprite_chomp_3",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_lilanim",
+    "color": "#202327",
+    "editedtime": "1675992030",
+    "vars": {
+        "tileset": "sheet_lilanims",
+        "across": 5,
+        "down": 1,
+        "w": 128,
+        "h": 128
+    }
+}

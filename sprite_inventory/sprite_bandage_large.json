@@ -1,0 +1,17 @@
+{
+    "name": "Large Bandage",
+    "codename": "sprite_bandage_large",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_inventory",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_miscitems",
+        "across": 5,
+        "down": 10,
+        "w": 128,
+        "h": 192
+    }
+}

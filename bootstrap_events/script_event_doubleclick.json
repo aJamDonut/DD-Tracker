@@ -1,0 +1,13 @@
+{
+    "name": "Right Double Click",
+    "codename": "script_event_doubleclick",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_events",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "exec": "function() {\r\n\tgame.ee.on('right-doubleclick', function (event) {\r\n      console.log(\"dblclick\");\r\n    });\r\n}"
+    }
+}

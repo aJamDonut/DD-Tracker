@@ -1,0 +1,27 @@
+{
+    "name": "SinCorp Recon",
+    "codename": "ss_sin_recon",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_body",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "body_sin_2",
+        "meta": {
+            "description": "Recon armor for the SinCorp faction.",
+            "weight": 10,
+            "contextOptions": "equipt",
+            "slots": "body",
+            "blockWidth": 3,
+            "blockHeight": 3,
+            "value": 3200
+        },
+        "events": {
+            "onEquipt": "function(life) {\r\n\tlife.addStatsFrom(this);\r\n}",
+            "onUnEquipt": "function(life) {\r\n\tlife.removeStatsFrom(this);\r\n}",
+            "onCreate": "function(item) {\r\n  \titem.data.stats.bluntReduction = 15;\r\n  \titem.data.stats.ballisticReduction = 15;\r\n  \titem.data.stats.sharpReduction = 15;\r\n  \titem.data.stats.tempHeat = 10;\r\n  \titem.data.stats.tempCold = -10;\r\n}"
+        }
+    }
+}

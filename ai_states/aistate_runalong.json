@@ -1,0 +1,16 @@
+{
+    "name": "Run along path",
+    "codename": "aistate_runalong",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ai_states",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "start": "function(life) {\r\n  life.running = true;\r\n}",
+        "run": "function(life) {\r\n\tif(life.hasPath) {\r\n    \t \r\n    }\r\n}",
+        "end": "function() {\r\n\tconsole.error(\"No mo run\");\r\n}",
+        "weight": "function(life) {\r\n  if(life.path.length !== 0) {\r\n\treturn 91;\r\n  } else {\r\n\treturn 0;\r\n  }\r\n}"
+    }
+}

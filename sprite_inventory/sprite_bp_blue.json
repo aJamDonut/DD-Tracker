@@ -1,0 +1,17 @@
+{
+    "name": "BP Blue",
+    "codename": "sprite_bp_blue",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_inventory",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_miscitems",
+        "across": 8,
+        "down": 9,
+        "w": 64,
+        "h": 64
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Killed",
+    "codename": "s_effect_killed",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "status_effects_server",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "start": "function(item, options){\r\n\titem.removeTarget();\r\n    item.data.doAttack = false;\r\n}",
+        "stacks": "0"
+    }
+}

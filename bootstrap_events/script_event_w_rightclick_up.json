@@ -1,0 +1,13 @@
+{
+    "name": "World Right Click",
+    "codename": "script_event_w_rightclick_up",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_events",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "exec": "function() {\r\n\tgame.ee.on('world-rightclick-up', function () {\r\n     if(game.input.dblTimer > Date.now() - 400) {\r\n       game.ee.emit('right-doubleclick', event);\r\n       game.input.dRClick = true;\r\n     }\r\n      game.input.dblTimer = Date.now();\r\n      game.input.rClick = true;\r\n\t});\r\n}"
+    }
+}

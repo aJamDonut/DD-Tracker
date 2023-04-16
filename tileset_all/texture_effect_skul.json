@@ -1,0 +1,14 @@
+{
+    "name": "Effect Skull",
+    "codename": "texture_effect_skul",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "tileset_all",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "filename": "skull.png",
+        "blockSize": 1
+    }
+}

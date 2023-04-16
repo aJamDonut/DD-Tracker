@@ -1,0 +1,14 @@
+{
+    "name": "player_pawns",
+    "codename": "player_hud_pawns",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "component_widgets",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "options": "'name, value, x, y, w, h, lblW'",
+        "getElement": "function(options) { \r\n  \r\n  return new TickerContainer({}, function(){\r\n  \r\n  \r\n    \r\n  \tlet w = 100;\r\n  \tlet h = 800;\r\n  \r\n  \tlet page = 1;\r\n\r\n    let pawns = game.session.getPlayerPawns();\r\n    let ids = Object.keys(pawns);\r\n    let list = [];\r\n    for(let i = 0; i < ids.length; i++) {\r\n      let pawn = pawns[ids[i]];\r\n      \r\n      let add = game.render.component('hud_checkbox',\r\n        {\r\n        name: pawn.data.name || 'Citizen',\r\n          pawn: pawn,\r\n          isEnabled: function(){\r\n            return game.session.isSelected(this.options.pawn);\r\n          },\r\n          onDisable: function() {\r\n            console.log(pawn);\r\n\t\t\tgame.p = this.options.pawn;\r\n            game.session.deselectPawns();\r\n            game.session.selectPawn(this.options.pawn);\r\n            game.cameraFollow = game.p;\r\n      \t  },\r\n          onEnable: function() {\r\n            console.log(pawn);\r\n\t\t\tgame.p = this.options.pawn;\r\n            game.session.deselectPawns();\r\n            game.session.selectPawn(this.options.pawn);\r\n      \t  }\r\n        });\r\n        if(i > 0) {\r\n\t\t\tif(pawns[ids[i-1]].data.ownedAge < pawn.data.ownedAge) {\r\n\t\t\t\tlist.unshift(add);\r\n            } else {\r\n              list.push(add);\r\n            }\r\n        } else {\r\n\t\t\tlist.push(add);\r\n        }      \r\n    }\r\n    \r\n    var pane = new UIContainer({fullscreen:false, fill: '0x303030', padding:0, x: -10, y: 5, w: 330, h:h-55});\r\n    let pager = game.render.componentRaw('pager', {ticks: true, page: page, width:320, items:list, itemsPerPage:10});\r\n  \t\r\n    pager.x = -5\r\n    pager.y = 10;\r\n                   \r\n    pane.addChild(pager)\r\n   \tthis.addChild(pane);\r\n  }, 0.1);\r\n }"
+    }
+}

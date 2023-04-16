@@ -1,0 +1,23 @@
+{
+    "name": "Player Storage",
+    "codename": "pers_player_storage",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_persistent_items",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "container_5",
+        "meta": {
+            "blockZone": "all",
+            "collisionGroups": "all",
+            "physicsType": "helper",
+            "contextOptions": "loot"
+        },
+        "events": {
+            "onCreate": "function(item) {  \r\n    \r\n  \tgame.inventories.createInventoryForItem(item, 10, 10, false, function(item){\r\n    \t\/\/When item added\r\n      console.log(this);\r\n      \tthis.sync();\r\n    });\r\n  \r\n  \r\n\titem.data.job = 'store';\r\n  \titem.sync();\r\n  \tgame.offloader.addToIndex('jobs', item);\r\n  \r\n  \tgame.offloader.addToIndex('playerstorage', item);\r\n  \tgame.index.addToIndex('playerstorage', item);\r\n  \tgame.offloader.addToIndex('ticker', item); \/\/Needs to tick to index inventory\r\n  \r\n  \titem.alpha = 1;\r\n  \titem.steps = 0;\r\n  \titem.jobAnim = 'build';\r\n  \titem.maxSteps = 3;\r\n  \r\n  \titem.jobStep = function(data){\r\n      \r\n      console.error(\"Job step\", this.phase, this.steps);\r\n      this.steps++;\r\n      \r\n      let caller = game.index.getFromIndex(data.callerId, 'all');\r\n      \r\n      caller.forceAnim = 'util\/build_'+caller.data.dir; \/\/Some animation to look like something is happening\r\n      \r\n      \r\n      if(this.steps === this.maxSteps) {\r\n        \r\n        this.steps = 0; \/\/Reset back to zero for next run\r\n        console.error(\"Do transfer\");\r\n        \r\n        caller.inventory.main.transferItems(this.inventory);\r\n        \r\n        this.sync();\r\n        \r\n        caller.forceAnim = false;\r\n        \r\n        caller.completeJob(this, true);\r\n        \r\n        \/\/Was gathering\r\n        if(caller.data.gatherId) {\r\n\t\t\tgame.session.setCommand(caller, 'move');\r\n          \tcaller.data.do = 'gather'\r\n          \tcaller.sync();\r\n        }\r\n        \r\n        \r\n      }\r\n  \t}\r\n}",
+            "onJobCheck": "function(item, life) {\r\n  \r\n  return life.data.inventoryFull;\r\n  \r\n}"
+        }
+    }
+}

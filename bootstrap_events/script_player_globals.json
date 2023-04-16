@@ -1,0 +1,13 @@
+{
+    "name": "Player global",
+    "codename": "script_player_globals",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_events",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "exec": "function(){\r\n\r\n    game.playerGlobals = {}\r\n    game.playerGlobals.weaponType = 'fist';\r\n    game.playerGlobals.shootType = 'spray'; \/\/sniper,spray,balance\r\n    game.playerGlobals.stance = 'walk'; \/\/crouch,walk,run\r\n\r\n}"
+    }
+}

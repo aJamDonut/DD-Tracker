@@ -1,0 +1,13 @@
+{
+    "name": "Loopyo",
+    "codename": "script_loopyo",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_helpers",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "exec": "function(){\r\n\r\n  game.loopyo = function(){\r\n\r\n    \r\n    if(!game.radius) {\r\n    \tgame.radius = {x:1, y:1};\r\n    \tgame.tween(game.radius, 'slide', {x:10, y: 10, duration: 1000});\r\n    }\r\n    \r\n    if(!game.deg) {\r\n    \tgame.deg = {x:1, y:1};\r\n      \r\n      \r\n      \t\r\n    \tgame.tween(game.deg, 'slide', {x:360, y: 360, duration: 60000});\r\n      \r\n    }\r\n\r\n    if(!game.firepos) {\r\n    \tgame.firepos = {x:10, y:10};\r\n    \tgame.tween(game.firepos, 'slide', {x:10, y: 10, duration: 10000});\r\n    }\r\n    \r\n    \r\n    let angleX = Math.floor(game.firepos.x + game.radius.x * Math.cos(game.deg.x));\r\n    let angleY = Math.floor(game.firepos.y + game.radius.x * Math.sin(game.deg.x)); \r\n   \r\n    game.quickSpawn.skulls(angleX, angleY)\r\n    \r\n    console.log(game.radius.x);\r\n    \r\n    setTimeout(game.loopyo, 10);\r\n  }\r\n  \r\n}"
+    }
+}

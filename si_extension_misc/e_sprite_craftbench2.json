@@ -1,0 +1,17 @@
+{
+    "name": "Tier 2 Craftbench",
+    "codename": "e_sprite_craftbench2",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "si_extension_misc",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_craftbench2",
+        "meta": {
+            "blockZone": "all"
+        },
+        "events": []
+    }
+}

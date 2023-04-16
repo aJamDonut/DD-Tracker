@@ -1,0 +1,21 @@
+{
+    "name": "Backpack",
+    "codename": "ss_backpack_large",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_backpack",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "backpack_large",
+        "meta": {
+            "weight": 5,
+            "contextOptions": "equipt",
+            "slots": "backpack",
+            "blockWidth": 4,
+            "blockHeight": 3
+        },
+        "events": []
+    }
+}

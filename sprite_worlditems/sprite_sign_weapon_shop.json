@@ -1,0 +1,17 @@
+{
+    "name": "Sign Weapon Shop",
+    "codename": "sprite_sign_weapon_shop",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_worlditems",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_world_items",
+        "across": 29,
+        "down": 23,
+        "w": 192,
+        "h": 128
+    }
+}

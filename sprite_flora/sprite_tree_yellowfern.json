@@ -1,0 +1,17 @@
+{
+    "name": "Large Yellow Fern",
+    "codename": "sprite_tree_yellowfern",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_flora",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_world_items",
+        "across": 1,
+        "down": 25,
+        "w": 320,
+        "h": 320
+    }
+}

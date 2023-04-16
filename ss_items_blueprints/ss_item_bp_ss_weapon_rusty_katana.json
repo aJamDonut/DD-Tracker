@@ -1,0 +1,21 @@
+{
+    "name": "Rusty Katana",
+    "codename": "ss_item_bp_ss_weapon_rusty_katana",
+    "value": "150",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_blueprints",
+    "color": "#202327",
+    "editedtime": "1675985838",
+    "vars": {
+        "sprite": "sprite_bp_yellow",
+        "meta": {
+            "contextOptions": "usebp",
+            "blockWidth": 1,
+            "blockHeight": 1,
+            "recipe": "ss_weapon_rusty_katana",
+            "value": 600
+        },
+        "events": []
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Resource Items",
+    "codename": "ahref_resitems",
+    "value": "-100",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ahref_ahref_items",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "url": "items.php?type=ss_items_resources&template=ss_items",
+        "submenu": []
+    }
+}

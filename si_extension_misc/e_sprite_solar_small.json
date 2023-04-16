@@ -1,0 +1,17 @@
+{
+    "name": "Solar Panel Small",
+    "codename": "e_sprite_solar_small",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "si_extension_misc",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_solar_small",
+        "meta": {
+            "blockZone": "top"
+        },
+        "events": []
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "World Map",
+    "codename": "sprite_world_map",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_misc",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_map",
+        "across": 1,
+        "down": 1,
+        "w": 999,
+        "h": 999
+    }
+}

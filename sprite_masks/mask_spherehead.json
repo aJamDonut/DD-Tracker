@@ -1,0 +1,17 @@
+{
+    "name": "Sphere head",
+    "codename": "mask_spherehead",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_masks",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_humanoid2",
+        "across": 31,
+        "down": 1,
+        "w": 128,
+        "h": 128
+    }
+}

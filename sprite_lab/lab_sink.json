@@ -1,0 +1,17 @@
+{
+    "name": "Lab Sink and Tap",
+    "codename": "lab_sink",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_lab",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_lab_items",
+        "across": 14,
+        "down": 26,
+        "w": 128,
+        "h": 128
+    }
+}

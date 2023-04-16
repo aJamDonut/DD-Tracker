@@ -1,0 +1,16 @@
+{
+    "name": "Tech Light",
+    "codename": "e_sprite_techlight",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "si_extension_misc",
+    "color": "",
+    "editedtime": null,
+    "vars": {
+        "meta": [],
+        "events": {
+            "onCreate": "function(furni){\r\n  \t\r\n\r\n    var myLight = new Sprite('lightgreen_screenwhite', {anchor:'center'});\r\n  \tmyLight.scale.x = 2.5;\r\n  \tmyLight.scale.y = 2.5;\r\n  \tmyLight.alpha = 0.2;\r\n    myLight.x = 32;\r\n    myLight.y = 32;\r\n\r\n\tmyLight.filters = [game.render.filters.bloom]\r\n  \tfurni.addChild(myLight);\r\n  \r\n  \tvar myLight = new Sprite('lightcookie_oval', {anchor:'center'});\r\n  \tmyLight.scale.x = 4;\r\n  \tmyLight.scale.y = 4;\r\n    myLight.x = furni.x + 64;\r\n    myLight.y = furni.y + 64;\r\n\t\r\n  \t\/\/game.render.objectLayer.addChild(myLight);\r\n  \tgame.render.lights.addChild(myLight);\r\n  \r\n\r\n  \r\n  \r\n}"
+        }
+    }
+}

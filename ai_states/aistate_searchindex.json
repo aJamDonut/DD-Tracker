@@ -1,0 +1,13 @@
+{
+    "name": "Start Search Index",
+    "codename": "aistate_searchindex",
+    "value": "25",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ai_states",
+    "color": "#202327",
+    "editedtime": "1675820957",
+    "vars": {
+        "weight": "function(life) {\r\n\r\n  if (life.searchIndex && life.searchIndex > Object.keys(life.touchers).length) {\r\n    life.searchIndex = -1\r\n    life.lastSweep = game.ts;\r\n  }\r\n\r\n  \/\/life.data.debug = life.searchIndex;\r\n  \/\/life.sync();\r\n\r\n  if (typeof life.searchIndex == 'undefined') {\r\n    life.searchIndex = -1;\r\n    life.lastSweep = Date.now() - 10000;\r\n  }\r\n\r\n  let keys = Object.keys(life.touchers);\r\n\r\n  if (keys.length == 0) {\r\n    \/\/Nothing to check so return early\r\n    life.log(\"No keys\");\r\n    life.searchIndex = -1;\r\n    life.fullSweep = true;\r\n    life.lastSweep = Date.now();\r\n    return 0;\r\n  }\r\n\r\n  life.searchIndex++;\r\n\r\n  let target = servers.world.index.getFromIndex(keys[life.searchIndex], 'all');\r\n\r\n  if (!target) {\r\n    return 0; \/\/Invalid item?\r\n  }\r\n\r\n  if (life.dist(target) > 25 * 64) {\r\n    return 0; \/\/So far away ignore it\r\n  }\r\n\r\n  life.log(\"Scanning \" + target.id);\r\n  life.scanningLife = target;\r\n\r\n  return 0;\r\n\r\n}"
+    }
+}

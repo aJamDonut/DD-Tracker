@@ -1,0 +1,14 @@
+{
+    "name": "Pager Grid Component",
+    "codename": "pagergrid",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "component_displays",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "options": "'items[], page'",
+        "getElement": "function(options) {\r\n\r\n    var pane = new UIContainer();\r\n    pane.pageContents = [];\r\n    pane.items = options.items;\r\n    pane.pages = Math.ceil(options.items.length \/ options.itemsPerPage);\r\n    pane.page = options.page;\r\n    pane.cols = options.cols;\r\n    pane.gap = options.gap || 0;\r\n    pane.itemsPerPage = options.itemsPerPage;\r\n    pane.ticks = options.ticks; \/\/If ticks is true, wont refresh\r\n\r\n    pane.refresh = function () {\r\n        if (this.page == 1) {\r\n            this.pageButtons.back.alpha = 0;\r\n            this.pageButtons.back.interactive = false;\r\n        } else {\r\n            this.pageButtons.back.alpha = 1;\r\n            this.pageButtons.back.interactive = true;\r\n        }\r\n        if (this.page == this.pages) {\r\n            this.pageButtons.fwd.alpha = 0;\r\n            this.pageButtons.fwd.interactive = false;\r\n        } else {\r\n            this.pageButtons.fwd.interactive = true;\r\n            this.pageButtons.fwd.alpha = 1;\r\n        }\r\n        var startOffset = this.itemsPerPage * (this.page - 1);\r\n        yOffset = 0;\r\n        xOffset = 0;\r\n        let colCount = 0;\r\n        for (var i = startOffset; i < startOffset + this.itemsPerPage; i++) {\r\n            if (this.items[i] == undefined) {\r\n                break;\r\n            }\r\n            if (colCount === pane.cols) {\r\n                yOffset += this.items[i].height + this.gap;\r\n                xOffset = 0;\r\n                colCount = 0;\r\n            }\r\n            colCount++;\r\n\r\n\r\n            this.items[i].y = yOffset\r\n            this.items[i].x = xOffset\r\n            this.addChild(this.items[i]);\r\n            xOffset += this.items[i].width + this.gap;\r\n            this.pageContents.push(this.items[i]);\r\n        }\r\n    }\r\n    pane.pageUp = function () {\r\n        if (this.page == this.pages) {\r\n            return false;\r\n        }\r\n        this.page++;\r\n        if (!this.ticks) {\r\n            this.empty();\r\n            this.refresh();\r\n        }\r\n    }\r\n    pane.pageDown = function () {\r\n        if (this.page == 1) {\r\n            return false;\r\n        }\r\n        this.page--;\r\n        if (!this.ticks) {\r\n            this.empty();\r\n            this.refresh();\r\n        }\r\n    }\r\n    pane.empty = function () {\r\n        for (var i = 0; i < this.pageContents.length; i++) {\r\n            this.removeChild(this.pageContents[i]);\r\n        }\r\n    }\r\n    pane.addPageButtons = function (btns) {\r\n        this.pageButtons = btns;\r\n    }\r\n\r\n    return pane;\r\n}"
+    }
+}

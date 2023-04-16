@@ -1,0 +1,17 @@
+{
+    "name": "Bullet trail 1",
+    "codename": "sprite_bullettrail1",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_effects",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_bullettrail1",
+        "across": 1,
+        "down": 1,
+        "w": 20,
+        "h": 5
+    }
+}

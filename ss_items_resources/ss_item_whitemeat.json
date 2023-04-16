@@ -1,0 +1,23 @@
+{
+    "name": "White Meat",
+    "codename": "ss_item_whitemeat",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_resources",
+    "color": "#202327",
+    "editedtime": "1675955894",
+    "vars": {
+        "sprite": "sprite_meat_white",
+        "meta": {
+            "description": "White meat... but... why...te?",
+            "slots": "resource",
+            "blockWidth": 2,
+            "blockHeight": 2,
+            "value": 50
+        },
+        "events": {
+            "onCreate": "function() {\r\n  \tthis.resourceType = 'Food';\r\n  \tthis.maxStack = 5;\r\n  \tthis.isQuantity = true;\r\n}"
+        }
+    }
+}

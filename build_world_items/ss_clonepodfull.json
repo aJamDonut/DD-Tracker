@@ -1,0 +1,24 @@
+{
+    "name": "Clone Pod Full",
+    "codename": "ss_clonepodfull",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_world_items",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "w_emptyclonepod",
+        "description": "A clone pod",
+        "blockWidth": 2,
+        "blockHeight": 4,
+        "meta": {
+            "blockZone": "bottom",
+            "physicsType": "static"
+        },
+        "events": {
+            "onCreateJSON": "[{\"x\":4.569851921104032,\"y\":4.437991693417871,\"type\":\"spine\",\"layer\":\"self\",\"scale\":1,\"sprite\":\"clonepod\",\"anchor\":0,\"alpha\":1,\"tween\":\"none\"},{\"x\":-12.164391484925602,\"y\":59.164391484925716,\"type\":\"sprite\",\"layer\":\"self\",\"scale\":1,\"sprite\":\"lightgreen_screen\",\"anchor\":0,\"alpha\":1,\"tween\":\"none\"},{\"x\":143.69590467286628,\"y\":185.35347061256903,\"type\":\"sprite\",\"layer\":\"self\",\"scale\":0.9989368327901276,\"sprite\":\"lightbluesheencolumn\",\"anchor\":0.5,\"alpha\":0.7,\"tween\":\"none\"}]"
+        },
+        "destroyBase": "1"
+    }
+}

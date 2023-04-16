@@ -1,0 +1,17 @@
+{
+    "name": "Lab Small Quarantine Sign",
+    "codename": "lab_quar_smsign",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_lab",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_lab_items",
+        "across": 23,
+        "down": 21,
+        "w": 128,
+        "h": 128
+    }
+}

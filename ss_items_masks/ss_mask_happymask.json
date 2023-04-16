@@ -1,0 +1,27 @@
+{
+    "name": "Happy Mask",
+    "codename": "ss_mask_happymask",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_masks",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "mask_happymask",
+        "meta": {
+            "description": "Can't express how happy you are but want to tell the world? Try this new mask!",
+            "weight": 3,
+            "contextOptions": "equipt",
+            "slots": "mask",
+            "blockWidth": 3,
+            "blockHeight": 3,
+            "value": 950
+        },
+        "events": {
+            "onEquipt": "function(life) {\r\n\tlife.data.stats.hp += this.data.stats.hp;\r\n  \tlife.data.stats.savage += this.data.stats.savage;\r\n}",
+            "onUnEquipt": "function(life) {\r\n\tlife.data.stats.hp -= this.data.stats.hp;\r\n  \tlife.data.stats.savage -= this.data.stats.savage;\r\n}",
+            "onCreate": "function(item) {\r\n  \tif(this.loaded) {\r\n\t\treturn false;\r\n    }\r\n  \titem.data.quality = game.rng(1,4)\r\n  \titem.data.stats = {};\r\n\titem.data.stats.hp = -10 * this.data.quality;\r\n  \titem.data.stats.savage = 2 * this.data.quality;\r\n}"
+        }
+    }
+}

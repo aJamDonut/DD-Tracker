@@ -1,0 +1,13 @@
+{
+    "name": "squareWBorder",
+    "codename": "squareWBorder",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "component_misc",
+    "color": "#202327",
+    "editedtime": "1677332376",
+    "vars": {
+        "getElement": "function (options) {\r\n    if(options==undefined) {\r\n\t\toptions = {};\r\n    }\r\n\r\n    w = options.w || 64;\r\n    h = options.h || 64;\r\n    \r\n \r\n    var pane = new UIContainer();\r\n    pane.addChild(new UIPane({fullscreen:false, fill: '0x3d3d3d', padding:0, x: 0, y: 0, w: 1, h:h}));\r\n    pane.addChild(new UIPane({fullscreen:false, fill: '0x3d3d3d', padding:0, x: 0, y: 0, w: w, h:1}));\r\n    pane.addChild(new UIPane({fullscreen:false, fill: '0x3d3d3d', padding:0, x: w, y: 0, w: 1, h:h}));\r\n    pane.addChild(new UIPane({fullscreen:false, fill: '0x3d3d3d', padding:0, x: 0, y: h, w: w, h:1}));\r\n    return pane;\r\n    \r\n  }"
+    }
+}

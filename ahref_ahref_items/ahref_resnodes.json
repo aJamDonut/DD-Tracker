@@ -1,0 +1,14 @@
+{
+    "name": "Resource Nodes",
+    "codename": "ahref_resnodes",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ahref_ahref_items",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "url": "items.php?type=si_extension_resources&template=si_extension",
+        "submenu": []
+    }
+}

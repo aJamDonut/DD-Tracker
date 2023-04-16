@@ -1,0 +1,15 @@
+{
+    "name": "Yama Short Post",
+    "codename": "ss_yamashortpost",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_furniture",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_yamashortpost",
+        "meta": [],
+        "events": []
+    }
+}

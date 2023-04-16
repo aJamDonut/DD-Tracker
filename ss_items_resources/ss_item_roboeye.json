@@ -1,0 +1,23 @@
+{
+    "name": "Robo Eye",
+    "codename": "ss_item_roboeye",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_resources",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "sprite_roboeye",
+        "meta": {
+            "description": "A rare stone used in earth crafting",
+            "slots": "resource",
+            "blockWidth": 2,
+            "blockHeight": 2,
+            "value": 230
+        },
+        "events": {
+            "onCreate": "function() {\r\n  \tthis.maxStack = 3;\r\n  \tthis.isQuantity = true;\r\n}"
+        }
+    }
+}

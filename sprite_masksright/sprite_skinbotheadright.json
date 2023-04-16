@@ -1,0 +1,17 @@
+{
+    "name": "Skinbot Head Right",
+    "codename": "sprite_skinbotheadright",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_masksright",
+    "color": "#202327",
+    "editedtime": "1679246781",
+    "vars": {
+        "tileset": "sheet_humanoid3",
+        "across": 7,
+        "down": 3,
+        "w": 128,
+        "h": 128
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "name": "Small Bandage",
+    "codename": "ss_item_bp_bandage_small",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_items_blueprints",
+    "color": "#202327",
+    "editedtime": "1675985776",
+    "vars": {
+        "sprite": "sprite_bp_green",
+        "meta": {
+            "description": "A small bandage useful for stopping bleeding",
+            "contextOptions": "usebp",
+            "blockWidth": 1,
+            "blockHeight": 1,
+            "recipe": "ss_item_bandage_small",
+            "value": 10
+        },
+        "events": []
+    }
+}

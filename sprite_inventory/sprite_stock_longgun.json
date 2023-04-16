@@ -1,0 +1,17 @@
+{
+    "name": "Long Gun Stock",
+    "codename": "sprite_stock_longgun",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_inventory",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_miscitems",
+        "across": 1,
+        "down": 14,
+        "w": 128,
+        "h": 128
+    }
+}

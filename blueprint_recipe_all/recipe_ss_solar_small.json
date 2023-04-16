@@ -1,0 +1,17 @@
+{
+    "name": "Solar Panel Small",
+    "codename": "recipe_ss_solar_small",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "blueprint_recipe_all",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "crafts": "ss_solar_small",
+        "sprite": "sprite_solar_small",
+        "crafted_in": "build",
+        "require": "adhesive,composites,building_material,sheetmetal",
+        "amount": "1,9,10,15"
+    }
+}

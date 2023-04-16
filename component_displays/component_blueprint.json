@@ -1,0 +1,14 @@
+{
+    "name": "Component Blueprint",
+    "codename": "component_blueprint",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "component_displays",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "options": "'recipe'",
+        "getElement": "function(options) {\r\n  \r\n  if(!options) {\r\n\toptions = {\r\n      \t\t\tname: 'pickaxe',\r\n      \t\t\trecipe: _BLUEPRINTS.RECIPES['recipe_pickaxe']\r\n              }\r\n  }\r\n  \r\n  var recipe = options.recipe;\r\n  \r\n  var pane = new UIContainer();\r\n\r\n  var w = 84;\r\n  var h = 84;\r\n\r\n  var x = 0;\r\n  var y= 0;\r\n  \r\n  var spriteW = 64;\r\n  \r\n  pane.addChild(new UIPane({fullscreen:false, fill: '0x212121', padding:0, x: x, y: y, w: w, h:h}));\r\n  pane.addChild(new UIPane({fullscreen:false, fill: '0x3d3d3d', padding:5, x: x+5, y: y+5, w: w-10, h:h-10}));\r\n  \r\n  pane.addChild(new UIPane({fullscreen:false, fill: '0x212121', padding:5, x: x+10, y: y+10, w: 64, h:64}));\r\n\r\n  var icon = new ItemIcon(recipe.crafts, {w: 64, h: 64, moveable:false})\r\n  icon.x = 7;\r\n  icon.y = 7;\r\n  icon.interactive = false;\r\n  pane.addChild(icon);\r\n  \r\n  \r\n  var icon = new ItemIcon('ss_item_bp_'+options.name, {w: 64, h: 64, moveable:false})\r\n    icon.x = 7;\r\n  icon.y = 7;\r\n  icon.alpha = 0.05;\r\n  pane.addChild(icon);\r\n  \r\n  return pane;\r\n  \r\n}"
+    }
+}

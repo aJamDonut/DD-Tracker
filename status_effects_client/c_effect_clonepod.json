@@ -1,0 +1,16 @@
+{
+    "name": "Clone pod",
+    "codename": "c_effect_clonepod",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "status_effects_client",
+    "color": "#202327",
+    "editedtime": "1679159329",
+    "vars": {
+        "sprite": "play_icon",
+        "start": "function(item, options){\r\n  item.setAnim('none\/idle_down',true);\r\n  item.data.dead = true;\r\n  \/\/game.render.aboveAll.addChild(game.render.componentRaw('hud_died', {}, 'frontMenu'));\r\n}",
+        "end": "function(item, options){\r\n  item.setAnim('none\/idle_down',false);\r\n  item.y = item.y + 128;\r\n  item.syncXY();\r\n  item.data.dead = false;\r\n  \/\/game.render.aboveAll.addChild(game.render.componentRaw('hud_died', {}, 'frontMenu'));\r\n}",
+        "stacks": "0"
+    }
+}

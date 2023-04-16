@@ -1,0 +1,17 @@
+{
+    "name": "Rain 1",
+    "codename": "tex_rain_1",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "textures_particles",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "across": 1,
+        "down": 1,
+        "w": 205,
+        "h": 61,
+        "tileset": "tileset_rain"
+    }
+}

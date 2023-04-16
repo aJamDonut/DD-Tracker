@@ -1,0 +1,13 @@
+{
+    "name": "Extra Scenes",
+    "codename": "script_helper_scenes",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_helpers",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "exec": "function () {\r\n  game.ui.scenes.lvleditor = {\r\n    \"startup\": function () {\r\n      game.ee.emit('leveleditor-init');\r\n    }\r\n  };\r\n\r\n  game.ui.scenes.lvltest = {\r\n    \"startup\": function () {\r\n      console.log(\"Started new sandbox game\");\r\n      game.ee.emit('newgame-init', {slot: 'lvltest'});\r\n    }\r\n  };\r\n  \r\n  game.ui.scenes.newgame = {\r\n    \"startup\": function () {\r\n      console.error(\"Started new sandbox game\");\r\n\r\n      var level = game.startLevel;\r\n      game.ui.attachEvents();\r\n\r\n\r\n      if (level.length > 0) {\r\n        \/\/TODO: hm\r\n        game.saves.unload();\r\n\r\n        \r\n        $.getJSON(game.folder + 'levels\/' + level + '.json', game.saves.loadLevel).fail(game.DD.start);\r\n\r\n        \r\n\r\n        \r\n\r\n      } else {\r\n\r\n        console.error(\"invalid level parameter provided\")\r\n      }\r\n\r\n\r\n    }\r\n  };\r\n}"
+    }
+}

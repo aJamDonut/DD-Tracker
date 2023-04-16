@@ -1,0 +1,17 @@
+{
+    "name": "Gas Mask",
+    "codename": "mask_gasmask",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "sprite_masks",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "tileset": "sheet_humanoid",
+        "across": 5,
+        "down": 3,
+        "w": 128,
+        "h": 128
+    }
+}

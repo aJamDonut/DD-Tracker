@@ -1,0 +1,17 @@
+{
+    "name": "Spark 1",
+    "codename": "tex_spark_1",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "textures_particles",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "across": 1,
+        "down": 1,
+        "w": 17,
+        "h": 5,
+        "tileset": "tileset_spark_1"
+    }
+}

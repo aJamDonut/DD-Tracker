@@ -1,0 +1,18 @@
+{
+    "name": "Codec: Just die already!",
+    "codename": "codec_a6",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "ss_textitems_codecs",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "sprite": "item_codec",
+        "meta": {
+            "blockWidth": 1,
+            "blockHeight": 1,
+            "description": "[Author: Ira Barber] [Year: 4079]\r\nSpirits give me strength. My body is growing weaker by the day and SinCorp isn't supporting Ruoni or myself. I've thought about making the journey north but I'm afraid I'm too old to survive the journey now.\r\n\r\nI regret not following Kenshin all those years ago, I should have followed my gut and not listened to Alex. Why do I always make these mistakes?\r\n\r\nI don't think it's too late for Ruoni to make the journey north. All we need is a map or a guide, that would do it. I pray every night for an angel to help."
+        }
+    }
+}

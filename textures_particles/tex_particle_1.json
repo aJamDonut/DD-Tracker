@@ -1,0 +1,17 @@
+{
+    "name": "Particle 1",
+    "codename": "tex_particle_1",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "textures_particles",
+    "color": null,
+    "editedtime": null,
+    "vars": {
+        "across": 1,
+        "down": 1,
+        "w": 44,
+        "h": 44,
+        "tileset": "tileset_particle_1"
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "name": "Medium Storage",
+    "codename": "ss_container_mediumstorage",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "build_world_lootcontainers",
+    "color": "#202327",
+    "editedtime": null,
+    "vars": {
+        "sprite": "container_4",
+        "meta": {
+            "blockZone": "all",
+            "physicsType": "logic",
+            "contextOptions": "loot",
+            "description": "A handy item container",
+            "persist": "1"
+        },
+        "events": {
+            "onCreate": "function(furni){\r\n  \tgame.inventories.createInventoryForItem(furni, 4,10, true);\r\n}"
+        }
+    }
+}
