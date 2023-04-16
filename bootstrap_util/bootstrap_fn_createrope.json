@@ -1,0 +1,13 @@
+{
+    "name": "Create Rope",
+    "codename": "bootstrap_fn_createrope",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_util",
+    "color": "#202327",
+    "editedtime": "1680782288",
+    "vars": {
+        "exec": "function() {\r\n\r\n\tgame.util.createRope = function (start, end) {\r\n\r\n\t\tlet rope = new ABE.UIPane();\r\n\t\trope.meta = { sort: false };\r\n\t\trope.parentGroup = game.render.sortGroup;\r\n\t\trope.height = 5;\r\n\t\trope.pivot.set(0, 0);\r\n\t\tgame.render.lifeLayer.addChild(rope);\r\n\r\n\t\trope.change = function (start, end) {\r\n\t\t\tthis.x = start.x + 32;\r\n\t\t\tthis.y = start.y + 32;\r\n\r\n\t\t\tlet ropeStart = this\r\n\t\t\tlet ropeEnd = { x: end.x + 32, y: end.y + 50 };\r\n\r\n\t\t\tlet dist = game.world.dist(ropeStart, ropeEnd);\r\n\r\n\t\t\tthis.rotation = game.world.angleAsRad(ropeStart, ropeEnd);\r\n\r\n\t\t\tthis.width = dist;\r\n\t\t}\r\n\r\n\t\trope.change(start, end);\r\n\t\t\r\n\t\treturn rope;\r\n\r\n\t}\r\n}"
+    }
+}

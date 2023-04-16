@@ -1,0 +1,13 @@
+{
+    "name": "Link Object",
+    "codename": "bootstrap_fn_link_objects",
+    "value": "0",
+    "quantity": "0",
+    "credits_shop_item": "0",
+    "type": "bootstrap_util",
+    "color": "#202327",
+    "editedtime": "1680783127",
+    "vars": {
+        "exec": "function() {\r\n\r\n\tgame.util.linking = false;\r\n\r\n\tgame.util.isLinking = function () {\r\n\t\treturn game.util.linking;\r\n\t}\r\n\r\n\tgame.util.stopLinking = function () {\r\n\t\tgame.util.linking = false;\r\n\t\tgame.util.resetLink();\r\n\t\tif (game.util.rope1) {\r\n\t\t\tgame.util.rope1.destroy();\r\n\t\t}\r\n\t}\r\n\r\n\tgame.util.resetLink = function() {\r\n\t\tgame.util.selectOne = false;\r\n\t\tgame.util.selectTwo = false;\r\n\t}\r\n\r\n\tgame.util.createLink = function () {\r\n\t\tgame.util.linking = true;\r\n\t}\r\n\r\n\tgame.util.makeLink = function (linkTo, linkFrom) {\r\n\t\t\/\/Ensure ID's persist to create the link\r\n\t\tlinkTo.data.persistId = linkTo.id;\r\n\t\tlinkFrom.data.persistId = linkFrom.id;\r\n\r\n\t\t\/\/Set the usedata of the input to this.\r\n\t\tlinkTo.data.usedata1 = linkFrom.id;\r\n\r\n\t\t\/\/For now setting linkfrom, see in future if needs changing\r\n\t\tlinkFrom.data.usedata1 = linkTo.id;\r\n\r\n\t\t\r\n\r\n\t\tgame.util.showLink(linkTo);\r\n\t}\r\n\r\n\tgame.util.showLink = function (item) {\r\n\r\n\t\tlet linkTo = game.index.find(item.data.usedata1);\r\n\r\n\t\tif (!linkTo) {\r\n\t\t\treturn;\r\n\t\t}\r\n\r\n\t\tif (game.util.rope1) {\r\n\t\t\tgame.util.rope1.destroy();\r\n\t\t}\r\n\r\n\t\tgame.util.rope1 = game.util.createRope(item, linkTo);\r\n\t}\r\n\r\n\tgame.ee.on('object_selected', function (item) {\r\n\r\n\t\tif (!game.util.isLinking()) {\r\n\t\t\treturn;\r\n\t\t}\r\n\r\n\t\t\/\/Never connect life to life, if this is life then just set links\r\n\t\tif(item.baseClass === \"BaseLife\") {\r\n\t\t\tgame.util.selectOne = item;\r\n\t\t\tif (item.data.usedata1) {\r\n\t\t\t\tgame.util.showLink(item);\r\n\t\t\t}\r\n\t\t\treturn;\r\n\t\t}\r\n\r\n\t\tif (game.util.selectOne.id === item.id) {\r\n\t\t\tgame.util.resetLink();\r\n\t\t\treturn;\r\n\t\t}\r\n\r\n\r\n\t\t\r\n\r\n\t\tgame.util.selectTwo = item;\r\n\r\n\t\tgame.util.makeLink(game.util.selectOne, game.util.selectTwo);\r\n\r\n\t\tgame.util.resetLink();\r\n\r\n\r\n\t});\r\n\r\n}\r\n"
+    }
+}
